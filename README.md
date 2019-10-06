@@ -1,6 +1,12 @@
 # Python
 
-## Test
+## TODO
+
+* lib/dataclasses
+* git-flow [link](https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c)
+* git merge vs. rebase
+
+
 
 Becoming a super hero is a fairly straight forward process:
 
