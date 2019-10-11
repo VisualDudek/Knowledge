@@ -10,3 +10,10 @@
 
   * How to Stand Out in a Python Coding Interview @ RealPython
 
+* Getting Started With Testing in Python [link](https://realpython.com/python-testing/) @RealPython 
+* Python Cheatsheet [link](https://www.pythonsheets.com/index.html)
+
+        _Welcome to pysheeet. This project aims at collecting useful Python snippets in order to enhance pythoneers’ coding experiences._
+
+
+

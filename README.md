@@ -22,6 +22,10 @@
 
 * Closing Issue using keyword [link](https://help.github.com/en/articles/closing-issues-using-keywords)
 * VERY GOOD Pracical Guide to use setup.py [link](https://blog.godatadriven.com/setup-py)
+* `setUp()` vs. `tearDown()`
+  * In general you add all prerequisite steps to `setUp` and all clean-up steps to `tearDown`
+  * So the idea is that test itself should contain only actions that to be performed on the test object to get the result, while `setUp` and `tearDown` are the methods to help you to leave your test code clean and flexible.
+  * You can create a `setUp` and `tearDown` for a bunch of tests and define them in a parent class - so it would be easy for you to support such tests and update common preparations and clean ups
 
 LINUX - GNOME
 
