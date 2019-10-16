@@ -19,6 +19,14 @@ args = my_parser.parse_args()
 print(vars(args))
 ```
 
+`id(self)`
+
+### `src`
+
+* How to Build Command Line Interface with argparse [link](https://realpython.com/command-line-interfaces-python-argparse/)
+* PyDocs argparse Tutorial [link](https://docs.python.org/3/howto/argparse.html#id1)
+* see for later / argparse
+
 ### The Basics
 
 ```python
@@ -92,5 +100,11 @@ print(vars(args))
 
 This example defines a custom action that is just linke `store` action but little more verbose.
 
+### Reading Data from stdin
 
+### Type of Data
+
+* `.FileType`
+
+\`\`
 
