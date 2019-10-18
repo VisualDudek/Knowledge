@@ -5,4 +5,5 @@
 * [Moleskin](moleskin.md)
 * [Korepetycje](korepetycje.md)
 * [unittest](unittest.md)
+* [@classmethod](classmethod.md)
 
