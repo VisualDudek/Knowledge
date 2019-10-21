@@ -51,3 +51,21 @@
 
 * snippet in `.bashrc` or `.zshrc` to check if in dir `READ.ME` exist, if yes than print out first 20 lines  
 
+### week 42
+
+* `Ctrl + H`
+* Logging, Python lib
+* Class która obsługuje informacje zwrotną z SendSMS
+
+```python
+class Status:
+    def isSuccesful():
+```
+
+* dodaj w katalogu test katalog dataset dla danych testowych
+* `main()` wszedzie gdzie jest to mozliwe, przykład Konrada z `pip`
+* exclude all VSCode settings in `.gitignore`
+* przećwicz `git diff HEAD~1` \(zsh\) `gd` 
+* `HEAD~3` nanosi trzy ostatnie commity na siebie
+* git submodule vs pip install from git repo?
+
