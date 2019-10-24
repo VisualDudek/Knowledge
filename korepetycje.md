@@ -1,3 +1,7 @@
+---
+description: all notes made during tutoring
+---
+
 # Korepetycje
 
 ### week 41

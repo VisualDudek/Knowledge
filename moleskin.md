@@ -1,3 +1,7 @@
+---
+description: 'notes from paper moleskin, updated weekly'
+---
+
 # Moleskin
 
 ### Week 41

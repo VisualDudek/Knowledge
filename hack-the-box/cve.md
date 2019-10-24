@@ -29,9 +29,21 @@ alexis ALL=(ALL, !root) ALL
 
 How to downgrade a package?
 
+{% hint style="danger" %}
+fill in
+{% endhint %}
+
 How to upgrade only sudo pkg?
 
+{% hint style="danger" %}
+fill in
+{% endhint %}
+
 What is `$ sudo apt dist-upgrade` ?
+
+{% hint style="danger" %}
+fill in
+{% endhint %}
 
 Is there a way I can see all the versions that are in the archives that I have configured in `sources.list`. I can see the last version of each archive with `apt-get policy`, but how can I see them all?
 
