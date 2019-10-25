@@ -4,6 +4,10 @@
 
 CVE - Common Vulnerabilities and Exposures
 
+{% hint style="danger" %}
+Read more about PAM
+{% endhint %}
+
 ### CVE-2019-14287 sudo minus 1 uid
 
 #### src
