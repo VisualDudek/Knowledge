@@ -16,3 +16,7 @@
 * [unittest](python/unittest.md)
 * [@classmethod](python/classmethod.md)
 
+## AWS
+
+* [Cloud Practitioner](aws/cloud-practitioner.md)
+
