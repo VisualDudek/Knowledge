@@ -75,9 +75,16 @@ class Status:
 
 #### rozliczenie week 42-43
 
-* logging
+* DevOps/SysOps Meetup
+  * architektura hiperkonwergentna
+  * protokol wifi bez zamykania access pointow
+  * AWS Cloud
+* Building Quantum Computing Algorithms In Python - Episode 235 @Python \_\_init\_\_
 * CVE sudo minus 1
+* logging
 * flask templates
+
+
 
 
 

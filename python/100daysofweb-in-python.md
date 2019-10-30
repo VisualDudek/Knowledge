@@ -19,6 +19,13 @@
 `favicon.ico`
 {% endhint %}
 
+```markup
+<!-- Adding a favicon -->
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+```
+
+[gauger.io/fonticon](https://gauger.io/fonticon) - create beautiful favicons with ease
+
 ### Templates
 
 ```python
@@ -39,5 +46,5 @@ def index():
     return render_template('index.html')
 ```
 
-
+[https://fontawesome.com/start](https://fontawesome.com/start) - all kind of icons
 
