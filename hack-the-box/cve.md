@@ -33,15 +33,11 @@ alexis ALL=(ALL, !root) ALL
 
 How to downgrade a package?
 
-{% hint style="danger" %}
-fill in
-{% endhint %}
+`$ sudo apt install <pkg-name>=<pkg-version-number>`
 
 How to upgrade only sudo pkg?
 
-{% hint style="danger" %}
-fill in
-{% endhint %}
+`$ sudo apt install sudo`
 
 What is `$ sudo apt dist-upgrade` ?
 

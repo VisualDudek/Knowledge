@@ -73,3 +73,11 @@ class Status:
 * `HEAD~3` nanosi trzy ostatnie commity na siebie
 * git submodule vs pip install from git repo?
 
+#### rozliczenie week 42-43
+
+* logging
+* CVE sudo minus 1
+* flask templates
+
+
+
