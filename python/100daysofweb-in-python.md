@@ -6,6 +6,31 @@
 
 [http://flask.palletsprojects.com/en/1.1.x/](http://flask.palletsprojects.com/en/1.1.x/)
 
+### syntax
+
+```text
+Flask
+redirect
+url_for
+render_template
+request.method
+
+@app.route('/login', methods=["GET", "POST"])
+return redirect(url_for("login", user=name))
+
+## env
+FLASK_APP=<app_file>
+FLASK_ENV=development
+
+## Jinja2 templates
+{{ }}
+{% %}
+{% endfor %}
+{% extends "base.html" %}
+{% block <name> %} ... {% endblock %}
+
+```
+
 ### A minimal App
 
 `$ pipenv install pytlint --dev`
@@ -28,6 +53,8 @@ Remember to set up env for flask app:
 
 [gauger.io/fonticon](https://gauger.io/fonticon) - create beautiful favicons with ease
 
+#### Sample code
+
 ```python
 #demo.py
 
@@ -41,7 +68,7 @@ def home():
     
 @app.route('/user/<user>')
 def user(user):
-    return f'Hello {user}!'
+    return f'Hello <h1>{user}!</h1>'
     
 @app.route('/admin')
 def admin():
