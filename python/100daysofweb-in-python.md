@@ -19,6 +19,11 @@
 
 `$ export FALSK_APP=demo.py`
 
+`$ export FLASK_ENV=development`
+
+1. activates the debugger
+2. activates the automatic reloader
+
 {% hint style="info" %}
 `favicon.ico`
 {% endhint %}
