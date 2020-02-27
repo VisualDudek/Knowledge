@@ -22,5 +22,6 @@
 
 ## Docker
 
+* [Exercises](docker/exercises.md)
 * [Docker in Action](docker/docker-in-action.md)
 
