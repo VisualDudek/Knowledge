@@ -121,3 +121,17 @@ docker run --rm \
 
 ![](../.gitbook/assets/sharing-files-beetween-containers.jpg)
 
+Docker volumes are named filesystem trees managed by Docker. They can be implemented with disk storage on the host filesystem, or another more exotic backend such as cloud storage. By default, Docker creates volumes by using the local volume plugin.
+
+Create a volume named `location-example` and display the location of the volume host filesystem tree:
+
+```bash
+docker volume create \ 
+    --driver local \
+    --label example=location \
+    location-example
+docker volume inspect \
+    --format "{{json .Mountpoint}}" \
+    location-example
+```
+
