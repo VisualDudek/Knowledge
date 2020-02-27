@@ -121,7 +121,7 @@ docker run --rm \
 
 ![](../.gitbook/assets/sharing-files-beetween-containers.jpg)
 
-Docker volumes are named filesystem trees managed by Docker. They can be implemented with disk storage on the host filesystem, or another more exotic backend such as cloud storage. By default, Docker creates volumes by using the local volume plugin.
+Docker volumes are named filesystem trees managed by Docker. They can be implemented with disk storage on the host filesystem, or another more exotic backend such as cloud storage. By default, Docker creates volumes by using the **`local`** volume plugin.
 
 Create a volume named `location-example` and display the location of the volume host filesystem tree:
 
@@ -134,4 +134,38 @@ docker volume inspect \
     --format "{{json .Mountpoint}}" \
     location-example
 ```
+
+4.4.2 Using volumes with a NoSQL database
+
+Get started by creating the volume that will store the Cassandra database files. **Add label** to the volume with the key example and the value cassandra.
+
+```bash
+docker volume create \
+    --driver local \
+    --label example=cassandra \
+    cass-shared
+```
+
+Create a new container running Cassandra:
+
+```bash
+docker run -d \
+    --volume cass-shared:/var/lib/cassandra/data \
+    --name cass1 \
+    cassandra:2.2
+```
+
+{% hint style="warning" %}
+Nice separation strategy!
+
+run a Cassandra client tool \(CQLSH\) and connect to your running server:
+{% endhint %}
+
+```bash
+docker run -it --rm \
+    --link cass1:cass \
+    cassandra:2.2 cqlsh cass
+```
+
+
 
