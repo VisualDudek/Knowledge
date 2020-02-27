@@ -167,5 +167,49 @@ docker run -it --rm \
     cassandra:2.2 cqlsh cass
 ```
 
+Inspect Cassandra database from the CQLSH command line:
+
+```bash
+select *
+from system.schema_keyspaces
+where keyspace_name = 'docker_hello_world';
+
+# Create keyspace
+create keyspace docker_hello_world
+with replication = {
+    'class' : 'SimpleStrategy',
+    'replication_factor': 1
+};
+
+# Repeat query
+
+# Leave ans stop current container
+quit
+
+# Stop and remove the Cassandra node
+docker stop cass1
+docker rm -vf cass1
+```
+
+Test recovery of the data:
+
+```bash
+docker run -d \
+    --volume cass-shared:/var/lib/cassandra/data \
+    --name cass2 \
+    cassandra:2.2
+
+docker run -it --rm \
+    --link cass2:cass \
+    cassandra:2.2 \
+    cqlsh cass
+
+select *
+from system.schema_keyspaces
+where keyspace_name = 'docker_hello_world';
+```
+
+### 4.5 Shared mount points and sharing files
+
 
 
