@@ -158,7 +158,7 @@ docker run -d \
 {% hint style="warning" %}
 Nice separation strategy!
 
-run a Cassandra client tool \(CQLSH\) and connect to your running server:
+run a Cassandra client tool \(CQLSH\) from the same image but in another container !!! and connect to your running server:
 {% endhint %}
 
 ```bash
