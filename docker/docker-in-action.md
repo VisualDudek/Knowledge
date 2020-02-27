@@ -23,7 +23,7 @@ echo 'You got to trust me on this, I saved the world'
 
 ## 4. Working with storage and volumes
 
-4.2 Bind mounts
+### 4.2 Bind mounts
 
 Bind mounts are mount points used to remount parts of a filesystem tree onto other location. When working with containers, bind mounts attach a user-specified location on the host filesystem to a specific point in a container file tree.
 
@@ -76,5 +76,48 @@ docker run -d --name diaweb \
   nginx:latest
 ```
 
+By creating the read-only mount, you can prevent any process inside the container from modifying the content of the volume.
 
+{% hint style="info" %}
+PoC:
+
+```text
+docker exec diaweb \
+    sed -i "s/listen 80/listen 8080/" /etc/nginx/conf.d/default.conf
+```
+{% endhint %}
+
+{% hint style="warning" %}
+The first problem with bind mounts is that they tie otherwise portable container description to the filesystem of a specific host.
+
+The next big problem is that they create an opportunity for conflict with other containers. It would be bad idea to start multiple instance of Cassandra that all use the same host location as a bind mount for data storage.
+{% endhint %}
+
+### 4.3 In-memory storage
+
+Most service software and web application use private key files, database password, API key files, or other sensitive config files, and **need upload buffering space**.
+
+{% hint style="info" %}
+This is useful to temporarily store sensitive files that you don’t want to persist in either the host or the container writable layer.
+{% endhint %}
+
+```bash
+docker run --rm \
+    --mount type=tmpfs,dst=/tmp \
+    --entrypoint mount \
+    alpine:latest -v
+```
+
+You can add size limit and change the file mode using options **tmpfs-size** and **tmpfs-mode.**
+
+```bash
+docker run --rm \
+    --mount type=tmpfs,dst=/tmp,tmpfs-size=16k,tmpfs-mode=1770 \
+    --entrypoint mount \
+    alpine:latest -v
+```
+
+### 4.4 Docker Volumes
+
+![](../.gitbook/assets/sharing-files-beetween-containers.jpg)
 
