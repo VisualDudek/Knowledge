@@ -139,11 +139,11 @@ def randomly_greet(name):
 
 ### Decorating Classes
 
-Some commonly used decorators that are even built-ins Python are `@classmethod` `@staticmethod` and `@property` 
+**Decorate the methods of a class**. Some commonly used decorators that are even built-ins Python are `@classmethod` `@staticmethod` and `@property` 
 
 #### Example using built-in class decorators
 
-```bash
+```python
 class Circle:
     def __init__(self, radius):
         self._radius = radius
@@ -196,6 +196,55 @@ class Circle:
         """Value of π, could use math.pi instead though"""
         return 3.1415926535
 ```
+
+**Decorate the whole class.** This is , for example, done in the new `dataclasses` module in Python 3.7
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class PlayingCard:
+    rank: str
+    suit: str = 'abc'
+    
+# This is the same as:
+def __init__(self, rank: str, suit: str = 'abc'):
+```
+
+### Nesting Decorators
+
+```python
+@debug
+@do_twice
+def greet(name):
+    print(f"Hello {name}")
+```
+
+Think about this as the decorators being executed in the order they are listed. In other words, `@debug` calls `@do_twice` which calls `greet()` or `debug(do_twice(greet()))`
+
+### Decorators With Arguments
+
+Sometimes, it's useful to pass arguments to your decorators. For instance, `@do_twice` could be extended to a `@repeat(num_times)` decorator.
+
+```python
+def repeat(num_times):
+    def decorator_repeat(func):
+        @functools.wraps(func)
+        def wrapper_repeat(*args, **kwargs):
+            for _ in range(num_times):
+                value = func(*args, **kwargs)
+            return value
+        return wrapper_repeat
+    return decorator_repeat
+```
+
+all you need is that `repeat(num_times=4)` to return a function object that can act as a decorator!
+
+### Both Please
+
+decorators can be used both with and without arguments. when a decorator uses arguments, you need to add an extra outer function. The challenge is for your code to figure out if the decorator has been called with or without arguments.
+
+ \(...\) hard times \(...\)
 
 ## Exercises
 
