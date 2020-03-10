@@ -11,6 +11,7 @@
 
 ## PYTHON
 
+* [Decorators](python/decorators.md)
 * [100DaysOfWeb in Python](python/100daysofweb-in-python.md)
 * [argparse](python/argparse.md)
 * [unittest](python/unittest.md)
