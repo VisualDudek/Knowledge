@@ -246,6 +246,16 @@ decorators can be used both with and without arguments. when a decorator uses ar
 
  \(...\) hard times \(...\)
 
+### Stateful Decorators
+
+Sometimes, it’s useful to have **a decorator that can keep track of state**. As a simple example, we will create a decorator that counts the number of times a function is called.
+
+we talked about pure functions returning a value based on given arguments. Stateful decorators are quite the opposite, where the return value will depend on the current state, as well as the given arguments.
+
+ Recall that the decorator syntax `@my_decorator` is just an easier way of saying `func = my_decorator(func)`. Therefore, if `my_decorator` is a class, it needs to take `func` as an argument in its `.__init__()` method. Furthermore, the class needs to be [callable](https://docs.python.org/reference/datamodel.html#emulating-callable-objects) so that it can stand in for the decorated function.
+
+ For a class to be callable, you implement the special `.__call__()` method:
+
 ## Exercises
 
 * Show that simple decorator do not inherit original func name and doc string, show solution how to fix it.
