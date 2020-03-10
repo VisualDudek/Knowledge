@@ -52,6 +52,21 @@ def do_twice(func):
 
 ## A Few Real World Examples
 
+### Template
+
+```bash
+import functools
+
+def decorator(func):
+    @functools.wraps(func)
+    def wrapper_decorator(*args, **kwargs):
+        # Do something before
+        value = func(*args, **kwargs)
+        # Do something after
+        return value
+    return wrapper_decorator
+```
+
 ### Timing Functions
 
 ```bash
@@ -118,6 +133,68 @@ def randomly_greet(name):
     greeter, greeter_func = random.choice(list(PLUGINS.items()))
     print(f"Using {greeter!r}")
     return greeter_func(name)
+```
+
+## Fancy Decorators
+
+### Decorating Classes
+
+Some commonly used decorators that are even built-ins Python are `@classmethod` `@staticmethod` and `@property` 
+
+#### Example using built-in class decorators
+
+```bash
+class Circle:
+    def __init__(self, radius):
+        self._radius = radius
+
+    # decorator turns radius method into a "getter" for a read-only
+    #attribute with the same name.
+    @property
+    def radius(self):
+        """Get value of radius"""
+        return self._radius
+
+    # mutable property: it can be set to a different value
+    #However, by defining a setter method, we can do some 
+    #error testing to make sure it's not set to a nonsensical
+    #negative value.
+    @radius.setter
+    def radius(self, value):
+        """Set radius, raise error if negative"""
+        if value >= 0:
+            self._radius = value
+        else:
+            raise ValueError("Radius must be positive")
+
+    # an immutable property, properties without .setter() methods
+    #can't be changed. Even though it is defined as a method, 
+    #it can be retrieved as an attribute without parentheses.
+    @property
+    def area(self):
+        """Calculate area inside circle"""
+        return self.pi() * self.radius**2
+
+    # regular method
+    def cylinder_volume(self, height):
+        """Calculate volume of cylinder with circle as base"""
+        return self.area * height
+
+    # is a class method. It’s not bound to one particular instance 
+    #of Circle. Class methods are often used as factory methods 
+    #that can create specific instances of the class.
+    @classmethod
+    def unit_circle(cls):
+        """Factory method creating a circle with radius 1"""
+        return cls(1)
+
+    # static method. It’s not really dependent on the Circle class, 
+    #except that it is part of its namespace. 
+    #Static methods can be called on either an instance or the class.
+    @staticmethod
+    def pi():
+        """Value of π, could use math.pi instead though"""
+        return 3.1415926535
 ```
 
 ## Exercises
