@@ -1,5 +1,11 @@
 # All in one
 
+## Shallow and Deep Copy
+
+copy.**copy**\(_x_\)
+
+copy.**deepcopy**\(_x\[, memo\]_\)
+
 ## Python Keywords
 
 Only two methods `keyword.iskeyword(s)` and `keyword.kwlist`

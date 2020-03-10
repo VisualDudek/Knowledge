@@ -21,3 +21,9 @@ The objects returned by `dict.keys()` , `dict.values()` and `dict.items()` are _
 
 **pop**\(_key\[, default\]_\)
 
+**copy**\(\) - shallow copy
+
+**fromkeys**\(_iterable\[, value\]_\) - tip: if you need distinct values use a dict comprehension instead.
+
+
+
