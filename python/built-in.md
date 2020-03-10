@@ -28,7 +28,11 @@ import functools
 dir(functools) # show the names in the struct module
 ```
 
+## zip\(\)
 
+**zip**\(_\*iterables_\) -&gt; iterator of tuples
+
+U may want to `dict()` or `list()` iterator
 
 
 
