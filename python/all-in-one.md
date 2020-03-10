@@ -19,3 +19,9 @@ y = 1000
 a == b # True
 ```
 
+## Zen
+
+```python
+import this
+```
+
