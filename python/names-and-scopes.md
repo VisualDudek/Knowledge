@@ -17,5 +17,15 @@ You can reference names in at least two different ways:
 1. dot notation `module.name`
 2. subscription operation on `__dict__` in the form `module.__dict__['name']`
 
-\`\`
+ You can inspect the names and parameters of a function using `.__code__`, which is an attribute that holds information on the function’s internal code.
+
+```python
+def cube(base):
+     result = base ** 3
+     print(f'The cube of {base} is: {result}')
+     
+cube.__code__.co_varnames
+```
+
+ Notice that the names in `builtins` are always loaded into your global Python scope with the special name `__builtins__`, as you can see in the following code: `dir(__builtins__)`
 
