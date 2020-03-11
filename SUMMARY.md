@@ -17,6 +17,7 @@
 * [Built-in Types](python/built-in-types.md)
 * [collections](python/collections.md)
 * [Decorators](python/decorators.md)
+* [Names and Scopes](python/names-and-scopes.md)
 * [100DaysOfWeb in Python](python/100daysofweb-in-python.md)
 * [argparse](python/argparse.md)
 * [unittest](python/unittest.md)
