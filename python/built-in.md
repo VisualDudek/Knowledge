@@ -28,6 +28,12 @@ import functools
 dir(functools) # show the names in the struct module
 ```
 
+## str\(\)
+
+str.**zfill**\(_width_\)
+
+Return a copy of the string left filled with ASCII `0` digits to make a string of length _width_.
+
 ## zip\(\)
 
 **zip**\(_\*iterables_\) -&gt; iterator of tuples
