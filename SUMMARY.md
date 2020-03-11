@@ -11,6 +11,7 @@
 
 ## PYTHON
 
+* [All Exercises](python/all-exercises.md)
 * [All in one](python/all-in-one.md)
 * [Built-in](python/built-in.md)
 * [Built-in Types](python/built-in-types.md)
