@@ -25,5 +25,5 @@ The objects returned by `dict.keys()` , `dict.values()` and `dict.items()` are _
 
 **fromkeys**\(_iterable\[, value\]_\) - tip: if you need distinct values use a dict comprehension instead.
 
-
+**dict comprehension** - `{x: x**2 for x in (2, 4, 6)}`
 
