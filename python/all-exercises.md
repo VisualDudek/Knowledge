@@ -13,5 +13,7 @@
 ## collections
 
 * show how defaultdict avoid raising `KeyErorr`
-* \`\`
+* create dict where key is Python keyword and value is len of key
+
+
 
