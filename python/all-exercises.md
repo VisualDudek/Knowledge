@@ -10,3 +10,8 @@
 * create dict using zip and iterables
 * create dict only keys with same value
 
+## collections
+
+* show how defaultdict avoid raising `KeyErorr`
+* \`\`
+
