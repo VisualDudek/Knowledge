@@ -140,3 +140,21 @@ current_mean(12) # 12.333333333333334
 
  The closure that you create in the above code remembers the state information of `sample` between calls of `current_mean`. 
 
+Better way to optimize memory:
+
+```python
+def mean():
+    total = 0
+    length = 0
+    def _mean(number):
+        nonlocal total, length # <- if not than total will be local
+        total += number
+        length += 1
+        return total / length
+    return _mean
+```
+
+{% hint style="info" %}
+If you do not make `total, length` nonlocal than assignment operator will create local vars.
+{% endhint %}
+
