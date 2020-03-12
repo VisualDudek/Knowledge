@@ -2,7 +2,7 @@
 
 ## OrderedDict
 
-remembers the order entries were added
+remembers the order entries were added, OrderedDict maintains the order of insertion.
 
 ```python
 d = OrderedDict.fromkeys('abcde')

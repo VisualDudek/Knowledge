@@ -16,6 +16,7 @@
 * [Built-in](python/built-in.md)
 * [Built-in Types](python/built-in-types.md)
 * [collections](python/collections.md)
+* [Closures](python/closures.md)
 * [Decorators](python/decorators.md)
 * [Names and Scopes](python/names-and-scopes.md)
 * [100DaysOfWeb in Python](python/100daysofweb-in-python.md)

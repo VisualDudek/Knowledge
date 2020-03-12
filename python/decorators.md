@@ -4,6 +4,8 @@ description: 'based on: https://realpython.com/primer-on-python-decorators/#furt
 
 # Decorators
 
+* Decorators are implemented using closures
+
 ## Simple Decorators
 
 Use decorators in a simpler way with @ symbol, sometimes called the "pie" syntax.
