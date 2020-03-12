@@ -18,5 +18,12 @@
 * show how defaultdict avoid raising `KeyError`
 * create dict where key is Python keyword and value is len of key
 
+## Closures
+
+* create inner function with nonlocal vars, show local and nonlocal vars, create closure
+  * show what name closure inherits
+  * explain free var term and etymology of Closure
+* create closure tat calculate mean, show `co_freevars`
+
 
 
