@@ -1,5 +1,9 @@
 # Closures
 
+## Based on
+
+* Medium [link](https://towardsdatascience.com/closures-and-decorators-in-python-2551abbc6eb6)
+
 nonlocal scope - When a variable is assigned in an enclosing function, it is nonlocal to its nested functions. A nonlocal variable can be accessed by the function in which it was defined and all its nested functions.
 
 ```python
@@ -82,7 +86,57 @@ h = f(a) # Closure, U are binding free vars
 h(b) 
 ```
 
- Python can keep track of the free variables for each function. We can simply use `__code__.co_freevars` attribute to see which free variables are captured by the inner function. For example for the closure defined in Listing 9 we can write: `h.__code__.co_freevars`
+ Python can keep track of the free variables for each function. We can simply use `__code__.co_freevars` attribute to see which free variables are captured by the inner function. For example for the closure  we can write: `h.__code__.co_freevars`
+
+In addition U can check `h.__closure__` and`h.__closure__[0].cell_contents`
+
+{% hint style="info" %}
+check the `h.__name__` to get idea what scope h is.
+{% endhint %}
 
  It is important to note that to have a closure, the inner function should _access_ the nonlocal variables of the outer function. When no free variable is accessed inside the inner function, it does not capture them since it is already a closed term and does not need to be closed.
+
+**sum up**: To define a closure we need an inner function that:
+
+* It should be returned by the outer function.
+* it should capture some of the nonlocal variables of the outer function. This can be done by accessing those variables, or defining them as a nonlocal variable or having a nested closure that needs to capture them.
+
+This is similar to what a class does in object-oriented programming.
+
+```python
+class NthRoot:
+    def __init__(self, n=2):
+        self.n = n
+    def set_root(n):
+        self.n = n
+    def calc(self, x):
+        return x ** (1/self.n)
+    
+thirdRoot = NthRoot(3)
+print(thirdRoot.calc(27))  # Output is 3
+def nth_root(n=2):
+    def calc(x):
+        return x ** (1/n)
+    return calc
+third_root = nth_root(3)
+print(third_root(27))  # Output is 3
+```
+
+## Examples
+
+```python
+def mean():
+    sample = []
+    def _mean(number):
+        sample.append(number)
+        return sum(sample) / len(sample)
+    return _mean
+
+current_mean = mean()
+current_mean(10) # 10.0
+current_mean(15) # 12.5
+current_mean(12) # 12.333333333333334
+```
+
+ The closure that you create in the above code remembers the state information of `sample` between calls of `current_mean`. 
 
