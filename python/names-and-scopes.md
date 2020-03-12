@@ -1,5 +1,11 @@
 # Names and Scopes
 
+## Based on
+
+Real Python Scope & the LEGB Rule [link](https://realpython.com/python-scope-legb-rule/#using-enclosing-scopes-as-closures)
+
+## Names and Scopes
+
  the **scope** of a name defines the area of a program in which you can unambiguously access that name, such as variables, functions, objects, and so on. A name will only be visible to and accessible by the code in its scope.
 
  a Python scope determines where in your program a name is visible. Python scopes are implemented as _dictionaries_ that map names to objects. These _dictionaries_ are commonly called **namespaces**. These are the concrete mechanisms that Python uses to store names. They’re stored in a special attribute called `__dict__`.

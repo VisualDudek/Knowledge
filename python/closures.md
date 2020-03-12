@@ -4,6 +4,8 @@
 
 * Medium [link](https://towardsdatascience.com/closures-and-decorators-in-python-2551abbc6eb6)
 
+## Closure
+
 nonlocal scope - When a variable is assigned in an enclosing function, it is nonlocal to its nested functions. A nonlocal variable can be accessed by the function in which it was defined and all its nested functions.
 
 ```python
@@ -121,6 +123,12 @@ def nth_root(n=2):
 third_root = nth_root(3)
 print(third_root(27))  # Output is 3
 ```
+
+## Currying
+
+ In mathematics, currying means transforming a function with multiple parameters into a sequence of nested unary functions. As mentioned before a unary function is a function that only takes one argument. So for example, if we have a function _f\(x, y, z\)_. Currying transforms it to _g\(x\)\(y\)\(z\)_ = _\(\(g\(x\)\)\(y\)\)\(z\)_.
+
+TBA
 
 ## Examples
 
