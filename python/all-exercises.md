@@ -5,6 +5,7 @@
 * show that shallow copy of list has same reference -&gt; changing one element in copy will affect original
   * make deep copy and show diff id numbers
   * show names in copy module scope
+* count backwards using range and reversed.
 
 ## Built-in Types
 
@@ -24,6 +25,11 @@
   * show what name closure inherits
   * explain free var term and etymology of Closure
 * create closure tat calculate mean, show `co_freevars`
+
+## f-String
+
+* convert int o hex and binary using f-String
+* centered, centered and fill
 
 ## Modules
 

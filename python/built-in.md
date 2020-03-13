@@ -28,6 +28,12 @@ import functools
 dir(functools) # show the names in the struct module
 ```
 
+## reversed\(\)
+
+**reversed**\(_seq_\)
+
+ Return a reverse [iterator](https://docs.python.org/3/glossary.html#term-iterator). _seq_ must be an object which has a [`__reversed__()`](https://docs.python.org/3/reference/datamodel.html#object.__reversed__) method or supports the sequence protocol \(the [`__len__()`](https://docs.python.org/3/reference/datamodel.html#object.__len__) method and the [`__getitem__()`](https://docs.python.org/3/reference/datamodel.html#object.__getitem__) method with integer arguments starting at `0`\).
+
 ## str\(\)
 
 str.**zfill**\(_width_\)
