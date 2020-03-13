@@ -34,6 +34,8 @@ str.**zfill**\(_width_\)
 
 Return a copy of the string left filled with ASCII `0` digits to make a string of length _width_.
 
+str.**center**\(_width_\[, _fillchar_\]\)
+
 ## zip\(\)
 
 **zip**\(_\*iterables_\) -&gt; iterator of tuples
