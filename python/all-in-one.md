@@ -42,7 +42,7 @@ The concatenation of the `ascii_lowercase` and `ascii_uppercase`
 
 ## textwrap Module
 
-textwrap.**wrap**\(_text_, _width=70_, _\*\*kwargs_\)
+textwrap.**wrap**\(_text_, _width=70_, _\*\*kwargs_\) -&gt; _list_
 
 ## Zen
 
