@@ -25,5 +25,7 @@
   * explain free var term and etymology of Closure
 * create closure tat calculate mean, show `co_freevars`
 
+## Modules
 
+* Print upper and lowercase letters.
 

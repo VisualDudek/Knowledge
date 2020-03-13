@@ -25,6 +25,12 @@ y = 1000
 a == b # True
 ```
 
+## String Module
+
+string.ascii\_letters
+
+The concatenation of the `ascii_lowercase` and `ascii_uppercase` 
+
 ## Zen
 
 ```python
