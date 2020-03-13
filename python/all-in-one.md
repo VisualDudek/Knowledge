@@ -25,11 +25,15 @@ y = 1000
 a == b # True
 ```
 
-## String Module
+## string Module
 
-string.ascii\_letters
+string.**ascii\_letters**
 
 The concatenation of the `ascii_lowercase` and `ascii_uppercase` 
+
+## textwrap Module
+
+textwrap.wrap\(_text_, _width=70_, _\*\*kwargs_\)
 
 ## Zen
 

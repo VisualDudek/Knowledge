@@ -22,6 +22,7 @@
 * [100DaysOfWeb in Python](python/100daysofweb-in-python.md)
 * [argparse](python/argparse.md)
 * [unittest](python/unittest.md)
+* [re](python/re.md)
 * [@classmethod](python/classmethod.md)
 
 ## AWS
