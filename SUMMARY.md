@@ -16,6 +16,7 @@
 * [Built-in](python/built-in.md)
 * [Built-in Types](python/built-in-types.md)
 * [collections](python/collections.md)
+* [itertools](python/itertools.md)
 * [Closures](python/closures.md)
 * [Decorators](python/decorators.md)
 * [Names and Scopes](python/names-and-scopes.md)
