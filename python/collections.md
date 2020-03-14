@@ -21,3 +21,7 @@ dict subclass that calls a factory function to supply missing values, Usually a 
 
 ## Counter
 
+counter.**most\_common**\(\[_n_\]\) -&gt; list
+
+Elements with e**qual counts are ordered in the order first encountered.**
+
