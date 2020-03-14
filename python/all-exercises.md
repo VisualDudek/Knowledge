@@ -31,6 +31,10 @@
 * convert int o hex and binary using f-String
 * centered, centered and fill
 
+## itertools
+
+* generate indexes pairs for substring 
+
 ## Modules
 
 * Print upper and lowercase letters.
