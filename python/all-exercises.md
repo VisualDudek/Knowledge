@@ -39,3 +39,9 @@
 
 * Print upper and lowercase letters.
 
+## Common Errors
+
+* `.split` insead of `.split()`
+
+\`\`
+
