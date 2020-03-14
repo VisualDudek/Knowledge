@@ -7,6 +7,7 @@
   * show names in copy module scope
 * count backwards using range and reversed.
 * input string of numerics convert to int using map
+* sort items \(x,y\) based on y using lambda
 
 ## Built-in Types
 
