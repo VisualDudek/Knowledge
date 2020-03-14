@@ -6,6 +6,7 @@
   * make deep copy and show diff id numbers
   * show names in copy module scope
 * count backwards using range and reversed.
+* input string of numerics convert to int using map
 
 ## Built-in Types
 
