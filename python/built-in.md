@@ -28,6 +28,10 @@ import functools
 dir(functools) # show the names in the struct module
 ```
 
+## input\(\)
+
+**input**\(\[_prompt_\]\)
+
 ## reversed\(\)
 
 **reversed**\(_seq_\)
