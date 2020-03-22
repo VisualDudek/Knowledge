@@ -15,6 +15,7 @@
 * create dict only keys with same value
 * handle `KeyError` via exception on missing key in dict
   * via dict method
+* do defaultdict exercises from collections section
 
 ## collections
 
