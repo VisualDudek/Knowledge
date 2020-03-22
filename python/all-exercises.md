@@ -20,7 +20,7 @@
 ## collections
 
 * show how defaultdict avoid raising `KeyError`
-* create dict where key is Python keyword and value is len of key
+* init defaultdict and create dict where key is Python keyword and value is len of key
 
 ## Closures
 
