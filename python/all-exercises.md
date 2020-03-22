@@ -20,7 +20,8 @@
 ## collections
 
 * show how defaultdict avoid raising `KeyError`
-* init defaultdict and create dict where key is Python keyword and value is len of key
+* generate tuple of \(x, y\) where x is A, B or C and y is random.choice of lower ascii letters next create dictionary with x-keys and y list of values
+* init defaultdict and create dict where key is Python keyword and value is len of key, do not overkill via `default_factory`
 
 ## Closures
 
