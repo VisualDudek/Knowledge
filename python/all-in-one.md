@@ -46,6 +46,30 @@ The concatenation of the `ascii_lowercase` and `ascii_uppercase`
 
 textwrap.**wrap**\(_text_, _width=70_, _\*\*kwargs_\) -&gt; _list_
 
+### Ternary operator
+
+```python
+# <expr1> if <conditional_expr> else <expr2>
+
+age = 12
+s = 'minor' if age < 21 else 'adult'
+
+# Python program to demonstrate ternary operator 
+a, b = 10, 20
+  
+# Use tuple for selecting an item 
+print( (b, a) [a < b] ) 
+  
+# Use Dictionary for selecting an item 
+print({True: a, False: b} [a < b]) 
+  
+# lamda is more efficient than above two methods 
+# because in lambda  we are assure that 
+# only one expression will be evaluated unlike in 
+# tuple and Dictionary 
+print((lambda: b, lambda: a)[a < b]()) 
+```
+
 ## Zen
 
 ```python
