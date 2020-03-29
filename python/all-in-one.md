@@ -46,7 +46,7 @@ The concatenation of the `ascii_lowercase` and `ascii_uppercase`
 
 textwrap.**wrap**\(_text_, _width=70_, _\*\*kwargs_\) -&gt; _list_
 
-### Ternary operator
+## Ternary operator
 
 ```python
 # <expr1> if <conditional_expr> else <expr2>
