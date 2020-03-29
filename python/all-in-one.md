@@ -48,6 +48,10 @@ textwrap.**wrap**\(_text_, _width=70_, _\*\*kwargs_\) -&gt; _list_
 
 ## Ternary operator
 
+keep in mind that expr1 mentioned below can be `assignment` or `return`
+
+I really like tuple use case! :\)
+
 ```python
 # <expr1> if <conditional_expr> else <expr2>
 
