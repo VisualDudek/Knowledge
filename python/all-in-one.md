@@ -1,5 +1,9 @@
 # All in one
 
+## hashlib
+
+`hashlib.sha256(b'asdf').hexdigest()`
+
 ## return None; usecase dis lib
 
 each func in python has implicite return None at the end
