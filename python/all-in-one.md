@@ -2,7 +2,7 @@
 
 ## dict\(\).get as a Alternative to if/elif/else 
 
-switch case
+switch case, prototypy musza byc te same np, ta sama liczba argumentow.
 
 ```python
 class foo():
