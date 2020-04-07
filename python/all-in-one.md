@@ -1,5 +1,18 @@
 # All in one
 
+## return None; usecase dis lib
+
+```python
+import dis
+
+def x():
+    pass
+    
+>>> dis.dis(x)
+0 LOAD_CONST    (None)
+2 RETURN_VALUE
+```
+
 ## path of script
 
 ```python
