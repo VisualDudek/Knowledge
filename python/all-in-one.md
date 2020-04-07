@@ -1,5 +1,13 @@
 # All in one
 
+## path of script
+
+```python
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+```
+
 ## dict\(\).get as a Alternative to if/elif/else 
 
 switch case, prototypy musza byc te same np, ta sama liczba argumentow.
