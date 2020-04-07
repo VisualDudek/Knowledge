@@ -2,6 +2,8 @@
 
 ## return None; usecase dis lib
 
+each func in python has implicite return None at the end
+
 ```python
 import dis
 
