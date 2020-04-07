@@ -1,5 +1,38 @@
 # All in one
 
+## dict\(\).get as a Alternative to if/elif/else 
+
+```python
+class foo():
+    def __init__(self):
+        choice = input('Choose number:')
+        {
+            '1': self.a,
+            '2': self.b,
+        }.get(choice, self.default)()
+
+        # ^^^--- similar to:
+        if choice == '1':
+            self.a()
+        elif choice == '2':
+            self.b()
+        else:
+            self.default()
+
+    def a(self):
+        print(f'a func')
+
+    def b(self):
+        print(f'b func')
+
+    def default(self):
+        print(f'default')
+
+    
+if __name__ == "__main__":
+    test = foo()
+```
+
 ## Shallow and Deep Copy
 
 copy.**copy**\(_x_\)
