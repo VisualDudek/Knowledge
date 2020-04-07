@@ -2,6 +2,8 @@
 
 ## dict\(\).get as a Alternative to if/elif/else 
 
+switch case
+
 ```python
 class foo():
     def __init__(self):
