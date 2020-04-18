@@ -23,5 +23,27 @@ $ sudo systemctl [disable/enable] ssh
 
 other apps: `sftp` and `rsync`
 
+```bash
+# local -> remote
+$ scp local.txt remoteuser@remoteserver:/remote/folder/
 
+# local <- remote
+$ scp remoteuser@remoteserver:/remote/folder/remote.txt local.txt
+
+# copy multiple files from local to remote
+$ scp myfile1.txt myfile2.txt remoteuser@remoteserver:/remote/folder/
+
+# copy all files from local to remote
+$ scp * remoteuser@remoteserver:/remote/folder/
+
+# copy all files and folders recursively from local to remote
+$ scp -r * remoteuser@remoteserver:/remote/folder/
+```
+
+### Adding SSH key to the ssh-agent
+
+```bash
+# keep ssh keys in ~/.ssh
+$ ssh-add [file]
+```
 
