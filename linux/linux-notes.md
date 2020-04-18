@@ -19,3 +19,9 @@ $ sudo systemctl [stop/start] ssh
 $ sudo systemctl [disable/enable] ssh
 ```
 
+### copy files via SSH scp
+
+other apps: `sftp` and `rsync`
+
+
+
