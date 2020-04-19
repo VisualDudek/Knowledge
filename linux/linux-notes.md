@@ -47,3 +47,23 @@ $ scp -r * remoteuser@remoteserver:/remote/folder/
 $ ssh-add [file]
 ```
 
+### Ranger
+
+```bash
+# MAIN BINDINGS
+gn        Create a new tab
+gt, gT    Go to the next or previous tab. You can also use TAB and SHITF+TAB
+gc        Close the current tab 
+```
+
+* show shell output and exit status, use `:shell -w [cmd]` to view the output until you press enter.
+* ^^^--- U can rebind `!` to `map ! console shell -w%space`
+
+### Pomodoro GNOME
+
+{% hint style="info" %}
+[https://gnomepomodoro.org/](https://gnomepomodoro.org/)
+{% endhint %}
+
+
+
