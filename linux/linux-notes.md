@@ -84,3 +84,18 @@ $ timedatectl list-timezones
 $ sudo timedatectl set-timezone your_time_zone
 ```
 
+### TMUX
+
+shortcuts: [link](https://tmuxcheatsheet.com/)
+
+```bash
+# Window: Ctrl+b 
+c - Create window
+, - rename current window
+& - close current window
+p/n - previus/next window
+0 .. 9 - select window by number
+
+
+```
+
