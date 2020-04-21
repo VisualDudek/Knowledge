@@ -40,6 +40,16 @@ $ scp * remoteuser@remoteserver:/remote/folder/
 $ scp -r * remoteuser@remoteserver:/remote/folder/
 ```
 
+### CRON
+
+Set a cron every certain hours between certain hours
+
+```bash
+0 8-17/2 * * * /path/command
+# or
+0 8,10,12,14,16 * * * /path/command
+```
+
 ### Adding SSH key to the ssh-agent
 
 ```bash
