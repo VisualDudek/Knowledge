@@ -75,5 +75,12 @@ gc        Close the current tab
 [https://gnomepomodoro.org/](https://gnomepomodoro.org/)
 {% endhint %}
 
+### Timezone
 
+```bash
+$ timedatectl
+$ cat /etc/timezone
+$ timedatectl list-timezones
+$ sudo timedatectl set-timezone your_time_zone
+```
 
