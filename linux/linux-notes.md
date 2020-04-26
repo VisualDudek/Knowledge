@@ -6,6 +6,8 @@
 
 ### Enable ssh server
 
+needed for `scp`
+
 ```bash
 $ sudo apt update
 $ sudo apt install openssh-server
