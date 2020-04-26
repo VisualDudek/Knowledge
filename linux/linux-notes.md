@@ -91,6 +91,14 @@ $ timedatectl list-timezones
 $ sudo timedatectl set-timezone your_time_zone
 ```
 
+### unrar
+
+```bash
+apt install unrar
+unrar l file.rar - list files
+unrar x rile.rar - open/extract with their original directory structure
+```
+
 ### htop
 
 `-d --delay=DELAY` Delay between updates, in tenths of seconds
