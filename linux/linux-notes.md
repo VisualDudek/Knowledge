@@ -84,6 +84,10 @@ $ timedatectl list-timezones
 $ sudo timedatectl set-timezone your_time_zone
 ```
 
+### htop
+
+`-d --delay=DELAY` Delay between updates, in tenths of seconds
+
 ### TMUX
 
 shortcuts: [link](https://tmuxcheatsheet.com/)
