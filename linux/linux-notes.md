@@ -103,6 +103,10 @@ unrar x rile.rar - open/extract with their original directory structure
 
 `-d --delay=DELAY` Delay between updates, in tenths of seconds
 
+### python http.server
+
+`python3 -m http.server`
+
 ### TMUX
 
 shortcuts: [link](https://tmuxcheatsheet.com/)
