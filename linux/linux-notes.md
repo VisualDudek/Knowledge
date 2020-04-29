@@ -107,6 +107,15 @@ unrar x rile.rar - open/extract with their original directory structure
 
 `python3 -m http.server`
 
+### GNOME prevent from Windows grouping
+
+1. open `dconf-editor`
+2. go to `org/gnome/desktop/wm/keybindings`
+3. move the value `<Alt>Tab` from `switch-application` to `switch-windows`
+4. if using X11, press `<Alt>F2` then type `r` to restart Gnome
+
+{% embed url="https://superuser.com/questions/394376/how-to-prevent-gnome-shells-alttab-from-grouping-windows-from-similar-apps" %}
+
 ### TMUX
 
 shortcuts: [link](https://tmuxcheatsheet.com/)

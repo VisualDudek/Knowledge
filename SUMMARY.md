@@ -5,6 +5,11 @@
 * [Moleskin](moleskin.md)
 * [Korepetycje](korepetycje.md)
 
+## LINUX
+
+* [VIM](linux/vim.md)
+* [Linux-notes](linux/linux-notes.md)
+
 ## HACK THE BOX
 
 * [CVE](hack-the-box/cve.md)
@@ -34,9 +39,4 @@
 
 * [Exercises](docker/exercises.md)
 * [Docker in Action](docker/docker-in-action.md)
-
-## LINUX
-
-* [VIM](linux/vim.md)
-* [Linux-notes](linux/linux-notes.md)
 
