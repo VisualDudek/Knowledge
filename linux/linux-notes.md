@@ -57,6 +57,17 @@ Set a cron every certain hours between certain hours
 0 8,10,12,14,16 * * * /path/command
 ```
 
+### ssh manually add keys
+
+manually add ssh keys for key-authentication
+
+```bash
+ssh-keygen -t rsa
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/name.key -C "Comment"
+# copy key.pub to ~/.ssh/authorized_keys
+# send key to remote user 
+```
+
 ### ssh Adding SSH key to the ssh-agent
 
 ```bash
