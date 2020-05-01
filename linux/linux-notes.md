@@ -57,7 +57,7 @@ Set a cron every certain hours between certain hours
 0 8,10,12,14,16 * * * /path/command
 ```
 
-### Adding SSH key to the ssh-agent
+### ssh Adding SSH key to the ssh-agent
 
 ```bash
 # keep ssh keys in ~/.ssh
