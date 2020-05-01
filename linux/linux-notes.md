@@ -127,6 +127,8 @@ c - Create window
 & - close current window
 p/n - previus/next window
 0 .. 9 - select window by number
+" - split panes horizontally
+% - verically
 
 
 ```
