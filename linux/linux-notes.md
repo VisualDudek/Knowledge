@@ -57,6 +57,32 @@ Set a cron every certain hours between certain hours
 0 8,10,12,14,16 * * * /path/command
 ```
 
+### fzf
+
+```bash
+CTRL-T    Paste the selected files and dirs onto the command-line
+CTRL-R    Paste the selected command from history onto the command-line
+ALT-C     cd into the selected dir
+
+#files under current dir
+vim **<TAB>
+
+#Host nanes
+ssh **<TAB>
+
+#Env
+unset/export/unalias **<TAB>
+
+# Preview window, when --preview option is set, fzf automatically starts an
+#+external process with the current line as the arg
+fzf --previw 'cat {}'
+
+#see man page
+man fzf
+```
+
+wow usecase for Docker [https://github.com/junegunn/fzf/wiki/examples\#docker](https://github.com/junegunn/fzf/wiki/examples#docker)
+
 ### ssh manually add keys
 
 manually add ssh keys for key-authentication
