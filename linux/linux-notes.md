@@ -83,6 +83,11 @@ man fzf
 
 wow usecase for Docker [https://github.com/junegunn/fzf/wiki/examples\#docker](https://github.com/junegunn/fzf/wiki/examples#docker)
 
+Links:
+
+* Luke Smith @[yt](https://www.youtube.com/watch?v=vt33Hp-4RXg)
+* another yt tutorial [link](https://www.youtube.com/watch?v=1a5NiMhqAR0)
+
 ### ssh manually add keys
 
 manually add ssh keys for key-authentication
