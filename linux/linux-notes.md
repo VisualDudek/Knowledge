@@ -149,6 +149,12 @@ unrar x rile.rar - open/extract with their original directory structure
 
 `python3 -m http.server`
 
+### PAM
+
+Link
+
+* An Easy Guide to Linux-PAM [link](https://dzone.com/articles/linux-pam-easy-guide)
+
 ### GNOME prevent from Windows grouping
 
 1. open `dconf-editor`
