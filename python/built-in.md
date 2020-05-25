@@ -16,6 +16,8 @@ id(a) == id(b) # still True
 # Be carefull with mutable objects
 ```
 
+`==` operator compares the values, while the `is` operator compares the identities \(i.e. memory addresses\)
+
 ## dir\(\)
 
 **dir**\(\[_object_\]\)
