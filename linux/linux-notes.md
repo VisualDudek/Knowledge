@@ -179,6 +179,8 @@ p/n - previus/next window
 % - verically
 x - kill current pane
 
+z - zoom pane
+
 ```
 
 ### SSHFS
