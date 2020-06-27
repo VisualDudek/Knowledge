@@ -9,6 +9,7 @@
 
 * [VIM](linux/vim.md)
 * [Linux-notes](linux/linux-notes.md)
+* [Zabbix](linux/zabbix.md)
 * [Git && GitHub](linux/git-and-and-github.md)
 
 ## HACK THE BOX
