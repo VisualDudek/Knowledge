@@ -92,6 +92,22 @@ Links:
 * Luke Smith @[yt](https://www.youtube.com/watch?v=vt33Hp-4RXg)
 * another yt tutorial [link](https://www.youtube.com/watch?v=1a5NiMhqAR0)
 
+### setUID
+
+Setuid is a Linux file permission setting that allows a user to execute that file or program with the permission of the owner of that file. This is primarily used to elevate the privileges of the current user. If a file is “setuid” and is owned by the user “root” then a user that has the ability to execute that program will do so as the user root instead of themselves.
+
+{% hint style="danger" %}
+Linux ignores the setuid bit on all interpreted executables \(i.e. executables starting with a `#!` line\)
+{% endhint %}
+
+### ssh
+
+#### Disable creating .ssh folder during connection
+
+Use `-o` flag with `StrictHostKeyChecking=no` and `UserKnownHostsFile=/dev/null` 
+
+Not sure about the second one ^^^
+
 ### ssh manually add keys
 
 manually add ssh keys for key-authentication
