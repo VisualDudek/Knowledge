@@ -25,7 +25,9 @@ Restart Zabbix agent: `$ sudo systemctl zabbix-agent`
 
 When U test it from Zabbix Server keep in mind that it will be executed via zabbix user and working dir will be different than `/etc/zabbix` for me it was `/`
 
+[Link Zabbix Doc 5.0 User Parameters](https://www.zabbix.com/documentation/current/manual/config/items/userparameters)
 
+[Link Extending Zabbix agents](https://www.zabbix.com/documentation/current/manual/config/items/userparameters/extending_agent)
 
 ### test2
 
