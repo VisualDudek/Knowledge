@@ -203,6 +203,13 @@ z - zoom pane
 
 ```
 
+```text
+# Session managment
+tmux ls
+tmux new -s [session-name]
+tmux rename-session [-t session-name] [new-session-name]
+```
+
 ### SSHFS
 
 mount remote directories over a Secure Shell connection
