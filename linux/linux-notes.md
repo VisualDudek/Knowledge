@@ -194,6 +194,12 @@ unrar x rile.rar - open/extract with their original directory structure
 
 `-d --delay=DELAY` Delay between updates, in tenths of seconds
 
+### fping
+
+fping is meant to be used in scripts, so its output is designed to be easy to parse
+
+RTT = Round Trip Time
+
 ### python http.server
 
 `python3 -m http.server`
