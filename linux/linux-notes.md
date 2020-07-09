@@ -87,6 +87,12 @@ Set a cron every certain hours between certain hours
 0 8,10,12,14,16 * * * /path/command
 ```
 
+### iptables
+
+`-L, --list [chain]` List all rules in the selected chain.
+
+`-S, --list-rules [chain]` Print all rules in the selected chain. If no chain is selected, all chains are printed like iptables-save.
+
 ### ls
 
 `-1`   list one file per line. Useful with `wc -l`
