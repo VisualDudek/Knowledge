@@ -14,6 +14,7 @@
 Double-check:
 
 * need space around \[ \] e.g. `[ $? -ne 0]` will produce error due to no inner space at the end of brackets.
+* `set -x` Print commands and their arguments as they are executed.
 
 #### Script example
 
@@ -89,6 +90,10 @@ Set a cron every certain hours between certain hours
 ### ls
 
 `-1`   list one file per line. Useful with `wc -l`
+
+### man
+
+`-k [cmd]` Search the short descriptions and manual page names for the keyword `cmd` as regular expression. Print out any matches. Equivalent to `appropos [cmd]`
 
 ### fzf
 
