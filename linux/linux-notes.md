@@ -9,6 +9,35 @@
 * named piped `$mkfifo`
 * `rsync`
 
+### BASH
+
+Double-check:
+
+* need space around \[ \] e.g. `[ $? -ne 0]` will produce error
+
+#### Script example
+
+```bash
+#!/bin/bash
+set -x
+
+DATE=$(date)
+
+fping 172.21.100.2
+
+if [ $? -ne 0 ]; then
+	echo $DATE restarting ipsec >> /var/log/marcin.ipsec.log
+	/usr/sbin/ipsec stop
+	sleep 5
+	/usr/sbin/ipsec start
+	sleep 5
+else
+	echo $DATE is alive >> /var/log/marcin.ipsec.log
+fi
+```
+
+
+
 ### Enable ssh server
 
 needed for `scp`
