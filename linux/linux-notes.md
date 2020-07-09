@@ -170,6 +170,10 @@ $ ssh-add [file]
 
 `-D,  --list-interfaces` Print the list of the network interfaces available on the system and on which tcpdump can capture packets.
 
+#### tcpdump-notes
+
+* `n packets dropped by kernel` due to a lack of buffer space, You can increase the buffer size with `-B, --buffer-size` e.g. `$ tcpdump -B 4096 ...` the number is in kilobytes. OR better way is to apply better filter.
+
 ### Ranger
 
 ```bash
