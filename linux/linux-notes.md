@@ -13,7 +13,7 @@
 
 Double-check:
 
-* need space around \[ \] e.g. `[ $? -ne 0]` will produce error
+* need space around \[ \] e.g. `[ $? -ne 0]` will produce error due to no inner space at the end of brackets.
 
 #### Script example
 
