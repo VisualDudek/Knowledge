@@ -166,6 +166,10 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/name.key -C "Comment"
 $ ssh-add [file]
 ```
 
+### tar
+
+
+
 ### tcpdump
 
 `-D,  --list-interfaces` Print the list of the network interfaces available on the system and on which tcpdump can capture packets.
