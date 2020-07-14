@@ -87,6 +87,10 @@ Set a cron every certain hours between certain hours
 0 8,10,12,14,16 * * * /path/command
 ```
 
+### htop
+
+`H` hide/show user process threads, will be colored in green OR not, enable tree to see forks/clone
+
 ### iptables
 
 `-L, --list [chain]` List all rules in the selected chain.
