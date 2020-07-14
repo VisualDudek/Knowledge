@@ -189,6 +189,10 @@ $ ssh-add [file]
 gn        Create a new tab
 gt, gT    Go to the next or previous tab. You can also use TAB and SHITF+TAB
 gc        Close the current tab 
+
+# How to display the size of all selected multiple dirs in current view?
+v -  selects all items in current view.
+So `vdcv` will show you sizes of all dirs.
 ```
 
 * show shell output and exit status, use `:shell -w [cmd]` to view the output until you press enter.
