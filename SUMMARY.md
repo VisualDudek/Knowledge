@@ -21,6 +21,7 @@
 * [All Exercises](python/all-exercises.md)
 * [All in one](python/all-in-one.md)
 * [Built-in](python/built-in.md)
+* [Standard Library](python/standard-library.md)
 * [Built-in Types](python/built-in-types.md)
 * [collections](python/collections.md)
 * [itertools](python/itertools.md)
