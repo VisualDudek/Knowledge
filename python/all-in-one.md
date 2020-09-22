@@ -88,6 +88,18 @@ import keyword
 print(keyword.kwlist)
 ```
 
+## pyenv
+
+```text
+pyenv versions    # List all Python versions available to pyenv
+pyenv install --list     # To create a virtual env, you need first to make sure
+#that you have a suitable interpreter installed
+
+pyenv shell 3.8.0    # Set the shell-specific Pyhon version
+pyenv virtualenv 3.8.0 my-data-project    # Create virtual env
+pyenv local my-data-project    # Set virtual env for this dir and auto-load
+```
+
 ## Underscores
 
 **Separating Digits of Number**
