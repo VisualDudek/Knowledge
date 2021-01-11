@@ -1,8 +1,6 @@
 # Table of contents
 
 * [Python](README.md)
-* [How to use GitBook](how-to-use-gitbook.md)
-* [Moleskin](moleskin.md)
 * [Korepetycje](korepetycje.md)
 
 ## LINUX
