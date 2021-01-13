@@ -12,6 +12,8 @@
 
 `git commit --amend` add more changes to the last commit by staging before exec `--amend`
 
+`-a` is not `--amend` first automatically "add" changes from all known files.
+
 if you want to edit older commit msg:
 
 ```text
