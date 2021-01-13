@@ -10,7 +10,7 @@
 
 ### Edit last commit msg
 
-`git commit --amend` 
+`git commit --amend` add more changes to the last commit by staging before exec `--amend`
 
 if you want to edit older commit msg:
 
