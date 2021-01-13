@@ -32,7 +32,7 @@ git push --force <brand-name>
 
 ### Undo uncommitted changes
 
-`git reset` this willunstage all files.
+`git reset` this will unstage all files.
 
 `git checkout [dir|file|.]` will revert local uncommitted changes, same as `git reset --hard HEAD`
 
