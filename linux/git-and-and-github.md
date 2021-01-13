@@ -30,6 +30,12 @@ git push --force <brand-name>
 
 `git add -i`
 
+### Undo uncommitted changes
+
+`git reset` this willunstage all files.
+
+`git checkout [dir|file|.]` will revert local uncommitted changes, same as `git reset --hard HEAD`
+
 ## GitHub
 
 ### Actions
