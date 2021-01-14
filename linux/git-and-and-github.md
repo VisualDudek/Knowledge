@@ -38,6 +38,24 @@ git push --force <brand-name>
 
 `git checkout [dir|file|.]` will revert local uncommitted changes, same as `git reset --hard HEAD`
 
+### Undo the last commit
+
+`git reset --soft HEAD~1` 
+
+`reset` copied the old head to `.git/ORIG_HEAD`
+
+`commit` with `-c ORIG_HEAD` will open an editor, which initially contains the log message from the old commit and allows you to edit it.
+
+```text
+$ git commit -m "Something terribly misguided" # (0: Your Accident)
+$ git reset HEAD~                              # (1)
+[ edit files as necessary ]                    # (2)
+$ git add .                                    # (3)
+$ git commit -c ORIG_HEAD                      # (4)
+```
+
+{% embed url="https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git" %}
+
 ## GitHub
 
 ### Actions
