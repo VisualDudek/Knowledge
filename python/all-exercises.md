@@ -20,6 +20,8 @@
 * do defaultdict exercises from collections section
 
 1. Create dict with number as key and value as lowercase assci.
+2. check if each 3th item is 0 using `all()` for list `[[1, 2, 0], [1, 2, 0], [1, 2, 0]]`
+3. aaa
 
 ### collections
 
@@ -58,6 +60,8 @@
 ```python
 d = { i:name for i, name in enumerate(string.ascii_lowercase) } # 1
 
-
+# all()
+items = [[1, 2, 0], [1, 2, 0], [1, 2, 0]]
+all(flag == 0 for (*_, flag) in items)
 ```
 
