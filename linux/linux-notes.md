@@ -6,10 +6,13 @@
 
 space not being freed form disk after deleting a file, docker case: after deleting large file inside docker container there is no gain of free space `df -h` bc. other process is still using file descriptor?
 
-* run ubuntu container
-* crate big file 
+* run ubuntu container, keep several panes open in tmux
+* crate big file `$ dd if=/dev/zero of=1G.md bs=1G count=1`
+*  keep file open `$ less 1G.md`
+* remove `1g.md` file
+* run inside and outside container `$ sudo lsof | grep deleted`
 
-
+{% embed url="https://access.redhat.com/solutions/2316" %}
 
 * package manager for Debian, list packages matching given pattern: `$ dpkg -l <package name pattern>`
 * re-evaluate group membership e.g. after added to docker group: `$ su - <username>`
