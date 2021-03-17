@@ -4,9 +4,10 @@
 
 ### file desctiptor
 
-space not being freed form disk after deleting a file
+space not being freed form disk after deleting a file, docker case: after deleting large file inside docker container there is no gain of free space `df -h` bc. other process is still using file descriptor?
 
-
+* run ubuntu container
+* crate big file 
 
 
 
