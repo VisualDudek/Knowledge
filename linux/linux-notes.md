@@ -44,6 +44,21 @@ field to end of line
 * named piped `$mkfifo`
 * `rsync`
 
+### awk
+
+for exercises pipe into awk `ls -al`
+
+```bash
+# Use of NR built-in var, display line number
+awk '{print NR,$0}' FILE
+```
+
+links:
+
+{% embed url="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/" %}
+
+{% embed url="https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/" %}
+
 ### BASH
 
 Double-check:
