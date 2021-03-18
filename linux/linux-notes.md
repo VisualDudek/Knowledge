@@ -18,8 +18,15 @@ space not being freed form disk after deleting a file, docker case: after deleti
 
 To identify the used file size \(in blocks\): `# lsof -Fn -Fs |grep -B1 -i deleted | grep ^s  | cut -c 2- | awk '{s+=$1} END {print s}'`
 
+U can get more info:
+
+* `stat FILE`
+
 ```bash
 grep ^s    meta-character that math the beginning line
+lsof -Fn -Fs    selects the fields to be output
+cut -c 2-    selects only these characters, N- from N'th byte, character or 
+field to end of line 
 ```
 
 {% embed url="https://access.redhat.com/solutions/2316" %}
