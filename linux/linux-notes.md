@@ -2,7 +2,7 @@
 
 ## POSTMORTEM
 
-### file desctiptor
+### file desctiptor/inodes
 
 space not being freed form disk after deleting a file, docker case: after deleting large file inside docker container there is no gain of free space `df -h` bc. other process is still using file descriptor?
 
@@ -30,6 +30,19 @@ field to end of line
 ```
 
 {% embed url="https://access.redhat.com/solutions/2316" %}
+
+### reading ICMP datagram
+
+### timezone, set or change
+
+```bash
+# check current time zone
+timedatectl
+# view all zones
+timedatactl list-timezones
+# set
+sudo timedata set-timezone <time_zone>
+```
 
 ### TODO
 
@@ -150,6 +163,10 @@ Set a cron every certain hours between certain hours
 ### ls
 
 `-1`   list one file per line. Useful with `wc -l`
+
+### lsof
+
+Find process running on specific Port `# lsof -i TCP:22`
 
 ### man
 
