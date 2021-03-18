@@ -31,6 +31,10 @@ field to end of line
 
 {% embed url="https://access.redhat.com/solutions/2316" %}
 
+#### df vs du
+
+{% embed url="http://linuxshellaccount.blogspot.com/2008/12/why-du-and-df-display-different-values.html" %}
+
 ### reading ICMP datagram
 
 ### timezone, set or change
