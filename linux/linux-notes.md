@@ -9,10 +9,22 @@ space not being freed form disk after deleting a file, docker case: after deleti
 * run ubuntu container, keep several panes open in tmux
 * crate big file `$ dd if=/dev/zero of=1G.md bs=1G count=1`
 *  keep file open `$ less 1G.md`
+* check used space via `df -h` and `docker system df -v` and `du`
 * remove `1g.md` file
+* check again disk usage
 * run inside and outside container `$ sudo lsof | grep deleted`
+* Resolution 1. shutdown of relevant process 2. truncate File Size
+* `echo > /proc/[pid]/fd/[fd_number]`
+
+To identify the used file size \(in blocks\): `# lsof -Fn -Fs |grep -B1 -i deleted | grep ^s  | cut -c 2- | awk '{s+=$1} END {print s}'`
+
+```bash
+grep ^s    meta-character that math the beginning line
+```
 
 {% embed url="https://access.redhat.com/solutions/2316" %}
+
+### TODO
 
 * package manager for Debian, list packages matching given pattern: `$ dpkg -l <package name pattern>`
 * re-evaluate group membership e.g. after added to docker group: `$ su - <username>`
