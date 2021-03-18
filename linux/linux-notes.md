@@ -33,6 +33,8 @@ field to end of line
 
 #### df vs du
 
+* It is possible to delete \([unlink](https://linux.die.net/man/2/unlink)\) a file while a program is still writing to it. If this happens the file remains on disk until all references \(including open file handles\) are removed. `du` cannot find these because they have no filename. But they will still have an inode and so still show up when checked with `df`.
+
 {% embed url="http://linuxshellaccount.blogspot.com/2008/12/why-du-and-df-display-different-values.html" %}
 
 ### reading ICMP datagram
