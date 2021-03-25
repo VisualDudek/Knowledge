@@ -74,7 +74,8 @@ awk '{print NR,$0}' FILE
 awk -F:
 awk 'FS=":"'
 # print only users with id above 1000
-cat /etc/passwd | awk 'FS=":" $3>=1000 {print $3,$1}'
+cat /etc/passwd | awk -F: '$3>=1000 {print $3,$1}'
+cat /etc/passwd | awk 'BEGIN {FS=":"} $3>=1000 {print $3,$1}'
 ```
 
 links:
