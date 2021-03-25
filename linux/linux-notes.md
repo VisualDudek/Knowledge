@@ -70,6 +70,11 @@ for exercises pipe into awk `ls -al`
 ```bash
 # Use of NR built-in var, display line number
 awk '{print NR,$0}' FILE
+# use field separator semicolon
+awk -F:
+awk 'FS=":"'
+# print only users with id above 1000
+cat /etc/passwd | awk 'FS=":" $3>=1000 {print $3,$1}'
 ```
 
 links:
