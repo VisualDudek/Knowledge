@@ -14,6 +14,8 @@
 
 `-a` is not `--amend` first automatically "add" changes from all known files.
 
+alias for zsh: `gc!` = `git commit -v --amend`
+
 if you want to edit older commit msg:
 
 ```text
