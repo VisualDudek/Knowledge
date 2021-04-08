@@ -56,6 +56,8 @@ $ git add .                                    # (3)
 $ git commit -c ORIG_HEAD                      # (4)
 ```
 
+{% embed url="https://www.atlassian.com/git/tutorials/rewriting-history" %}
+
 {% embed url="https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git" %}
 
 ## GitHub
