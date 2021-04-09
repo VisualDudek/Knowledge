@@ -60,6 +60,10 @@ $ git commit -c ORIG_HEAD                      # (4)
 
 {% embed url="https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git" %}
 
+### Hooks
+
+{% embed url="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks" %}
+
 ## GitHub
 
 ### Actions
