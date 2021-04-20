@@ -64,6 +64,10 @@ $ git commit -c ORIG_HEAD                      # (4)
 
 {% embed url="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks" %}
 
+### Merging vs. Rebase
+
+{% embed url="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" %}
+
 ## GitHub
 
 ### Actions
