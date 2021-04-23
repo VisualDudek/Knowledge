@@ -120,7 +120,7 @@ fi
 
 
 
-### Enable ssh server
+### Enable ssh server \(scp\)
 
 needed for `scp`
 
