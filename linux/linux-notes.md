@@ -297,7 +297,7 @@ So `vdcv` will show you sizes of all dirs.
 [https://gnomepomodoro.org/](https://gnomepomodoro.org/)
 {% endhint %}
 
-### Timezone
+### timedatectl
 
 ```bash
 $ timedatectl
@@ -343,7 +343,7 @@ Link
 
 {% embed url="https://superuser.com/questions/394376/how-to-prevent-gnome-shells-alttab-from-grouping-windows-from-similar-apps" %}
 
-### TMUX
+### tmux
 
 shortcuts: [link](https://tmuxcheatsheet.com/)
 
@@ -369,7 +369,7 @@ tmux new -s [session-name]
 tmux rename-session [-t session-name] [new-session-name]
 ```
 
-### SSHFS
+### sshfs
 
 mount remote directories over a Secure Shell connection
 
