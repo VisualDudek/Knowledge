@@ -57,7 +57,7 @@ sudo timedata set-timezone <time_zone>
 ### setuid
 
 {% hint style="warning" %}
-Coś nie tak z przykładem dla ping
+Coś nie tak z przykładem dla ping -&gt; sysctl -a -&gt; `net.ipv4.ping_group_range`
 {% endhint %}
 
 ```bash
