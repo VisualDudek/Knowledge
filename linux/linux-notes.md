@@ -158,7 +158,7 @@ $ scp * remoteuser@remoteserver:/remote/folder/
 $ scp -r * remoteuser@remoteserver:/remote/folder/
 ```
 
-### CRON
+### cron
 
 Set a cron every certain hours between certain hours
 
@@ -189,6 +189,14 @@ Find process running on specific Port `# lsof -i TCP:22`
 ### man
 
 `-k [cmd]` Search the short descriptions and manual page names for the keyword `cmd` as regular expression. Print out any matches. Equivalent to `appropos [cmd]`
+
+better search: `$ man -wk [cmd]` 
+
+```bash
+-k, --apropos
+-K, --global-apropos
+-w    # Don't display the manual pages, but do print the locations
+```
 
 ### fzf
 
