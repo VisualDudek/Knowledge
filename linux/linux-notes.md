@@ -88,6 +88,8 @@ ping [ip]
 ps u -C ping
 ```
 
+Modern versions of `ping`, the executable starts off running as root, but it explicity sets just the capabilities that it needs and then resets its user ID to be that of the original user.
+
 ### TODO
 
 * package manager for Debian, list packages matching given pattern: `$ dpkg -l <package name pattern>`
