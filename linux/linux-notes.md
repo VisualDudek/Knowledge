@@ -56,6 +56,10 @@ sudo timedata set-timezone <time_zone>
 
 ### setuid
 
+{% hint style="warning" %}
+Coś nie tak z przykładem dla ping
+{% endhint %}
+
 ```bash
 # check that system cmd sleep is owned by root
 ls -l `which sleep`
@@ -78,6 +82,10 @@ ls -l `which ping`
 cp `which ping` ./myping
 ./myping [ip]
 # take note that setuid bit is not carried over by copy
+# (2) run legacy ping (has setuid bit on) and check in other terminal what UID
+#process is running
+ping [ip]
+ps u -C ping
 ```
 
 ### TODO
