@@ -54,6 +54,32 @@ timedatactl list-timezones
 sudo timedata set-timezone <time_zone>
 ```
 
+### setuid
+
+```bash
+# check that system cmd sleep is owned by root
+ls -l `which sleep`
+# copy sleep cmd to create cmd that is owned by U
+cp `which sleep` ./mysleep
+#(1) run mysleep via sudo and check on other terminal that it is run by root UID
+sudo ./mysleep 30
+ps ajf
+# now turn on setuid bit
+chmod +s ./mysleep
+# check setuid bit in octal notation
+ls -l ./mysleep
+# repet (1) and check that even when run as root (sudo) sleep has owner UID
+
+# --- ping example --- got setuid but jumps few hoops to avoid running as root
+#ping need previliges to open raw network sockets
+# check setuid bit on ping
+ls -l `which ping`
+# make copy and try run it
+cp `which ping` ./myping
+./myping [ip]
+# take note that setuid bit is not carried over by copy
+```
+
 ### TODO
 
 * package manager for Debian, list packages matching given pattern: `$ dpkg -l <package name pattern>`
