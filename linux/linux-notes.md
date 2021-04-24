@@ -60,6 +60,12 @@ sudo timedata set-timezone <time_zone>
 Coś nie tak z przykładem dla ping -&gt; sysctl -a -&gt; `net.ipv4.ping_group_range`
 {% endhint %}
 
+#### Why ping works without capability and setuid?
+
+On recent LInux system, ping doesn't need any privileges for its most basic operation, which is to send ICMP echo request messages and receive responding echo reply messages. Can use and ICMP socket, which is permited without privileges: `socket(AF INET, SOCK DGRAM, IPPROTO__ICMP) = 3`
+
+Enable the Linux kernel's net.ipv4.ping\_group\_range parameter to cover all groups. This will let all users on the operating system create ICMP Echo sockets without using setuid binaries, or having the CAP\_NET\_ADMIN and CAP\_NET\_RAW file capabilities.
+
 ```bash
 # check that system cmd sleep is owned by root
 ls -l `which sleep`
