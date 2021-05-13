@@ -49,9 +49,9 @@ TODO
 # check current time zone
 timedatectl
 # view all zones
-timedatactl list-timezones
+timedatectl list-timezones
 # set
-sudo timedata set-timezone <time_zone>
+sudo timedate set-timezone <time_zone>
 ```
 
 ### setuid
