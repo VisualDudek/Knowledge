@@ -417,6 +417,14 @@ tmux new -s [session-name]
 tmux rename-session [-t session-name] [new-session-name]
 ```
 
+#### scroll in tmux
+
+`Ctrl-b than [` you can use normal navigation keys to scroll around. Press `q` to quit scroll mode.
+
+`Ctrl-b PgUp` to go directly into copy mode.
+
+`:set-window-option mode-keys vi`
+
 ### sshfs
 
 mount remote directories over a Secure Shell connection
