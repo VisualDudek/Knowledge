@@ -21,6 +21,10 @@ Indentation guides by using [indentLine plugin](https://github.com/Yggdroot/inde
 
 `vim <filename> --startuptime debug.log` Write startup timing messages to debug.log
 
+### readonly mode
+
+`vim -R filename`
+
 
 
 
