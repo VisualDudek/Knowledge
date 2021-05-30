@@ -17,6 +17,13 @@ Indentation guides by using [indentLine plugin](https://github.com/Yggdroot/inde
 
 {% embed url="https://www.arthurkoziel.com/setting-up-vim-for-yaml/" %}
 
+### display tabs as characters
+
+```text
+:set list
+:set listchars=tab:>-
+```
+
 ### startuptime
 
 `vim <filename> --startuptime debug.log` Write startup timing messages to debug.log
