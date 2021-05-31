@@ -36,6 +36,11 @@ Indentation guides by using [indentLine plugin](https://github.com/Yggdroot/inde
 
 `:h[elp]`
 
+```text
+# Get specific help:
+Option :help 'textwidth'
+```
+
 {% embed url="https://vim.fandom.com/wiki/Learn\_to\_use\_help" %}
 
 
