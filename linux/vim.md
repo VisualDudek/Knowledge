@@ -32,6 +32,14 @@ Indentation guides by using [indentLine plugin](https://github.com/Yggdroot/inde
 
 `vim -R filename`
 
+### Learn to use help
+
+`:h[elp]`
+
+{% embed url="https://vim.fandom.com/wiki/Learn\_to\_use\_help" %}
+
+
+
 
 
 
