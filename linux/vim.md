@@ -11,6 +11,9 @@
 ```text
 # vim config
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+# Vim has a shortcut for every keyword. 
+#Examples: tabstop becomes ts, expandtab becomes et, listchars becomes lcs
 ```
 
 Indentation guides by using [indentLine plugin](https://github.com/Yggdroot/indentLine).
