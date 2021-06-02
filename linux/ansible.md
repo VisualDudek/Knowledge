@@ -2,7 +2,7 @@
 
 ### Playbooks Examples
 
-```text
+```yaml
 ---
 - hosts: web
   become: yes
@@ -16,4 +16,6 @@
     - name: install website
       unarchive: remote_src=yes src=/tmp/website.tgz dest=/var/www/html/
 ```
+
+
 
