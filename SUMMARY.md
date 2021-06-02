@@ -5,6 +5,7 @@
 
 ## LINUX
 
+* [Ansible](linux/ansible.md)
 * [VIM](linux/vim.md)
 * [Linux-notes](linux/linux-notes.md)
 * [Zabbix](linux/zabbix.md)
