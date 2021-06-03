@@ -4,6 +4,10 @@
 
 ### using tab pages
 
+```text
+:tabe[dit] {file}
+```
+
 {% embed url="https://vim.fandom.com/wiki/Using\_tab\_pages" %}
 
 ### YEAML setup
