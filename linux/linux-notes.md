@@ -323,6 +323,12 @@ $ ssh-add [file]
 
 * `n packets dropped by kernel` due to a lack of buffer space, You can increase the buffer size with `-B, --buffer-size` e.g. `$ tcpdump -B 4096 ...` the number is in kilobytes. OR better way is to apply better filter.
 
+### terminator
+
+{% embed url="https://askubuntu.com/questions/158159/how-do-i-get-terminator-to-start-up-with-my-custom-layout" %}
+
+
+
 ### Ranger
 
 ```bash
