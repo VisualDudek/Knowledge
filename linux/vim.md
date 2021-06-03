@@ -6,6 +6,10 @@
 
 ```text
 :tabe[dit] {file}
+
+# In normal mode
+gt            go to next tab
+gT            go to previous tab
 ```
 
 {% embed url="https://vim.fandom.com/wiki/Using\_tab\_pages" %}
