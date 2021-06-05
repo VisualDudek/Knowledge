@@ -444,6 +444,8 @@ set -g status-right "#(cut -d ' ' -f -3 /proc/loadavg) %H:%M %d-%b-%y"
 
 {% embed url="https://www.linode.com/docs/guides/persistent-terminal-sessions-with-tmux/" %}
 
+{% embed url="https://leanpub.com/the-tao-of-tmux/read" %}
+
 ### sshfs
 
 mount remote directories over a Secure Shell connection
