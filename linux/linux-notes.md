@@ -440,6 +440,8 @@ tmux rename-session [-t session-name] [new-session-name]
 set -g status-right "#(cut -d ' ' -f -3 /proc/loadavg) %H:%M %d-%b-%y"
 ```
 
+{% embed url="https://gist.github.com/spicycode/1229612" %}
+
 #### tmux-links
 
 {% embed url="https://www.linode.com/docs/guides/persistent-terminal-sessions-with-tmux/" %}
