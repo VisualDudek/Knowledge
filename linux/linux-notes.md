@@ -431,6 +431,19 @@ tmux rename-session [-t session-name] [new-session-name]
 
 `:set-window-option mode-keys vi`
 
+#### tmux-config
+
+```bash
+# ~/.tmux.conf
+
+# Display CPU load average for the last 1,5 and 15 minutes, in the status bar
+set -g status-right "#(cut -d ' ' -f -3 /proc/loadavg) %H:%M %d-%b-%y"
+```
+
+#### tmux-links
+
+{% embed url="https://www.linode.com/docs/guides/persistent-terminal-sessions-with-tmux/" %}
+
 ### sshfs
 
 mount remote directories over a Secure Shell connection
