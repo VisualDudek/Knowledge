@@ -93,6 +93,32 @@ ansible-vault create secret.yml
     msg: "{{ results.matched }}"
 ```
 
+#### include
+
+```yaml
+---
+- host: lamp
+  tasks:
+    - name: include lamp tasks
+      include: dir/book.yml
+```
+
+```yaml
+# book.yml OLNY TASKS
+---
+  - name: install and start the servers
+    yum:
+      name:
+        - "{{ ftp_package }}"
+        - httpd
+      state: latest
+  - name: start ftp server
+    service:
+      name: "{{ ftp_package }}"
+      state: started
+      enabled: true
+```
+
 ### Playbooks Examples
 
 ```yaml
