@@ -21,6 +21,10 @@
 
 * you can disable gathering of facts
 
+{% hint style="warning" %}
+in `var:` U do not need double quote
+{% endhint %}
+
 ```yaml
 ---
 - name: show facts
