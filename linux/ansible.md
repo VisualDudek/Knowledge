@@ -5,6 +5,7 @@
 ### vars
 
 * if vars is firs item it need to be in double quotes
+* keep vars inside `host_vars/<servername>` or `group_vars/<groupname>` files
 
 ```yaml
 ---
