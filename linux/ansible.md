@@ -1,5 +1,11 @@
 # Ansible
 
+### YAML structure
+
+```yaml
+# how U can use Array
+```
+
 ### Playbooks Examples
 
 ```yaml
