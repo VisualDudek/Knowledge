@@ -1,5 +1,7 @@
 # Ansible
 
+### ansible.cfg
+
 ### vars
 
 * if vars is firs item it need to be in double quotes
