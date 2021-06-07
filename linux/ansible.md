@@ -1,5 +1,22 @@
 # Ansible
 
+### vars
+
+* if vars is firs item it need to be in double quotes
+
+```yaml
+---
+- name: create a user using var
+  hosts: all
+  vars:
+    user: lisa
+  
+  tasks:
+    - name: create user {{ user }}
+      user:
+        name: "{{ user }}"
+```
+
 ### YAML structure
 
 `- name: txt` is optional U can start with `- debug:` The dash is only for arry notice, in this case array element of `tasks:` 
