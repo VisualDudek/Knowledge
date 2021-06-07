@@ -2,6 +2,10 @@
 
 * autocompletion: `Ctrl-x Ctrl-n OR Ctrl-p`
 
+### show compiled modules
+
+`vim --version`
+
 ### using tab pages
 
 ```text
@@ -14,7 +18,7 @@ gT            go to previous tab
 
 {% embed url="https://vim.fandom.com/wiki/Using\_tab\_pages" %}
 
-### YEAML setup
+### YAML setup
 
 ```text
 # vim config
