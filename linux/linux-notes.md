@@ -140,6 +140,8 @@ links:
 
 ### BASH
 
+Bash scripts
+
 Double-check:
 
 * need space around \[ \] e.g. `[ $? -ne 0]` will produce error due to no inner space at the end of brackets.
@@ -166,7 +168,17 @@ else
 fi
 ```
 
+#### wait
 
+```bash
+for job in `jobs -p`
+do
+echo $job
+    wait $job || let "FAIL+=1"
+done
+```
+
+{% embed url="https://stackoverflow.com/questions/356100/how-to-wait-in-bash-for-several-subprocesses-to-finish-and-return-exit-code-0" %}
 
 ### Enable ssh server \(scp\)
 
