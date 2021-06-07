@@ -327,6 +327,15 @@ $ ssh-add [file]
 
 {% embed url="https://askubuntu.com/questions/158159/how-do-i-get-terminator-to-start-up-with-my-custom-layout" %}
 
+#### keybinds disabled
+
+```bash
+# ~/.config/terminator/config
+
+[keybindings]
+    layout_launcher = None
+```
+
 
 
 ### Ranger
