@@ -6,6 +6,8 @@
 
 `vim --version`
 
+`:echo has('clipboard')`
+
 ### using tab pages
 
 ```text
