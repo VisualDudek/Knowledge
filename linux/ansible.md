@@ -6,6 +6,7 @@
 
 * if vars is firs item it need to be in double quotes
 * keep vars inside `host_vars/<servername>` or `group_vars/<groupname>` files
+* can set var from cli: `ansible-playbook name.yml -e "key=value"`
 
 ```yaml
 ---
@@ -49,6 +50,7 @@ What is this syntax: `msg: >`
 ### ansible-vault
 
 * run `ansible-playbook` with `--ask-vault-pass` flag.
+* you can store passwd in file and restrict access than run playbook with:`--vault-password-file=filename`
 
 ```bash
 # yaml file protected password
