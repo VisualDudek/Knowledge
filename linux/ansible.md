@@ -4,6 +4,21 @@
 
 ```yaml
 # how U can use Array
+
+- name: Find files
+  ansible.builtin.find:
+    paths:
+      - '/mnt/a'
+      - '/mnt/b'
+    patterns: '*.plot'
+  register: results
+- name: Print results var
+  debug:
+    msg: "{{ results.matched }}"
+    
+### U can skip name
+- debug:
+    msg: "{{ results.matched }}"
 ```
 
 ### Playbooks Examples
