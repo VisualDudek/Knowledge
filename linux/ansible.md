@@ -19,6 +19,18 @@
 
 #### ansible\_facts
 
+* you can disable gathering of facts
+
+```yaml
+---
+- name: show facts
+  hosts: all
+  tasks:
+    - name: print facts
+      debug:
+        var: ansible_facts
+```
+
 
 
 ### YAML structure
