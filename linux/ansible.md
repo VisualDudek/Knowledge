@@ -46,6 +46,28 @@ in `var:` U do not need double quote
 What is this syntax: `msg: >` 
 {% endhint %}
 
+### ansible-vault
+
+* run `ansible-playbook` with `--ask-vault-pass` flag.
+
+```bash
+# yaml file protected password
+ansible-vault create secret.yml
+```
+
+```yaml
+---
+- name: create a user using var from vault
+  hosts: all
+  vars_files:
+    - secret.yml
+  tasks:
+    - name: creating user
+      user:
+        name: "{{ username }}"
+        password: "{{ pwhash }}"
+```
+
 ### YAML structure
 
 `- name: txt` is optional U can start with `- debug:` The dash is only for arry notice, in this case array element of `tasks:` 
