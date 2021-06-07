@@ -33,9 +33,15 @@ in `var:` U do not need double quote
     - name: print facts
       debug:
         var: ansible_facts
+    - name: be more specific about facts
+      debug:
+        msg: >
+          This host uses IP address {{ andible.facts.default_ipv4.address }}
 ```
 
-
+{% hint style="info" %}
+What is this syntax: `msg: >` 
+{% endhint %}
 
 ### YAML structure
 
