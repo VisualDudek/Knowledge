@@ -17,6 +17,10 @@
         name: "{{ user }}"
 ```
 
+#### ansible\_facts
+
+
+
 ### YAML structure
 
 `- name: txt` is optional U can start with `- debug:` The dash is only for arry notice, in this case array element of `tasks:` 
