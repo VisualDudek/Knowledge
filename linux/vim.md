@@ -20,6 +20,14 @@ gT            go to previous tab
 
 {% embed url="https://vim.fandom.com/wiki/Using\_tab\_pages" %}
 
+### panes
+
+{% embed url="https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally" %}
+
+{% embed url="https://vim.fandom.com/wiki/Resize\_splits\_more\_quickly" %}
+
+
+
 ### YAML setup
 
 ```text
