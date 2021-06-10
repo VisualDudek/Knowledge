@@ -178,6 +178,25 @@ echo $job
 done
 ```
 
+#### file flag on/off
+
+```bash
+#!/bin/bash
+
+set -x
+
+while true
+do
+    if [ -f "/path/on.flag" ]; then
+        echo "ON"
+    else
+        echo "OFF"
+    fi
+    
+    sleep 5
+done
+```
+
 {% embed url="https://stackoverflow.com/questions/356100/how-to-wait-in-bash-for-several-subprocesses-to-finish-and-return-exit-code-0" %}
 
 ### Enable ssh server \(scp\)
