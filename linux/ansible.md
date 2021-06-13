@@ -2,6 +2,12 @@
 
 ## ansible.cfg
 
+```text
+[defaults]
+
+inventory = ./inventory/inventory.yml
+```
+
 ## TASK CONTROL
 
 ### when
