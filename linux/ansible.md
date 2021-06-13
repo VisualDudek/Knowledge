@@ -177,5 +177,9 @@ ansible-vault create secret.yml
       unarchive: remote_src=yes src=/tmp/website.tgz dest=/var/www/html/
 ```
 
+## ad hoc cheat sheet
 
+```bash
+ansible all -m setup -a "filter=ansible_distribution" -u ubuntu
+```
 
