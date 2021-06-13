@@ -99,6 +99,10 @@ Handlers are tasks that only run when notified.
         msg: "Copy with chage, msb by handler"
 ```
 
+## templates
+
+* place all templats into `./templates/` sub directory
+
 ## vars
 
 * if vars is firs item it need to be in double quotes
