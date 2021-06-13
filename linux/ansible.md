@@ -23,6 +23,8 @@
       when: result.rc == 0
 ```
 
+`rc` stands for **return code**
+
 ## vars
 
 * if vars is firs item it need to be in double quotes
