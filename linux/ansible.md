@@ -25,6 +25,23 @@
 
 `rc` stands for **return code**
 
+### when multiple
+
+```yaml
+---
+- name: print msg only when multiple condition are meet
+  remote_user: ubuntu
+  gather_facts: yes
+  hosts: all
+  tasks:
+    - name: print msg based on facts
+      debug:
+        msg: "when condition are meet"
+      when:
+        - ansible_distribution == "Ubuntu"
+        - ansible_memfree_mb > 1000
+```
+
 ## vars
 
 * if vars is firs item it need to be in double quotes
@@ -47,6 +64,7 @@
 ## ansible\_facts
 
 * you can disable gathering of facts
+* you can use `smart` gathering facts
 
 {% hint style="warning" %}
 in `var:` U do not need double quote
