@@ -2,6 +2,27 @@
 
 ### ansible.cfg
 
+### TASK CONTROL
+
+#### when
+
+```yaml
+---
+- name: print msg only when corond is running
+  remote_user: ubuntu
+  gather_facts: yes
+  hosts: all
+  tasks:
+    - name: get the cron server status
+      command: systemctl is-active cron
+      ignore_errors: yes
+      register: result
+    - name: print msg based on crond status
+      debug:
+        msg: "Crond is running"
+      when: result.rc == 0
+```
+
 ### vars
 
 * if vars is firs item it need to be in double quotes
