@@ -1,5 +1,9 @@
 # Ansible
 
+## sample dir layout
+
+{% embed url="https://docs.ansible.com/ansible/latest/user\_guide/sample\_setup.html\#sample-directory-layout" %}
+
 ## ansible.cfg
 
 ```text
@@ -131,6 +135,27 @@ foo={{ foo }}
 bar={{ bar }}
 some line of config
 #my IP address={{ ansible_facts.default_ipv4.address }}
+```
+
+How to create hosts file based on inventory hosts
+
+```yaml
+---
+- name: update /tmp/hosts file dynamically
+  hosts: all
+  remote_user: ubuntu
+  tasks:
+    - name: update /tmp/hosts
+      template:
+        src: hosts.j2
+        dest: /tmp/hosts
+```
+
+```text
+# ./templates/hosts.j2
+{% for host in groups['all'] %}
+{{ hostvars[host]['ansible_facts']['default_ipv4']['address'] }} {{ hostvars[host]['ansible_facts']['fqdn'] }} {{ hostvars[host]['ansible_facts']['hostname'] }}
+{% endfor %}
 ```
 
 ## vars
