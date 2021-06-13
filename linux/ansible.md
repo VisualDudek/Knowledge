@@ -109,6 +109,30 @@ Handlers are tasks that only run when notified.
 
 * place all templats into `./templates/` sub directory
 
+```yaml
+---
+- name: crete file from template
+  hosts: all
+  remote_user: ubuntu
+  gather_facts: yes
+  vars:
+    foo: "Marcin"
+    bar: "test"
+  tasks:
+    - name: use template to copy file, can use for config creatation
+      template:
+        src: test_template.j2
+        dest: /tmp/test_template.conf
+```
+
+```yaml
+# ./tempates/test_template.j2
+foo={{ foo }}
+bar={{ bar }}
+some line of config
+#my IP address={{ ansible_facts.default_ipv4.address }}
+```
+
 ## vars
 
 * if vars is firs item it need to be in double quotes
