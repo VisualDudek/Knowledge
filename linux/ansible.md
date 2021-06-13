@@ -293,6 +293,38 @@ ansible-vault create secret.yml
       unarchive: remote_src=yes src=/tmp/website.tgz dest=/var/www/html/
 ```
 
+### manipulate files
+
+```yaml
+---
+- name: Manipulate file
+  remote_user: ubuntu
+  hosts: all
+  tasks:
+    - name: copy file demo
+      copy:
+        src: /tmp/hosts
+        dest: /tmp/
+    - name: add some lines to /tmp/hosts
+      blockinfile:
+        path: /tmp/hosts
+        block: |
+          555.555.555 host1
+          555.555.777 host2
+        state: present
+    - name: verify file checksum
+      stat:
+        path: /tmp/hosts
+        checksum_algorithm: md5
+      register: result
+    - debug:
+        msg: "The checksum of /tmp/hosts is {{ result.stat.checksum }}"
+    - name: fetch a file
+      fetch:
+        src: /tmp/hosts
+        dest: /tmp/
+```
+
 ## ad hoc cheat sheet
 
 ```bash
