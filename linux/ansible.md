@@ -68,7 +68,36 @@ Sometimes you want a task to run only when a change is made on a machine. For ex
 
 {% hint style="info" %}
 Handlers are tasks that only run when notified.
+
+`notify: [handler name]`
 {% endhint %}
+
+* same yaml lvl as `tasks`
+
+{% hint style="warning" %}
+* will only run if all tasks are sucesfull, U can omit this by `ignore_errors: yes` on `hosts:` lvl
+* will run only on change task, notify will by activated only for changed tasks
+{% endhint %}
+
+```yaml
+---
+- name: run handler only when copy file changed
+  remote_user: ubuntu
+  gather_facts: yes
+  hosts: all
+  tasks:
+    - name: copy file
+      copy:
+        src: /tmp/test
+        dest: /tmp/test
+      notify:
+        - print_msg
+
+  handlers:
+    - name: print_msg
+      debug:
+        msg: "Copy with chage, msb by handler"
+```
 
 ## vars
 
