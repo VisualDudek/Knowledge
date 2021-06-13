@@ -1,10 +1,10 @@
 # Ansible
 
-### ansible.cfg
+## ansible.cfg
 
-### TASK CONTROL
+## TASK CONTROL
 
-#### when
+### when
 
 ```yaml
 ---
@@ -23,7 +23,7 @@
       when: result.rc == 0
 ```
 
-### vars
+## vars
 
 * if vars is firs item it need to be in double quotes
 * keep vars inside `host_vars/<servername>` or `group_vars/<groupname>` files
@@ -42,7 +42,7 @@
         name: "{{ user }}"
 ```
 
-#### ansible\_facts
+## ansible\_facts
 
 * you can disable gathering of facts
 
@@ -68,7 +68,7 @@ in `var:` U do not need double quote
 What is this syntax: `msg: >` 
 {% endhint %}
 
-### ansible-vault
+## ansible-vault
 
 * run `ansible-playbook` with `--ask-vault-pass` flag.
 * you can store passwd in file and restrict access than run playbook with:`--vault-password-file=filename`
@@ -91,7 +91,7 @@ ansible-vault create secret.yml
         password: "{{ pwhash }}"
 ```
 
-### YAML structure
+## YAML structure
 
 `- name: txt` is optional U can start with `- debug:` The dash is only for arry notice, in this case array element of `tasks:` 
 
@@ -114,7 +114,7 @@ ansible-vault create secret.yml
     msg: "{{ results.matched }}"
 ```
 
-#### include
+### include
 
 ```yaml
 ---
@@ -140,7 +140,7 @@ ansible-vault create secret.yml
       enabled: true
 ```
 
-### Playbooks Examples
+## Playbooks Examples
 
 ```yaml
 ---
