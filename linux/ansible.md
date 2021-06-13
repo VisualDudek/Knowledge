@@ -42,6 +42,26 @@
         - ansible_memfree_mb > 1000
 ```
 
+### when complex
+
+```yaml
+---
+- name: print msg only when multiple complex conditions are meet
+  remote_user: ubuntu
+  gather_facts: yes
+  hosts: all
+  tasks:
+    - name: print msg based on facts
+      debug:
+        msg: "complex when conditions are meet"
+      when: >
+        ( ansible_distribution == "Ubuntu" and
+          ansible_memfree_mb > 1000 )
+        or
+        ( ansible_distribution == "Ubuntu" and
+          ansible_memfree_mb > 100 )
+```
+
 ## vars
 
 * if vars is firs item it need to be in double quotes
