@@ -325,6 +325,63 @@ ansible-vault create secret.yml
         dest: /tmp/
 ```
 
+### create users
+
+```yaml
+---
+- name: create some users
+  hosts: all
+  become: yes
+  #  vars_files:
+  #    - vars/users
+  #    - vars/groups
+  remote_user: ubuntu
+  tasks:
+    - name: add groups
+      group:
+        name: "{{ item.groupname }}"
+      loop: "{{ usergroups }}"
+    - name: add users
+      user:
+        name: "{{ item.username }}"
+        groups: "{{ item.groups }}"
+      loop: "{{ users }}"
+    - name: add SSH public keys
+      authorized_key:
+        user: "{{ item.username }}"
+        key: "{{ lookup('file', 'files/' + item.username + '/id_rsa.pub') }}"
+        state: present
+      loop: "{{ users }}"
+    - name: add marcin group members to sudo
+      copy:
+        content: "%marcin ALL=(ALL) NOPASSWD: ALL"
+        dest: /etc/sudoers.d/marcin
+        mode: 0440
+```
+
+```text
+./files
+├── adam
+│   ├── id_rsa
+│   └── id_rsa.pub
+└── marcin
+    ├── id_rsa
+    └── id_rsa.pub
+    
+./group_vars
+└── all.yml
+
+# ./group_vars/all.yml
+---
+users:
+  - username: marcin
+    groups: marcin
+  - username: adam
+    groups: marcin
+usergroups:
+  - groupname: marcin
+```
+
 ## ad hoc cheat sheet
 
 ```bash
