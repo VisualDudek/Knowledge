@@ -6,6 +6,10 @@
 
 ## ansible.cfg
 
+{% hint style="info" %}
+copy from `/etc/ansible/ansible.cfg` and edit for best usage
+{% endhint %}
+
 ```text
 [defaults]
 
@@ -201,7 +205,7 @@ in `var:` U do not need double quote
 ```
 
 {% hint style="info" %}
-What is this syntax: `msg: >` 
+What is this syntax: `msg: >` and how it diff to `|`
 {% endhint %}
 
 ## ansible-vault
