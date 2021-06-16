@@ -280,6 +280,11 @@ ansible-vault create secret.yml
       enabled: true
 ```
 
+## Ansible Galaxy
+
+* `ansible-galaxy search nginx`
+* `ansible-galaxy install [role]`
+
 ## Playbooks Examples
 
 ```yaml
