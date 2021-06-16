@@ -280,10 +280,34 @@ ansible-vault create secret.yml
       enabled: true
 ```
 
+## roles
+
+By default, Ansible looks for roles in a dir called `roles/`
+
+{% hint style="danger" %}
+If U do not want that vars can be overriten put them into `vars` not in to `defaults`
+{% endhint %}
+
+```yaml
+# motd-role.yml 
+---
+- name: use motd role playbook
+  hosts: ansible2
+  
+  roles:
+    - role: motd
+      system_manager: bob@example #Override defaults vars in role
+```
+
 ## Ansible Galaxy
 
 * `ansible-galaxy search nginx`
 * `ansible-galaxy install [role]`
+* `ansible-galaxy init [role-name]`
+
+{% hint style="info" %}
+Galxy-init create nice dir structure
+{% endhint %}
 
 ## Playbooks Examples
 
