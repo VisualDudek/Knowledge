@@ -397,3 +397,9 @@ usergroups:
 ansible all -m setup -a "filter=ansible_distribution" -u ubuntu
 ```
 
+## miscellaneous
+
+### safely limiting to one server
+
+{% embed url="https://stackoverflow.com/questions/18195142/safely-limiting-ansible-playbooks-to-a-single-machine" %}
+
