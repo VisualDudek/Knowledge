@@ -309,6 +309,8 @@ If U do not want that vars can be overriten put them into `vars` not in to `defa
 Galxy-init create nice dir structure
 {% endhint %}
 
+{% embed url="https://galaxy.ansible.com/linux-system-roles" %}
+
 ## Playbooks Examples
 
 ```yaml
