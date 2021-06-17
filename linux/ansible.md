@@ -169,6 +169,7 @@ How to create hosts file based on inventory hosts
 * keep vars inside `host_vars/<servername>` or `group_vars/<groupname>` files
 * u can provied file with vars in playbook using `vars_files`
 * can set var from cli: `ansible-playbook name.yml -e "key=value"`
+* can privde file with vars from cli: `ansible-playbook name.yml -e "@user.lst"`
 
 ```yaml
 ---
@@ -181,6 +182,39 @@ How to create hosts file based on inventory hosts
     - name: create user {{ user }}
       user:
         name: "{{ user }}"
+```
+
+```yaml
+# import file with vars using cli:
+# ansible-playbook name.yml -e "@user.lst"
+---
+- host: local
+  vars:
+    userFile: /home/user/vars/list
+  tasks:
+  - name: create file
+    file:
+      state: touch
+      path: "{{ userFile }}"
+  - name: list users
+    lineinfile:
+      path: "{{ userFile }}"
+      line: "{{ item }}"
+    with_items:
+      - "{{ staff }}"
+      - "{{ faculty }}"
+      - "{{ other }}"
+      
+# user.list
+staff:
+  - joe
+  - john
+  - bob
+faculty:
+  - matt
+  - alex
+other:
+  - will
 ```
 
 ### dictionary vars
