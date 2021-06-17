@@ -246,7 +246,7 @@ employee.name # first is safer due to python collison
 
 ## ansible\_facts
 
-* you can disable gathering of facts
+* you can disable gathering of facts `gather_facts: no`
 * you can use `smart` gathering facts
 
 {% hint style="warning" %}
@@ -267,8 +267,16 @@ in `var:` U do not need double quote
           This host uses IP address {{ andible.facts.default_ipv4.address }}
 ```
 
-{% hint style="info" %}
+{% hint style="danger" %}
 What is this syntax: `msg: >` and how it diff to `|`
+{% endhint %}
+
+### facts.d
+
+Create in `etc/ansible/facts.d/[name].fact` will be sored in `ansible_local` var. Facts files may be INI, JSON or and executable that returns JSON.
+
+{% hint style="info" %}
+executable lolcal facts seems cool, U can write pyhon script to retur JSON with local vars
 {% endhint %}
 
 ## ansible-vault
