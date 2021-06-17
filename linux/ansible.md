@@ -208,6 +208,8 @@ employee.name # first is safer due to python collison
 {{ groups['webservers'] | join(' ') }}
 ```
 
+{% embed url="https://jinja.palletsprojects.com/en/3.0.x/templates/\#filters" %}
+
 ## ansible\_facts
 
 * you can disable gathering of facts
