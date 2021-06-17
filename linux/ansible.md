@@ -183,6 +183,31 @@ How to create hosts file based on inventory hosts
         name: "{{ user }}"
 ```
 
+### dictionary vars
+
+```yaml
+employee:
+    name: bob
+    id: 42
+    
+# two formats to access dictionary
+employee['name'] 
+employee.name # first is safer due to python collison
+```
+
+### magic vars
+
+```yaml
+{{ hostvars['node1']['ansible_distribution'] }}
+{{ groups['webservers'] }}
+```
+
+### Jinja2 filters
+
+```yaml
+{{ groups['webservers'] | join(' ') }}
+```
+
 ## ansible\_facts
 
 * you can disable gathering of facts
