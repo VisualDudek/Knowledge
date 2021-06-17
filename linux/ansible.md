@@ -165,7 +165,9 @@ How to create hosts file based on inventory hosts
 ## vars
 
 * if vars is firs item it need to be in double quotes
+* always starts with letter
 * keep vars inside `host_vars/<servername>` or `group_vars/<groupname>` files
+* u can provied file with vars in playbook using `vars_files`
 * can set var from cli: `ansible-playbook name.yml -e "key=value"`
 
 ```yaml
