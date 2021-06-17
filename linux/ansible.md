@@ -116,6 +116,7 @@ Handlers are tasks that only run when notified.
 ## templates
 
 * place all templats into `./templates/` sub directory
+* templates have `.j2` extension
 
 ```yaml
 ---
@@ -170,6 +171,7 @@ How to create hosts file based on inventory hosts
 * u can provied file with vars in playbook using `vars_files`
 * can set var from cli: `ansible-playbook name.yml -e "key=value"`
 * can privde file with vars from cli: `ansible-playbook name.yml -e "@user.lst"`
+* lists are defined by hyphens
 
 ```yaml
 ---
@@ -273,7 +275,7 @@ What is this syntax: `msg: >` and how it diff to `|`
 
 ### facts.d
 
-Create in `etc/ansible/facts.d/[name].fact` will be sored in `ansible_local` var. Facts files may be INI, JSON or and executable that returns JSON.
+Create in `etc/ansible/facts.d/[name].fact` will be stored in `ansible_local` var. Facts files may be INI, JSON or and executable that returns JSON.
 
 {% hint style="info" %}
 executable lolcal facts seems cool, U can write pyhon script to retur JSON with local vars
