@@ -378,6 +378,29 @@ If U do not want that vars can be overriten put them into `vars` not in to `defa
       system_manager: bob@example #Override defaults vars in role
 ```
 
+### role dir structure
+
+```bash
+# playbooks
+site.yml
+webservers.yml
+fooservers.yml
+roles/
+    common/
+        tasks/
+        handlers/
+        library/
+        files/
+        templates/
+        vars/
+        defaults/
+        meta/
+    webservers/
+        tasks/
+        defaults/
+        meta/
+```
+
 ## Ansible Galaxy
 
 * `ansible-galaxy search nginx`
