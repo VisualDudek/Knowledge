@@ -1,5 +1,11 @@
 # Ansible
 
+## ansible cli
+
+```bash
+ansible all --list-hosts
+```
+
 ## sample dir layout
 
 {% embed url="https://docs.ansible.com/ansible/latest/user\_guide/sample\_setup.html\#sample-directory-layout" %}
