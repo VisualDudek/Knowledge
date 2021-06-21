@@ -363,6 +363,8 @@ ansible-vault create secret.yml
 
 By default, Ansible looks for roles in a dir called `roles/`
 
+* By default Ansible will look in each directory within a role for a `main.yml`
+
 {% hint style="danger" %}
 If U do not want that vars can be overriten put them into `vars` not in to `defaults`
 {% endhint %}
