@@ -257,6 +257,10 @@ Set a cron every certain hours between certain hours
 
 `-S, --list-rules [chain]` Print all rules in the selected chain. If no chain is selected, all chains are printed like iptables-save.
 
+### journalctl
+
+`journalctl -k` show only kernel messages
+
 ### ls
 
 `-1`   list one file per line. Useful with `wc -l`
