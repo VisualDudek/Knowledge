@@ -77,6 +77,12 @@ another option to put smth on standard output is `cout` which is part of `iostre
 
 ### string
 
+## debugging, gdb
+
+? need to compile with debug support, using `-g` flag.
+
+`$ g++ main.cpp -g`
+
 ## other
 
 ### declaration vs initialization
