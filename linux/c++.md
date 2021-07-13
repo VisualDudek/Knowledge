@@ -99,6 +99,13 @@ Integer literal can contain any number of single quotes ' for readability. These
 
 A _character literal_ is a single, constant character. Single quotation marks \(' '\) surround all characters. If the character is any type but `char`, you must also provide a prefix: `L` for `wchar_t`, `u` for `char16_t`, and `U` for `char32_t`. For example, 'J' declares a `char` literal and `L'J'` declares a `wchar_t`.
 
+Unicode character literals: `\u` followed by a 4-digit Unicode code or the prefix `\U` followed by an 8-digit Unicode code.
+
+```cpp
+'\u0041' // A
+'\U0001F37A' // beer mug character
+```
+
 ## Escape Sequences
 
 ## debugging, gdb
