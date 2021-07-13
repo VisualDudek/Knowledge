@@ -172,6 +172,23 @@ int main() {
 
 ### Range-Based for Loop
 
+```cpp
+for(element-type element-name : array-name) {
+    --snip--
+}
+// element-type must match the types within the array you're iteraing over
+```
+
+```cpp
+int main() {
+    int max = 0;
+    int array[] = { 1, 5, 2, 4, 0};
+    for(int value : array) {
+        if (value > max) maximum = value;
+    }
+}
+```
+
 ## debugging, gdb
 
 ? need to compile with debug support, using `-g` flag.
