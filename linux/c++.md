@@ -45,3 +45,38 @@ return-type function_name(par-type1 par_name1, par-type2 par_name2) {
 }
 ```
 
+## printf
+
+{% hint style="info" %}
+another option to put smth on standard output is `cout` which is part of `iostream` library
+{% endhint %}
+
+### format specifiers
+
+## libraries
+
+### cstdio
+
+* printf
+
+### iostream
+
+* cout
+
+### string
+
+## other
+
+### declaration vs initialization
+
+Declaration, generally, refers to the introduction of a new name in the program. For example, you can _declare_ a new function by describing it's "signature":
+
+```cpp
+void foo();
+class klass;
+struct ztruct;
+int x;
+```
+
+Initialization refers to the "assignment" of a value, at construction time. 
+
