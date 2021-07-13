@@ -53,6 +53,18 @@ another option to put smth on standard output is `cout` which is part of `iostre
 
 ### format specifiers
 
+## Comments
+
+```cpp
+// This comment is on its own line
+
+/*
+ * This is a commment
+ * with multiple
+ * lines, Don't forget to close
+ */
+```
+
 ## libraries
 
 ### cstdio
