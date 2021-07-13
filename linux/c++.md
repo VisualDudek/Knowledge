@@ -53,6 +53,8 @@ another option to put smth on standard output is `cout` which is part of `iostre
 
 ### format specifiers
 
+`%x` hexadecimal and `%o` octal representation.
+
 ## Comments
 
 ```cpp
@@ -76,6 +78,22 @@ another option to put smth on standard output is `cout` which is part of `iostre
 * cout
 
 ### string
+
+## literal
+
+A literal is a hardcoded value in a program:
+
+`binary` uses the prefix `0b` 
+
+`octal` -&gt; `0`
+
+`decimal` -&gt; this is the default
+
+`hexadecimal` uses the prefix `0x`
+
+{% hint style="info" %}
+Integer literal can contain any number of single quotes ' for readability. These are completely ignored by the compiler. For example, `1000000` and `1'000'000` are both integer equal to one million.
+{% endhint %}
 
 ## debugging, gdb
 
