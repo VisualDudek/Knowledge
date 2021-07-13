@@ -36,6 +36,10 @@ else if (boolean-2) stmt-2;
 else stmt-3;
 ```
 
+## AND, OR
+
+The logical operators AND `&&` and OR `||` are binary.
+
 ## Functions
 
 ```cpp
@@ -109,6 +113,10 @@ Unicode character literals: `\u` followed by a 4-digit Unicode code or the prefi
 ```
 
 ## Escape Sequences
+
+## Types
+
+System programmers sometimes work directly with _raw memory_, which is a collection of bits without a type. Employ the `std::byte` type, available in the `<cstddef>` header, it permits bitwise logical operations and little else.
 
 ## debugging, gdb
 
