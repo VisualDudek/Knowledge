@@ -166,6 +166,12 @@ int main() {
 }
 ```
 
+{% hint style="info" %}
+`size_t` is guaranteed to be able to index any value within it, `int` is not.
+{% endhint %}
+
+### Range-Based for Loop
+
 ## debugging, gdb
 
 ? need to compile with debug support, using `-g` flag.
