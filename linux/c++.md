@@ -136,6 +136,10 @@ int main() {
 
 `void` The `void` type has an empty set of values.
 
+### Strings
+
+_Strings_ are contiguous blocks of characters. A _C-style string_ or _null-terminated string_ has a zero-byte appended to its end \(a null\) to indicate the ind of the string. Because array elements are contiguous, you can store strings in array of character types.
+
 ## Arrays
 
 * indexing is zero based
@@ -146,7 +150,14 @@ int array[] = { 1, 2, 3, 4 };
 
 // Accessing Array Elements
 arr[2] = 100;
+
+// number of elements in an Array
+size_t n = sizeof(array)/sizeof(int)
 ```
+
+{% hint style="info" %}
+you can safely obtain the number of elements using the `std::size` function available in the `<iterator>` header.
+{% endhint %}
 
 ## For loops
 
