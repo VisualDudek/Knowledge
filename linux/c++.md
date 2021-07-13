@@ -55,6 +55,8 @@ another option to put smth on standard output is `cout` which is part of `iostre
 
 `%x` hexadecimal and `%o` octal representation.
 
+As a general rule, use `%g` to print floating-point types.
+
 ## Comments
 
 ```cpp
@@ -79,7 +81,7 @@ another option to put smth on standard output is `cout` which is part of `iostre
 
 ### string
 
-## literal
+## literals
 
 A literal is a hardcoded value in a program:
 
@@ -94,6 +96,10 @@ A literal is a hardcoded value in a program:
 {% hint style="info" %}
 Integer literal can contain any number of single quotes ' for readability. These are completely ignored by the compiler. For example, `1000000` and `1'000'000` are both integer equal to one million.
 {% endhint %}
+
+A _character literal_ is a single, constant character. Single quotation marks \(' '\) surround all characters. If the character is any type but `char`, you must also provide a prefix: `L` for `wchar_t`, `u` for `char16_t`, and `U` for `char32_t`. For example, 'J' declares a `char` literal and `L'J'` declares a `wchar_t`.
+
+## Escape Sequences
 
 ## debugging, gdb
 
