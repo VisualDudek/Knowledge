@@ -24,6 +24,8 @@ int main() {
 
 ## if
 
+* for one-liners do not need square brackets `{` but you need semicolon `;`
+
 ```cpp
 if (boolean-expression) {
     statement1;
@@ -129,6 +131,38 @@ int main() {
     printf("char: %zu\n", size_c);
     size_t size_i = sizeof(int);
     printf("int: %zu\n", size_i);
+}
+```
+
+`void` The `void` type has an empty set of values.
+
+## Arrays
+
+* indexing is zero based
+
+```cpp
+int my_array[100];
+int array[] = { 1, 2, 3, 4 };
+
+// Accessing Array Elements
+arr[2] = 100;
+```
+
+## For loops
+
+```cpp
+for( init-stmt; conditional; iteration-stmt) {
+    --snip--
+}
+```
+
+```cpp
+int main() {
+    int max = 0;
+    int array[] = { 1, 5, 2, 4, 0};
+    for(size_t i=0; i < 5; i++) {
+        if (array[i] > max) maximum = array[i];
+    }
 }
 ```
 
