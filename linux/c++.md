@@ -118,6 +118,20 @@ Unicode character literals: `\u` followed by a 4-digit Unicode code or the prefi
 
 System programmers sometimes work directly with _raw memory_, which is a collection of bits without a type. Employ the `std::byte` type, available in the `<cstddef>` header, it permits bitwise logical operations and little else.
 
+`size_t` type, also available in the `<cstddef>` header, to encode size of objects. \[Format Specifiers\] the usual format specifiers for a `size_t` are `%zu` for a decimal representation of `%zx` for a hexadecimal.
+
+```cpp
+#include <cstddef>
+#include <cstdio>
+
+int main() {
+    size_t size_c = sizeof(char);
+    printf("char: %zu\n", size_c);
+    size_t size_i = sizeof(int);
+    printf("int: %zu\n", size_i);
+}
+```
+
 ## debugging, gdb
 
 ? need to compile with debug support, using `-g` flag.
