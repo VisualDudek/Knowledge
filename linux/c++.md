@@ -57,6 +57,8 @@ another option to put smth on standard output is `cout` which is part of `iostre
 
 As a general rule, use `%g` to print floating-point types.
 
+There is no format specifiers for `bool`, but you can use the `int` format spec. `%d` to yield a `1` for ture and a `0` for false.
+
 ## Comments
 
 ```cpp
@@ -128,4 +130,8 @@ int x;
 ```
 
 Initialization refers to the "assignment" of a value, at construction time. 
+
+### unary, binary and ternarry operator
+
+A _unary_ operator takes a single operand: the unary negation operator `!` takes a single operand and returns its opposite.
 
