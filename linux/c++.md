@@ -381,6 +381,19 @@ int array[5]{ 1, 2, 3 };    // 1, 2, 3, 0, 0
 int array[5];               // uninitialized values
 ```
 
+#### Narrowing Conversions
+
+```cpp
+float a{ 1 };
+float b{ 2 };
+int narrowed_result(a/b);    // Potentially ansty narrowing conversion
+int result{ a/b };           // Compiler generates warning
+```
+
+{% hint style="info" %}
+_use braced initializers everywhere_
+{% endhint %}
+
 ### Unions
 
 The union is a cousin of the POD that puts all of its members in the same place.
