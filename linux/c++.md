@@ -12,7 +12,7 @@ int main() {
 ```
 
 * _.cpp_ extension
-* single entry point called the `main` function
+* single entry point called the `main` function, can not be _void_
 * exit code `return 0;`
 * `printf` is defined in the `cstdio` library
 
@@ -45,7 +45,7 @@ The logical operators AND `&&` and OR `||` are binary.
 ## Functions
 
 ```cpp
-return-type function_name(par-type1 par_name1, par-type2 par_name2) {
+return_type function_name(par-type1 par_name1, par-type2 par_name2) {
     --snip--
     return return_value;
 }
@@ -134,7 +134,7 @@ int main() {
 }
 ```
 
-`void` The `void` type has an empty set of values.
+**void** The `void` type has an empty set of values.
 
 ### Strings
 
