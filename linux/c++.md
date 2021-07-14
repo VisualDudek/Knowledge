@@ -504,6 +504,43 @@ int main() {
 }
 ```
 
+### Pointer Arithmetic
+
+* can access array elements using pointer with the bracket operator `[ ]`
+
+```cpp
+College* second_college_ptr = &work[1];
+// or using pointer arithmetic
+College* second_college_ptr = work + 2; // remember that work is an array
+```
+
+{% hint style="info" %}
+`&work[1]` this seem tricky, but it seems that order of "decode" this is first form right than from left: \(1\) obtain object 2-th at array work \(2\) get address of this object
+{% endhint %}
+
+```cpp
+int main() {
+    char lower[] = "abc?e";
+    char upper[] = "ABC?E";
+    char* upper_ptr = upper;
+    
+    lower[3] = 'd';
+    upper_ptr[3] = 'D';
+```
+
+```cpp
+// array pointer arithmetics, equivalent to above Listing
+int main() {
+    char lower[] = "abc?e";
+    char upper[] = "ABC?E";
+    char* upper_ptr = &upper[0];
+    
+    // next magic happens
+    *(lower + 3) = 'd';
+    *(upper_ptr + 3) = 'D';
+}
+```
+
 ## Arrays
 
 * indexing is zero based
