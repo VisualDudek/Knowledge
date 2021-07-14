@@ -545,6 +545,8 @@ int main() {
 
 ### nullptr and Boolean Expressions
 
+Pointers have an implicity conversion to `bool`
+
 ### References
 
 * cannot be reseated or reassigend
@@ -566,6 +568,94 @@ int main() {
     add_year(clock); // Clock is implicity passed by reference!
     printf("The year is %d.\n", clock.get_year());
 }
+```
+
+### Forward-Linked Lists
+
+Each element holds a pointer to the next element. The last element in the linked list holds a `nullptr`
+
+```cpp
+// singly linked list element
+struct Element {
+    Element* next{};
+    
+    void insert_after(Element* new_element) {
+        new_element->next = next;
+        next = new_element;
+    }
+    
+    char data[2];
+    int number;
+};
+
+int main() {
+    Element a, b, c;
+    a.number = 1;
+    b.number = 2;
+    c.number = 3;
+    
+    a.insert_after(&b);
+    b.insert_after(&c);
+    
+    for (Element* cursor = &a; cursor; cursor = cursor->next) {
+        printf("element %c%c-%d\n",
+            cursor->data[0],
+            cursor->data[1],
+            cursor->number);
+    }
+}
+```
+
+{% hint style="info" %}
+for loop check if pointer `cursor` is not `nullptr`
+{% endhint %}
+
+### this Pointer
+
+* use when a method parameter name collides with a member variable
+
+```cpp
+struct Element {
+    Element* next{};
+    void insert_after(Element* new_element) {
+        new_element->next = this->next;
+        this->next = new_element;
+    }
+    
+    char data[2];
+    int number;
+};
+```
+
+```cpp
+// resolve ambiguity between members and arguments
+struct Clock {
+    bool set_year(int year) {
+     if (year < 2019) return false;
+     this->year = year;
+     return true;
+    }
+--snip---
+private:
+ int year;
+};
+```
+
+### const
+
+"I promise not to modify"
+
+### auto
+
+* can use `auto*` and `auto&`
+
+```cpp
+int a = 42;
+
+auto the_a { 42 };    // int
+auto foot { 12L };    // long
+auto rootbeer { 5.0F };    // float
+auto bar { "string" };     // char[7]
 ```
 
 ## Arrays
