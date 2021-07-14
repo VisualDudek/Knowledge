@@ -276,7 +276,7 @@ int main() {
 You want to guarantee that `year` is never less than 2019 under _any circumstatnces_. Such requirement is called a **class invariant**: a feature of a class that is always true \(that is, it never varies\). ---&gt; U can use **constructor**.
 {% endhint %}
 
-### constructors
+### constructor\(s\)
 
 * name matches the class's name
 * can take any number of args &lt; - - - what if you wnat to init `Clock` with a custom year?
@@ -330,6 +330,16 @@ int main() {
 {% hint style="danger" %}
 `T t8();` This is function declaration. It is function `t8` that a yet-to-be-defined function takes no args and returns an object of type `T`.
 {% endhint %}
+
+### destructor
+
+```cpp
+struct Earth {
+    ~Earth() {
+        // Earth's destructor
+    }
+};
+```
 
 ### Initialization
 
