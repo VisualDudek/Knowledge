@@ -433,6 +433,62 @@ int main() {
 }
 ```
 
+## Reference Types
+
+* keywords `this` , `const` and `auto`
+* _**dereferencing**_: given a pointer, you can obtain the object residing at the corresponding address
+* `void` pointer
+* `std::byte` pointer
+* encode empty pointers with `nullptr`
+* You can obtain the address of a variable by prepending the _address-of operator_ \(`&`\)
+* Pointers encode object location.
+
+```cpp
+int* my_ptr;    // declare a pointer using an asterisk (*)
+printf("The value of my_ptr is %p.", my_ptr);  // format specifier
+```
+
+{% hint style="info" %}
+Address Space Layout Randomization
+{% endhint %}
+
+### Dereferencing Pointers
+
+* dereference operatror \(`*`\) is a unary operator that accesses the object to which a pointer refers.
+
+```cpp
+int main() {
+    int foo{};
+    int* foo_address = &foo;
+    printf("Value at foo_address: %d\n", *foo_address);
+    printf("foo Address: %p\n", foo_address);
+    *foo_address = 1234;    // same as foo = 1234
+    printf("Value at foo_address: %d\n", *foo_address);
+    printf("foo Address: %p\n", foo_address);
+}
+```
+
+### The Member-of-Pointer Operator
+
+* or called _arrow operator_ \(`->`\)
+* perform two simultaneous operations: \(1\) dereferences a pointer \(2\) accesses a member of the pointed-to object.
+
+```cpp
+struct Clock {
+    --snip--
+};
+
+int main() {
+    Clock clock;
+    Clock* clock_ptr = &clock;
+    clock_ptr->set_year(2020);
+    // same as (*clock_ptr).set_year(2020)
+    
+    printf("Address of clock: %p\n", clock_ptr);
+    printf("Value of clock's year: %d", clock_ptr->get_year());
+}
+```
+
 ## Arrays
 
 * indexing is zero based
