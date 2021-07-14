@@ -570,6 +570,21 @@ int main() {
 }
 ```
 
+```cpp
+// references cannot be reseated
+int main() {
+    char original{ 'A' };
+    char& original_ref = original;
+    printf("Original: %c\n", original);
+    printf("Reference: %c\n", original_ref);
+    
+    char new_char{ 'B' };
+    original_ref = new_char;
+    printf("Original: %c\n", original);        // B
+    printf("New_value: %c\n", new_value);      // B
+    printf("Reference: %c\n", original_ref);   // B 
+```
+
 ### Forward-Linked Lists
 
 Each element holds a pointer to the next element. The last element in the linked list holds a `nullptr`
