@@ -489,10 +489,26 @@ int main() {
 }
 ```
 
+```cpp
+struct Bar {
+    char name[265];
+};
+
+void print_name(Bar* bar_ptr) {
+    printf("Bar name: %s\n", bar_ptr->name);
+}
+
+int main() {
+    Bar foo[] = { "Mag", "Nul", "Kelly" };
+    print_name(foo); // HINT: remember that array is already address!
+}
+```
+
 ## Arrays
 
 * indexing is zero based
 * array is just memory addres so U do not need reference if you want pointer to array
+* passing array in to function arg in fact you are passing pointer
 
 ```cpp
 int my_array[100];
@@ -508,6 +524,31 @@ size_t n = sizeof(array)/sizeof(int)
 {% hint style="info" %}
 you can safely obtain the number of elements using the `std::size` function available in the `<iterator>` header.
 {% endhint %}
+
+```cpp
+int arr[]{3, 6, 9};
+int* arr_ptr = arr;     // Points to 3
+// do not need reference operator bc array is just address
+```
+
+```cpp
+// pass array as two args
+
+struct College {
+    char name[256];
+};
+
+void print_names(College* colleges, size_t n_colleges) {
+    for (size_t i = 0; i < n_colleges; i++) {
+        --snip--
+    }
+}
+
+int main() {
+    College work[] = { "Andy", "Fox", "Napoleon" };
+    print_names( work, sizeof(work) / sizeof(College) );
+}
+```
 
 ## For loops
 
