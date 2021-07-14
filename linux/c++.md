@@ -541,6 +541,33 @@ int main() {
 }
 ```
 
+### void Pointers and std::byte Pointers
+
+### nullptr and Boolean Expressions
+
+### References
+
+* cannot be reseated or reassigend
+* cannot be assigned to null \(easily\)
+* no deref operator needed
+
+```cpp
+struct Clock {
+    --snip--
+};
+
+void add_year(Clock& clock) {
+    clock.set_year(clock.get_year() + 1); // No deref operator needed
+}
+
+int main() {
+    Clock clock;
+    printf("The year is %d.\n", clock.get_year()); // directly object pass
+    add_year(clock); // Clock is implicity passed by reference!
+    printf("The year is %d.\n", clock.get_year());
+}
+```
+
 ## Arrays
 
 * indexing is zero based
