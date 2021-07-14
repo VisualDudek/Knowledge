@@ -273,8 +273,23 @@ int main() {
 ```
 
 {% hint style="info" %}
-You want to guarantee that `year` is never less than 2019 under _any circumstatnces_. Such requirement is called a **class invariant**: a feature of a class that is always true \(that is, it never varies\).
+You want to guarantee that `year` is never less than 2019 under _any circumstatnces_. Such requirement is called a **class invariant**: a feature of a class that is always true \(that is, it never varies\). ---&gt; U can use **constructor**.
 {% endhint %}
+
+### constructors
+
+* name matches the class's name
+* can take any number of args &lt; - - - what if you wnat to init `Clock` with a custom year?
+
+```cpp
+struct Clock {
+    Clock() {
+        year = 2019;
+    }
+private:
+    int year;
+};
+```
 
 ### Unions
 
