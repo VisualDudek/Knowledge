@@ -38,6 +38,25 @@ else if (boolean-2) stmt-2;
 else stmt-3;
 ```
 
+## Switch Statements
+
+```cpp
+switch (condition) {
+    case (case_a): {
+        // Handle case a here
+        --snip--
+    } break;
+    case (case_b): {
+        // Handle case b here
+        --snip--
+    } break;
+    default: {
+        // Handle the default case here
+        --snip--
+    }
+}
+```
+
 ## AND, OR
 
 The logical operators AND `&&` and OR `||` are binary.
@@ -139,6 +158,152 @@ int main() {
 ### Strings
 
 _Strings_ are contiguous blocks of characters. A _C-style string_ or _null-terminated string_ has a zero-byte appended to its end \(a null\) to indicate the ind of the string. Because array elements are contiguous, you can store strings in array of character types.
+
+String literal, declare by enclosing text in quotation marks \(" "\).
+
+```cpp
+char english[] = "A book holds a house of gold.";
+```
+
+```cpp
+int main() {
+    char alphabet[27];
+    for (int i = 0; i <26; i++) {
+        albhabet[i] = i + 97;
+    }
+    alphabet[26] = 0; // make null-terminated string
+    printf("%s", alphabet);
+}
+```
+
+### Enumerations
+
+```cpp
+enum class Race {
+    Dinan,
+    Teklan,
+    Ivyn,
+    Aidan
+}
+
+// Initialize
+Race langbard_race = Race::Aidan;
+```
+
+{% hint style="info" %}
+`enum class` is one of two kinds of enumerations: it's called a scoped enum. For compatibility with C, C++ also aupports an unscoped enum, which is declared with `enum` rather than `enum class`. 
+{% endhint %}
+
+### Plain-Old-Data Classes POD
+
+* keyword `struct`
+* semicolon and the end of last square bracket
+* access members using the dot operator
+
+```cpp
+struct Book {
+    char name[256];
+    int year;
+    int pages;
+    bool hardcover;
+}; // semicolon and end
+
+int main() {
+    Book book;
+    book.pages = 271;
+}
+```
+
+{% hint style="warning" %}
+As a general rule, you should order members from largest to smallest within POD definitions.
+{% endhint %}
+
+POD classes contina inly data maembers, and sometimes that's all you want from a class. However, designing a program using only PODs can create a lot of complexity. You can fight such complexity with **encapsulation**, a design pattern that binds data with the functions that manipulate it. Placing related functions and data together helps to simplity code in at least two ways. First, you can put related code in one place, which helps you to reason about your program. Second, you can hide some of a class's code and data from the rest of your program using a practice called _information hiding_.
+
+> **encapsulation** a design pattern that binds data with the functions that manipulate it. In C++, you achive encapsulation by adding methods and access controls to class definitions.
+
+### Classes
+
+`struct` vs `class` keyword, aside from default access control, classes declared with the `struct` and `class` are the same.
+
+* `class` declares members `private` by default
+
+### methods
+
+```cpp
+struct ClockOfTheLongNow {
+    void add_year() {
+        year++;
+    }
+    int year;
+};
+```
+
+### access controls
+
+```cpp
+struct ClockOfTheLongNow {
+    void add_year() {
+        year++;
+    }
+    bool set_year(int new_year) {    // setter
+        if (new_year < 2019) return false;
+        year = new_year;
+        return true;
+    }
+    int get_yer() {    // getter
+        return year;
+    }
+private:
+    int year;
+};
+// such way U cannot modify `yaer` directly
+```
+
+{% hint style="info" %}
+Having encapsulated `year` you must now use methods to interact with `ClockOfTheLongNow`
+{% endhint %}
+
+```cpp
+// will show U the problem when clock is declared and year is uninitailized
+int main() {
+    ClockOfTheLongNow clock;
+    --snip--
+}
+```
+
+{% hint style="info" %}
+You want to guarantee that `year` is never less than 2019 under _any circumstatnces_. Such requirement is called a **class invariant**: a feature of a class that is always true \(that is, it never varies\).
+{% endhint %}
+
+### Unions
+
+The union is a cousin of the POD that puts all of its members in the same place.
+
+* keyword `union`
+* store only one value 
+
+{% hint style="info" %}
+You can think of unions as different views or interpretations of a block of memory.
+{% endhint %}
+
+```cpp
+union Variant {
+    char string[10];
+    int integer;
+    double floating_point;
+};
+
+int main() {
+    Variant v;
+    v.integer = 42;
+    printf("The ultimate answer: %d\n", v.integer);
+    v.floating_point = 2.7182818284;
+    printf("Euler's number e: %f\n", v.floating_point);
+    // Disaster strikes:
+    printf("A dumpser fire: %d\n", v.integer);
+}
+```
 
 ## Arrays
 
