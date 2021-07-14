@@ -280,6 +280,7 @@ You want to guarantee that `year` is never less than 2019 under _any circumstatn
 
 * name matches the class's name
 * can take any number of args &lt; - - - what if you wnat to init `Clock` with a custom year?
+* can have several constructors depending on type of constructor arg.
 
 ```cpp
 struct Clock {
@@ -289,6 +290,95 @@ struct Clock {
 private:
     int year;
 };
+
+// constructor with arg
+    ...
+    Clock(int year_in) {
+        --snip--
+};
+
+int main() {
+    Clock clock{ 2020 }; // Class initialization. constructor with arg
+```
+
+```cpp
+struct T {
+    T() {
+        // no arg
+    }
+    T(char arg) {
+        printf("char: %c\n", arg);
+    }
+    T(int arg) {
+        printf("int: %d\n", arg);
+    }
+};
+
+// Init
+int main() {
+    T t1; // no arg
+    T t2{ 'c' };         // char: c
+    T t3{ 65537 };       // int: 65537
+    T t4{ 6.02e23f };    // float: 60200017271895229464576.000000
+    T t5('g');           // char: g
+    T t6 = { '1' };      // char: 1
+    T t7{};              // no arg
+    T t8();              // suprise 
+}
+```
+
+{% hint style="danger" %}
+`T t8();` This is function declaration. It is function `t8` that a yet-to-be-defined function takes no args and returns an object of type `T`.
+{% endhint %}
+
+### Initialization
+
+```cpp
+// Initialized to 0
+int a = 0;
+int b{};
+int c = {};
+int d; // maybe
+```
+
+```cpp
+// Initialized to 42
+int e = 42;
+int f{ 42 };
+int g = { 42 };
+int h(42);
+```
+
+* only form left to righ, cannot skip args
+* cannot use parentheses to init PODs
+
+```cpp
+// POD initialization
+
+struct Foo {
+    int a;
+    char b[256];
+    bool c;
+};
+
+int main() {
+    Foo foo{};    // All fields zeroed
+    Foo foo = {}; // All fields zeroed
+    
+    Foo foo{ 42, "Hello" };        // Fields a & b set; c = 0
+    Foo foo{ 42, "Hello", true };  // All fields set
+}
+```
+
+{% hint style="danger" %}
+`Foo foo = 0;  // this will fial`
+{% endhint %}
+
+```cpp
+int array[]{ 1, 2, 3 };
+int array[5]{};             // 0, 0, 0, 0, 0   
+int array[5]{ 1, 2, 3 };    // 1, 2, 3, 0, 0
+int array[5];               // uninitialized values
 ```
 
 ### Unions
@@ -323,6 +413,7 @@ int main() {
 ## Arrays
 
 * indexing is zero based
+* array is just memory addres so U do not need reference if you want pointer to array
 
 ```cpp
 int my_array[100];
