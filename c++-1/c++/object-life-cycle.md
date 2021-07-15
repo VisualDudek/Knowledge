@@ -31,6 +31,6 @@ Co to są **translation units**?
 * **local static var** are declared at function scope
 
 {% hint style="info" %}
-_local static var_ begin upon the firdt invocation of the enclosing function and end ehen the program exits.
+_local static var_ begin upon the first invocation of the enclosing function and end when the program exits.
 {% endhint %}
 
