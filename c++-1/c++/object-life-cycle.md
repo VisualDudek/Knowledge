@@ -13,7 +13,7 @@ void power_up(int nuclear_isotopes) {
 }
 // each time function power_up is invoked both nuclear_isotopes and waste_heat 
 // are allocated each time.
-// Just before junction returns, these vars are deallocated.
+// Just before function returns, these vars are deallocated.
 ```
 
 ### static
@@ -117,7 +117,33 @@ The runtime seeks the closest exception handler to a thrown exception. If there 
 As a general rule, treat destructors as if they were `noexcept` . Do not throw exception inside destrctor.
 {% endhint %}
 
-## SimpleString Class
+## SimpleString Class Example
 
+* `size_t` is unsigned and cannot be negative, so you do not need to check for this bogus condition.
 
+```cpp
+struct SimpleString {
+    SimpleString(size_t max_size) // constructor
+        : max_size{ max_size },   // saves length into the max_size memeber
+          length{} {              // init length to zero
+        if (max_size == 0) {
+          throw std::runtime_error{"Max size must be at least 1."};
+          // ^--- exception in action
+        }
+        buffer = new char[max_size];
+        buffer[0] = 0;
+    }
+    
+    ~SimpleString() {           // deconstructor
+      delete[] buffer;
+    }
+--snip--
+private:
+  size_t max_size;
+  char* buffer;
+  size_t length;
+};
+```
+
+> This pattern is called _resource acquisiion is initialization_ \(RAII\) or _constructor acuires, deconstructor releases_ \(CADRe\).
 
