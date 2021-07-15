@@ -76,6 +76,7 @@ delete[] my_int_array_ptr;
 * `std::runtime_error` constructor accepts a null-terminated `const char*` describing the nature of the error condition.
 * use `try-catch` blocks to establish exception handlers for a block of code.
 * can chaining together `catch` stmt's.
+* can rethrow exception using `throw` inside `catch`
 
 ```cpp
 // throws an exception whenever you invoke the forget method with arg == 0xFACE
