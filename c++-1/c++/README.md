@@ -108,6 +108,10 @@ There is no format specifiers for `bool`, but you can use the `int` format spec.
 
 ### string
 
+### stdexcept
+
+* `std::runtime_error`
+
 ## literals
 
 A literal is a hardcoded value in a program:

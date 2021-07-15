@@ -117,3 +117,7 @@ The runtime seeks the closest exception handler to a thrown exception. If there 
 As a general rule, treat destructors as if they were `noexcept` . Do not throw exception inside destrctor.
 {% endhint %}
 
+## SimpleString Class
+
+
+
