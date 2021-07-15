@@ -65,5 +65,11 @@ delete[] my_int_array_ptr;
 
 ## Tracing the Object Life Cycle
 
+{% hint style="danger" %}
+`const char* const name;` co to jest ???
+{% endhint %}
+
+## Exceptions
+
 
 
