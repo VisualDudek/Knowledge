@@ -78,6 +78,7 @@ delete[] my_int_array_ptr;
 * can chaining together `catch` stmt's.
 * can rethrow exception using `throw` inside `catch`
 * `noexcept` mark any func that cannot possibly throw an exception -&gt; enable some code optimizations
+* exception can affect object lifetime
 
 ```cpp
 // throws an exception whenever you invoke the forget method with arg == 0xFACE
@@ -106,5 +107,9 @@ int main () {
 
 {% hint style="info" %}
 The rules for exception handling are based on class inheritance. When an exception is thrown, a `catch` block hankles the exception if the theown exception's type matchs the `catch` handler's exception type or if the thrown exception's type _inherits_ from the `catch` handler's exception type
+{% endhint %}
+
+{% hint style="info" %}
+The runtime seeks the closest exception handler to a thrown exception. If there is a matching exception handler in the current stack frame. it will handle the exception. If no matching handler is found, the runtime will unwind the call stack until it finds a suitable handler. Any objects whose lifetimes end **are destroyed** in the usual way.
 {% endhint %}
 
