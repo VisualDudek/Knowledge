@@ -414,6 +414,21 @@ int result{ a/b };           // Compiler generates warning
 _use braced initializers everywhere_
 {% endhint %}
 
+### inheritance
+
+```cpp
+struct Superclass {
+    int x;
+};
+
+struct Subclass : Superclass {    // inheritance syntax
+    int y;
+    int foo() {
+        return x + y;    // subclass inherits members from Superclass
+    }
+};
+```
+
 ### Unions
 
 The union is a cousin of the POD that puts all of its members in the same place.
