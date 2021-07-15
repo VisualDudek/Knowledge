@@ -71,5 +71,33 @@ delete[] my_int_array_ptr;
 
 ## Exceptions
 
+* `throw` and `catch` keywords.
+* include `<stdexcept>`
+* `std::runtime_error` constructor accepts a null-terminated `const char*` describing the nature of the error condition.
+* use `try-catch` blocks to establish exception handlers for a block of code.
 
+```cpp
+// throws an exception whenever you invoke the forget method with arg == 0xFACE
+struct Foo {
+    void forget(int x) {
+        if (x == 0xFACE) {
+            throw std::runtime_error{ "make an exception." };
+        }
+        print("Forgot 0x%x\n", x);
+    }
+};      
+// try-catch
+int main () {
+    Foo foo;
+    try {
+        foo.forget(0xFACE);
+    } catch (const std::runtime_error& e) {
+        printf("exception caught with message: %s\n", e.what());
+    }
+}
+```
+
+{% hint style="danger" %}
+`std:runtime_error& e` co tutaj robi &? czy to jest referencja?
+{% endhint %}
 
