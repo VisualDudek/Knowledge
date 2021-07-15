@@ -157,7 +157,7 @@ struct SimpleString {
 private:
   size_t max_size;
   char* buffer;
-  size_t length;
+  size_t length; // odpowiada idx null-byte
 };
 ```
 
