@@ -75,6 +75,7 @@ delete[] my_int_array_ptr;
 * include `<stdexcept>`
 * `std::runtime_error` constructor accepts a null-terminated `const char*` describing the nature of the error condition.
 * use `try-catch` blocks to establish exception handlers for a block of code.
+* can chaining together `catch` stmt's.
 
 ```cpp
 // throws an exception whenever you invoke the forget method with arg == 0xFACE
@@ -99,5 +100,9 @@ int main () {
 
 {% hint style="danger" %}
 `std:runtime_error& e` co tutaj robi &? czy to jest referencja?
+{% endhint %}
+
+{% hint style="info" %}
+The rules for exception handling are based on class inheritance. When an exception is thrown, a `catch` block hankles the exception if the theown exception's type matchs the `catch` handler's exception type or if the thrown exception's type _inherits_ from the `catch` handler's exception type
 {% endhint %}
 
