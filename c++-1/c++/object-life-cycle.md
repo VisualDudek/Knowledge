@@ -113,3 +113,7 @@ The rules for exception handling are based on class inheritance. When an excepti
 The runtime seeks the closest exception handler to a thrown exception. If there is a matching exception handler in the current stack frame. it will handle the exception. If no matching handler is found, the runtime will unwind the call stack until it finds a suitable handler. Any objects whose lifetimes end **are destroyed** in the usual way.
 {% endhint %}
 
+{% hint style="info" %}
+As a general rule, treat destructors as if they were `noexcept` . Do not throw exception inside destrctor.
+{% endhint %}
+
