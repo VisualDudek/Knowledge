@@ -142,6 +142,12 @@ struct SimpleString {
                                          //the state odf a SimpleString
       printf("%s: %s" tag, buffer);
     }
+    
+    bool append_line(const char* x) {
+      const auto x_len = strlen(x);
+      if (x_len + length + 2 > max_size) return false; // 2 bc of null byte and 
+                                                       // newline character
+      std::strncpy(buffer + length, x, max_size - length);
 --snip--
 private:
   size_t max_size;
