@@ -137,6 +137,11 @@ struct SimpleString {
     ~SimpleString() {           // deconstructor
       delete[] buffer;
     }
+    
+    void print(const char* tag) const {  // it is const bc doesn't need to mod
+                                         //the state odf a SimpleString
+      printf("%s: %s" tag, buffer);
+    }
 --snip--
 private:
   size_t max_size;
