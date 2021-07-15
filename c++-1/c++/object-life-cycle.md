@@ -77,6 +77,7 @@ delete[] my_int_array_ptr;
 * use `try-catch` blocks to establish exception handlers for a block of code.
 * can chaining together `catch` stmt's.
 * can rethrow exception using `throw` inside `catch`
+* `noexcept` mark any func that cannot possibly throw an exception -&gt; enable some code optimizations
 
 ```cpp
 // throws an exception whenever you invoke the forget method with arg == 0xFACE
