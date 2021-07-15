@@ -102,6 +102,10 @@ There is no format specifiers for `bool`, but you can use the `int` format spec.
 
 * printf
 
+### cstring
+
+* strlen
+
 ### iostream
 
 * cout
