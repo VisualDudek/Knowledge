@@ -148,6 +148,11 @@ struct SimpleString {
       if (x_len + length + 2 > max_size) return false; // 2 bc of null byte and 
                                                        // newline character
       std::strncpy(buffer + length, x, max_size - length);
+      length += x_len;
+      buffer[length++] = '\n';
+      buffer[length] = 0;
+      return true;
+    }
 --snip--
 private:
   size_t max_size;
