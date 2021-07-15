@@ -105,6 +105,7 @@ There is no format specifiers for `bool`, but you can use the `int` format spec.
 ### cstring
 
 * strlen
+* strncpy
 
 ### iostream
 
