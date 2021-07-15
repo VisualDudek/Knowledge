@@ -3,10 +3,14 @@
 * [Python](README.md)
 * [Korepetycje](korepetycje.md)
 
+## C++ <a id="c++-1"></a>
+
+* [C++](c++-1/c++/README.md)
+  * [OBJECT LIFE CYCLE](c++-1/c++/object-life-cycle.md)
+
 ## LINUX
 
 * [Ansible](linux/ansible.md)
-* [C++](linux/c++.md)
 * [VIM](linux/vim.md)
 * [Linux-notes](linux/linux-notes.md)
 * [Zabbix](linux/zabbix.md)
