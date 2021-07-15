@@ -331,6 +331,16 @@ int main() {
 `T t8();` This is function declaration. It is function `t8` that a yet-to-be-defined function takes no args and returns an object of type `T`.
 {% endhint %}
 
+```cpp
+struct Tracer {
+    Tracer(const char* name) : name{ name } { // take arg and saves it into
+    --snip--                                  // member name.
+    }
+private:
+    const char* const name;
+};
+```
+
 ### destructor
 
 ```cpp
