@@ -120,6 +120,13 @@ As a general rule, treat destructors as if they were `noexcept` . Do not throw e
 ## SimpleString Class Example
 
 * `size_t` is unsigned and cannot be negative, so you do not need to check for this bogus condition.
+* new func `strncpy`
+
+{% hint style="info" %}
+initializacja var members w kostruktorze, dziwna składnia po operatorze colon \(`:`\)
+
+`Constructor( args ) : init member1 using arg1, init member2 using arg2 {`
+{% endhint %}
 
 ```cpp
 struct SimpleString {
@@ -161,5 +168,16 @@ private:
 };
 ```
 
+{% hint style="warning" %}
+ciekawe czy jest róźnica pomiędzy `delete[] buffer;` a `delete buffer;` bez brackets
+{% endhint %}
+
 > This pattern is called _resource acquisiion is initialization_ \(RAII\) or _constructor acuires, deconstructor releases_ \(CADRe\).
+
+### Composing a SimpleString
+
+```cpp
+struct SimpleStringOwner {
+    SimpleStringOwner(const char* x)
+```
 
