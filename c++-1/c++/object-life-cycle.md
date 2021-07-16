@@ -342,5 +342,23 @@ e.g. class that manage GB data and each time U copy the object you'll need to al
 
 * major differenve between copy assignment and copy constructor is the in copy assignment `dst` might already have a value. You must clean up `dst` resources before copy `src` e.g. `dst = src`
 
+> copy assignment operator usrs the `operator=` syntax
+
+```cpp
+struct SimpleString {
+    --snip--
+    SimpleString& operator=(const SimpleString& other) {
+        if (this == &other) return *this; // no need of slef-copy
+        const auto new_buffer = new char[other.max_size];
+        delete[] buffer;
+        buffer = new_buffer;
+        length = other.length;
+        max_size = other.max_size;
+        std::strncpy(buffer, other.buffer, max_size);
+        return *this;
+    }
+}
+```
+
 
 
