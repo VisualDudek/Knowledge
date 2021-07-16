@@ -332,3 +332,9 @@ int main() {
 }
 ```
 
+{% hint style="danger" %}
+You shouldn't pass by value to avoid modification. Use a `const` reference.
+
+e.g. class that manage GB data and each time U copy the object you'll need to allocate and copy a gigabyte of data.
+{% endhint %}
+
