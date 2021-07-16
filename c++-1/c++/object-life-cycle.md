@@ -246,3 +246,7 @@ bool send_kings_horses_and_men() {
 }
 ```
 
+{% hint style="info" %}
+deklaracja typów w przypadku gdy funkcja zwraca więcej niż jeden arg, patrz powyżej na --15--
+{% endhint %}
+
