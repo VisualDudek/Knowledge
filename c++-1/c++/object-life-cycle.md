@@ -290,3 +290,45 @@ co to jest **memberwise copy** ?
 Why it is not so easy with _Fully featured classes_ ?
 {% endhint %}
 
+### Copy Constructor
+
+* we want _deep copy_
+* copy constructror is invoked when passing `SimpleString` into a function by value
+
+```cpp
+struct SimpleString {
+    --snip--
+    SimpleString(const SimpleString& other); // no reson to modifiy src
+};
+
+int main() {
+    SimpleString a;
+    SimpleString a_copy{ a };
+}
+```
+
+```cpp
+// copy constructor implementation
+SimpleString(const SimpleString& other)
+    : max_size( other.max_size },
+      buffer{ new char[other.max_size] },
+      length { other.length } {
+    std::strncpy(buffer, other.buffer, max_size);
+}
+```
+
+```cpp
+// if class have copy constructor, it will be invoked while passing into 
+//function by value
+--snip--
+void foo(SimpleString x) {
+    x.append_line("This change is lost.");
+}
+
+int main() {
+    SimpleString a { 20 };
+    foo(a); // Invoke copy constructor
+    a.print("Still empty");
+}
+```
+
