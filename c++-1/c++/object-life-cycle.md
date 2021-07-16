@@ -338,3 +338,9 @@ You shouldn't pass by value to avoid modification. Use a `const` reference.
 e.g. class that manage GB data and each time U copy the object you'll need to allocate and copy a gigabyte of data.
 {% endhint %}
 
+### Copy Assignment
+
+* major differenve between copy assignment and copy constructor is the in copy assignment `dst` might already have a value. You must clean up `dst` resources before copy `src` e.g. `dst = src`
+
+
+
