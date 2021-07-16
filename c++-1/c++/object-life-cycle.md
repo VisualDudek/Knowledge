@@ -286,3 +286,7 @@ Point make_transpose(Point p) {
 co to jest **memberwise copy** ?
 {% endhint %}
 
+{% hint style="danger" %}
+Why it is not so easy with _Fully featured classes_ ?
+{% endhint %}
+
