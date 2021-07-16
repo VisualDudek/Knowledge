@@ -282,3 +282,7 @@ Point make_transpose(Point p) {
 }
 ```
 
+{% hint style="warning" %}
+co to jest **memberwise copy** ?
+{% endhint %}
+
