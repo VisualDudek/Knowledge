@@ -231,7 +231,18 @@ struct Result {
 };
 
 Reslut make_humpty() {
-    HumptyDumpty hd{};
-    
+    HumptyDumpty hd{};    // init all to zero
+    bool is_valid;
+    // Check that hd is valid and set is_valid appropriately
+    return { hd, is_valid };
+}
+
+bool send_kings_horses_and_men() {
+    auto [hd, success] = make_humpty();  // zwróć uwagę na auto deklaracje typów
+    if (!success) return false;
+    // Class invariant established
+    --snip--
+    return true;
+}
 ```
 
