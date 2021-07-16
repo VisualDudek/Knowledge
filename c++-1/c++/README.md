@@ -696,7 +696,8 @@ private:
 
 ### const
 
-"I promise not to modify"
+* "I promise not to modify"
+* read-only
 
 ### auto
 
