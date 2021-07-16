@@ -192,5 +192,14 @@ struct SimpleStringOwner {
 private:
  SimpleString string;
 };
+
+int main() {
+    SimpleStringOwner x{ "x" };
+    printf("x is alive\n");
+}
 ```
+
+{% hint style="danger" %}
+Gdzie jest problem w SimpleString i jak go rozwiązuje SimpleStringOwner ???
+{% endhint %}
 
