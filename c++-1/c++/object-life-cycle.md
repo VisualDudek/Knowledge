@@ -72,7 +72,7 @@ delete[] my_int_array_ptr;
 ## Exceptions
 
 * `throw` and `catch` keywords.
-* include `<stdexcept>`
+* `#include <stdexcept>`
 * `std::runtime_error` constructor accepts a null-terminated `const char*` describing the nature of the error condition.
 * use `try-catch` blocks to establish exception handlers for a block of code.
 * can chaining together `catch` stmt's.
