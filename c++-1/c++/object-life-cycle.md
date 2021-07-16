@@ -218,3 +218,20 @@ Gdzie jest problem w SimpleString i jak go rozwiązuje SimpleStringOwner ???
 TODO: example from boook
 {% endhint %}
 
+### Alternatives to Exceptions
+
+1. manually enforce class invariants by exposing some method that communicates whether the class invariants could be established
+2. return multiple values using _structured binding declaration._ **Factory methods,** their purpose is to initialize objects.
+
+```cpp
+// factory method + return multiple values
+struct Result {
+    HumptyDumpty hd;
+    bool success;
+};
+
+Reslut make_humpty() {
+    HumptyDumpty hd{};
+    
+```
+
