@@ -254,3 +254,31 @@ deklaracja typów w przypadku gdy funkcja zwraca więcej niż jeden arg, patrz p
 
 _Copy sematics_ is "the meaning of copy". In practice, programmers use the term to mean the rules of makeing copies of objects: after `x` is _copied into_ `y`, they'r _equvalent_ and _independent_. That is, `x == y` is ture after a copy \(equivalence\), and a modification to `x` doesn't cause a modification of `y` \(independence\).
 
+```cpp
+// example
+int add_one(int x) {    // pass by value
+    x++;
+    return x;
+}
+
+int main() {
+    auto original = 1;
+    auto reult = add_one(original);  // pass by value
+    printf("Original: %d; Result: %d", original, result);
+}
+```
+
+```cpp
+// same wiht POD types, original is unaffected
+struct Point {
+    int x, y;
+};
+
+Point make_transpose(Point p) {
+    int tmp = p.x;
+    p.x = p.y;
+    p.y = tmp;
+    return p; // return new Point
+}
+```
+
