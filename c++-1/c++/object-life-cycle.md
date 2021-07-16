@@ -121,6 +121,15 @@ As a general rule, treat destructors as if they were `noexcept` . Do not throw e
 
 * `size_t` is unsigned and cannot be negative, so you do not need to check for this bogus condition.
 * new func `strncpy`
+* co to jest _class invariant_ ???
+
+> What is assumed to **be true for** a class is called "_class invariant_" or simply "invariant" It is the job of a constructor to establish the invariant for its class \(**so that the member functions can rely on it**\) and for the member functions to make sure that the invatiant holds when they exit.
+
+```text
+// Invariant Example: it is not c++ lang
+context LargeCompany
+inv: numberOfEmployees > 50
+```
 
 {% hint style="info" %}
 initializacja var members w kostruktorze, dziwna składnia po operatorze colon \(`:`\)
@@ -201,5 +210,11 @@ int main() {
 
 {% hint style="danger" %}
 Gdzie jest problem w SimpleString i jak go rozwiązuje SimpleStringOwner ???
+{% endhint %}
+
+### Call Stack Unwinding
+
+{% hint style="warning" %}
+TODO: example from boook
 {% endhint %}
 
