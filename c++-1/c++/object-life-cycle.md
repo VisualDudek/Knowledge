@@ -255,7 +255,7 @@ deklaracja typów w przypadku gdy funkcja zwraca więcej niż jeden arg, patrz p
 _Copy sematics_ is "the meaning of copy". In practice, programmers use the term to mean the rules of makeing copies of objects: after `x` is _copied into_ `y`, they'r _equvalent_ and _independent_. That is, `x == y` is ture after a copy \(equivalence\), and a modification to `x` doesn't cause a modification of `y` \(independence\).
 
 ```cpp
-// example
+// example pass by value
 int add_one(int x) {    // pass by value
     x++;
     return x;
@@ -274,7 +274,7 @@ struct Point {
     int x, y;
 };
 
-Point make_transpose(Point p) {
+Point make_transpose(Point p) {  // pass by value
     int tmp = p.x;
     p.x = p.y;
     p.y = tmp;
