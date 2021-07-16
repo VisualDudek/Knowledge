@@ -179,5 +179,18 @@ ciekawe czy jest róźnica pomiędzy `delete[] buffer;` a `delete buffer;` bez b
 ```cpp
 struct SimpleStringOwner {
     SimpleStringOwner(const char* x)
+        : string{ 10 } {
+        if (!string.append_line(x)) {
+            throw std::runtime_error{ "Not enoug memory!" };
+        }
+        string.print("Constructed");
+    }
+    ~SimpleStringOwner() {
+        string.print("About to destroy");
+    }
+        
+private:
+ SimpleString string;
+};
 ```
 
