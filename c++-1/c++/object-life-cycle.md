@@ -250,3 +250,7 @@ bool send_kings_horses_and_men() {
 deklaracja typów w przypadku gdy funkcja zwraca więcej niż jeden arg, patrz powyżej na --15--
 {% endhint %}
 
+## Copy Semantics
+
+_Copy sematics_ is "the meaning of copy". In practice, programmers use the term to mean the rules of makeing copies of objects: after `x` is _copied into_ `y`, they'r _equvalent_ and _independent_. That is, `x == y` is ture after a copy \(equivalence\), and a modification to `x` doesn't cause a modification of `y` \(independence\).
+
