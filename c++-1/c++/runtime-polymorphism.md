@@ -153,3 +153,11 @@ If you want to permit a derived class to override a base class's methods, you us
 
 ### Pure-Virtual Classes and Virtual Destructors
 
+### Using Interfaces
+
+As a _consumer_ you can only deal in references or pointers to interfaces. The compiler cannot know ahead of time how much memory to allocate for the underlying type: if the compliler could know the underlying type, you would be better off using trmplates.
+
+> **Constructor injection**, you typically use an interface reference. BC reference cannot be reseated, they won't change for the lifetime of the object.
+>
+> **Property injection**, you use a method to set a pointer member. This allows you to change the object to which the member points.
+
