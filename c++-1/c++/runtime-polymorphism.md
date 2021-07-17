@@ -119,7 +119,35 @@ Consider an alternative approach where `Bank` holds a pointer to a logger. This 
 
 ## Defining Interfaces
 
+* `virtual`
+* `=0` you _require_ a derived class to implement the method
+* `override`
+* class inheritance `struct DerivedClass : BaseClass {`
 
+```cpp
+struct Logger {
+    virtual ~Logger() = default;
+    virtual void log_transfer(long from, long to, double amount) = 0;
+};
 
+struct ConsoleLogger : Logger {
+    void log_transfer(long from, long to, duble amount) override {
+        printf("%ld -> %ld: %f\n", from, to, amount);
+    }
+};
+```
 
+### Base Class Inheritance
+
+easy
+
+### Member Inheritance
+
+{% hint style="info" %}
+private member do not inherited by derived classes.
+{% endhint %}
+
+### virtual Methods
+
+If you want to permit a derived class to override a base class's methods, you use the `vurtial` keyword. By adding `virtual` to a method's definition, you declare that a derived class's implementation should be used if one is supplied. Whitin the implementation, you add the `override` keyword to the method's declaration.
 
