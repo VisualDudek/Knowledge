@@ -384,6 +384,12 @@ SimpleStringOwner c{ SimpleString{ 50 } }; // SimpleString{ 50 } is an rvalue
 
 ### lvalue \(&\) and rvalue \(&&\) References 
 
+* can cast an lvalue to an rvalue using `std::move`
+
+{% hint style="warning" %}
+cast lvalue to rvalue ale po co?
+{% endhint %}
+
 ```cpp
 void ref_type(int &x) {
     printf("lvalue reference %d\n", x);
@@ -395,8 +401,49 @@ void ref_type)int &&x) {
 int main() {
     auto x = 1;
     ref_type(x);    // lvalue
+    ref_typr(std::move(x); // cast lvalue to an rvalue
     ref_type(2);    // rvalue
     ref_type(x + 2);    // rvalue
 }
 ```
+
+### Move Construction
+
+* take rvalue references
+* can cannibalize rvalue references
+
+```cpp
+// move constructor
+SimpleString(SimpleString&& other) noexcept
+    : max_size{ ther.max_size },
+    buffer(other.buffer),
+    length(other.length) {
+    other.length = 0;
+    other.buffer = nullptr;
+    other.max_size = 0;
+}
+```
+
+### Move Assignment
+
+* `operator=`
+
+```cpp
+SimpleString& operator=(SimpleString&& other) noexcept {
+    if (this == other) return *this;
+    delete[] buffer;
+    buffer = other.buffer;
+    length = other.length;
+    max_size = other.max_size;
+    other.buffer = nullptr;
+    other.length = 0;
+    other.max_size = 0;
+    return *this;
+}
+
+// U can add below constructor to SimpleStringOwner
+SimpleStringOwner(SimpleString&& x) : string{ std::move(x) } {}
+```
+
+### Final Product of SimpleString
 

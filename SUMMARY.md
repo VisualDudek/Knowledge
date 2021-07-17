@@ -7,6 +7,7 @@
 
 * [C++](c++-1/c++/README.md)
   * [OBJECT LIFE CYCLE](c++-1/c++/object-life-cycle.md)
+  * [RUNTIME POLYMORPHISM](c++-1/c++/runtime-polymorphism.md)
 
 ## LINUX
 
