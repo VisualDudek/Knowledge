@@ -103,3 +103,9 @@ int main() {
 */
 ```
 
+{% hint style="info" %}
+There must be a better way.
+
+Consider an alternative approach where `Bank` holds a pointer to a logger. This way, you can set the pointer directly and get rid of `LoggerType` entirely. Y**ou exploit the fact that your loggers have thte same function prototype**.
+{% endhint %}
+
