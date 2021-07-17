@@ -362,5 +362,23 @@ struct SimpleString {
 
 ### Default Copy
 
+## Move Semantics
 
+### Value Categories
+
+> Every expression has two important characteristics: its _type_ and its _**value category**_.
+
+* lvalue
+* glvalue
+* prvalue
+* xvalue
+
+```cpp
+// lvalue is any vlaue that has a name, and an rvalue is anything 
+//that isn't an lvalue
+
+SimpleString a{ 50 };
+SimpleStringOwner b { a };     // a is an lvalue
+SimpleStringOwner c{ SimpleString{ 50 } }; // SimpleString{ 50 } is an rvalue
+```
 
