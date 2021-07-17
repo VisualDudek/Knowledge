@@ -93,5 +93,13 @@ int main() {
   bank.set_logger(LoggerType::File);
   bank.make_transfer(3000, 2000, 75.00);
 }
+
+// Wady tego rozwązania ujawniają się gdy trzeba dodać nowy Logger
+/*
+1. You need to write a new logger type
+2. need to add new enum value to the enum class LoggerType
+3. must add a new case in the switch-case stmt
+4. need add the new logging class as a member to Bank
+*/
 ```
 
