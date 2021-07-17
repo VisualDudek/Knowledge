@@ -70,6 +70,8 @@ return_type function_name(par-type1 par_name1, par-type2 par_name2) {
 }
 ```
 
+> Defining multiple functions with the same name but different parameters is called _function overloading_.
+
 ## printf
 
 {% hint style="info" %}
