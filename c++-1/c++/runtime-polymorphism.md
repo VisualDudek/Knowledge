@@ -106,6 +106,20 @@ int main() {
 {% hint style="info" %}
 There must be a better way.
 
-Consider an alternative approach where `Bank` holds a pointer to a logger. This way, you can set the pointer directly and get rid of `LoggerType` entirely. Y**ou exploit the fact that your loggers have thte same function prototype**.
+Consider an alternative approach where `Bank` holds a pointer to a logger. This way, you can set the pointer directly and get rid of `LoggerType` entirely. Y**ou exploit the fact that your loggers have thte same function prototype**. This is the idea behind an _interface_: the `Bank` class doesn't need to know the implementation details of the `Logger` reference it holds, just how to invoke its methods.
 {% endhint %}
+
+### Interface
+
+* interface
+* implementation
+* consumers of class
+
+### Object Composition and Implementation Inheritance
+
+## Defining Interfaces
+
+
+
+
 
