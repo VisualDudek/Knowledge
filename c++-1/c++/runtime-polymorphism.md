@@ -151,3 +151,5 @@ private member do not inherited by derived classes.
 
 If you want to permit a derived class to override a base class's methods, you use the `vurtial` keyword. By adding `virtual` to a method's definition, you declare that a derived class's implementation should be used if one is supplied. Whitin the implementation, you add the `override` keyword to the method's declaration.
 
+### Pure-Virtual Classes and Virtual Destructors
+
