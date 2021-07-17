@@ -382,3 +382,7 @@ SimpleStringOwner b { a };     // a is an lvalue
 SimpleStringOwner c{ SimpleString{ 50 } }; // SimpleString{ 50 } is an rvalue
 ```
 
+### lvalue \(&\) and rvalue \(&&\) References 
+
+
+
