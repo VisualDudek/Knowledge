@@ -96,7 +96,7 @@ cout << *intPtr << '\n'; // OK
 
 ### narrow\_cast
 
-## mean: A Template Function Example
+## Example: mean, A Template Function
 
 ```cpp
 // consider the func that computes the mean of a double array
@@ -144,6 +144,8 @@ no i się okazało że mozna opuścić
 
 BUT sometimes, templare arguments cannot be deduced. For example, if a templare function's return type is a templare argument, you must specify template arguments explicitly.
 {% endhint %}
+
+## Example: SimpleUniquePointer, A Templare Class
 
 > end
 >
