@@ -125,7 +125,25 @@ T mean(const T* values, size_t length) {
     }
     return result / length;
 }
+
+int main() {
+    const double nums_d[] { 1.0, 2.0, 3.0 };
+    const auto result1 = mean<double>(nums_d, 3);
+    // can drop explicit template parameter
+    const auto result1 = mean(nums_d, 3);
+    
+    const float nums_f[] { 1.0f, 2.0f, 3.0f };
+    const auto result2 = mean<float>(nums_f, 3);
+}
 ```
+
+{% hint style="danger" %}
+dlaczego jest potrzebne castowanie ???
+
+no i się okazało że mozna opuścić
+
+BUT sometimes, templare arguments cannot be deduced. For example, if a templare function's return type is a templare argument, you must specify template arguments explicitly.
+{% endhint %}
 
 > end
 >
