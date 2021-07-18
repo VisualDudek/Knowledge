@@ -92,6 +92,29 @@ int* intPtr{ static_cast<int*>(voidPtr) };
 cout << *intPtr << '\n'; // OK
 ```
 
+### reinterpret\_cast
+
+### narrow\_cast
+
+## mean: A Template Function Example
+
+```cpp
+// consider the func that computes the mean of a double array
+double mean(const double* values, size_t length) {
+    double result{};
+    for(size_t i{}; i<length; i++) {
+        result += values[i];
+    }
+    return result / length;
+}
+```
+
+**Plot twist**: suppose you want to support `mean` calculations for other numeric types, such as `float` or `long`. First thought "That's what function overloads are for!"
+
+So it is simple copy pase with different types BUT this approach doesn't scale as you add more types.
+
+> What you need to solve this copy-and-paste problem is _generic programming_, a prgramming style where you program with yet-to-be-specified types. Tou achive gereric programming using the support C++ has for templates. Templates allow the compiler to instantiate a custom class or function based on the types in use.
+
 > end
 >
 > end
