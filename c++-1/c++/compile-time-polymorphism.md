@@ -5,6 +5,7 @@
 ### Q
 
 * what are _void pointers_?
+* ^--- type of pointer that can be pointed at objects of any data type! BUT bc the void pointer does not know what type of object it is pointing to, direct indirection through it is not possible. Rather, the void pointer must first be explicitly cast to another pointer type before indericting through the new pointer.
 
 ## Templates
 
