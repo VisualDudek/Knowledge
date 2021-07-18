@@ -115,6 +115,18 @@ So it is simple copy pase with different types BUT this approach doesn't scale a
 
 > What you need to solve this copy-and-paste problem is _generic programming_, a prgramming style where you program with yet-to-be-specified types. Tou achive gereric programming using the support C++ has for templates. Templates allow the compiler to instantiate a custom class or function based on the types in use.
 
+```cpp
+// template in practice
+template<typename T>
+T mean(const T* values, size_t length) {
+    T result{};
+    for(size_t i{}; i<length; i++) {
+        result += values[i];
+    }
+    return result / length;
+}
+```
+
 > end
 >
 > end
