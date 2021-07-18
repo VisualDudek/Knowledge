@@ -6,6 +6,7 @@
 
 * what are _void pointers_?
 * ^--- type of pointer that can be pointed at objects of any data type! BUT bc the void pointer does not know what type of object it is pointing to, direct indirection through it is not possible. Rather, the void pointer must first be explicitly cast to another pointer type before indericting through the new pointer.
+* ^--- ciekawe gdzie jest edge dla void pointers?
 
 ## Templates
 
@@ -70,7 +71,25 @@ ciekawostka: you can use `const_cast` to add `const` to an object's type.
 
 ```cpp
 short increment_as_short(void* target) {
+    auto as_short = static_cast<short*>(target);
+    *as_short = *as_short + 1;
+    return *as_short;
+}
 
+int main() {
+    short beast {665};
+    auto mark_of_the_beast = increment_as_short(&beast);
+}
+
+// chyba znalazlem lepszy pszykład:
+int value{ 5 };
+void* voidPtr{ &value };
+
+cout << *voidPtr << '\n'; // illegal: Indirection through a void pointer
+
+int* intPtr{ static_cast<int*>(voidPtr) };
+
+cout << *intPtr << '\n'; // OK
 ```
 
 > end
