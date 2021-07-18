@@ -220,5 +220,22 @@ struct FileLogger : Logger {
         printf("[file] %ld,%ld,%f\n", from, to, amount);
     }
 };
+
+// konstrukcja User/Consumer-a pozostanie niezmienna
+struct Bank {
+    Bank(Logger& logger) : logger{ logger } {}
+    void make_transfer(long from, long to, double amount) {
+        --snip--
+        logger.log_transfer(from, to, amount);
+    }
+private:
+    Logger% logger;
+};
+
+int main() {
+    ConsoleLogger logger;
+    Bank bank{ logger };
+    bank.make_transfer(1000, 2000, 49.95);
+}
 ```
 
