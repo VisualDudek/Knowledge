@@ -161,3 +161,11 @@ As a _consumer_ you can only deal in references or pointers to interfaces. The c
 >
 > **Property injection**, you use a method to set a pointer member. This allows you to change the object to which the member points.
 
+## Updating the Bank Logger
+
+```cpp
+// teraz zacznie się wszystko wyjaśniać
+--snip--
+// Include Logger interface and its multiple logger implementations.
+```
+
