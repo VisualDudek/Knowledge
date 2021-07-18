@@ -173,7 +173,8 @@ void are_belong_to_us(BaseClass& base) {}
 
 int main() {
     DerivedClass derived;
-    are_beleong_to_us(derived);
+    are_beleong_to_us(derived); // GAME-CHANGER: ten fragment pozostaje niezmienny
+    // w dalszym developmencie kodu
 }
 ```
 
@@ -203,5 +204,11 @@ As a _consumer_ you can only deal in references or pointers to interfaces. The c
 // teraz zacznie się wszystko wyjaśniać
 --snip--
 // Include Logger interface and its multiple logger implementations.
+struct Logger {
+    virtual ~Logger() = default;
+    virtual void log_transfer(long from, long to, double amount) = 0;
+};
+
+
 ```
 
