@@ -222,6 +222,8 @@ struct FileLogger : Logger {
 };
 
 // konstrukcja User/Consumer-a pozostanie niezmienna
+// ale logger jest stały dla life-time bank object
+// ^--- yes, there is a better way
 struct Bank {
     Bank(Logger& logger) : logger{ logger } {}
     void make_transfer(long from, long to, double amount) {
@@ -237,5 +239,10 @@ int main() {
     Bank bank{ logger };
     bank.make_transfer(1000, 2000, 49.95);
 }
+
+// The Bank class constructor sets the value of logger using a member initializer.
+//References can't be reseated, so the object tht logger points to 
+//doesn't change for the lifetime of Bank.
+//You fix (hard-link) your logger choice upon Bank Construction.
 ```
 
