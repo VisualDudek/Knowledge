@@ -143,6 +143,7 @@ Consider an alternative approach where `Bank` holds a pointer to a logger. This 
 * class inheritance `struct DerivedClass : BaseClass {`
 
 ```cpp
+// defining interface
 struct Logger {
     virtual ~Logger() = default;
     virtual void log_transfer(long from, long to, double amount) = 0;
@@ -157,7 +158,12 @@ struct ConsoleLogger : Logger {
 
 ### Base Class Inheritance
 
-easy
+```cpp
+// class inheritance
+struct DerivedClass : BaseClass {
+    --snip--
+};
+```
 
 ### Member Inheritance
 
