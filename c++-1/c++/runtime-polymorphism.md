@@ -165,6 +165,18 @@ struct DerivedClass : BaseClass {
 };
 ```
 
+```cpp
+// bardzo ważny przykład który pokazuje co umożliwia dziedziczenie class
+struct BaseClass {};
+struct DerivedClass : BaseClass {};
+void are_belong_to_us(BaseClass& base) {}
+
+int main() {
+    DerivedClass derived;
+    are_beleong_to_us(derived);
+}
+```
+
 ### Member Inheritance
 
 {% hint style="info" %}
