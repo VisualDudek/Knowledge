@@ -147,6 +147,38 @@ BUT sometimes, templare arguments cannot be deduced. For example, if a templare 
 
 ## Example: SimpleUniquePointer, A Templare Class
 
+A _unique pointer_ is an RAII wrapper around a free-store-allocated object. As its name suggests, the unique pointer has a single owner at a time, so when a unique pointer's lifetime ends, the pionted-to object gets destructed.
+
+```cpp
+template <typename T>
+struct SimpleUniquePointer {
+    SimpleUniquePointer() = default;
+    SimpleUniquePointer(T* pointer)
+        : pointer{ pointer } {
+    }
+    ~SimpleUniquePointer() {
+        if(pointer) delete pointer;
+    }
+    SumpleUniquePointer(const SimpleUniquePointer&) = delete;
+    SimpleUniquePointer& opertor=(const SimpleUniquePointer&) = delete;
+    SimpleUniquePointer(SimpleUniquePointer&& other) noexcept
+        : pointer{ other.pointer } {
+        other.pointer = nullptr;
+    }
+    SimpleUniquePointer& operator=(SimpleUniquePointer&& other) noexcept {
+        if(pointer) delete pointer;
+        pointer = other.pointer;
+        other.pointer = nullptr;
+        return *this;
+    }
+    T* get() {
+        return pointer;
+    }
+private:
+    T* pointer;
+};
+```
+
 > end
 >
 > end
