@@ -588,8 +588,8 @@ int main() {
     char* upper_ptr = &upper[0];
     
     // next magic happens
-    *(lower + 3) = 'd';
-    *(upper_ptr + 3) = 'D';
+    *(lower + 3) = 'd';    
+    *(upper_ptr + 3) = 'D'; // same as upper_ptr[3] but no dereference needed
 }
 ```
 
