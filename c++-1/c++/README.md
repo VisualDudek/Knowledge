@@ -200,6 +200,8 @@ string result = (foo < 10) ? "lower" : "upper";
 
 ### string
 
+* `getline()`
+
 ### stdexcept
 
 * `std::runtime_error`
