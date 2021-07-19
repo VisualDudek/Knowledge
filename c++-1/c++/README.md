@@ -887,6 +887,12 @@ do {
 } while (counter <= 10); //end do...while
 ```
 
+```cpp
+// loop until user enters the end-of-file indicator -> Ctrl-d 
+while (cin >> grade) {
+    --snip--
+```
+
 ## debugging, gdb
 
 ? need to compile with debug support, using `-g` flag.
