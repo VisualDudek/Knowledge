@@ -129,6 +129,10 @@ string result = (foo < 10) ? "lower" : "upper";
 
 * cout
 
+### limits
+
+* `std::numeric_limits<long long>::min();`
+
 ### string
 
 ### stdexcept
