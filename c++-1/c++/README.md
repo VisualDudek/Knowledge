@@ -149,6 +149,8 @@ string result = (foo < 10) ? "lower" : "upper";
 ### iostream
 
 * cout
+* sticky stream manipulator
+  * `cout << fixed << setprecision(2);`
 
 ### iomanip
 
