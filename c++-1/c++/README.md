@@ -98,6 +98,18 @@ There is no format specifiers for `bool`, but you can use the `int` format spec.
  */
 ```
 
+## ternary operator :?
+
+* very good usecase for return stmt
+
+`variable = (condition) ? expressionTrue : expressionFalse;`
+
+```cpp
+// ternary operator :? example
+int foo = 5;
+string result = (foo < 10) ? "lower" : "upper";
+```
+
 ## libraries
 
 ### cstdio
