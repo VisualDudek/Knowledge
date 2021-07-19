@@ -61,6 +61,18 @@ switch (condition) {
 }
 ```
 
+### \[\[fallthrough\]\]
+
+```cpp
+switch (grade / 10) {
+    case 9: [[fallthrough]]; // without fallthrough compiler will warning
+                            //need explicite stated that intention
+    case 10:
+        ++aCount;
+        break;
+    ...
+```
+
 ## AND, OR
 
 The logical operators AND `&&` and OR `||` are binary.
