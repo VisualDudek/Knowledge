@@ -22,6 +22,10 @@ int main() {
 2. compiler
 3. linker
 
+```bash
+g++ -std=c++2a -I fmt fig03_06.cpp format.cc -o fig03_06
+```
+
 ## if
 
 * for one-liners do not need square brackets `{` but you need semicolon `;`
@@ -76,6 +80,8 @@ return_type function_name(par-type1 par_name1, par-type2 par_name2) {
 
 {% hint style="info" %}
 another option to put smth on standard output is `cout` which is part of `iostream` library
+
+C++20 text-format &lt;format&gt; if compiler do not support use format.h lib
 {% endhint %}
 
 ### format specifiers
@@ -85,6 +91,15 @@ another option to put smth on standard output is `cout` which is part of `iostre
 As a general rule, use `%g` to print floating-point types.
 
 There is no format specifiers for `bool`, but you can use the `int` format spec. `%d` to yield a `1` for ture and a `0` for false.
+
+### format lib
+
+```cpp
+#include "fmt/format.h"
+using namespace fmt;
+...
+    cout << format("{}'s garade id {}", sudent, grade) << endl;
+```
 
 ## Comments
 
@@ -126,6 +141,10 @@ string result = (foo < 10) ? "lower" : "upper";
 
 * strlen
 * strncpy
+
+### format C++20
+
+* {fmt} library provides a full implementation of the new text-formatting features
 
 ### iostream
 
@@ -791,6 +810,8 @@ vector <int> vec {1, 2, 3, 4, 5};
 
 ## For loops
 
+* init-stmt vars are limited to for-scope
+
 ```cpp
 for( init-stmt; conditional; iteration-stmt) {
     --snip--
@@ -827,6 +848,20 @@ int main() {
     for(int value : array) {
         if (value > max) maximum = value;
     }
+}
+```
+
+## while
+
+```cpp
+int main() {
+    int counter{1};
+    
+    while (counter <= 10) {
+        cout << counter << " ";
+        ++counter;
+    }
+    count << endl;
 }
 ```
 
