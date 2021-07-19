@@ -13,7 +13,7 @@ description: >-
 3. brniemy w rozwiązania typu `enum class` czyli rownoległe utrzymywanie kilku implementacji oraz dodatkowego obiektu który utzymuej wiedze nt. dostępnych implementacji -&gt; w następstwie musi się pojawić "narzędzie" w obiekcie który konsumuje Loggera które na podstwie obiektu w którym przetrzymujemy informacje o dostępnych implementacjach będzie urzywał tego którego potrzebujemy
 4. rozwiązanie w punkcie powyżej generuje co najmniej kilka problemów \(w przypadku rozbudowy kodu\):
    1. utzymanie spójnej deklaracji Loggera, ta sama struktura dla wszystkich implementacji
-   2. zmiana kodu w conajmniej trzech miejscach, nowa implementacja Loggera, obiekt do przechowywania informacji o wszystkich implementacjach, narzedzie wewnątrz consumenta Loggera np swich-case work-flow code block.
+   2. zmiana kodu w co najmniej trzech miejscach, nowa implementacja Loggera, obiekt do przechowywania informacji o wszystkich implementacjach, narzedzie wewnątrz consumenta Loggera np swich-case work-flow code block.
 
 There must be a better way!
 
