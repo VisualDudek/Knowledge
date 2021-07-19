@@ -222,6 +222,8 @@ aghghghghgh nie rozumiem
 The SimpleUniquePointer is a pedagogical implementation of the stdlib `std::unique_ptr` which is a member of the family of RAII templates called smart pointers.
 {% endhint %}
 
+## Type Checking in Templates
+
 > end
 >
 > end
