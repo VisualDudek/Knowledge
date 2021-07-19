@@ -29,6 +29,7 @@ g++ -std=c++2a -I fmt fig03_06.cpp format.cc -o fig03_06
 ## if
 
 * for one-liners do not need square brackets `{` but you need semicolon `;`
+* can have init-stmt
 
 ```cpp
 if (boolean-expression) {
@@ -40,6 +41,13 @@ if (boolean-expression) {
 if (boolean-expression) stmt-1;
 else if (boolean-2) stmt-2;
 else stmt-3;
+
+// with initailizer
+if (int value{9}; value == 7) {
+--snip--
+} else {
+--snip--
+}
 ```
 
 ## Switch Statements
@@ -834,6 +842,7 @@ vector <int> vec {1, 2, 3, 4, 5};
 ## For loops
 
 * init-stmt vars are limited to for-scope
+* if U want to use counter outside loop, declare it outside loop-scope
 
 ```cpp
 for( init-stmt; conditional; iteration-stmt) {
@@ -849,6 +858,15 @@ int main() {
         if (array[i] > max) maximum = array[i];
     }
 }
+```
+
+```cpp
+int counter;
+for (counter = 0; ... ; ...) {} // notice that inside for-loop there
+                                //is no declaration or initialization
+                                //only assignment
+
+// you can use counter outside for-loop
 ```
 
 {% hint style="info" %}
@@ -877,6 +895,7 @@ int main() {
 ## while
 
 * only thing with `do...while` loop is that it will be executed at least once -&gt; condition is tested after first do block
+* `continue` example
 
 ```cpp
 int main() {
@@ -903,6 +922,16 @@ do {
 // loop until user enters the end-of-file indicator -> Ctrl-d 
 while (cin >> grade) {
     --snip--
+```
+
+```cpp
+// continue keyword example
+//how to skip 5 in interation
+for (int i{1}; i <=10; ++i) {
+    if (i == 5) {
+        continue;
+    }
+}
 ```
 
 ## debugging, gdb
