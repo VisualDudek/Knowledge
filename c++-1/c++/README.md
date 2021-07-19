@@ -150,6 +150,8 @@ string result = (foo < 10) ? "lower" : "upper";
 
 * cout
 
+### iomanip
+
 ### limits
 
 * `std::numeric_limits<long long>::min();`
