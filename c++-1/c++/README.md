@@ -843,6 +843,20 @@ int main() {
 }
 ```
 
+## std::array
+
+* defined in header `<array>`
+
+```cpp
+template <class T, std::size_t N>
+struct array;
+
+std::array<int, 3> a = {1, 2, 3};
+
+// can be init at for-range-based loop
+for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
+```
+
 ## Vector
 
 * iterators and reverse\_iterator
@@ -905,6 +919,11 @@ int main() {
         if (value > max) maximum = value;
     }
 }
+```
+
+```cpp
+// init iterowanego obiektu w stmt for-loop
+for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
 ```
 
 ## while
