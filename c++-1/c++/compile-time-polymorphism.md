@@ -194,6 +194,14 @@ struct Tracer {
     }
 private:
     const char* const name;
+};
+
+void consumer(SimpleUniquePointer<Tracer> consumer_ptr) {
+    printf("(cons) consumer_ptr: 0x%p\n", consumer_ptr.get());
+}
+
+int main() {
+
 ```
 
 {% hint style="danger" %}
