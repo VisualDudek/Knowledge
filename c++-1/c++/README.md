@@ -50,6 +50,8 @@ if (int value{9}; value == 7) {
 }
 ```
 
+## \[\[likely\]\] and \[\[unlikely\]\] C++20
+
 ## Switch Statements
 
 ```cpp
@@ -179,7 +181,8 @@ string result = (foo < 10) ? "lower" : "upper";
   * not sticky
   * right align by default
   * `cout << setw(4) << left << year << endl;`
-* better use C++20 format
+  * better use C++20 format
+* `boolalpha`
 
 ### limits
 
