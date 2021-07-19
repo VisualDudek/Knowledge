@@ -214,6 +214,14 @@ co to za konstrukcja? z podwójnym const
 `const char* const name;`
 {% endhint %}
 
+{% hint style="danger" %}
+aghghghghgh nie rozumiem
+{% endhint %}
+
+{% hint style="info" %}
+The SimpleUniquePointer is a pedagogical implementation of the stdlib `std::unique_ptr` which is a member of the family of RAII templates called smart pointers.
+{% endhint %}
+
 > end
 >
 > end
