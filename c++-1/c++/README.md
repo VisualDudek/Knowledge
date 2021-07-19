@@ -156,6 +156,10 @@ string result = (foo < 10) ? "lower" : "upper";
 
 * `setw(int n);`
   * `cout << "Year" << setw(20) << "Amount on deposit" << endl;` 
+  * not sticky
+  * right align by default
+  * `cout << setw(4) << left << year << endl;`
+* better use C++20 format
 
 ### limits
 
@@ -860,6 +864,8 @@ int main() {
 
 ## while
 
+* only thing with `do...while` loop is that it will be executed at least once -&gt; condition is tested after first do block
+
 ```cpp
 int main() {
     int counter{1};
@@ -870,6 +876,15 @@ int main() {
     }
     count << endl;
 }
+```
+
+```cpp
+// do ... while
+int counter{1};
+do {
+    cout << counter << " ";
+    ++counter;
+} while (counter <= 10); //end do...while
 ```
 
 ## debugging, gdb
