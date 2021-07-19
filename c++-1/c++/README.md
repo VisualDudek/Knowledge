@@ -52,6 +52,16 @@ if (int value{9}; value == 7) {
 
 ## \[\[likely\]\] and \[\[unlikely\]\] C++20
 
+* can apply to if, case ...
+
+```cpp
+if (condition) [[likely]] {
+    --snip--
+} else {
+    --snip--
+}
+```
+
 ## Switch Statements
 
 ```cpp
