@@ -154,6 +154,9 @@ string result = (foo < 10) ? "lower" : "upper";
 
 ### iomanip
 
+* `setw(int n);`
+  * `cout << "Year" << setw(20) << "Amount on deposit" << endl;` 
+
 ### limits
 
 * `std::numeric_limits<long long>::min();`
