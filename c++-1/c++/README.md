@@ -772,6 +772,17 @@ int main() {
 }
 ```
 
+## Vector
+
+* iterators and reverse\_iterator
+
+```cpp
+#include <vector>
+
+vector <int> v;
+vector <int> vec {1, 2, 3, 4, 5};
+```
+
 ## For loops
 
 ```cpp
