@@ -159,25 +159,48 @@ struct SimpleUniquePointer {
     ~SimpleUniquePointer() {
         if(pointer) delete pointer;
     }
+    // bc we want to allow a single owner of the pointed-to object
+    //we delete the copy and copy-assignment operators
     SumpleUniquePointer(const SimpleUniquePointer&) = delete;
     SimpleUniquePointer& opertor=(const SimpleUniquePointer&) = delete;
+    // but we anable move operator
     SimpleUniquePointer(SimpleUniquePointer&& other) noexcept
         : pointer{ other.pointer } {
         other.pointer = nullptr;
     }
+    // ???
     SimpleUniquePointer& operator=(SimpleUniquePointer&& other) noexcept {
         if(pointer) delete pointer;
         pointer = other.pointer;
         other.pointer = nullptr;
         return *this;
     }
+    // implement get method
     T* get() {
         return pointer;
     }
 private:
     T* pointer;
 };
+
+// uasge example
+
+struct Tracer {
+    Tracer(const char* name) : name{ name } {
+        printf("%s constructed.\n", name);
+    }
+    ~Tracer() {
+        printf("%s destructed.\n", name);
+    }
+private:
+    const char* const name;
 ```
+
+{% hint style="danger" %}
+co to za konstrukcja? z podwójnym const
+
+`const char* const name;`
+{% endhint %}
 
 > end
 >
