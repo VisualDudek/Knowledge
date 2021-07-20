@@ -311,9 +311,29 @@ T& get(T (&arr)[Length]) {
     static_assert(Index < Length, "Out-of-bound access");
     return arr[Index];
 }
+
+// usage
+int main() {
+    int fib[] {1, 1, 2, 3};
+    cout << get<0>(fib) << get<1>(fib);
+}
 ```
 
+## Variadic Templates
 
+> _Variadic templates_ take a variable number of arguments.
+
+{% hint style="danger" %}
+skip
+{% endhint %}
+
+## Advanced Template Topics
+
+{% hint style="danger" %}
+skip
+{% endhint %}
+
+## Polymorphism at Runtime vs. Compile Time
 
 
 
