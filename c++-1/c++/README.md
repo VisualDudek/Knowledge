@@ -159,6 +159,11 @@ string result = (foo < 10) ? "lower" : "upper";
 
 ## libraries
 
+### std
+
+* `swap`
+  * `void swap( T& a, T& b);`
+
 ### bignumber.h
 
 ### cstdio
@@ -201,6 +206,7 @@ string result = (foo < 10) ? "lower" : "upper";
 ### string
 
 * `getline()`
+* `string.size()`
 
 ### stdexcept
 
