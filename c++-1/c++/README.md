@@ -64,6 +64,8 @@ if (condition) [[likely]] {
 
 ## Switch Statements
 
+* init stmt from C++17
+
 ```cpp
 switch (condition) {
     case (case_a): {
@@ -79,6 +81,9 @@ switch (condition) {
         --snip--
     }
 }
+
+// C++17
+switch (init-stmt; condition) {}
 ```
 
 ### \[\[fallthrough\]\]
@@ -100,6 +105,9 @@ The logical operators AND `&&` and OR `||` are binary.
 ## Functions
 
 * order in main program matters, if U want use function that is defined after `main()` block U have to declare it before `main()` block.
+* ??? function prototype is the same as function signature?
+  * return type is not part of function signature
+* **argument coercion** - can call a function with an int arg, even though the function prototype spec duble parameter
 
 ```cpp
 // declaration function prototype
@@ -183,7 +191,10 @@ string result = (foo < 10) ? "lower" : "upper";
 
 ### cstdlib
 
+* C at the bgn of `cstdlib` indicate that it comes from C lang.
 * `abs()`
+* `rand()`
+  * by default it use the same seed every time
 
 ### cstring
 
