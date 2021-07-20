@@ -28,7 +28,7 @@ private:
 };
 
 // instanting templates
-tc_name<t_param1, t_param2, ...> my_concrete_class { ... };
+tc_name<t_param1, t_param2, ...> my_concrete_class ( ... );
 ```
 
 ```cpp
