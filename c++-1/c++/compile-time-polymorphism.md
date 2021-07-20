@@ -224,6 +224,51 @@ The SimpleUniquePointer is a pedagogical implementation of the stdlib `std::uniq
 
 ## Type Checking in Templates
 
+```cpp
+// this template has a silent requiremnt: it must support multiplication
+template<typename T>
+T square(T value) {
+    return value * value;
+}
+
+// how can it goes wrong?
+int main() {
+    char c{ 'a' };
+    auto result = square(&c); // Bang!
+}
+// solution -> concepts 
+```
+
+> C++ templare programming shares similarities with _duck-typed languages_. Duck-typed languages \(like Python\) defer type checking until runtime.
+
+## Concepts C++20
+
+* `concept`
+
+{% hint style="danger" %}
+skip
+{% endhint %}
+
+## static\_assert \(the preconcepts stopgap\) C++17
+
+* alternative to concepts
+
+```cpp
+static_assert(boolean-expression, optional-message);
+
+//alternative to concepts
+template <typename T>
+T mean(T* values, size_t length) {
+    static_assert(std::is_default_constructible<T>(),
+        "Type must be default constructible.");
+    static_assert(std::is_copy_constructible<T>(),
+        "Type must be copy constructible.");
+    static_assert(std::is_arithmetic<T>(),
+        "Type must support addition and division.");
+    --snip--
+}
+```
+
 > end
 >
 > end
