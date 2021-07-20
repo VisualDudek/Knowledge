@@ -99,7 +99,13 @@ The logical operators AND `&&` and OR `||` are binary.
 
 ## Functions
 
+* order in main program matters, if U want use function that is defined after `main()` block U have to declare it before `main()` block.
+
 ```cpp
+// declaration function prototype
+return_type function_name(par-type1 par_name1, par-type2 par_name2);
+
+// definiton
 return_type function_name(par-type1 par_name1, par-type2 par_name2) {
     --snip--
     return return_value;
@@ -207,6 +213,10 @@ string result = (foo < 10) ? "lower" : "upper";
 ### limits
 
 * `std::numeric_limits<long long>::min();`
+
+### numbers C++20
+
+* namespce `std::numbers`
 
 ### string
 
@@ -1007,4 +1017,9 @@ Initialization refers to the "assignment" of a value, at construction time.
 ### unary, binary and ternarry operator
 
 A _unary_ operator takes a single operand: the unary negation operator `!` takes a single operand and returns its opposite.
+
+### comma operator
+
+* comma operator guarantees left-to-right evaluation `a, b, c`
+* NOTE: in func evaluation order is not specified
 
