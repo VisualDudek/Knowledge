@@ -265,9 +265,59 @@ T mean(T* values, size_t length) {
         "Type must be copy constructible.");
     static_assert(std::is_arithmetic<T>(),
         "Type must support addition and division.");
+    static_assert(std::is_constructible<T, size_t>(),
+        "Type must be constructible from size_t.");
     --snip--
 }
 ```
+
+## Non-Type Template Parameters
+
+* function `get` can be improved by enable by non-type template parameters genericizing the values out of `get`
+* _first_: relax the requ. that `arr` refer to an `int` array by making `get` template function
+* _second_: can relax the req that `arr` refer to an array of length `10` by introducing a non-type template parameter `Length` **into template, not func. parameter**. **U are injecting a value into the generic code at complie time.**
+* third**:** U can perform compile time bounds checking by taking `size_t index` as another non-type templare parameter. This allow you to replace the `std::out_of_range` with a `static_assert`.
+
+{% hint style="info" %}
+when U declare int a\[\] = {1, 2, 3} it is the same as \(or will be rewritten as\) int\[3\] = {1, 2, 3} since the templated function is receiving argument in form of T a\[N\], then N will have value of 3.
+{% endhint %}
+
+```cpp
+// base scenario
+#include <stdexcept>
+
+int& get(int (&arr)[10], size_t index) {
+    if (index >= 10) throw std::out_of_range{ "Out of bounds" };
+    return arr[index];
+}
+
+// first improvment: accept an array of a generic type
+template <typename T>
+T& get(T (&arr)[10], size_t index) {
+    if (index >= 10) throw std::out_of_range{ "Out of bounds" };
+    return arr[index];
+}
+
+// second: tytaj wazne bedzie jak tego uzywać
+template <typename T, size_t Length>
+T& get (T (&arr)[Length], size_t index) {
+    if (index >= Length) throw std::out_of_range{ "Out of bounds" };
+    return arr[index];
+}
+
+// third:
+template <size_t Index, typename T, size_t Length>
+T& get(T (&arr)[Length]) {
+    static_assert(Index < Length, "Out-of-bound access");
+    return arr[Index];
+}
+```
+
+
+
+
+
+
 
 > end
 >
