@@ -9,6 +9,7 @@
   * [OBJECT LIFE CYCLE](c++-1/c++/object-life-cycle.md)
   * [RUNTIME POLYMORPHISM](c++-1/c++/runtime-polymorphism.md)
   * [COMPILE-TIME POLYMORPHISM](c++-1/c++/compile-time-polymorphism.md)
+  * [EXPRESSIONS](c++-1/c++/expressions.md)
 
 ## LINUX
 
