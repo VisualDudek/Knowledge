@@ -166,6 +166,11 @@ string result = (foo < 10) ? "lower" : "upper";
 
 ### bignumber.h
 
+### cmath
+
+* all func are in `std` namespace,
+* `pow(a, b)`
+
 ### cstdio
 
 * printf
