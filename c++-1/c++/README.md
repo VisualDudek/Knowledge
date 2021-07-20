@@ -195,6 +195,7 @@ string result = (foo < 10) ? "lower" : "upper";
 * `abs()`
 * `rand()`
   * by default it use the same seed every time
+* `srand()` 
 
 ### cstring
 
@@ -228,6 +229,10 @@ string result = (foo < 10) ? "lower" : "upper";
 ### numbers C++20
 
 * namespce `std::numbers`
+
+### random
+
+* `class uniform_int_distribution`
 
 ### string
 
