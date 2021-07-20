@@ -986,7 +986,7 @@ for (int i{1}; i <=10; ++i) {
 
 ## other
 
-### declaration vs initialization
+### declaration vs initialization vs definition
 
 Declaration, generally, refers to the introduction of a new name in the program. For example, you can _declare_ a new function by describing it's "signature":
 
