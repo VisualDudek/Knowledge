@@ -208,6 +208,10 @@ string result = (foo < 10) ? "lower" : "upper";
 * `getline()`
 * `string.size()`
 
+### sstream
+
+* `stringstream`
+
 ### stdexcept
 
 * `std::runtime_error`
