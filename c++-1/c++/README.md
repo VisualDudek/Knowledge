@@ -460,6 +460,7 @@ You want to guarantee that `year` is never less than 2019 under _any circumstatn
 * can have several constructors depending on type of constructor arg.
 * constructor that can be invoked without an argument is called _default constructor_.
 * many useful operations do not require direct access to the representation of class, so they can be defined separtely from the class definition.
+* the `std::initializer_list` used to define the initializer-list constructor is a standard-library type known to the compiler: when we use `{ }`  -list, such as`{1,2,3,4}` the compiler will create an object of type `initializer_list` to give to the program.
 
 ```cpp
 struct Clock {
@@ -522,15 +523,24 @@ private:
 
 ### destructor
 
+* `delete` cleans up object, `delete[]` deletes an array
+
 ```cpp
 struct Earth {
     ~Earth() {
         // Earth's destructor
     }
+    
+    ~Earth() { delete[] elem; }
+    
+private:
+    double* elem;  // elem points to an array
 };
 ```
 
 ### Initialization
+
+* the `std::initializer_list` used to define the initializer-list constructor is a standard-library type known to the compiler: when we use `{ }`  -list, such as `{1,2,3,4}` the compiler will create an object of type `initializer_list` to give to the program.
 
 ```cpp
 // Initialized to 0
