@@ -458,6 +458,8 @@ You want to guarantee that `year` is never less than 2019 under _any circumstatn
 * name matches the class's name
 * can take any number of args &lt; - - - what if you wnat to init `Clock` with a custom year?
 * can have several constructors depending on type of constructor arg.
+* constructor that can be invoked without an argument is called _default constructor_.
+* many useful operations do not require direct access to the representation of class, so they can be defined separtely from the class definition.
 
 ```cpp
 struct Clock {
