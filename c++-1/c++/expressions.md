@@ -108,6 +108,16 @@ int main() {
 
 ### overloading operator new
 
+* _free store_, also known as the _heap_, is an implementation-defined storage location. **Kernel usually manages the free store malloc on Linux**.
+
+{% hint style="info" %}
+In game dev or high-frequency trading, free store allocation simply involve too much latency, because you've delegated its management to the operating system.
+
+You could try to avoid using the free store entirely, but this is severely limiting. One major limitation this would introduce is to preclude the use of stdlib containers, which after reading Part II you'll agree is a major loss. Rather than settling for these severe restrictions, you can overload the free store operations and take control over allocations.
+
+**You do this by overloading opertor `new`.**
+{% endhint %}
+
 
 
 a
