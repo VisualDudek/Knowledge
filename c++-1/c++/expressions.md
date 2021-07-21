@@ -49,11 +49,25 @@ e.g. for unary arithmetic operators if the operand is of type `bool, char or sho
 ->* pointer-to-member-of-pointer
 ```
 
-### ternaty conditional
+### ternaty conditional aka Elvis operator
 
 The _ternary conditional operator_ `x ? y : z` is a lump of **syntactic sugar**.
 
+### comma
 
+It allows several expressions separated by commas to be evaluated within a larger expression.
+
+```cpp
+int confusing(int &x) {
+    return x = 9, x++, x / 2;
+}
+
+int main() {
+    int x{};
+    auto y = confusing(x);
+    // after invoking confusing, x equals 10 and y equals 5
+}
+```
 
 
 
