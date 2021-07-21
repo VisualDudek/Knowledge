@@ -274,6 +274,22 @@ Unicode character literals: `\u` followed by a 4-digit Unicode code or the prefi
 
 ## Escape Sequences
 
+## Scope
+
+```cpp
+// using global scope
+
+int x{1};
+
+int main() {
+    int x {5}; // local main scope
+}
+
+void foo() {
+    cout << x << endl; // using global scope
+}
+```
+
 ## Types
 
 System programmers sometimes work directly with _raw memory_, which is a collection of bits without a type. Employ the `std::byte` type, available in the `<cstddef>` header, it permits bitwise logical operations and little else.

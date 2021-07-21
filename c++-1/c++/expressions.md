@@ -6,6 +6,7 @@
 * prefix and postfix operator the return of expresion is related to pre or post
 * `typeid` form `<typeinfo>`
 * overloading operator `new`
+  * overloading `malloc` ???
 * user-defined literals
 * type conversion of own user-defined types
 * `constexpr`
@@ -117,6 +118,8 @@ You could try to avoid using the free store entirely, but this is severely limit
 
 **You do this by overloading opertor `new`.**
 {% endhint %}
+
+### the &lt;new&gt; Header
 
 
 
