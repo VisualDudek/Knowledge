@@ -36,6 +36,39 @@ x >> y
 
 e.g. for unary arithmetic operators if the operand is of type `bool, char or short int` the result of the expression is an `int` 
 
+### member access operators
+
+```cpp
+// member access operators
+[ ] subscript
+* indirection
+& address-of
+. member-of-object
+-> member-of-pointer
+.* pointer-to-member-of-object
+->* pointer-to-member-of-pointer
+```
+
+### ternaty conditional
+
+The _ternary conditional operator_ `x ? y : z` is a lump of **syntactic sugar**.
+
+
+
+
+
+
+
+
+
+a
+
+
+
+
+
+
+
 
 
 
