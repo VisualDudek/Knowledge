@@ -461,6 +461,8 @@ You want to guarantee that `year` is never less than 2019 under _any circumstatn
 * constructor that can be invoked without an argument is called _default constructor_.
 * many useful operations do not require direct access to the representation of class, so they can be defined separtely from the class definition.
 * the `std::initializer_list` used to define the initializer-list constructor is a standard-library type known to the compiler: when we use `{ }`  -list, such as`{1,2,3,4}` the compiler will create an object of type `initializer_list` to give to the program.
+* _**concrete types**_ are types where their representation is part of theri definition.
+* _**abstract types**_ completely insulates a user from implementtaion details. SEE \#\# BELOW
 
 ```cpp
 struct Clock {
@@ -518,6 +520,59 @@ struct Tracer {
     }
 private:
     const char* const name;
+};
+```
+
+```cpp
+// allow init with { }
+// below Vector is not the same Vector as this from <vector> header
+Vector::Vector(sdt::initializer_list<double> lst) // init with a list
+    :elem{new double[lst.size()]}, sz{static_cast<int>(lst.size())}
+{
+    copy(lst.begin(),lst.end(), elem); //copy from list into elem
+}
+```
+
+### abstract class
+
+* `virtual` means "may be redefined later in a class derived from this one"
+* `=0` syntax says the function is pure virtual; that is, some class derived from it MUST define the function.
+* Since we don't know anything about the representation of an abstract type \(not even its size\), we must allocate objects on the free store and access them through references or pointers.
+* `override` keyword is optional but beeing explicit allows the compiler to catch mistakes
+* ??? note that the member
+
+```cpp
+class Container {
+public:
+    virtual double& operator[](int) = 0; 
+    virtual int size() const = 0;
+    virtual ~Container() {}
+};
+
+Container c; // BANG! there can be no objects of an abstract class SEE 3th point
+            //above
+Container* p = new Vector_container(10) // OK
+
+// see how use func useses the Container interface in complete ignoracce of 
+// implementation details
+void use(Container& c)
+{
+    const int sz = c.size();
+    
+    for (int i=0; i!=sz; ++i)
+        cout << c[i] << endl;
+}
+
+// derived class from Container
+class Vector_container : public Container { // Vector_container implements Container
+public:
+    Vector_container(int s) : v(x) {} // Vector of s elements
+    ~Vector_container() {}
+    
+    double& operator[](int i) override { return v[i]; }
+    int size() const override { return v.size(); }
+private:
+    Vector v;
 };
 ```
 
