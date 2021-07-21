@@ -353,6 +353,24 @@ Race langbard_race = Race::Aidan;
 `enum class` is one of two kinds of enumerations: it's called a scoped enum. For compatibility with C, C++ also aupports an unscoped enum, which is declared with `enum` rather than `enum class`. 
 {% endhint %}
 
+```cpp
+// can define operator for enum class
+
+enum class Color {red, blue , green };
+
+Color& operator++(Color& t);
+{
+    switch (t) {
+    case Color::red: return t=Color::blue;
+    case Color::blue: return t=Color::green;
+    case Color::green: return t=Color::red;
+    }
+}
+
+Color next = Color::red;
+++next; 
+```
+
 ### Plain-Old-Data Classes POD
 
 * keyword `struct`
