@@ -290,6 +290,10 @@ void foo() {
 }
 ```
 
+{% hint style="danger" %}
+todo static local
+{% endhint %}
+
 ## Types
 
 System programmers sometimes work directly with _raw memory_, which is a collection of bits without a type. Employ the `std::byte` type, available in the `<cstddef>` header, it permits bitwise logical operations and little else.
