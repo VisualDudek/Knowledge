@@ -69,9 +69,44 @@ int main() {
 }
 ```
 
+### operator overloading
 
+* keyword `operator`
+* "design pattern" for immutable
 
+{% hint style="info" %}
+`type_traits`which allow you to determine features of your types at compile time. A related family of type support is available in the `<limits>` header, which allows you to query various properties of arithmetic types.
+{% endhint %}
 
+```cpp
+struct CheckedInteger {
+    CheckedInteger(unsigned int value) : value{ value } {}
+    
+    CheckedInteger operator+(insigned int other) const {
+        CheckedInteger result{ value + other };
+        if (result.value < value) throw std::runtime_error{ "Overflow!" };
+        return result;
+    }
+    
+    const unsigned int value; // due to const CheckedInteger is immutable
+                            //after construction
+};
+
+int main() {
+    CheckedInteger a { 100 };
+    auto b = a + 200;
+    cout << b; // a + 200 = 300
+    
+    try {
+        // a + max does not fit inside an unsigned int
+        auto c = a + std::numeric_limits<unsigned int>::max();
+    } catch(const std::overflow_error& e) {
+        cout << e.what();    // Exception: Overflow!
+    }
+}
+```
+
+### overloading operator new
 
 
 
