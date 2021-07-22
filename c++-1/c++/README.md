@@ -111,6 +111,7 @@ The logical operators AND `&&` and OR `||` are binary.
 * `inline` advice to the compiler, removes the overhead of the function call
   * only way to check the difference is to read asembly code 
 * can have default values
+* **signature** consists from name function and its parameters not return type
 
 ```cpp
 // declaration function prototype
