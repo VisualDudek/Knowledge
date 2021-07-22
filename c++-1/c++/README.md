@@ -113,6 +113,7 @@ The logical operators AND `&&` and OR `||` are binary.
 * can have default values
 * **signature** consists from name function and its parameters not return type
 * _**name mangling**_ - compiler will combine name function with its parameters, each compiler has its own syntax
+* C++20 functions marked `[[nodiscard]]` cause compilers to issue warnings if you ignore the return value
 
 ```cpp
 // declaration function prototype
@@ -148,6 +149,17 @@ int box(int l, int w, int h) {}
 ```cpp
 // check compiler name mangling syntax:
 g++ -S helloworld.c // will produce helloworld.s assembler
+```
+
+```cpp
+// [[nodiscard]] example
+int cube(int x) {
+    return x * x * x;
+}
+
+int main() {
+    cube(10); // generates a compiler warning
+}
 ```
 
 > Defining multiple functions with the same name but different parameters is called _function overloading_.
