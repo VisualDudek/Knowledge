@@ -112,6 +112,7 @@ The logical operators AND `&&` and OR `||` are binary.
   * only way to check the difference is to read asembly code 
 * can have default values
 * **signature** consists from name function and its parameters not return type
+* _**name mangling**_ - compiler will combine name function with its parameters, each compiler has its own syntax
 
 ```cpp
 // declaration function prototype
