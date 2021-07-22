@@ -299,6 +299,8 @@ Unicode character literals: `\u` followed by a 4-digit Unicode code or the prefi
 
 ## Scope
 
+* can access hidden global var by _unarry scope_ resolution operator
+
 ```cpp
 // using global scope
 
