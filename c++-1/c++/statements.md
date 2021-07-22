@@ -96,7 +96,27 @@ int main() {
 }
 ```
 
+### structure bindings
 
+* enable unpack objects
+* the obj peel off the POD from top to bottom
+
+```cpp
+auto [object-1, object-2, ...] = plain-old-data;
+
+struct TextFile {
+    bool success;
+    const char* contents;
+    size_t n_bytes;
+};
+
+TextFile read_text_file(const char* path);
+
+int main() {
+    const auto [sucess, constent, length] = read_text_file("README.md");
+    --snip--
+}
+```
 
 
 
