@@ -207,9 +207,49 @@ int main() {
 
 ### Evaluation order
 
+* the comma operator `a, b` guarantees thet `a` executes befoer `b`
+
+```cpp
+(stop() + drop()) + roll()
+// the roll function might execute before after, or between evaluations of
+//stop and drop
+```
+
+## User-Defined Literals
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a
 
 
 
