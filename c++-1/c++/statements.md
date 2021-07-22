@@ -118,6 +118,21 @@ int main() {
 }
 ```
 
+### attributes
+
+* you introduce attributes using double brackets `[[ ]]` containing a list of one or more comma-separated attribute elements.
+* very rare in use
+
+## Selection stmt
+
+{% hint style="info" %}
+SEE C++ page
+{% endhint %}
+
+
+
+
+
 
 
 
