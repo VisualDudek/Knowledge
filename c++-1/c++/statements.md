@@ -126,14 +126,31 @@ int main() {
 ## Selection stmt
 
 {% hint style="info" %}
-SEE C++ page
+if -&gt; SEE C++ page
 {% endhint %}
 
+{% hint style="danger" %}
+nadal nie czaje `constexpr`
+{% endhint %}
 
+## Iteration stmt
 
+{% hint style="info" %}
+większość pokryte w C++ -&gt; SEE C++ page
+{% endhint %}
 
+* you can define your own types that are also valid range expressions
+  * need to exposes a `begin` and `end` method. Both return _interator_
+  * _Iterator_ is an obj that supports `operator!=` `operator++` and `operator*`
 
-
+```cpp
+// under hood, a range-based for loop looks:
+const auto e = range.end();
+for(auto b = range.begin(); b != e; ++b) {
+    const auto& element = *b; //iterator supports the dereferencer *
+                            //so you can extract the pointed-to element
+}
+```
 
 
 
