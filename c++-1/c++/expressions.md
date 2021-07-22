@@ -199,7 +199,13 @@ int main() {
 }
 ```
 
+### Operator precedence and associativity
 
+```cpp
+*a++ + b * c // postfixx addition has higher precedence than the dereference *
+```
+
+### Evaluation order
 
 
 
