@@ -108,6 +108,9 @@ The logical operators AND `&&` and OR `||` are binary.
 * ??? function prototype is the same as function signature?
   * return type is not part of function signature
 * **argument coercion** - can call a function with an int arg, even though the function prototype spec duble parameter
+* `inline` advice to the compiler, removes the overhead of the function call
+  * only way to check the difference is to read asembly code 
+* can have default values
 
 ```cpp
 // declaration function prototype
@@ -118,6 +121,26 @@ return_type function_name(par-type1 par_name1, par-type2 par_name2) {
     --snip--
     return return_value;
 }
+```
+
+```cpp
+// inline functions
+inline double cube(double side) {
+    return side * side * side;
+}
+...
+cout << cude(a); // compiler will put body of cube function into main code;
+```
+
+```cpp
+// default values
+//small flexibility e.g. if first arg has def value all ubsequent has to 
+// defaults can be defined in prototype
+int box(int l = 1, int w = 1, int h = 1);
+
+--snip--
+
+int box(int l, int w, int h) {}
 ```
 
 > Defining multiple functions with the same name but different parameters is called _function overloading_.

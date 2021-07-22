@@ -217,35 +217,76 @@ int main() {
 
 ## User-Defined Literals
 
+* user-defined literal, it's worth mentioning because you might find them in libraries. The stdlib `<chrono>` header uses literals extensively.
 
+## Type Conversions
 
+* can be explicit or implicit
+* explicit type conversion are also called _casts_
+* C-style cast `(desired-type)object-to-cast` For each C-style cast, there exists some incantation of `static_cast` `const_casts` and `reinterpret_casts` that would achive the desired type conversion. C-syle casts are far more dangerous than the named casts.
+* in user-defined types, you can provide user-defined conversion functions.
+  * u can ban implicit conversion by keyword `explicit`
 
+```cpp
+int main() {
+    auto x = 2.718228182845L;
+    uint8_t y = x; // Silent truncation, narrowing conversion
+    uint8_t yy{ x }; // BANG! narrow conversion is prevented by {}
+    
+    // 0b111111111 = 511
+    unit8_t x = 0b111111111;  // 255
+    int8_t y = 0b111111111;   // -1 
+    // both x and y involve narrowing conversion that could be avoided using the
+    //braced initialization syntax 
+}
+```
 
+### user-defined type conversion
 
+```cpp
+struct MyType {
+    operator destination-type() const {
+        // return a destination-type from here.
+        --snip--
+    }
+}
 
+//example, user-defined type conversion from a ReadonlyInt to an int.
+struct ReadOnlyInt {
+    ReadOnlyInt(int val) : val{val} {}
+    operator int() const {
+        return val;
+    }
+    
+private:
+    const int val;
+};
 
+// use case
+int main() {
+    ReadOnlyInt the_answer{ 42 };
+    auto ten_answer * 10; // int with value 420
+    // implicit conversion
+}
 
+// can ban using umplicit conversion
+... // class definition
+    explicit operator int() const {
+...
+//than U need to explicitly cast
+...
+    auto ten_anser = static_cast<int>(the_answer) * 10;
+```
 
+## Constatnt Expressions
 
+* constant expressions are expressions that can be evaluated at **compile time**.
+* keyword `constexpr`
+* `constexpr` implies `const`
 
+## Volatile Expressions
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* keyword `volatile`
 
 
 
