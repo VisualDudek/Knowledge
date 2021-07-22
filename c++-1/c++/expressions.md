@@ -121,9 +121,83 @@ You could try to avoid using the free store entirely, but this is severely limit
 
 ### the &lt;new&gt; Header
 
+* Notice that the return type of operator `new` is `viod*` 
+* if ther is plenty of free memory, but it's scattered across allocated memory large requests for memory can fail
+* &lt;new&gt; header contains the following four operators
 
+```cpp
+void* operator new(size_t);
+void operator delete(void*);
+void* operator new[](size_t);
+void operator delete[](void*);
+```
 
-a
+### Buckets
+
+### Control of the Free Store
+
+```cpp
+// implementing very simple Bucket and Heap classes that will take control
+//over free store allocation
+#include <cstddef>
+#include <new>
+
+struct Bucket {
+    const static size_t data_size{ 4096 };
+    std::byte data[data_size];
+};
+
+struct Heap {
+    void* allocate(size_t bytes) {
+        if (bytes > Bucket::data_size) throw std::badalloc{};
+        for (size_t i{}; i < n_heap_buckets; i++) {
+            if (!bucket_used[i]) {
+                bucket_used[i] = true;
+                return buckets[i].data;
+            }
+        }
+        throw std::bad_alloc{};
+    }
+    
+    void free(void* p) {
+        for (size_t i{}; i < n_heap_buckets; i++) {
+            if (buckets[i].data == p) {
+                bucket_used[i] = false;
+                return;
+            }
+        }
+    }
+    
+static const size_t n_heap_buckets{ 10 };
+Bucket buckets[n_heap_buckets]{};
+bool bucket_used[n_heap_buckets]{};
+};               
+```
+
+### Using Our Heap
+
+```cpp
+Heap heap;
+
+void* operator new(size_t n_bytes) {  // new operator overload
+    return heap.allocate(n_bytes);
+}
+void operator delete(void* p) {
+    return heap.free(p);
+}
+
+int main() {
+    cout << "Buckets: " << heap.buckets << endl;
+    
+    auto breakfast = new unsigned int { 0xCOFFEE };
+    auto dinner = new unsigned int { 0xDEADBEEF };
+    
+    cout << "pointer of breakfast: " << breakfast << endl;
+    cout << "dereference pointer of breakfast: " << * breakfast << endl;
+    delete breakfast;
+    delete dinner;
+}
+```
 
 
 
