@@ -2,6 +2,8 @@
 
 ## summary
 
+* **templates** - just place holders for types
+
 ### Q
 
 * what are _void pointers_?
@@ -29,6 +31,12 @@ private:
 
 // instanting templates
 tc_name<t_param1, t_param2, ...> my_concrete_class ( ... );
+```
+
+```cpp
+template <typename T>
+// same as
+template <class T>
 ```
 
 ```cpp

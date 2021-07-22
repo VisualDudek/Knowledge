@@ -145,6 +145,11 @@ int box(int l = 1, int w = 1, int h = 1);
 int box(int l, int w, int h) {}
 ```
 
+```cpp
+// check compiler name mangling syntax:
+g++ -S helloworld.c // will produce helloworld.s assembler
+```
+
 > Defining multiple functions with the same name but different parameters is called _function overloading_.
 
 ## printf
