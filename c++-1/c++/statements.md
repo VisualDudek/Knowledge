@@ -78,7 +78,23 @@ int main() {
 }
 ```
 
+```cpp
+// partial application on template parameters
+//incomplete example
 
+template <typename T, typename F>
+struct NarrowCaster const {
+    T cast(F value) {}
+};
+
+template <typename F>
+using short_caster = NarrowCaster<short, F> 
+
+int main() {
+    const short_caster<int> caster; //synonymous with NarrowCaster<short, int>
+    const auto cyclic_short = caster.cast(142857);
+}
+```
 
 
 
