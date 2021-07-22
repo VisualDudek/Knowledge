@@ -315,6 +315,18 @@ void foo() {
 }
 ```
 
+```cpp
+// unary scope resolution operator
+
+const int number{7};
+
+int main() {
+    const double number{10.5};
+    
+    cout << "Global: " << ::number << endl;
+}
+```
+
 {% hint style="danger" %}
 todo static local
 {% endhint %}
