@@ -34,6 +34,10 @@ void foo(int& name) {}
   * create by nested blocks or using scope-resolution operator `::`
 * use _directive_ `using` to avoid a lot of typing. Imort namescope into the current namespace.
 
+{% hint style="warning" %}
+You should never put a `using namespace` directive within a header file. Every source file that includes your header will dump all the symbols from that using directive into the global namespace. This can cause issues that are very difficult to debug.
+{% endhint %}
+
 ```cpp
 namespace foo {
     // all symbols declared within this block
@@ -56,7 +60,23 @@ int main() {
 }
 ```
 
+### type aliasing
 
+* defines a name that refers to a previously defined name `using type-alias = type-id;`
+* can introduce template parameters into type aliases
+  * can perform paritial application on template parameters
+  * can define a type alias for a template with a fully specified set of template parameters.
+
+```cpp
+namespace foo::bar { }
+
+using String = const char[260];
+using ABC = foo::bar;
+
+int main() {
+    String saying { "Hello world!" };
+}
+```
 
 
 
