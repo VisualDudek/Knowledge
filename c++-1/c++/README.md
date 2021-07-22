@@ -162,6 +162,24 @@ int main() {
 }
 ```
 
+```cpp
+// selection stmt with binding declaration
+struct TextFile {
+    bool success;
+    const char* data;
+    size_t n_bytes;
+};
+
+TextFile read_text_file(const char* path) {--snip--}
+
+int main() {
+    if(const auto [success, txt, len] = read_text_file; success) {
+    // success == true
+    } else {
+    }
+}
+```
+
 > Defining multiple functions with the same name but different parameters is called _function overloading_.
 
 ## printf
