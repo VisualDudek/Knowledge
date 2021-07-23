@@ -136,7 +136,20 @@ BC all of this generic programming can be computed at compile time, you mark the
 
 ### fold expressions
 
+* computes the result of using a binary operator over all the arguments of a parameter pack.
+*  `(... binary-operator parameter-pack)` 
 
+```cpp
+// example using fold expression indtead of recursion
+template <typename... T>
+constexpr auto sum(T... args) {
+    return (... + args);
+}
+
+int main() {
+    cout << sum(2, 4, 6, 8, 10, 12);
+}
+```
 
 
 
