@@ -368,6 +368,19 @@ int main() {
 todo static local
 {% endhint %}
 
+## Magic number
+
+Unique values with unexplained meaning or multipe occurrences which could be relaced with names constans
+
+```cpp
+// example
+std::array<int, 5> arr{};  // here 5 is magic number
+
+// can be refactor
+constexpr size_t arraySize{5};
+std::array<int, arraySize> arr{};
+```
+
 ## Types
 
 System programmers sometimes work directly with _raw memory_, which is a collection of bits without a type. Employ the `std::byte` type, available in the `<cstddef>` header, it permits bitwise logical operations and little else.
