@@ -49,6 +49,12 @@ auto my-func(args) -> type-expression {
     // return an obj with type matching
     //the type-expression above
 }
+
+// example
+template <typename X, typename Y>
+auto add(X x, Y y) -> decltype(x + y) {
+    return x + y;
+}
 ```
 
 ```cpp
@@ -59,7 +65,9 @@ const A* a;
 decltype(a->x) y;     // type of y is double 
 ```
 
+## Overload Resolution
 
+## Variadic Function
 
 
 
