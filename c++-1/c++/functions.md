@@ -69,6 +69,11 @@ decltype(a->x) y;     // type of y is double
 
 ## Variadic Function
 
+takes a variable number of args, e.g. `printf` is a variadic function, it accepts any number of parameters.
+
+* declare variadic by placing `...` as the final parameter in the func arg list.
+* need to be accessed by utility functions int the `<cstdarg>` header.
+
 
 
 
