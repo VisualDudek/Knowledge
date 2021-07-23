@@ -152,6 +152,56 @@ for(auto b = range.begin(); b != e; ++b) {
 }
 ```
 
+```cpp
+// implements FiboIterator and FiboRange
+struct FiboIterator {
+    bool opertator!=(int x) const {
+        return x >= current;
+    }
+    
+    FiboIterator& operator++() {
+        const auto tmp = current;
+        current += last;
+        last = tmp;
+        return *this;
+    }
+    
+    int operator*() const {
+        return current;
+    }   
+        
+private:
+    int current{ 1 }, last{ 1 };
+};
+
+struct FiboRange {
+    explicit FiboRange(int max) : max{ max } {}
+    FiboIterator begin() const {
+        return FiboIterator{};
+    }
+    int end() const {
+        return max;
+    }
+private:
+    const int max;
+};
+
+// example
+int main();
+    for (const auto i : FiboRange{ 5000 }) {
+        cout << i << " ";
+    }
+}
+```
+
+
+
+
+
+
+
+
+
 
 
 
