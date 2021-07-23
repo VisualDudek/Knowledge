@@ -11,6 +11,7 @@
   * [COMPILE-TIME POLYMORPHISM](c++-1/c++/compile-time-polymorphism.md)
   * [EXPRESSIONS](c++-1/c++/expressions.md)
   * [STATEMENTS](c++-1/c++/statements.md)
+  * [FUNCTIONS](c++-1/c++/functions.md)
 
 ## LINUX
 
