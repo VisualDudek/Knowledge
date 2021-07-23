@@ -1097,6 +1097,7 @@ for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
 ## Vector
 
 * iterators and reverse\_iterator
+* C++ `erase` method
 
 ```cpp
 #include <vector>
