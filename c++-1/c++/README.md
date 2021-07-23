@@ -1074,6 +1074,8 @@ template <class T, std::size_t N>
 struct array;
 
 std::array<int, 3> a = {1, 2, 3};
+// or
+std::array<int, 3> a{32, 27, 64};
 
 // can be init at for-range-based loop
 for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
@@ -1146,6 +1148,13 @@ int main() {
 ```cpp
 // init iterowanego obiektu w stmt for-loop
 for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
+```
+
+```cpp
+// multiply the elements of items by 2
+for (int& itemRef : items) {
+    itemRef *= 2;
+}
 ```
 
 ## while
