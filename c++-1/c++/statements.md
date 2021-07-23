@@ -2,7 +2,7 @@
 
 ## Expression stmt
 
-* _expression statement_ is an expression followed by a sebicolon `( ; )`
+* _expression statement_ is an expression followed by a semicolon `( ; )`
 
 ## Compound stmt
 
