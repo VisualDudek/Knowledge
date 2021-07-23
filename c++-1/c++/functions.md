@@ -194,7 +194,34 @@ using operation_func = float(*)(float, int);
 
 ## Function-Call Operator
 
+* You can make user-define types callable or invocable by overloading the function-call operator `operator()()` 
+* mind change: umozliwia call bezpośrednio na clasie, patrz przykład
 
+```cpp
+// count if
+
+struct CountIf {
+    CountIf(char x) : x{ x } {}
+    size_t operator()(const char* str) const {
+        size_t index{}, result{};
+        while (str[index]) {
+            if (str[index] == x) result++;
+            index++;
+        }
+        return result;
+    }
+private:
+    const char x;
+};
+
+int main() {
+    CountIf s_sounter{ 's' };
+    auto sally = s_counter("Sally sells seashells by the seashore.");
+    cout << sally << endl;
+    auto buffalo = CountIf{ 'f' }("Buffalo buffalo Buffalo");
+    cout << buffalo << endl;
+}
+```
 
 
 
