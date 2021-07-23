@@ -159,7 +159,12 @@ _Functional programming_ is a programming paradigm that emphasizes function eval
 * cannot modity the pointed-to function \(conceptually similar to const obj.\)
 * `return-type (*pointer-name)(args);` 
 * use address-operator `&` to take the address of a function
-* mind changer: just init func pointer that accept types U want
+* **mind changer**: just init func pointer that accept types U want
+* alias to function pointers:  `using alias-name = return-type(*)(args)`
+
+{% hint style="warning" %}
+Gdzie jest edge ???
+{% endhint %}
 
 ```cpp
 float add(float a, int b) {
@@ -180,6 +185,11 @@ int main() {
     operation = &add; // assign address of add func to operation pointer
     cout << operation(first, second);
 }
+```
+
+```cpp
+// alias to function pointer
+using operation_func = float(*)(float, int);
 ```
 
 
