@@ -73,6 +73,7 @@ takes a variable number of args, e.g. `printf` is a variadic function, it accept
 
 * declare variadic by placing `...` as the final parameter in the func arg list.
 * need to be accessed by utility functions int the `<cstdarg>` header.
+  * func: `va_list` `va_start` `va_end` `va_arg` `va_copy` 
 
 
 
