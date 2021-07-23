@@ -151,6 +151,39 @@ int main() {
 }
 ```
 
+## Function Pointers
+
+_Functional programming_ is a programming paradigm that emphasizes function evaluation and immutable data.
+
+* One way you can achive this is to pass a function pointer. Functions occupy memory, just like objects. You can refer to this memory address via usual pointer mechanism.
+* cannot modity the pointed-to function \(conceptually similar to const obj.\)
+* `return-type (*pointer-name)(args);` 
+* use address-operator `&` to take the address of a function
+* mind changer: just init func pointer that accept types U want
+
+```cpp
+float add(float a, int b) {
+    return a + b;
+}
+
+float subtract(float a, int b) {
+    return a - b;
+}
+
+int main() {
+    const float first{ 100 };
+    const int second{ 20 };
+    
+    float(*operation)(float, int) {}; // init function pointer
+                                    //accepting a float and int a
+                                    
+    operation = &add; // assign address of add func to operation pointer
+    cout << operation(first, second);
+}
+```
+
+
+
 
 
 ---END---
