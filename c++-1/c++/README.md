@@ -1128,6 +1128,8 @@ for (counter = 0; ... ; ...) {} // notice that inside for-loop there
 
 ### Range-Based for Loop
 
+* C++20 added init-stmt 
+
 ```cpp
 for(element-type element-name : array-name) {
     --snip--
@@ -1154,6 +1156,13 @@ for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
 // multiply the elements of items by 2
 for (int& itemRef : items) {
     itemRef *= 2;
+}
+```
+
+```cpp
+// C++20, init-stmt runningTotal example
+for (int runningTotal{0}; const int item : items) {
+    runningTotal += item;
 }
 ```
 
