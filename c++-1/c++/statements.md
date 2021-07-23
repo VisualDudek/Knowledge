@@ -203,6 +203,18 @@ int main();
 }
 ```
 
+## Jump stmt
+
+You should avoid using them because they can almost always be replaced with higher-level control structures.
+
+* `break` 
+* `continue` 
+* `goto` works with _labels_, are identifiers you can add to any stmt.
+
+```cpp
+// do not use goto :)
+```
+
 
 
 
