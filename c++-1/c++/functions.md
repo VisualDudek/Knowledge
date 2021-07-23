@@ -98,6 +98,7 @@ int main() {
 
 * enable: create func templates that accept variadic, same-type args.
 * _template parameter pack_
+  * the recursion needs a stopping criteria, so you add a func template specialization without the parameter
 
 ```cpp
 // example
@@ -106,9 +107,34 @@ void my_func(T x, Args...args) {
     // use x, then recurse:
     my_func(args...);
 }
+
+// func template specialization
+template <typename T>
+void my_func(T x) {
+    // Use x, but DON't recurse
+}
+
+// sum example
+template <typename T>
+constexpr T sum(T x) {
+    return x;
+}
+
+template <typename T, typename.. Args>
+constexpr T sum(T x, Args... args) {
+    return x + sum(args...);
+}
+
+int main() {
+    cout << sum(2, 4, 6, 8, 10, 12); // now you do not need size of input
+}
 ```
 
+{% hint style="danger" %}
+BC all of this generic programming can be computed at compile time, you mark these func `constexpr` this compile-time computatin is a _**major**_ advantage over variadic function above.
+{% endhint %}
 
+### fold expressions
 
 
 
