@@ -96,7 +96,7 @@ int main() {
 
 ## Variadic Templates
 
-* enable: create tunc templates that accept variadic, same-type args.
+* enable: create func templates that accept variadic, same-type args.
 * _template parameter pack_
 
  
