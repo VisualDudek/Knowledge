@@ -74,10 +74,32 @@ takes a variable number of args, e.g. `printf` is a variadic function, it accept
 * declare variadic by placing `...` as the final parameter in the func arg list.
 * need to be accessed by utility functions int the `<cstdarg>` header.
   * func: `va_list` `va_start` `va_end` `va_arg` `va_copy` 
+* not type-safe \(notice that the second arg of `va_arg` is a type\)
+* the number of elements in the variadic args must be tracked separately
 
+```cpp
+int sum(size_t n, ...) {
+    va_list args;
+    va_start(args, n);
+    int result{};
+    while (n--) {
+        auto next_element = va_arg(args, int);
+        result += next_element;
+    }
+    va_end(Args);
+    return rsult;
+}
 
+int main() {
+    cout << sum(6, 2, 4, 6, 8, 10, 12);
+```
 
+## Variadic Templates
 
+* enable: create tunc templates that accept variadic, same-type args.
+* _template parameter pack_
+
+ 
 
 
 
