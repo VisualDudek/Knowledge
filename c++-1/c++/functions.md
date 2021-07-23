@@ -99,7 +99,14 @@ int main() {
 * enable: create func templates that accept variadic, same-type args.
 * _template parameter pack_
 
- 
+```cpp
+// example
+template <typename T, typename... Args>
+void my_func(T x, Args...args) {
+    // use x, then recurse:
+    my_func(args...);
+}
+```
 
 
 
