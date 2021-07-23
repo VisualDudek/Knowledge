@@ -209,7 +209,9 @@ struct type-name {
 
 struct CountIf {
     CountIf(char x) : x{ x } {} // zwykły konstruktor
-    size_t operator()(const char* str) const {
+    size_t operator()(const char* str) const { 
+                            // bc calling the function doesn't modify the state
+                            //of CountIf object, we can mark it const
         size_t index{}, result{};
         while (str[index]) {
             if (str[index] == x) result++;
