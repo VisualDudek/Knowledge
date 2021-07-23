@@ -192,6 +192,15 @@ int main();
         cout << i << " ";
     }
 }
+// same thing with plain for-loop
+int main();
+    FiboRange range{ 5000 };
+    const auto end = range.end();
+    for (const auto x = range.begin(); x != end; ++x) {
+        const auto i = *x;
+        cout << i << " ";
+    }
+}
 ```
 
 
