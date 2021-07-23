@@ -29,7 +29,7 @@ on most platforms, a function call compiles into a series of instructions, such 
 
 * `noexcept` 
 * `const` 
-* `final` 
+* `final` indicates that a method cannot be overridden by a child class
 * `override` 
 * `volatile` 
 
