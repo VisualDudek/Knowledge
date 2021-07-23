@@ -236,9 +236,13 @@ int main() {
 
 * `[captures] (parameters) modifiers -> return-type { body }`
 * only captures and body are req
+* can take default args
+  * can override def value
+* _generic lambda_, TODO
 
 ```cpp
-[](int x) {return x*x;}
+auto square = [](int x) {return x*x;};
+square(3);
 
 // example
 
@@ -259,7 +263,12 @@ int main() {
 }
 ```
 
-
+```cpp
+// lambda with default arg
+auto increment = [](auto x, int y = 1) {return x + y }
+increment(10);
+increment(10, 5);
+```
 
 
 
