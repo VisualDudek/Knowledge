@@ -42,12 +42,21 @@ on most platforms, a function call compiles into a series of instructions, such 
 
 * `auto` 
 * \(very pedantic\) it is possible to extend the auto return type deduction syntax to provide the return type as a suffix with the arrow operator `->` 
+* `decltype ( expression )` 
 
 ```cpp
 auto my-func(args) -> type-expression {
     // return an obj with type matching
     //the type-expression above
 }
+```
+
+```cpp
+// decltype example
+struct A { double x; };
+const A* a;
+
+decltype(a->x) y;     // type of y is double 
 ```
 
 
