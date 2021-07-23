@@ -25,3 +25,27 @@ on most platforms, a function call compiles into a series of instructions, such 
 4. After the function completes, jump to the return address
 5. Clean up the call stack
 
+### suffix mod
+
+* `noexcept` 
+* `const` 
+* `final` 
+* `override` 
+* `volatile` 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---END---
+
