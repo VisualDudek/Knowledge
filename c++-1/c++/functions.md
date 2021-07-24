@@ -243,6 +243,8 @@ int main() {
   * `[](int x, double y) -> { return x + y; }`
   * can use `decltype`
   * `[](auto x, double y) -> decltype(x+y) { reutrn x + y; }`
+* _lambda captures_, porównaj z Countif \(powyżej\)
+  * by default, lambda capture by value
 
 ```cpp
 auto square = [](int x) {return x*x;};
