@@ -1081,6 +1081,7 @@ int main() {
 * defined in header `<array>`
 * support iterator
 * `array.at(idx)` vs `array[idx]` the first one make sure U have provided valid index, the later does not
+* support `size()`
 
 ```cpp
 template <class T, std::size_t N>
