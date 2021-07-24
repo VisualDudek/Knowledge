@@ -238,7 +238,11 @@ int main() {
 * only captures and body are req
 * can take default args
   * can override def value
-* _generic lambda_, TODO
+* _generic lambda_, are lambda expression templates
+* lambda explicit return type, use `->` syntax
+  * `[](int x, double y) -> { return x + y; }`
+  * can use `decltype`
+  * `[](auto x, double y) -> decltype(x+y) { reutrn x + y; }`
 
 ```cpp
 auto square = [](int x) {return x*x;};
@@ -268,6 +272,21 @@ int main() {
 auto increment = [](auto x, int y = 1) {return x + y }
 increment(10);
 increment(10, 5);
+```
+
+```cpp
+// jak uniknąć redundancji w dwóch linijkach poniżej? gdzie różnica jest tylko
+//w typie
+transform([](int x){reutrn 10 * x + 5}, base_int, a, 1);
+transform([](double x){return 10 * x + 5}, base_float, b, 1);
+// use generic lambda ( template )
+
+template <typename Fn, typename T>
+void transform(Fn fn, const T* in, T* out, size_t len) {
+    for(size_t i{}; i<len; i++) {
+        out[i] = fn(in[i]);
+    }
+}
 ```
 
 
