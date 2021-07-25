@@ -395,6 +395,24 @@ void AlphaHistogram::ingest(const char* x) {
         index++;
     }
 }
+
+//implement print()
+void AlphaHistogram::print() const {
+    for(auto index{ pos_A }; index <= pos_Z; index++) {
+        printf("%c: ", index);
+        auto n_asterisks = counts[index - pos_A];
+        while (n_asterisks--) printf("*");
+        printf("\n");
+    }
+}
+
+int main(int argc, char** argv) {
+    AlphaHistogram hist;
+    for(size_t i{ 1 }; i<argc; i++) {
+        hist.ingest(argv[i]);
+    }
+    hist.print();
+}
 ```
 
 
