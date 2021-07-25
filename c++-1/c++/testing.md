@@ -56,3 +56,28 @@ int main() {
 }
 ```
 
+* before we can write tests, need to write a _skeleton class_, which implements an interface but provides no functionality.
+
+```cpp
+template <typename T>
+struct AutoBrake {
+    AutoBrake(const T& publish) : publish{ pubblish } {}
+    void observe(const SpeedUpdate& cd) { }
+    void observe(const CarDetected& cd) { }
+    void set_collision_threshold_s =(double x) {  // setter
+        collision_threshold_s = x;
+    }
+    double get_collision_threshold_s() const {  // getter
+        return collision_threshold_s;
+    }
+    double get_speed_mps() const {  // getter
+        return speed_mps;
+    }
+    
+private:
+    double collision_threshold_s;
+    double speed_mps;
+    const T& publish;
+};
+```
+
