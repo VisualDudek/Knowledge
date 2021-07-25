@@ -13,6 +13,7 @@
   * [STATEMENTS](c++-1/c++/statements.md)
   * [FUNCTIONS](c++-1/c++/functions.md)
   * [STL](c++-1/c++/stl.md)
+  * [TESTING](c++-1/c++/testing.md)
 
 ## LINUX
 
