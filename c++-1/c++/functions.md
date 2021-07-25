@@ -338,12 +338,14 @@ int main() {
     // sailor = 3; tally = 10
 ```
 
-## std::function
+## std::function c++11
 
 * `std::funtion<return-type(args)>`
 
 {% hint style="danger" %}
 nie do końca rozumiem
+
+SOLUTION: ułatwienie żeby nie męczyć sie w coś takiego:  `x(void(*foo)())` 
 {% endhint %}
 
 ## The main function
