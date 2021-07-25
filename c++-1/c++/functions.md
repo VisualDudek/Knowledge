@@ -245,7 +245,7 @@ int main() {
   * `[](auto x, double y) -> decltype(x+y) { reutrn x + y; }`
 * _lambda captures_, porównaj z Countif \(powyżej\) it is analogous to function type constructor
   * by default, lambda capture by value
-  * cajpture is a list with comma
+  * capture is a list with comma
   * jeśli chcesz przechowywać wartości pomiędzy kolejnymi call lambda use reference pass
 * _lambda default capture_, reference `[&]` and by value `[=]` will auto-match variables
   * you're not allowed to midify variables captures by value unless you add the `mutable` keyword
