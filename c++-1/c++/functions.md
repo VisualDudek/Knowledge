@@ -243,8 +243,14 @@ int main() {
   * `[](int x, double y) -> { return x + y; }`
   * can use `decltype`
   * `[](auto x, double y) -> decltype(x+y) { reutrn x + y; }`
-* _lambda captures_, porównaj z Countif \(powyżej\)
+* _lambda captures_, porównaj z Countif \(powyżej\) it is analogous to function type constructor
   * by default, lambda capture by value
+  * cajpture is a list with comma
+  * jeśli chcesz przechowywać wartości pomiędzy kolejnymi call lambda use reference pass
+* _lambda default capture_, reference `[&]` and by value `[=]` will auto-match variables
+  * you're not allowed to midify variables captures by value unless you add the `mutable` keyword
+* _initializer expressions in capture list_,  
+  * przydatne jelsi chcesz przeniesc obiekt \(move\)
 
 ```cpp
 auto square = [](int x) {return x*x;};
@@ -273,7 +279,7 @@ int main() {
 // lambda with default arg
 auto increment = [](auto x, int y = 1) {return x + y }
 increment(10);
-increment(10, 5);
+increment(10, 5);  // can override default args
 ```
 
 ```cpp
@@ -289,6 +295,45 @@ void transform(Fn fn, const T* in, T* out, size_t len) {
         out[i] = fn(in[i]);
     }
 }
+```
+
+```cpp
+// lambda capture example
+// ciekawy przykład składni kodu, zobacz na ile linijek zociaga sie 
+//definicja lambdy
+int main() {
+    char to_count{ 's' };
+    auto s_counter = [to_count](const char* str) {
+        size_t index{}, result{};
+        while (str[index]) {
+            if (str[index] == to_count) result++;
+            index++;
+        }
+        return result;
+    };
+
+auto sally = s_counter("Sally sells seashells by the seashore");
+```
+
+```cpp
+// lambda capture with reference
+int main() {
+    char to_count{ 's' };
+    size_t tally{};
+    auto s_counter = [to_count, &tally](const char* str) {
+        size_t index{}, result{};
+        while (str[index]) {
+            if (str[index] == to_count) result++;
+            index++;
+        }
+        tally += result;
+        return result;
+    };
+    
+    auto sally = s_counter("Sally sells seashells by the seashore.");
+    // sally = 7; tally = 7
+    auto sailor = s_counter("Sailor went to sea to see what he could see.");
+    // sailor = 3; tally = 10
 ```
 
 
