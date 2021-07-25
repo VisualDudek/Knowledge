@@ -16,12 +16,16 @@
 
 ### map
 
+* work as default dic ???
+
 ```cpp
 std::map <key_type, date_type>
 
 map<string,int> m;
 m.size();
 m.insert(make_pair("hello",9));
+// also can do
+m["abc"] = 6 
 m.earse(val);
 
 // finding element
