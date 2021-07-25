@@ -391,6 +391,7 @@ void AlphaHistogram::ingest(const char* x) {
     size_t index{};
     while(const auto c = x[index]) {
         if (within_AZ(c)) counts[c - pos_A]++;
+        else if (within_az(c) counts[c - pos_a]++;
         index++;
     }
 }
