@@ -1095,6 +1095,7 @@ int main() {
 * support iterator
 * `array.at(idx)` vs `array[idx]` the first one make sure U have provided valid index, the later does not
 * support `size()`
+* multidimensional arrays
 
 ```cpp
 template <class T, std::size_t N>
@@ -1106,6 +1107,20 @@ std::array<int, 3> a{32, 27, 64};
 
 // can be init at for-range-based loop
 for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
+```
+
+```cpp
+// multidimensional array [C++20: Multidimensional array]
+size_t rows{2|;
+size_t columns{3};
+array<array<int, colums>, rows> array1{1, 2, 3, 4, 5, 6};
+                                    // ^^^^^^^-- first row
+// array1 is array of where each row is composed from array<int, columns>
+
+// access:
+array1[0][3]  // 0 row; 3 column idx
+
+array1.at(0).(3) 
 ```
 
 ## Vector
