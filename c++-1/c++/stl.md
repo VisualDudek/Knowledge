@@ -20,7 +20,7 @@
 
 ### map
 
-* work as default dic ???
+* work as default dic ??? works on keys that are not in map `m["abc"] = 6` 
 
 ```cpp
 std::map <key_type, date_type>
