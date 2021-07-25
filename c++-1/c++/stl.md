@@ -1,10 +1,35 @@
 # STL
 
-## algorithm
+## &lt;algorithm&gt;
 
 ### sort
 
 ### binary\_search
 
 * only returns true or false
+
+## Containers
+
+## Container Adaptors
+
+## Associative Containers
+
+### map
+
+```cpp
+std::map <key_type, date_type>
+
+map<string,int> m;
+m.size();
+m.insert(make_pair("hello",9));
+m.earse(val);
+
+// finding element
+map<string,int>::iterator itr=m.find(val);  // gives the iterator to the element
+//val if it is found otherwise return m.end()
+
+m["key"] 
+// or get iterator using find and then:
+itr->second //access the value
+```
 
