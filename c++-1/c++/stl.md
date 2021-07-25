@@ -8,6 +8,10 @@
 
 * only returns true or false
 
+## &lt;iomanip&gt;
+
+* flagi na `cout`
+
 ## Containers
 
 ## Container Adaptors
