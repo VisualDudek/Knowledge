@@ -251,6 +251,8 @@ int main() {
   * you're not allowed to midify variables captures by value unless you add the `mutable` keyword
 * _initializer expressions in capture list_,  
   * przydatne jelsi chcesz przeniesc obiekt \(move\)
+* can capture `this`
+* all labda expressions are `constexpr` as long as the labmda can be invoked at compile time.
 
 ```cpp
 auto square = [](int x) {return x*x;};
@@ -336,13 +338,55 @@ int main() {
     // sailor = 3; tally = 10
 ```
 
+## std::function
 
+* `std::funtion<return-type(args)>`
 
+{% hint style="danger" %}
+nie do końca rozumiem
+{% endhint %}
 
+## The main function
 
+* can access command line parameters within `main` by adding arguments to your `main` declarateion.
+* `char* argv[]` array of pointers
 
+```cpp
+// three main overloads
+int main();
+int main(int argc, char* argv[]);
+int main(int argc, char* argv[], impl-parametes);
+```
 
+```cpp
+// exploring program parameters
+int main(int argc, char** argv) {
+    cout << "Arguments: " << argc << endl;
+    for (size_t i{}; i < argc, i++) {
+    cout << i << "; " << argv[i] << endl;
+    }
+}
+```
 
+### example
+
+```cpp
+// start with helper functions
+char pos_A{ 65 }, pos_Z{ 90 }, pos_a{97}, pos_z{ 122 };
+bool within_AZ(char x) {return pos_A <= x && pos_Z >= x; }
+bool within_az(char x) {return pos_a <= x && pos_z >= x; }
+
+// build the simple structure
+struct AlphaHistogram {
+    void ingest(const char* x);
+    void print() const;
+private:
+    size_t counts[26]{};
+);
+
+// implementation of ingest
+void AlphaHistogram::ingest(const char* x) {
+```
 
 
 
