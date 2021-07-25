@@ -57,11 +57,13 @@ int main() {
 ```
 
 * before we can write tests, need to write a _skeleton class_, which implements an interface but provides no functionality.
+* _AutoBrake_ has a single constructor that takes the template parameter _publish_, which you save off into a _const_ member.
+* you provide two differernt observe functions
 
 ```cpp
 template <typename T>
 struct AutoBrake {
-    AutoBrake(const T& publish) : publish{ pubblish } {}
+    AutoBrake(const T& publish) : publish{ publish } {}
     void observe(const SpeedUpdate& cd) { }
     void observe(const CarDetected& cd) { }
     void set_collision_threshold_s =(double x) {  // setter
@@ -80,4 +82,51 @@ private:
     const T& publish;
 };
 ```
+
+### Assertion
+
+```cpp
+constexpt void assert_that(bool statement, const char* message) {
+    if (!statement) throw std::runtime_error{ mesage };
+}
+
+int main() {
+    assert_that(1 + 2 > 2, "ABC");
+    assert_that(24 == 42, "This assertion will generate an exception");
+}
+```
+
+{% hint style="info" %}
+... empty implementation is sometimes called a stub.
+{% endhint %}
+
+* **Requirement**: Initial Speed is Zero
+* first construct an _AutoBrake_ with an empty _BreakCommand publish_ function
+
+```cpp
+void initial_speed_is_zero() {
+    AutoBrake auto_brake{ [](const BrakeCommand&) {} };
+    assert_that(auto_brake.get_speed_mps() == 0L, "speed not equal 0");
+}
+```
+
+* **Test Harnesses**: is code that executes unit tests
+
+```cpp
+void run_test(void(*unit_test)(), cost char* name) {
+    try {
+        unit_test();
+        printf("[+] Test %s susccesful.\n", name);
+    } catch (const std::exception& e) {
+        printf("[-] Test failure in %s. %s.\n", name, e.what());
+    }
+}
+
+// run it in main
+int main() {
+    run_test(initial_speed_is_zero, "initial speed is 0");
+}
+```
+
+
 
