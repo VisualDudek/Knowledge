@@ -370,6 +370,8 @@ int main(int argc, char** argv) {
 
 ### example
 
+* zwróć uwage na sposób wyliczania indeksu do incrementacji \(row:18\)
+
 ```cpp
 // start with helper functions
 char pos_A{ 65 }, pos_Z{ 90 }, pos_a{97}, pos_z{ 122 };
@@ -386,6 +388,12 @@ private:
 
 // implementation of ingest
 void AlphaHistogram::ingest(const char* x) {
+    size_t index{};
+    while(const auto c = x[index]) {
+        if (within_AZ(c)) counts[c - pos_A]++;
+        index++;
+    }
+}
 ```
 
 
