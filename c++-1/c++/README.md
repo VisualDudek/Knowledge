@@ -303,6 +303,10 @@ string result = (foo < 10) ? "lower" : "upper";
 
 * namespce `std::numbers`
 
+### numeric
+
+* `accumulate`
+
 ### random
 
 * `class uniform_int_distribution`
