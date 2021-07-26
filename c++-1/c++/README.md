@@ -1140,8 +1140,10 @@ array1.at(0).(3)
 
 ## Vector
 
+* dynamic size
 * iterators and reverse\_iterator
 * C++ `erase` method
+* co to jest `vector<int>& items` co tu robi `&` ???SOLUTION reference  dotyczy całego vektora a nie elementów w vektorze.
 
 ```cpp
 #include <vector>
