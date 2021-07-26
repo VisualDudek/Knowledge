@@ -1152,7 +1152,13 @@ vector <int> vec {1, 2, 3, 4, 5};
 
 ## range &lt;ranges&gt; C++20
 
-* support lazy evaluation, eval only when needed 
+* support lazy evaluation, eval only when needed via `views` namespace
+
+### views namespace
+
+* `views::iota(1, 11);` only declare not allocate, it is lazy eval
+
+
 
 ## For loops
 
