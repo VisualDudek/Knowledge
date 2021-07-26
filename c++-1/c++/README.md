@@ -1158,6 +1158,8 @@ vector <int> vec {1, 2, 3, 4, 5};
 ### views namespace
 
 * `views::iota(1, 11);` only declare not allocate, it is lazy eval
+* can be chained by pipe operator `|` 
+* najciekawsze jest to że na przykładach z {C+20 video} iterator sie nie wyczeruje tzn. podeklaracji i wykorzystaniu jest wykorzystywany jeszcze kilka razy bez ponownej deklaracji
 
 
 
