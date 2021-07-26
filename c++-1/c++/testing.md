@@ -175,6 +175,7 @@ void sensitivity_greater_than_1() {
 ...
     void set_collision_threshold_s(double x) {
         if (x < 1) throw std::exception{ "Collision less than 1." };
+        // exception musiałem zamienic na runtime_error
         collision_threshold_s = x;
     }
 ```
