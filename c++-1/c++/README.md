@@ -1153,6 +1153,8 @@ vector <int> vec {1, 2, 3, 4, 5};
 vector <int> v(7); // 7 elements filled with zeros
 
 vec.size();
+vec.capacity(); // returns the number of elements that 
+//can be held in currently allocated storage
 ```
 
 ## range &lt;ranges&gt; C++20

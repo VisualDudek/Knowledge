@@ -48,3 +48,26 @@ auto showValues = [](auto& values) {
 showValues(v); // v is Vector
 ```
 
+## Containers
+
+### vector
+
+* when use `int` and when reference to int `int&` 
+
+```cpp
+void outputVector(const vector<int>& items) { //pass-by reference bo po co
+                        //marnować przestrzeń na dublowanie elemenu
+                        //const bo ta funkcja nie powinna absolutnie nic
+                        //zmieniać w przekazanym vektorze
+    for (const int item : items) {
+        cout << item << " ";
+    }
+}
+
+void inputVector(vector<int>& items) { //pass-by reference
+    for (int& items : items) { //potrzebuje referencji do kazdego obiektu
+        cin >> item;
+    }
+}
+```
+
