@@ -1152,7 +1152,8 @@ vector <int> vec {1, 2, 3, 4, 5};
 
 ## range &lt;ranges&gt; C++20
 
-* support lazy evaluation, eval only when needed via `views` namespace
+* support _lazy evaluation_, eval only when needed via `views` namespace
+* SEE: C++20 video L06 Intro to Functional-Style Programming
 
 ### views namespace
 

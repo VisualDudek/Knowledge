@@ -31,3 +31,20 @@ int main() {
 }
 ```
 
+### lambda, generic
+
+* assign labda to local var
+
+```cpp
+//lambda to dispaly results of range operations
+//can pass any type that support iterator
+auto showValues = [](auto& values) {
+    for(auto value : values) {
+        cout << value << " ";
+    }
+}
+
+//use case
+showValues(v); // v is Vector
+```
+
