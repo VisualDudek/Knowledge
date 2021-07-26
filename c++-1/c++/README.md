@@ -1144,6 +1144,8 @@ array1.at(0).(3)
 * iterators and reverse\_iterator
 * C++ `erase` method
 * co to jest `vector<int>& items` co tu robi `&` ???SOLUTION reference  dotyczy całego vektora a nie elementów w vektorze.
+* copy constructor
+  * przekazanie do konstruktora obiektu o tym samym typie
 
 ```cpp
 #include <vector>
@@ -1155,6 +1157,9 @@ vector <int> v(7); // 7 elements filled with zeros
 vec.size();
 vec.capacity(); // returns the number of elements that 
 //can be held in currently allocated storage
+
+// copy constructor
+vector<int> v{vec}; 
 ```
 
 ## range &lt;ranges&gt; C++20
