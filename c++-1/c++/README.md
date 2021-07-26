@@ -862,6 +862,15 @@ Address Space Layout Randomization
   * \(1\) use `to_array` function to convert to `std::array`
   * \(2\) process as C++20 `span` 
 * `[ ]` does not provide bounds checking
+* array name `n` is equivalent to `&n[0]` 
+* do not know their own size
+* when pass to func as arg wil decay into pointer
+
+```cpp
+int sumElements(const int values[], size_t numberOfElements)
+// compilator will dacay into pointer
+int sumElements(const int* values, size_t numberOfElements)
+```
 
 ### Dereferencing Pointers
 
