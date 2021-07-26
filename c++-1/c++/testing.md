@@ -180,7 +180,27 @@ void sensitivity_greater_than_1() {
     }
 ```
 
+* **Req**: save the car's speed between updates
+* bardzo ciekawy fix w tej architekturze tj. przekazywanie parametru w klasie
+  * zobacz jak jet przekazywany atrybut do klasy
 
+```cpp
+void speed_is_saved() {
+    AutoBrake auto_brake{ [](const BrakeCommand&) {} };
+    auto_brake.observe(SpeedUpdate{ 100L });
+    assert_that(100L == auto_brake.get_speed_mps(), "speed is not saved to 100");
+    auto_brake.observe(SpeedUpdate{ 50L });
+    assert_that(50L == auto_brake.get_speed_mps(), "speed is not saved to 50");
+    auto_brake.observe(SpeedUpdate{ 0L });
+    assert_that(0L == auto_brake.get_speed_mps(), "speed is not saved to 0");
+}
+
+// fix
+...
+    void observe(cost SpeedUpdate& x) {
+        speed_mps = x.velocity_mps;
+    }
+```
 
 
 
