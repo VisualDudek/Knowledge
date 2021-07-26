@@ -826,11 +826,29 @@ int main() {
 * `std::byte` pointer
 * encode empty pointers with `nullptr`
 * You can obtain the address of a variable by prepending the _address-of operator_ \(`&`\)
-* Pointers encode object location.
+* Pointers encode object location
+* indirection `*` pointer operator
+* legacy code from C
+  * built-in pointer-based arrays
+  * pointer-based strings
+* Null pointers before C++11: 0, NULL \(this is preprocessor value of 0\)
+* name convention, add Ptr suffix
 
 ```cpp
 int* my_ptr;    // declare a pointer using an asterisk (*)
 printf("The value of my_ptr is %p.", my_ptr);  // format specifier
+```
+
+```cpp
+int* countPtr;   // uninitialized "dangling pointer"
+// C++11 nullptr
+int* countPtr{nullptr};    // pointer to nothing
+```
+
+```cpp
+void cubeByReferene(int* nPtr) {
+    *nPtr = *nPtr * *nPtr * *nPtr;
+}
 ```
 
 {% hint style="info" %}
