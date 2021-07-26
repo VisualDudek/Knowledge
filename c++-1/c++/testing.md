@@ -203,9 +203,23 @@ void speed_is_saved() {
     }
 ```
 
+* **Req**: AutoBrake publishes a BrakeCommand when collision detected
+* it time collision is greater than zero and less than or equal to collision\_threshold\_s you invoke publish with a BrekCommand
 
-
-
+```cpp
+void alert_when_imminent() {
+    int brake_commands_published{};
+    AutoBrake auto_brake{
+        [&brake_command_published](const BrakeCommand&) {
+            brake_command_published++;
+        }
+    };
+    auto_brake.set_collision_threshold_S(10L);
+    auto_brake.observe(SpeedUpdate{ 100L });
+    auto_brake.observe(CarDetected{ 100L, 0L });
+    assert_that(brake_commands_published == 1, "brake cmd published not one");
+}
+```
 
 
 
