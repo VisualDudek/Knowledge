@@ -183,6 +183,7 @@ void sensitivity_greater_than_1() {
 * **Req**: save the car's speed between updates
 * bardzo ciekawy fix w tej architekturze tj. przekazywanie parametru w klasie
   * zobacz jak jet przekazywany atrybut do klasy
+* there is several assers in this test
 
 ```cpp
 void speed_is_saved() {
