@@ -849,12 +849,19 @@ int* countPtr{nullptr};    // pointer to nothing
 void cubeByReferene(int* nPtr) {
     *nPtr = *nPtr * *nPtr * *nPtr;
 }
-// takich cyrków nie trzeb robić gdy urzywasz referencji &
+// takich cyrków nie trzeb robić gdy używasz referencji &
 ```
 
 {% hint style="info" %}
 Address Space Layout Randomization
 {% endhint %}
+
+### Legacy Arrays
+
+* C++20, if built-in arrays are required
+  * \(1\) use `to_array` function to convert to `std::array`
+  * \(2\) process as C++20 `span` 
+* `[ ]` does not provide bounds checking
 
 ### Dereferencing Pointers
 
