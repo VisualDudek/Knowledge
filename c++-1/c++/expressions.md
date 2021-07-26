@@ -83,7 +83,7 @@ int main() {
 struct CheckedInteger {
     CheckedInteger(unsigned int value) : value{ value } {}
     
-    CheckedInteger operator+(insigned int other) const {
+    CheckedInteger operator+(unsigned int other) const {
         CheckedInteger result{ value + other };
         if (result.value < value) throw std::runtime_error{ "Overflow!" };
         return result;

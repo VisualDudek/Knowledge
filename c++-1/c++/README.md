@@ -127,6 +127,14 @@ The logical operators AND `&&` and OR `||` are binary.
 * **signature** consists from name function and its parameters not return type
 * _**name mangling**_ - compiler will combine name function with its parameters, each compiler has its own syntax
 * C++20 functions marked `[[nodiscard]]` cause compilers to issue warnings if you ignore the return value
+* _**hiher-order function**_ - is a func that does at least one of the following:
+  * takes one or more functions as args
+  * returns a function as its results
+* **lambda** - \(patrz rozdział FUNCTIONS\)  
+
+{% hint style="info" %}
+sprawdzaj przykłady na wiki, np. bdb opis dla hihger-order function
+{% endhint %}
 
 ```cpp
 // declaration function prototype
