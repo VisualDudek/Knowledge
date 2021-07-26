@@ -1160,6 +1160,9 @@ vec.capacity(); // returns the number of elements that
 
 // copy constructor
 vector<int> v{vec}; 
+
+// use overloaded assignment (=) operator
+vec = v; // assign integers from v to vec
 ```
 
 ## range &lt;ranges&gt; C++20
