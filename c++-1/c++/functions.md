@@ -239,6 +239,7 @@ int main() {
 * can take default args
   * can override def value
 * _generic lambda_, are lambda expression templates
+  * czyli w parametrach dajemy `auto` lub `auto&` lub warianty z `const` i to daje nam podobne zastosowanie jak teplate z funkcjami tzn. moge przekazać dowolny typ
 * lambda explicit return type, use `->` syntax
   * `[](int x, double y) -> { return x + y; }`
   * can use `decltype`

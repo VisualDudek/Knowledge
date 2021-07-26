@@ -24,6 +24,9 @@ int main() {
 
 ```bash
 g++ -std=c++2a -I fmt fig03_06.cpp format.cc -o fig03_06
+
+// define standard
+g++ -std=c__20 file.cpp -o file
 ```
 
 ## Preprocessor
@@ -1148,6 +1151,8 @@ vector <int> vec {1, 2, 3, 4, 5};
 ```
 
 ## range &lt;ranges&gt; C++20
+
+* support lazy evaluation, eval only when needed 
 
 ## For loops
 
