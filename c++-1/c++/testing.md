@@ -210,11 +210,11 @@ void speed_is_saved() {
 void alert_when_imminent() {
     int brake_commands_published{};
     AutoBrake auto_brake{
-        [&brake_command_published](const BrakeCommand&) {
-            brake_command_published++;
+        [&brake_commands_published](const BrakeCommand&) {
+            brake_commands_published++;
         }
     };
-    auto_brake.set_collision_threshold_S(10L);
+    auto_brake.set_collision_threshold_s(10L);
     auto_brake.observe(SpeedUpdate{ 100L });
     auto_brake.observe(CarDetected{ 100L, 0L });
     assert_that(brake_commands_published == 1, "brake cmd published not one");
