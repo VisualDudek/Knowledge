@@ -66,7 +66,7 @@ struct AutoBrake {
     AutoBrake(const T& publish) : publish{ publish } {}
     void observe(const SpeedUpdate& cd) { }
     void observe(const CarDetected& cd) { }
-    void set_collision_threshold_s =(double x) {  // setter
+    void set_collision_threshold_s(double x) {  // setter
         collision_threshold_s = x;
     }
     double get_collision_threshold_s() const {  // getter
@@ -86,8 +86,8 @@ private:
 ### Assertion
 
 ```cpp
-constexpt void assert_that(bool statement, const char* message) {
-    if (!statement) throw std::runtime_error{ mesage };
+constexpr void assert_that(bool statement, const char* message) {
+    if (!statement) throw std::runtime_error{ message };
 }
 
 int main() {
