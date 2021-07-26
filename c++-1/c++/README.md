@@ -133,7 +133,7 @@ The logical operators AND `&&` and OR `||` are binary.
 * **lambda** - \(patrz rozdział FUNCTIONS\)  
 
 {% hint style="info" %}
-sprawdzaj przykłady na wiki, np. bdb opis dla hihger-order function
+sprawdzaj przykłady na wiki, np. bdb opis dla hihger-order function 
 {% endhint %}
 
 ```cpp
