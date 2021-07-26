@@ -251,9 +251,9 @@ void observe(const CarDetected& cd) {
 }
 ```
 
+### adding a service-bus interface
 
-
-
+You want to refactor the service bus. You want to accept a `std::function` to subscribe to each service, as in the new `IServiceBus` interface.
 
 
 
