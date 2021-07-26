@@ -205,23 +205,45 @@ void speed_is_saved() {
 
 * **Req**: AutoBrake publishes a BrakeCommand when collision detected
 * it time collision is greater than zero and less than or equal to collision\_threshold\_s you invoke publish with a BrakeCommand
+* fix it with `observe(const CarDetected& cd)` definition
 
 ```cpp
 void alert_when_imminent() {
-    int brake_commands_published{};
+    int brake_commands_published{}; // will keep track of the number of times
+                            //taht the publish callback is invoked.
     AutoBrake auto_brake{
         [&brake_commands_published](const BrakeCommand&) {
             brake_commands_published++;
         }
-    };
+    }; // labda used to construct your auto_brake
+    //will pass by reference into labda local var
     auto_brake.set_collision_threshold_s(10L);
     auto_brake.observe(SpeedUpdate{ 100L });
-    auto_brake.observe(CarDetected{ 100L, 0L });
+    auto_brake.observe(CarDetected{ 100L, 0L }); // detect car 100 meters away 
+    //traveling  at 0 meters per second
+    //AutoBrake should determine that a collision will occure in 1 second
+    //this should trigger a callback, which will increment local var pased 
+    //into labda
     assert_that(brake_commands_published == 1, "brake cmd published not one");
 }
 ```
 
+{% hint style="info" %}
+kod poniżej pomaga w zrozumieniu jak działa przekazywana w init funkcja lambda
 
+nadal nie widze edge w takiej konstrukcji
+{% endhint %}
+
+```cpp
+void observe(const CarDetected& cd) {
+    const auto relative_velocity_mps = speed_mps - cd.velocity_mps;
+    const auto time_to_collision_s = cd.distatnce_m / relative_velocity_mps;
+    if (time_to_collision_s > 0 &&
+        time_to_collision_s <= collision_threshold_s) {
+        publish(BreakCommand{ time_to_collision_s });
+    }
+}
+```
 
 
 
