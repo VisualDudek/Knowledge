@@ -228,6 +228,12 @@ void alert_when_imminent() {
 }
 ```
 
+{% hint style="danger" %}
+capture lambda wywala seg falut:
+
+nie da rady incrementować local var poza scopem
+{% endhint %}
+
 {% hint style="info" %}
 kod poniżej pomaga w zrozumieniu jak działa przekazywana w init funkcja lambda
 
