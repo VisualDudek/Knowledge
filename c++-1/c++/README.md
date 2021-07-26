@@ -864,7 +864,13 @@ Address Space Layout Randomization
 * `[ ]` does not provide bounds checking
 * array name `n` is equivalent to `&n[0]` 
 * do not know their own size
+* cannot be compared using the relational and equality operators
+  * `arr1 == arr2` will be always false
+* cannot be assigned to one another
 * when pass to func as arg wil decay into pointer
+* `sort(begin(arr), end(arr));` can be applied to built-in arrays
+  * works only in the scope that originally defines the array
+  * out of scope compilator lose the knowledge of size of array
 
 ```cpp
 int sumElements(const int values[], size_t numberOfElements)
