@@ -1147,6 +1147,8 @@ vector <int> v;
 vector <int> vec {1, 2, 3, 4, 5};
 ```
 
+## range &lt;ranges&gt; C++20
+
 ## For loops
 
 * init-stmt vars are limited to for-scope
