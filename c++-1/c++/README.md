@@ -1150,6 +1150,9 @@ array1.at(0).(3)
 
 vector <int> v;
 vector <int> vec {1, 2, 3, 4, 5};
+vector <int> v(7); // 7 elements filled with zeros
+
+vec.size();
 ```
 
 ## range &lt;ranges&gt; C++20
