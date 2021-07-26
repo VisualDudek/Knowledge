@@ -138,3 +138,48 @@ struct AutoBrake {
 };
 ```
 
+* **Requirement**: Default Collision Threshold is Five
+* add next test into test harness
+* test failure? fix it
+
+```cpp
+void initial_sensitivity_id_five() {
+    AutoBrake auto_brake{ [](const BrakeCommand&) {} };
+    assert_that(auto_brake.get_collision_threshold_s() == 5L,
+        "sensitivity is not 5");
+}
+
+int main() {
+    --snip--
+    run_test(initial_sensitivity_is_five, "initial sensitiviti is 5");
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- END---
+
