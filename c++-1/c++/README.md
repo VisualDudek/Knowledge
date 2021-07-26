@@ -292,9 +292,10 @@ string result = (foo < 10) ? "lower" : "upper";
 
 ### iostream
 
-* cout
+* cout, cerr
 * sticky stream manipulator
   * `cout << fixed << setprecision(2);`
+* `cerr << "An exception occured"`
 
 ### iomanip
 
@@ -1146,6 +1147,7 @@ array1.at(0).(3)
 * co to jest `vector<int>& items` co tu robi `&` ???SOLUTION reference  dotyczy całego vektora a nie elementów w vektorze.
 * copy constructor
   * przekazanie do konstruktora obiektu o tym samym typie
+* can be accessed by `[ ]` or `at( )` the later do bound-check
 
 ```cpp
 #include <vector>
