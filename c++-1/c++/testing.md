@@ -255,7 +255,19 @@ void observe(const CarDetected& cd) {
 
 You want to refactor the service bus. You want to accept a `std::function` to subscribe to each service, as in the new `IServiceBus` interface.
 
+```cpp
+#include <functional>
 
+using SpeedUpdateCallback = std::function<void(const SpeedUpdate&)>;
+using CarDetectedCallback = std::function<void(const CarDetected&)>;
+
+struct IServiceBus {
+    virtual ~IServiceBus() = default;
+    virtual void publish(const BrakeCommand&) = 0;
+    virtual void subscribe(SpeedUpdateCallback) = 0;
+    virtual void subscribe(CarDetectedCallback) = 0;
+};
+```
 
 
 
