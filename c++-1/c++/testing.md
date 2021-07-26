@@ -128,5 +128,13 @@ int main() {
 }
 ```
 
+* **Getting the Test to Pass**: we need to intialize _speed\_mps_ to zero in the constructor of _AutoBrake_ 
 
+```cpp
+template <typename T>
+struct AutoBrake {
+    AutoBrake(const T& publish) : speed_mps{}, publish{ publish } {}
+    --snip--
+};
+```
 
