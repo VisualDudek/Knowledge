@@ -849,6 +849,7 @@ int* countPtr{nullptr};    // pointer to nothing
 void cubeByReferene(int* nPtr) {
     *nPtr = *nPtr * *nPtr * *nPtr;
 }
+// takich cyrków nie trzeb robić gdy urzywasz referencji &
 ```
 
 {% hint style="info" %}
