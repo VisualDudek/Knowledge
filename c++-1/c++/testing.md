@@ -204,7 +204,7 @@ void speed_is_saved() {
 ```
 
 * **Req**: AutoBrake publishes a BrakeCommand when collision detected
-* it time collision is greater than zero and less than or equal to collision\_threshold\_s you invoke publish with a BrekCommand
+* it time collision is greater than zero and less than or equal to collision\_threshold\_s you invoke publish with a BrakeCommand
 
 ```cpp
 void alert_when_imminent() {
