@@ -155,7 +155,29 @@ int main() {
 }
 ```
 
+* **Requirement**: sensitivity must always be greater than one
+* czyli sprawczamy czy rzuci wyjatkiem jesli bedziemy probować ustawic sensitivity na mniej niz 1, jesli rzuci wyjatkiem to wszystko jes ok i wychodzimy z funkcji, jesli nie rzuci wyjatkiem to sami zglaszamy failed test poprzez wywolanie assert\_that z false
+* add to test harnes
+* fix it
 
+```cpp
+void sensitivity_greater_than_1() {
+    AutoBrake auto_brake{ [](const BrakeCommand&) {} };
+    try {
+        auto_brake.set_collision_threshold_s(0.05L);
+    } catch (const std::exception&) {
+        return;
+    }
+    assert_that(false, "no exception thrown");
+}
+
+// fix it
+...
+    void set_collision_threshold_s(double x) {
+        if (x < 1) throw std::exception{ "Collision less than 1." };
+        collision_threshold_s = x;
+    }
+```
 
 
 
