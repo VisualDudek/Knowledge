@@ -353,6 +353,7 @@ SOLUTION: ułatwienie żeby nie męczyć sie w coś takiego:  `x(void(*foo)())
 
 * can access command line parameters within `main` by adding arguments to your `main` declarateion.
 * `char* argv[]` array of pointers
+* `char* argv[]` is the same as `char** argv` bc `argv[]` will decay into pointer
 
 ```cpp
 // three main overloads
