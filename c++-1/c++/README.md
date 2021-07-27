@@ -975,11 +975,37 @@ int main() {
 ### Pointer Arithmetic
 
 * can access array elements using pointer with the bracket operator `[ ]`
+* can use `++` and `--` 
+* C++ Core Guidelines - A pointer should refer only to a single object \(not an array\)
+* subtracting one pointer from another of the same type wil give a distance
+* pointer can be assigned to another pointer if both pointers are of the same type
+  * exception: pointer to void `void*` 
+  * viod pointer need to be manually cast to the proper ponter type
 
 ```cpp
 College* second_college_ptr = &work[1];
 // or using pointer arithmetic
 College* second_college_ptr = work + 2; // remember that work is an array
+```
+
+```cpp
+int v[5];
+int* vPtr{v};
+
+/*
+location:
+3000    3004    3008    3012    3016
+  | v[0]  | v[1]  | v[2]  | v[3] | v[4]
+  |           
+vPtr
+*/
+vPtr += 2;
+/*
+3000    3004    3008    3012    3016
+  | v[0]  | v[1]  | v[2]  | v[3] | v[4]
+                  |       
+                 vPtr
+*/
 ```
 
 {% hint style="info" %}
