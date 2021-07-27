@@ -75,6 +75,9 @@ void inputVector(vector<int>& items) { //pass-by reference
 
 * from `<span>` header
 * pass by value BC they are just a pointer
+* can pass built-in array and compiler will implicity create span obj.
+  * compiler can also create implicity span obj from std::array and vector
+* can work with span obj.
 
 ```cpp
 void displayArray(const int items[], size_t size) {//items[] will decay into pointer
@@ -94,5 +97,13 @@ void times2(span<int> items) {
         item *= 2;
     }
 }
+
+int arr[5]{1,2,3,4,5};
+displayArray(arr, 5); // need to pass size of arr
+dispalySpan(arr); // compiler will implicity creates span obj
+
+span<int> mySpan{arr};
+mySpan.front();
+mySpan.back();
 ```
 
