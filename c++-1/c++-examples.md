@@ -115,3 +115,61 @@ times2(mySpan.subspan(1, 3));
 accumulate(begin(mySpan), end(mySpan), 0);
 ```
 
+## Polymorphism
+
+### virtual function
+
+* zobacz jak wykorzystany jest w klasie HotelApartament construktor z base class
+  * umozliwia to tzymanie private vars in base class
+  * taki setter dla private vars.
+* kluczowe w tym przykładzie jest przesłanianie metod
+* zobacz z jakim prefixem oznaczone sa prywatne zmienne 
+
+```cpp
+class HotelRoom {
+public:
+    HotelRoom(int bedrooms, int bathrooms)
+    : bedrooms_(bedrooms), bathrooms_(bathrooms) {}
+    
+    int get_price() {
+        return 50*bedrooms_ + 100*bathrooms_;
+    }
+private:
+    int bedrooms_;
+    int  bathrooms_;
+};
+
+class HotelApartment : public HotelRoom {
+public:
+    HotelApartment(int bedrooms, int bathrooms)
+    : HotelRoom(bedrooms, bathrooms) {}
+    
+    int get_price() {
+        return HotelRoom::get_price() + 100;
+    }
+}
+
+// MIND CHANGER
+HotelApartment ha{1, 2};
+ha.get_price(); // 250 call HotelApartment::get_price ponieważ ha jest derived 
+    // from base class HotelRoom i przesłania metode get_price()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---END--
+
