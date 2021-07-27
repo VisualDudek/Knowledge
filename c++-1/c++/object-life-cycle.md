@@ -30,7 +30,7 @@ Co to są **translation units**?
 
 * **local static var** are declared at function scope
 * to co może dziwić to jednorazowe initializacja np. `static int foo{20};`
-* ^--- czytane pochopnie może błednie wskazywać na reinitializacje z wartością 20, co nie jest prawdą.
+* ^--- czytane pochopnie może błednie wskazywać na **re**initializacje z wartością 20, co nie jest prawdą.
 
 {% hint style="info" %}
 _local static var_ begin upon the first invocation of the enclosing function and end when the program exits.
