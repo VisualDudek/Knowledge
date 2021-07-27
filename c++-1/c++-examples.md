@@ -78,6 +78,8 @@ void inputVector(vector<int>& items) { //pass-by reference
 * can pass built-in array and compiler will implicity create span obj.
   * compiler can also create implicity span obj from std::array and vector
 * can work with span obj.
+* can create subviews
+* can use `[ ]` on span obj. but not all compilers do not make boud check!
 
 ```cpp
 void displayArray(const int items[], size_t size) {//items[] will decay into pointer
@@ -105,5 +107,11 @@ dispalySpan(arr); // compiler will implicity creates span obj
 span<int> mySpan{arr};
 mySpan.front();
 mySpan.back();
+mySpan.first(3); // first three elements
+mySpan.last(3);
+mySpan.subspan(1, 3);
+
+times2(mySpan.subspan(1, 3));
+accumulate(begin(mySpan), end(mySpan), 0);
 ```
 
