@@ -125,6 +125,8 @@ accumulate(begin(mySpan), end(mySpan), 0);
 * kluczowe w tym przykładzie jest przesłanianie metod
 * zobacz z jakim prefixem oznaczone sa prywatne zmienne 
 
+Root cause: Keyword _virtual_: It determines which method is used if the method is invoked by a reference or a pointer instead of by an object. If you **don’t use** the keyword virtual, the program chooses a method based on the **reference type or pointer type.** If you do **use** the keyword virtual, the program chooses a method based on the **type of object the reference or pointer refers to.**
+
 ```cpp
 class HotelRoom {
 public:
@@ -153,15 +155,18 @@ public:
 HotelApartment ha{1, 2};
 ha.get_price(); // 250 call HotelApartment::get_price ponieważ ha jest derived 
     // from base class HotelRoom i przesłania metode get_price()
+    // ivoked by object
     
 // ALE dla rooms gdzie mozemy trzymać HotelRoom i klasy które dziedzicza po niej
 //spraw wygląda juz troche inaczej
 vector<HotelRoom*> rooms;
 rooms.push_back(new HotelApartment(1,1));
 
-for (auto room : rooms) {
-    room->get_price();
+for (auto room : rooms) {  // iteruje po pointerach bo: vector<HotelRoom*> rooms;
+    room->get_price();  // invoke by pointer (or reference)
 }
+// teraz wykonywana jest metoda HotelRoom::get_price() 
+//a nie HotelApartment::get_price()
 ```
 
 
