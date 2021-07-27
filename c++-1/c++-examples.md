@@ -52,7 +52,7 @@ showValues(v); // v is Vector
 
 ### vector
 
-* when use `int` and when reference to int `int&` 
+* when use `int` and when reference to int `int&` wewnątrz "vector scope"
 
 ```cpp
 void outputVector(const vector<int>& items) { //pass-by reference bo po co
@@ -67,6 +67,31 @@ void outputVector(const vector<int>& items) { //pass-by reference bo po co
 void inputVector(vector<int>& items) { //pass-by reference
     for (int& items : items) { //potrzebuje referencji do kazdego obiektu
         cin >> item;
+    }
+}
+```
+
+### span C++20
+
+* from `<span>` header
+* pass by value BC they are just a pointer
+
+```cpp
+void displayArray(const int items[], size_t size) {//items[] will decay into pointer
+    for(size_t i{0}; i < size; ++i) {
+        cout << items[i] << " ";
+    }
+}
+
+void displaySpan(span<const int> items) {
+    for (const auto& item : items) {
+        cout << item << " ";
+    }
+}
+
+void times2(span<int> items) {
+    for (int& item : items) {
+        item *= 2;
     }
 }
 ```
