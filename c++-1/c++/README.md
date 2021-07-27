@@ -895,7 +895,8 @@ ptr = &y; // error: ptr is const ptr
   * \(2\) process as C++20 `span` 
 * `[ ]` does not provide bounds checking
 * array name `n` is equivalent to `&n[0]` 
-* do not know their own size
+* name of array decay to the pointer
+* do not know their own size, U loose information about size of array
 * cannot be compared using the relational and equality operators
   * `arr1 == arr2` will be always false
 * cannot be assigned to one another
@@ -909,6 +910,11 @@ ptr = &y; // error: ptr is const ptr
 int sumElements(const int values[], size_t numberOfElements)
 // compilator will dacay into pointer
 int sumElements(const int* values, size_t numberOfElements)
+
+// same thing again
+void foo(int ptr[]);  //ptr will decay into int* ptr, need to use *ptr inside
+//will decay to:
+void foo(int* ptr);
 ```
 
 ### Dereferencing Pointers
