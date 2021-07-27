@@ -153,6 +153,15 @@ public:
 HotelApartment ha{1, 2};
 ha.get_price(); // 250 call HotelApartment::get_price ponieważ ha jest derived 
     // from base class HotelRoom i przesłania metode get_price()
+    
+// ALE dla rooms gdzie mozemy trzymać HotelRoom i klasy które dziedzicza po niej
+//spraw wygląda juz troche inaczej
+vector<HotelRoom*> rooms;
+rooms.push_back(new HotelApartment(1,1));
+
+for (auto room : rooms) {
+    room->get_price();
+}
 ```
 
 
