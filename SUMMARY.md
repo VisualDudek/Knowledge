@@ -14,6 +14,7 @@
   * [FUNCTIONS](c++-1/c++/functions.md)
   * [STL](c++-1/c++/stl.md)
   * [TESTING](c++-1/c++/testing.md)
+* [String](c++-1/string.md)
 * [C++ examples](c++-1/c++-examples.md)
 
 ## LINUX
