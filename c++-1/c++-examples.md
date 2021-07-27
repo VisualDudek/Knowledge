@@ -222,9 +222,40 @@ hrPtr->get_price(); // 150 a nie 250 poniewaz zostala wywolana
 // THAT IS THE RESON YOU NEED virtual int get_price() in base class
 ```
 
+## Exception
 
+### user exception
 
+In that case when using `const throw()`, it expects you to return a `const char*`. I couldn't get the `int` to convert to a `char*`, it kept producing random jibberish after printing the result even though I use `str.c_str()`, as if it didn't have a null pointer termination. Oh well.
 
+It is probably because you are casting inside the `what` method and you are returning a pointer to something that you have lost control of after the scope to `what` finished. So, an unexcepted behavior causes the random junk appear. As mentioned in other comments, your class needs to own the memory that pointer you are returning in the `what` method points to.
+
+You can declare a static string inside the what\(\) function so you can keep the memory after you exit the function.
+
+```cpp
+// based on hackerrank Inherited Code
+struct BadLengthException : public std::exception {
+    BadLengthException(int n) : n_{n}
+    
+    int what() {
+        return n_;
+    }
+private:
+    int n_;
+};
+
+// better
+class BadLengthException: public std::exception {
+private:
+    string error;
+public:
+    BadLengthException(int _error) : error(to_string(_error)) {}
+
+    const char* what() {
+        return error.c_str();
+    }
+};
+```
 
 
 
