@@ -71,6 +71,50 @@ void inputVector(vector<int>& items) { //pass-by reference
 }
 ```
 
+#### Operator Overloading and Multidimensional vector
+
+* 
+```cpp
+// based on hackerrank: Operator Overloading
+struct Matrix {
+    vector<vector<int>> a;
+    
+    Matrix operator+(Matrix& other) {
+        Matrix res;
+        size_t n{a.size()};
+        size_t m{a[0].size()};
+        //cout <<n<<" "<<m<< endl;
+        
+        for(int i=0; i<n; i++) {
+            vector<int> b;
+            for(int j=0; j<m; j++) {
+                int res;
+                res = a[i][j] + other.a[i][j];
+                b.push_back(res);
+            }
+            res.a.push_back(b);
+        }
+        return res;
+    }
+};
+
+// better in syntax but solution is wrong bc. mutate this
+class Matrix {
+public:
+vector<vector<int> > a;
+
+Matrix & operator + (const Matrix &y) {
+
+    for (int m=0; m<y.a.size(); ++m) {
+        for (int n=0; n<y.a[0].size(); ++n) {
+            this->a[m][n] = this->a[m][n] + y.a[m][n];
+        }
+    }
+
+    return *this;
+};
+```
+
 ### span C++20
 
 * from `<span>` header
