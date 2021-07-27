@@ -905,6 +905,9 @@ ptr = &y; // error: ptr is const ptr
   * works only in the scope that originally defines the array
   * out of scope compilator lose the knowledge of size of array
 * C++20 `to_array()` 
+* `sizeof()` use on array to get size of whole array and on array pointer to get size of single element
+  * need only `( )` when dealing with type e.g. `sizeof(char) sizeof(int)` 
+  * do not need wiht vars e.g. `sizeof arr` 
 
 ```cpp
 int sumElements(const int values[], size_t numberOfElements)
