@@ -323,7 +323,7 @@ string result = (foo < 10) ? "lower" : "upper";
 
 * `class uniform_int_distribution`
 
-### string
+### std::string
 
 * `getline()`
 * `string.size()`
@@ -918,6 +918,18 @@ int sumElements(const int* values, size_t numberOfElements)
 void foo(int ptr[]);  //ptr will decay into int* ptr, need to use *ptr inside
 //will decay to:
 void foo(int* ptr);
+```
+
+### Legacy pointer-based string
+
+* null character `\0` 
+* `sizeof` for string literal is the length of the string, **including** null char
+* string literals are immutable
+
+```cpp
+char color[]{"blue"};
+const char* colorPtr{"blue"};
+char color[]{'b', 'l', 'u', 'e', '\0'};
 ```
 
 ### Dereferencing Pointers
