@@ -167,6 +167,13 @@ for (auto room : rooms) {  // iteruje po pointerach bo: vector<HotelRoom*> rooms
 }
 // teraz wykonywana jest metoda HotelRoom::get_price() 
 //a nie HotelApartment::get_price()
+
+// jeszcze inaczj ten sam przykład
+HotelRoom* hrPtr;
+hrPtr = &ha; // MIND CHANGER: do pointera typu base class moge przypisać
+            // derived class
+hrPtr->get_price(); // 150 a nie 250 poniewaz zostala wywolana 
+                //metoda HotelRoom::get_price() a nie HotelApartment
 ```
 
 
