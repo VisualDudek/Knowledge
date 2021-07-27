@@ -833,6 +833,7 @@ int main() {
   * pointer-based strings
 * Null pointers before C++11: 0, NULL \(this is preprocessor value of 0\)
 * name convention, add Ptr suffix
+* "smart pointers" can auto manage memory and avoid of "memory leaks"
 
 ```cpp
 int* my_ptr;    // declare a pointer using an asterisk (*)
