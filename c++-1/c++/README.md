@@ -26,7 +26,7 @@ int main() {
 g++ -std=c++2a -I fmt fig03_06.cpp format.cc -o fig03_06
 
 // define standard
-g++ -std=c__20 file.cpp -o file
+g++ -std=c++20 file.cpp -o file
 ```
 
 ## Preprocessor
