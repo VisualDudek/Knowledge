@@ -1242,6 +1242,13 @@ std::array<int, 3> a = {1, 2, 3};
 // or
 std::array<int, 3> a{32, 27, 64};
 
+const auto array1 = array{"abc"}; // creates a one-element array<const char*>
+        //not char[4] 
+array1.size(); // 1
+
+const auto array2 = to_array("abc"}; // will create const char[4]
+array2.size(); // 4
+
 // can be init at for-range-based loop
 for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
 ```
