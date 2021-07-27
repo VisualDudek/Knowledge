@@ -876,12 +876,12 @@ const int* yPtr{&y};  // pointer thinks that this location is constant
 
 //
 int x, y;
-int* const ptr{&x};
+int* const ptr{&x}; //ptr always points to the same location
 //  ^^^^^^^^- constant pointer of non-constant data of type int
 *ptr = 7; // OK
 ptr = &y; // error
 
-//
+// can only read 
 int x{5}, y;
 const int* const ptr{&x};
 *ptr = 7; // error: *ptr is const int
