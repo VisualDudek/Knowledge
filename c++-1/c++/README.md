@@ -856,6 +856,38 @@ void cubeByReferene(int* nPtr) {
 Address Space Layout Randomization
 {% endhint %}
 
+### using const with pointers
+
+* four ways to pass a pointer to a function:
+  * a nonconstst pointer to nonconstant data, highest access `int* ptr` 
+  * a nonconstant pointer to constant data,
+  * a constant pointer to nonconstant data,
+  * a constant pinter to constant data
+* constatn pointer oznacza tylko tyle ze nie mozna zmienić na xo wskazuje ale mozna \(jeśli nonconstatnt data\) zmienic dane na które wskazuje
+* **mind changer**: `const int*` vs `int* const`  
+
+```cpp
+// mind changer
+// constant pointer to nonconstant data a i tak nie moge modyfikować????
+int y{0};
+const int* yPtr{&y};  // pointer thinks that this location is constant
+//^^^^^^^- const is on th left of int -> constant data of type int
+*yPtr = 100;  // error: cannot modify a const obj.
+
+//
+int x, y;
+int* const ptr{&x};
+//  ^^^^^^^^- constant pointer of non-constant data of type int
+*ptr = 7; // OK
+ptr = &y; // error
+
+//
+int x{5}, y;
+const int* const ptr{&x};
+*ptr = 7; // error: *ptr is const int
+ptr = &y; // error: ptr is const ptr 
+```
+
 ### Legacy Arrays
 
 * C++20, if built-in arrays are required
