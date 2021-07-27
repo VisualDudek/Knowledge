@@ -128,6 +128,7 @@ accumulate(begin(mySpan), end(mySpan), 0);
 Root cause: Keyword _virtual_: It determines which method is used if the method is invoked by a reference or a pointer instead of by an object. If you **don’t use** the keyword virtual, the program chooses a method based on the **reference type or pointer type.** If you do **use** the keyword virtual, the program chooses a method based on the **type of object the reference or pointer refers to.**
 
 ```cpp
+// based on hackerrank: Hotel Prices
 class HotelRoom {
 public:
     HotelRoom(int bedrooms, int bathrooms)
