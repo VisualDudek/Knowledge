@@ -2,6 +2,8 @@
 
 ## Summary
 
+* conversion from numeric values to string
+* string manipulation: find, replace, insert
 * use fmt/format lib or C+20 format header
 * compared lex \(underlying ascii code value\)
 
@@ -43,4 +45,9 @@
 * `s.insert(10, "middle ")`
 * `s.insert(3, "xx", 0, string::npos)`insert "xx" at location 3 in s
   * insert from second string "xx" from 0 to end
+  * insert substring
+
+## Numeric Conversions
+
+* from numeric values to string use `to_string` function
 
