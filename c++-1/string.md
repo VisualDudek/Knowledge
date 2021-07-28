@@ -6,6 +6,7 @@
 * string manipulation: find, replace, insert
 * use fmt/format lib or C+20 format header
 * compared lex \(underlying ascii code value\)
+* strings in C++ are mutable
 
 ## String, not C-String
 
@@ -55,4 +56,16 @@
     * `stoi()` took inplicite two additional args: `stoi(s, nullptr, 10)`
     * \(1\) pointer to a `size_t` var - stores index of first char not converted, default is nullptr
     * \(2\) an `int` from 2 to 32 representing base, default is base 10
+
+## C++17 string\_view
+
+* read-only
+* `v.remove_prefix(1)` and `v.remove_suffix(1)`remove only subset from view
+  * v still looks at underlying string but only at remaining substring 
+* are iterable -&gt; so can be used with all algo functions which need iterators
+* `v.size()` `v.find()` `v.start_with()` 
+
+
+
+
 
