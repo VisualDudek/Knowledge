@@ -33,4 +33,7 @@
 ### replace
 
 * `s.erase(62);` remove from index 63 throuh end of s
+* `s.replace(pos, 1, ".")`
+* `s.replace(pos, 2, "xxxxx;;yyy", 5, 2)` replace with two semicolons bc start at 5 idx of second strind and two chars
+  * notice: that will overwtrite characters in s
 
