@@ -50,4 +50,9 @@
 ## Numeric Conversions
 
 * from numeric values to string use `to_string` function
+* for conversion form string to numeric there is one func for each type
+  * for `string s("100hello")` u can `int convInt{stoi(s)}`
+    * `stoi()` took inplicite two additional args: `stoi(s, nullptr, 10)`
+    * \(1\) pointer to a `size_t` var - stores index of first char not converted, default is nullptr
+    * \(2\) an `int` from 2 to 32 representing base, default is base10
 
