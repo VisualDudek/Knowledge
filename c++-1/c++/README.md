@@ -432,7 +432,7 @@ int main() {
 
 ### Strings
 
-_Strings_ are contiguous blocks of characters. A _C-style string_ or _null-terminated string_ has a zero-byte appended to its end \(a null\) to indicate the ind of the string. Because array elements are contiguous, you can store strings in array of character types.
+_C-Strings_ are contiguous blocks of characters. A _C-style string_ or _null-terminated string_ has a zero-byte appended to its end \(a null\) to indicate the ind of the string. Because array elements are contiguous, you can store strings in array of character types.
 
 String literal, declare by enclosing text in quotation marks \(" "\).
 
