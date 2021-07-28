@@ -1368,6 +1368,7 @@ int main() {
 ```cpp
 // init iterowanego obiektu w stmt for-loop
 for (auto* i : array <int, 6> {1, 2, 3, 4, 5, 6}) {}
+// ciekawe że to działa bo przy legacy array nie działa
 ```
 
 ```cpp
