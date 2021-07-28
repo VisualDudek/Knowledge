@@ -16,6 +16,21 @@
 * are mutable, e.g. `s.at(0) = 'x';`
 * `substr` retrive substring
 * `swap` self explantory 
+* string characteristics
+  * `s.capacity()` before realocating memory
+    * can `s.reserve()` to avoid constatnt realocating memory due to huge impact
+  * `s.max_size()`
+  * `s.size()`
+  * `s.empty()`
 
+### find substring, chars
 
+* `s.find()` vs `s.rfind()` second search from right to left
+* `s.find_first_of("abc")`vs `s.find_last_of()` notice it will look for char 'a', 'b' or 'c' 
+* `s.find_first_not_of("abc")` 
+* return `-1` if not found
+
+### replace
+
+* `s.erase(62);` remove from index 63 throuh end of s
 
