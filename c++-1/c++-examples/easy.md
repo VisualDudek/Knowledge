@@ -15,3 +15,14 @@ while (pos != string::npos) {
 }
 ```
 
+* using `stoi()` to convert string to int
+
+```cpp
+string s("100hello");
+size_t index;
+
+int convertInt{stoi(s, &index, 2)}
+// we will convert from base 2
+// fisrt char not converted -> index will be stored at &index address
+```
+
