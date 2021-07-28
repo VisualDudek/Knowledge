@@ -1310,8 +1310,6 @@ vec = v; // assign integers from v to vec
 * can be chained by pipe operator `|` 
 * najciekawsze jest to że na przykładach z {C+20 video} iterator sie nie wyczeruje tzn. podeklaracji i wykorzystaniu jest wykorzystywany jeszcze kilka razy bez ponownej deklaracji
 
-
-
 ## For loops
 
 * init-stmt vars are limited to for-scope
