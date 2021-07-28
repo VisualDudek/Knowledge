@@ -453,6 +453,8 @@ int main() {
 
 ### Enumerations
 
+* can overload increment operator on enum type
+
 ```cpp
 enum class Race {
     Dinan,
@@ -653,7 +655,7 @@ Vector::Vector(sdt::initializer_list<double> lst) // init with a list
 
 * `virtual` means "may be redefined later in a class derived from this one"
 * `=0` syntax says the function is pure virtual; that is, some class derived from it MUST define the function.
-* Since we don't know anything about the representation of an abstract type \(not even its size\), we must allocate objects on the free store and access them through references or pointers.
+* Since we **don't know anything about the representation of an abstract type** \(not even its size\), we **must allocate objects on the free store and access them through references or pointers**.
 * `override` keyword is optional but beeing explicit allows the compiler to catch mistakes
 * ??? note that the member
 
@@ -730,7 +732,8 @@ int h(42);
 ```
 
 * only form left to righ, cannot skip args
-* cannot use parentheses to init PODs
+* **cannot use parentheses** to init PODs
+  * with `()` it will be function declaration, not class initialization
 
 ```cpp
 // POD initialization
