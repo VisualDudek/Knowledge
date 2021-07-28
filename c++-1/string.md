@@ -38,3 +38,8 @@
   * notice: that will overwtrite characters in s
   * `replace` has 13 variety of overloads
 
+### insert
+
+* `s.insert(10, "middle ")`
+* `s.insert(3, "xx", 0, string::npos)`
+
