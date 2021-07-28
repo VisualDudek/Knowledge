@@ -41,5 +41,6 @@
 ### insert
 
 * `s.insert(10, "middle ")`
-* `s.insert(3, "xx", 0, string::npos)`
+* `s.insert(3, "xx", 0, string::npos)`insert "xx" at location 3 in s
+  * insert from second string "xx" from 0 to end
 
