@@ -67,6 +67,7 @@ int main() {
     int x{};
     auto y = confusing(x);
     // after invoking confusing, x equals 10 and y equals 5
+    //zobacz ze do fun. confucing przekazujesz reference, dlatego x = 10
 }
 ```
 
