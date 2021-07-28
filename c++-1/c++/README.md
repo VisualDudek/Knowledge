@@ -177,7 +177,7 @@ g++ -S helloworld.c // will produce helloworld.s assembler
 
 ```cpp
 // [[nodiscard]] example
-int cube(int x) {
+[[nodiscard]] int cube(int x) {
     return x * x * x;
 }
 
