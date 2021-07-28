@@ -911,7 +911,7 @@ ptr = &y; // error: ptr is const ptr
 * C++20 `to_array()` 
 * `sizeof()` use on array to get size of whole array and on array pointer to get size of single element
   * need only `( )` when dealing with type e.g. `sizeof(char) sizeof(int)` 
-  * do not need wiht vars e.g. `sizeof arr` 
+  * do not need wiht vars e.g. `sizeof arr` chyna jednak powoduje ze jest maloczytelne
 
 ```cpp
 int sumElements(const int values[], size_t numberOfElements)
