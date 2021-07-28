@@ -79,6 +79,7 @@ delete[] my_int_array_ptr;
 * can rethrow exception using `throw` inside `catch`
 * `noexcept` mark any func that cannot possibly throw an exception -&gt; enable some code optimizations
 * exception can affect object lifetime
+* `catch (...)` catch-all handler
 
 ```cpp
 // throws an exception whenever you invoke the forget method with arg == 0xFACE
