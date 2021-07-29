@@ -1342,6 +1342,7 @@ for (counter = 0; ... ; ...) {} // notice that inside for-loop there
 ```
 
 ```cpp
+// ciekawostka
 for(int i{0}; i < n; i++, x++) {} // dwa stmt w ostatnim args po przecinku
 ```
 
