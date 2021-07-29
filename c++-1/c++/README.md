@@ -1314,6 +1314,7 @@ vec = v; // assign integers from v to vec
 
 * init-stmt vars are limited to for-scope
 * if U want to use counter outside loop, declare it outside loop-scope
+* nie wiedziałem że w `iteration-stmt` mozna kilka stmt po przecinku
 
 ```cpp
 for( init-stmt; conditional; iteration-stmt) {
@@ -1338,6 +1339,10 @@ for (counter = 0; ... ; ...) {} // notice that inside for-loop there
                                 //only assignment
 
 // you can use counter outside for-loop
+```
+
+```cpp
+for(int i{0}; i < n; i++, x++) {} // dwa stmt w ostatnim args po przecinku
 ```
 
 {% hint style="info" %}
