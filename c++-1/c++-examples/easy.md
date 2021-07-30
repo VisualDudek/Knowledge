@@ -26,3 +26,58 @@ int convertInt{stoi(s, &index, 2)}
 // fisrt char not converted -> index will be stored at &index address
 ```
 
+## Files
+
+### create file
+
+* ciekawy while z "chain" stream cin
+
+```cpp
+if (ofstream output{"clients.txt", ios::out}; output) {
+    cout << "Enter the account, name, and balance. \n"
+        << "Enter end-of-file to end input. \n";
+        
+    int account;
+    string name;
+    double balance;
+    
+    // read account, name na balance from cin, then place in file
+    while (cin >> acount >> name >> balance) {
+        output << fmt::format("{} {} {}\n", account, name, balance);
+        cout << "? ";
+    }
+}
+else {
+    cerr << "File could not be opened\n";
+    exit(EXIT_FAILURE);
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---END---
+

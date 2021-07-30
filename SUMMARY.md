@@ -15,6 +15,7 @@
   * [STL](c++-1/c++/stl.md)
   * [TESTING](c++-1/c++/testing.md)
 * [String](c++-1/string.md)
+* [files](c++-1/files.md)
 * [C++ examples](c++-1/c++-examples/README.md)
   * [Easy](c++-1/c++-examples/easy.md)
 
