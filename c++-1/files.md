@@ -13,3 +13,14 @@ description: processing files
 
 * `ofstream` opens the file
 
+### file open modes
+
+```text
+ios::app
+ios::ate
+ios::in
+ios::out
+ios::trunc
+ios::binary
+```
+
