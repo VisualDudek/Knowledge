@@ -159,6 +159,17 @@ times2(mySpan.subspan(1, 3));
 accumulate(begin(mySpan), end(mySpan), 0);
 ```
 
+### set
+
+* `<set>` header
+
+```cpp
+set<int> s;
+...
+// contain "syntax"
+if ( s.find(item) != s.end() ) {}
+```
+
 ## Polymorphism
 
 ### virtual function
