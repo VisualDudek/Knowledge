@@ -289,6 +289,8 @@ string result = (foo < 10) ? "lower" : "upper";
 ### format C++20
 
 * {fmt} library provides a full implementation of the new text-formatting features
+* Optional header-only configuration enabled with the FMT\_HEADER\_ONLY macro
+* For anybody else who encounters this error: You need to insert \#define FMT\_HEADER\_ONLY above \#include "fmt/format.h" so your code will compile.
 
 ### iostream
 
