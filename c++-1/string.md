@@ -90,7 +90,10 @@ of text)"
 "multiple lines\nof text"
 ```
 
+## RegEx
 
+* `<regex>` header
+* `regex_match(<string>, regex-obj)` returns bool
 
 
 
