@@ -50,6 +50,8 @@ fileObj.seekg(0, ios::end);  // move to end
 // also used with ostream member function seekp
 ```
 
+### reading and writing quoted text
+
 
 
 
