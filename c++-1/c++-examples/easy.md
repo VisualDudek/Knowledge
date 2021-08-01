@@ -26,6 +26,15 @@ int convertInt{stoi(s, &index, 2)}
 // fisrt char not converted -> index will be stored at &index address
 ```
 
+## String stream
+
+```cpp
+const string inputString{"name test 123 4.7 A"};
+istringstream input{inputString};
+
+input >> s1 >> s2 >> i >> d >> c;
+```
+
 ## Files
 
 ### create file

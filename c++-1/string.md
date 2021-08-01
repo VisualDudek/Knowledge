@@ -68,6 +68,49 @@
 ## ostringstream, string stream processing
 
 * `<sstream>` header
+* U can stream `<<` string obj into `ostringstream` 
+  * `ostringstream.str()` output string obj.
+* it accept `/n` and call `str()` do not clear stream so U can access stream several times
+
+## Raw string literals C++11
+
+* `\` in string introduces an escape sequence
+  * `\n` for newline, `\t` for tab, etc.
+* to include a backslash in a string, must use `\\`
+* it makes some strings difficult to read
+  * eg. `"C:\\MyFolder\\MySubFolder\\MyFile.txt"`
+* Solution: put `R` before first quote and parethese
+  * `R"(C:\MyFolder\MySubFolder\MyFile.txt)"`
+* support multlines
+
+```cpp
+R"(multiple lines
+of text)"
+// will auto add \n
+"multiple lines\nof text"
+```
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---END---
 
