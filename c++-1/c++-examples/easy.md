@@ -85,7 +85,44 @@ int main() {
         
 ```
 
+## RegEx
 
+```cpp
+#include <iostream>
+#include <regex>
+using namespace std;
+
+int main() {
+    regex r1("marcin");
+    cout << regex_match("marcin", r1) << endl;
+    cout << regex_match("abc", r1) << endl;
+
+    // fully match five digits
+    regex r2(R"(\d{5})");
+
+    // match a word that starts with a capital letter
+    regex r3("[A-Z][a-z]*");
+
+    // match any character that's not a lowercase letter
+    regex r4("[^a-z]");
+
+    // match metacharacters as literals in a custom charcter class
+    regex r5("[*+$]");
+
+    // matching a capital letter followed by at least one lowercase letter
+    regex r6("[A-Z][a-z]+");
+
+    // matching zero or one occurence of a subexpression
+    regex r7("labell?ed");
+
+    // matching n (3) or more occurrences of a subexpression
+    regex r8(R"(\d{3,})");
+
+    // matching n to m inclusive (3-6), occurrences of a subexpresion
+    regex r9(R"(\d{3,6})");
+
+}
+```
 
 
 
