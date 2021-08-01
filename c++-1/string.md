@@ -94,6 +94,8 @@ of text)"
 
 * `<regex>` header
 * `regex_match(<string>, regex-obj)` returns bool
+* `regex_replace()`
+* `regex_search()` 
 
 ```text
 \d    Any digit (0-9)
