@@ -52,7 +52,16 @@ fileObj.seekg(0, ios::end);  // move to end
 
 ### reading and writing quoted text
 
+* problem with reading quoted text
 
+```cpp
+100 "Janie Jones" 24.98
+intput >> account >> name >> balance // only "Janie is read into string var name
+
+// SOLUTION
+// header <iomanip>
+input >> account >> quoted(name) >> balance
+```
 
 
 
