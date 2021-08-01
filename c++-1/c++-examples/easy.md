@@ -63,7 +63,27 @@ else {
 }
 ```
 
+### reading CSV file
 
+```cpp
+#include <algorithm>
+#include <cmath>
+#include <iostream>
+#include <numeric>
+#include <ranges>  // C++20 only in GNU 10
+#include <string>
+#include <vector>
+#include "fmt/format.h" // In C++20 this will be #include <format>
+#include "rapidcsv.h"
+using namespace std;
+
+int main() {
+    // load Titanic dataset; treat missing age values as NaN
+    rapidcsv::Document titanic{"titanic.csv",
+        rapidcsv::LabelParams{}, rapidcsv::SeparatorParams{},
+        rapidcsv::ConverterParams{true}};
+        
+```
 
 
 
