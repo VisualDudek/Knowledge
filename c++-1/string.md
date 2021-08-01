@@ -95,6 +95,16 @@ of text)"
 * `<regex>` header
 * `regex_match(<string>, regex-obj)` returns bool
 
+```text
+\d    Any digit (0-9)
+\D    Any character that is not a digit
+\s    Any whitespace character (such as spaces, tabs and newlines)
+\S    Any character that is not a whitespace character
+\w    Any word charcter (also called an alphanumeric character) that is
+        any uppercase or lowercase letter, any digit or an underscore
+\W    Any character that is not a word character
+```
+
 
 
 
