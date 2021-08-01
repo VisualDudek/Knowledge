@@ -31,6 +31,7 @@ int convertInt{stoi(s, &index, 2)}
 ### create file
 
 * ciekawy while z "chain" stream cin
+  * need to press EOF to exit cin \(Ctrl+D\)
 
 ```cpp
 if (ofstream output{"clients.txt", ios::out}; output) {
