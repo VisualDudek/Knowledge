@@ -65,7 +65,9 @@
 * are iterable -&gt; so can be used with all algo functions which need iterators
 * `v.size()` `v.find()` `v.start_with()` 
 
+## ostringstream, string stream processing
 
+* `<sstream>` header
 
 
 
