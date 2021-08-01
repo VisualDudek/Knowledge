@@ -64,11 +64,19 @@ intput >> account >> name >> balance // only "Janie is read into string var name
 input >> account >> quoted(name) >> balance
 ```
 
+### CSV Comma-Separated Values
 
 
 
+## Libs
 
+### rapidcsv
 
+* by d99kris
+
+```cpp
+#include "rapidcsv.h"
+```
 
 
 
