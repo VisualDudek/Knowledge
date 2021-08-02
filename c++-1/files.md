@@ -53,7 +53,7 @@ fileObj.seekg(0, ios::end);  // move to end
 ### reading and writing quoted text
 
 * problem with reading quoted text
-* fix with `<iopanip>` header
+* fix with `<iomanip>` header
 
 ```cpp
 100 "Janie Jones" 24.98
