@@ -18,6 +18,7 @@
 * [files](c++-1/files.md)
 * [C++ examples](c++-1/c++-examples/README.md)
   * [Easy](c++-1/c++-examples/easy.md)
+  * [Classes](c++-1/c++-examples/classes.md)
 
 ## LINUX
 
