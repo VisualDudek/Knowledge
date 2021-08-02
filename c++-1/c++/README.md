@@ -1282,6 +1282,7 @@ array1.at(0).(3)
 * copy constructor
   * przekazanie do konstruktora obiektu o tym samym typie
 * can be accessed by `[ ]` or `at( )` the later do bound-check
+* `v.front()` and `v.back()`
 
 ```cpp
 #include <vector>
