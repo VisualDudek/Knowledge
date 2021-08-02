@@ -65,6 +65,8 @@ else {
 
 ### reading CSV file
 
+* using _rapidcsv_ lib
+
 ```cpp
 #include <algorithm>
 #include <cmath>
