@@ -222,7 +222,9 @@ As a general rule, use `%g` to print floating-point types.
 
 There is no format specifiers for `bool`, but you can use the `int` format spec. `%d` to yield a `1` for ture and a `0` for false.
 
-### format lib
+### fmt lib
+
+* do not return fmt-string as reference BC it is only temporary obj in memory and will we "clensed" before U will use it
 
 ```cpp
 #include "fmt/format.h"
