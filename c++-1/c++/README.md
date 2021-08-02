@@ -527,6 +527,12 @@ POD classes contina inly data maembers, and sometimes that's all you want from a
 
 * `class` declares members `private` by default
 
+```cpp
+Account account{}; // an Account obj
+Account& ref{account}; // ref refers to an Account obj
+Account* ptr{&account}; // ptr points to an Account obj
+```
+
 ### methods
 
 ```cpp
