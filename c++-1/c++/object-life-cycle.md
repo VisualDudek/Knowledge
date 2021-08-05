@@ -395,6 +395,22 @@ cast lvalue to rvalue ale po co?
 {% endhint %}
 
 ```cpp
+int i = 10; 
+// cannot revers it
+10 = i;
+```
+
+```cpp
+int& GetValue() {   // will return reference
+    static int value = 10;  // here we see that it will be lvalue
+    reutrn value;
+}
+//if GetValue() returns lvalue we can put it at left and right of assign operator
+int i = GetValue();
+GetValue() = 5;
+```
+
+```cpp
 void ref_type(int &x) {
     printf("lvalue reference %d\n", x);
 }
