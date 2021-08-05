@@ -413,7 +413,7 @@ int main() {
 
 ```cpp
 // bdb przykład z rvalue referece overload
-//benefit: can detect temp reference
+//benefit: can detect temp reference, used in move constructor
 void foo(const std::string& name); // takes lvalue and rvalue
 void foo(string&& name); // takes only rvalue ref and overload rvalue above
 ```
