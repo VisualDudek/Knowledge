@@ -385,7 +385,10 @@ SimpleStringOwner c{ SimpleString{ 50 } }; // SimpleString{ 50 } is an rvalue
 
 ### lvalue \(&\) and rvalue \(&&\) References 
 
+**Value categories**: lvalue and rvalue hard to understand but crucial element of C++
+
 * can cast an lvalue to an rvalue using `std::move`
+* ^^^-- ciekawe czy to coś podobnego do uzycia `const` NIE to jest w drugą strone :\)
 
 {% hint style="warning" %}
 cast lvalue to rvalue ale po co?
@@ -395,7 +398,7 @@ cast lvalue to rvalue ale po co?
 void ref_type(int &x) {
     printf("lvalue reference %d\n", x);
 }
-void ref_type)int &&x) {
+void ref_type(int &&x) {
     printf("rvalue reference %d\n", x);
 }
 
