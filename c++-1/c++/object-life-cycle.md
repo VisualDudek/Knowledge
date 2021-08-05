@@ -37,7 +37,7 @@ _local static var_ begin upon the first invocation of the enclosing function and
 {% endhint %}
 
 * **static members**, are members of a class that aren't associated with a particular instance of the class.
-* need to be initialize at global scope
+* need to be initialize at global scope OR using `inline` keyword
 * must refer ot them by the contating class's name using _scope resolution operator_
 * have only a single instance
 * can be vars and also methods!
