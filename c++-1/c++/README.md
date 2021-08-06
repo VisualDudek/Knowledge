@@ -1069,7 +1069,7 @@ Pointers have an implicity conversion to `bool`
 
 ### References
 
-* cannot be reseated or reassigend
+* cannot be reseated or reassigend, **references are always const**
 * cannot be assigned to null \(easily\)
 * no deref operator needed
 
