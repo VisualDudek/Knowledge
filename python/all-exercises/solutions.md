@@ -47,3 +47,20 @@ print('\n'.join([a for a,b in sorted(marksheet) if b == second_highest]))
 print(('\n').join('abc'))
 ```
 
+```python
+# use on string five string validators
+s = "qA2"
+print(any([x.isalnum() for x in s]))
+print(any([x.isalpha() for x in s]))
+print(any([x.isdigit() for x in s]))
+print(any([x.islower() for x in s]))
+print(any([x.isupper() for x in s]))
+
+# better
+t = type(s)
+for method in [t.isalnum, t.isalpha, t.isdigit, t.islower, t.isupper]:
+    print(any(method(c) for c in s)
+    
+# or U can use in list: str.isalnum ...
+```
+

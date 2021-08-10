@@ -45,6 +45,7 @@
 * convert int o hex and binary using f-String
 * centered, centered and fill
 * print each char of 'abc' in new line using `.join()`
+* use on string five string validators in order to find if at least one char is alpha-numeric, alpha, digit ...
 
 ### itertools
 
