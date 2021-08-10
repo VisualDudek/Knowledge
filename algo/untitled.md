@@ -5,6 +5,7 @@
 trick is to calculate iteger part of N divated by 10 to the number of digits of N minus k
 
 * remember that: `log(a**b)` is equal `b * log(a)`
+* useful when need to calculate first digits of `a**b` when a and b are realy big
 
 ```text
 N = 1234567    // N has 7 digits
