@@ -62,5 +62,26 @@ for method in [t.isalnum, t.isalpha, t.isdigit, t.islower, t.isupper]:
     print(any(method(c) for c in s)
     
 # or U can use in list: str.isalnum ...
+
+## this is tricky:
+# uses all 5 methods on each character and creates a list for each,
+# containing the results of each method used on the character.
+newList = [[c.isalnum(), c.isalpha(), c.isdigit(), c.islower(), c.isupper()] for c in s]
+
+# rotates lists clockwise to get lists of each method instead
+rotated = list(zip(*newList))
+#explanation:
+# each method is used on each character
+newList = [[True, True, False, False, True ] # methods used on P
+           [True, False, True, False, False] # methods used on 1
+           [True, False, True, False, False] # methods used on 2
+           [True, True, False, False, True]] # methods used on A
+
+# rotates clockwise to get lists of methods' returned values
+rotated = [[True,  True,  True,  True ] # results for .isalnum()
+           [True,  False, False, True ] # results for .isalpha()
+           [False, True,  True,  False] # results for .isdigit()
+           [False, False, False, False] # results for .islower()
+           [True,  False, False, True]] # results for .isupper()
 ```
 
