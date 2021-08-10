@@ -35,7 +35,8 @@
 
 ## PYTHON
 
-* [All Exercises](python/all-exercises.md)
+* [All Exercises](python/all-exercises/README.md)
+  * [Solutions](python/all-exercises/solutions.md)
 * [All in one](python/all-in-one.md)
 * [Built-in](python/built-in.md)
 * [Standard Library](python/standard-library.md)
