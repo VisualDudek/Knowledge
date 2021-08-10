@@ -29,9 +29,9 @@
 * [Zabbix](linux/zabbix.md)
 * [Git && GitHub](linux/git-and-and-github.md)
 
-## HACK THE BOX
+## Algo
 
-* [CVE](hack-the-box/cve.md)
+* [Untitled](algo/untitled.md)
 
 ## PYTHON
 
