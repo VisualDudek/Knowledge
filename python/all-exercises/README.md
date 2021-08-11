@@ -51,7 +51,7 @@
 
 * generate indexes pairs for substring 
 
-### Modules
+### string module
 
 * Print upper and lowercase letters.
 

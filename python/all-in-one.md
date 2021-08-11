@@ -64,6 +64,8 @@ if __name__ == "__main__":
 
 ## Shallow and Deep Copy
 
+issue is pass by reference
+
 copy.**copy**\(_x_\)
 
 copy.**deepcopy**\(_x\[, memo\]_\)
