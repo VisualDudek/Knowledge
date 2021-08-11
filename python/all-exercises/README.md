@@ -50,6 +50,7 @@
 ### itertools
 
 * generate indexes pairs for substring 
+* using product create permutation
 
 ### string module
 

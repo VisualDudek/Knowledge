@@ -85,6 +85,14 @@ rotated = [[True,  True,  True,  True ] # results for .isalnum()
            [True,  False, False, True]] # results for .isupper()
 ```
 
+## itertools
+
+```python
+itertools.permutations('ABCD', 2)
+#can be daone using product and exclude entries with reapeted elements
+filter(lambda x: x[0] != x[1],itertools.product('ABCD', 'ABCD'))
+```
+
 ## tips & tricks
 
 ```python
