@@ -85,3 +85,12 @@ rotated = [[True,  True,  True,  True ] # results for .isalnum()
            [True,  False, False, True]] # results for .isupper()
 ```
 
+## tips & tricks
+
+```python
+for item in permutations(ss, n):
+    print(''.join(item))
+# can be shortened by unpack operator and print sep
+print(*[''.join(i) for i in permutations(sorted(s),int(n))],sep='\n')
+```
+
