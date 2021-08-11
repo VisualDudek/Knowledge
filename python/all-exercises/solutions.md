@@ -1,5 +1,15 @@
 # Solutions
 
+## Built-in
+
+* need to use unpack, same as with `zip()` 
+
+```python
+# print items of list obj each in new line uing sep='\n'
+l = [1,2,3]
+print(*l, sep='\n')
+```
+
 ## lists
 
 * in user-solution there is lots of space for improvements
