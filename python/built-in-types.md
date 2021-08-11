@@ -1,5 +1,9 @@
 # Built-in Types
 
+## set
+
+Curly braces or the `set()` function can be used to create sets. Note: to create an empty set you have to use `set()`, not `{}`; the latter creates an empty dictionary, a data structure that we discuss in the next section.
+
 ## dict
 
 ```python
