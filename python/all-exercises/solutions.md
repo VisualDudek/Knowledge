@@ -2,7 +2,7 @@
 
 ## Built-in
 
-* need to use unpack, same as with `zip()` 
+* need to use unpack operator, same as with `zip()` 
 
 ```python
 # print items of list obj each in new line uing sep='\n'
