@@ -32,6 +32,8 @@
 ## Algo
 
 * [Untitled](algo/untitled.md)
+* [AlgoExpert](algo/algoexpert/README.md)
+  * [Easy](algo/algoexpert/easy.md)
 
 ## PYTHON
 
