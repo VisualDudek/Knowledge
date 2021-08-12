@@ -29,3 +29,16 @@ def bubbleSort(array):
 	return array
 ```
 
+```python
+# with stop condition
+def bubbleSort(array):
+    swap = True
+	while swap:
+		swap = False
+		for idx in range(len(array)-1):
+			if array[idx] > array[idx + 1]:
+				array[idx], array[idx + 1] = array[idx + 1], array[idx]
+				swap = True
+    return array
+```
+
