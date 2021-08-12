@@ -22,6 +22,10 @@ print("b=", b)  #  Output is b=5
 
  We re passing two variables `a` and `b` to `func`. `a` is a reference to a list which is a mutable object, and `b` is a reference to an integer which is immutable. `func` **receives a copy** of `a` as `x` and a copy of `b` as `y`.
 
+{% hint style="info" %}
+**receives a copy** może wprowadzać w błąd, w zasadzie to wprowadza w błąd
+{% endhint %}
+
  An _inner function_ \(or _nested function_\) is a function that is defined inside another function \(the outer function\). The local variables of the outer function are said to be nonlocal to its inner function.
 
 {% hint style="info" %}
