@@ -42,3 +42,21 @@ def bubbleSort(array):
     return array
 ```
 
+### Selection
+
+* finding smallest item on right decreasing subset
+* operate on idx
+
+```python
+def selectionSort(array):
+    for idx in range(len(array)):
+		min_idx = idx
+		for j in range(idx,len(array)):
+			if array[j] < array[min_idx]:
+				min_idx = j
+		array[idx], array[min_idx] = array[min_idx], array[idx]
+    return array
+```
+
+
+
