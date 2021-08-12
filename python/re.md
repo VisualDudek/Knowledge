@@ -1,4 +1,16 @@
-# re
+# regex
+
+## intro
+
+```python
+import re
+
+pattern = r'pattern'
+
+match = re.findall(pattern, test_string)
+
+print("Number of matches :", len(match))
+```
 
 ## re.sub\(\)
 
