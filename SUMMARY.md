@@ -39,6 +39,7 @@
 
 * [All Exercises](python/all-exercises/README.md)
   * [Solutions](python/all-exercises/solutions.md)
+  * [U can always do better](python/all-exercises/u-can-always-do-better.md)
 * [All in one](python/all-in-one.md)
 * [Built-in](python/built-in/README.md)
   * [Built-in Types](python/built-in/built-in-types.md)
