@@ -30,6 +30,14 @@ import functools
 dir(functools) # show the names in the struct module
 ```
 
+## hash\(\)
+
+**hash**\(_object_\)
+
+used to quick compare dict keys during a dict lookup.
+
+NOTICE: arg is object --&gt; it can be Ur class
+
 ## input\(\)
 
 **input**\(\[_prompt_\]\)
