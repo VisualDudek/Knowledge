@@ -11,6 +11,7 @@
 * input string of numerics convert to int using map
 * generate random \(x, y\) int tuples and sort items \(x,y\) based on y using lambda
 * print each item of list  in new lines using `sep='\n'` , oneliner
+* show that `hash()` return diferent values for different instance of user-defined class
 
 ### Built-in Types
 
