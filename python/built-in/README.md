@@ -36,7 +36,7 @@ dir(functools) # show the names in the struct module
 
 used to quick compare dict keys during a dict lookup.
 
-NOTICE: arg is object --&gt; it can be Ur class
+NOTICE: arg is object --&gt; it can be user-defined class
 
 ## input\(\)
 
