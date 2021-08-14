@@ -112,6 +112,12 @@ y = 1000
 a == b # True
 ```
 
+## unpack
+
+```python
+first, *rest = [1,2,3,4,5,6]
+```
+
 ## string Module
 
 string.**ascii\_letters**
