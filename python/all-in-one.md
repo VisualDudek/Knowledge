@@ -1,5 +1,23 @@
 # All in one
 
+## dis Module
+
+### x = y = 5
+
+```python
+import dis
+dis.dis('x=y=5')
+'''
+  1           0 LOAD_CONST               0 (5)  # place on stack 5
+              2 DUP_TOP                         # duplicate top so now
+                                                #we have 5 and 5 on stack
+              4 STORE_NAME               0 (x)  # store top of stack in x
+              6 STORE_NAME               1 (y)  # store top of stack in y
+              8 LOAD_CONST               1 (None)
+             10 RETURN_VALUE
+'''
+```
+
 ## hashlib
 
 `hashlib.sha256(b'asdf').hexdigest()`
