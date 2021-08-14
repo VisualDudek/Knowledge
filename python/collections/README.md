@@ -43,6 +43,8 @@ Elements with e**qual counts are ordered in the order first encountered.**
 return a new tuple subclass named typename and positional or keyword arguments.
 
 * can unpack like a regular tuple
+* odrobine przypomina POD z positional and kwargs boost
+* \(python doc\) Named tuples are especially useful for assigning field names to result tuples returned by the csv or sqlite3 modules, SEE: **usage with map `somenamedtuple._make(iterable)`**
 
 ```python
 Point = namedtuple('Point', ['x', 'y'])
@@ -50,5 +52,13 @@ p = Point(11, y=22)
 #can unpack
 x, y = p
 p[0] == p.x
+```
+
+```python
+EmployeeRecord = namedtuple('EmployeeRecord', 'name, age, title, department, paygrade')
+
+import csv
+for emp in map(EmployeeRecord._make, csv.reader(open("employees.csv", "rb"))):
+    print(emp.name, emp.title)
 ```
 
