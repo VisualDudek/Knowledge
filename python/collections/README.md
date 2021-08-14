@@ -45,6 +45,8 @@ return a new tuple subclass named typename and positional or keyword arguments.
 * can unpack like a regular tuple
 * odrobine przypomina POD z positional and kwargs boost
 * \(python doc\) Named tuples are especially useful for assigning field names to result tuples returned by the csv or sqlite3 modules, SEE: **usage with map `somenamedtuple._make(iterable)`**
+* can return dict which maps field names to their corresponding values
+  * `somenamedtuple._asdict()`
 
 ```python
 Point = namedtuple('Point', ['x', 'y'])
