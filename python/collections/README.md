@@ -36,3 +36,19 @@ counter.**most\_common**\(\[_n_\]\) -&gt; list
 
 Elements with e**qual counts are ordered in the order first encountered.**
 
+## namedtuple\(\)
+
+**namedtuple**\(_typename_, _field\_names_, \*, _rename=False, defaults=None, module=None_\)
+
+return a new tuple subclass named typename and positional or keyword arguments.
+
+* can unpack like a regular tuple
+
+```python
+Point = namedtuple('Point', ['x', 'y'])
+p = Point(11, y=22)
+#can unpack
+x, y = p
+p[0] == p.x
+```
+
