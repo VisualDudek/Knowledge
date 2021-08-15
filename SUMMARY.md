@@ -31,9 +31,10 @@
 
 ## Algo
 
-* [Untitled](algo/untitled.md)
-* [AlgoExpert](algo/algoexpert/README.md)
-  * [Easy](algo/algoexpert/easy.md)
+* [Other](algo/untitled.md)
+* [AlgoExpert \[shell\]](algo/algoexpert/README.md)
+  * [Sort](algo/algoexpert/easy.md)
+  * [Array](algo/algoexpert/array.md)
 
 ## PYTHON
 

@@ -1,4 +1,4 @@
-# Untitled
+# Other
 
 ## Calculate first k digits
 
@@ -28,5 +28,16 @@ log N - int(log N) - 1 + k
 // calculate it and raise 10 to the result
 ```
 
+## Random N bits
 
+* magia na kilku poziomach
+
+```python
+random_bits = 0
+for i in range(32):
+    if randint(0,1):
+        random_bits |= 1 << i
+        
+print(bin(random_bits))
+```
 
