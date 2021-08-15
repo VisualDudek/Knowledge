@@ -35,6 +35,7 @@
 * [AlgoExpert \[shell\]](algo/algoexpert/README.md)
   * [Sort](algo/algoexpert/easy.md)
   * [Array](algo/algoexpert/array.md)
+  * [Recursion](algo/algoexpert/recursion.md)
 
 ## PYTHON
 
