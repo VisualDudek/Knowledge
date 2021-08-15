@@ -5,6 +5,17 @@
 * `res` is only reference and way to access store obj. from deep recursion call-stack
 
 ```text
+# algo
+[1,2,3,4] 
+[1] and perm [2,3,4]
+[2] ...
+[3] ...
+[4] ...
+
+# [2,3,4] will break into each elemnt plus perm of other elements
+```
+
+```text
 # pseudo-code
 call(array, perm, res)
 
