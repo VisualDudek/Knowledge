@@ -1,8 +1,6 @@
 # Sort
 
-## Sort
-
-### BubbleSort
+## BubbleSort
 
 * bombelki uciekają do góry
 * każdy bombelek to swap\(x\[i\], x\[i+1\]\)
@@ -42,7 +40,7 @@ def bubbleSort(array):
     return array
 ```
 
-### Selection
+## Selection
 
 * finding smallest item on right decreasing subset
 * operate on idx
