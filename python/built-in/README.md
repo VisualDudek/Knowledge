@@ -30,6 +30,17 @@ import functools
 dir(functools) # show the names in the struct module
 ```
 
+## eval\(\)
+
+**eval**\(_expression_\[, _globals_\[, _locals_\]\]\)
+
+expresion is string 
+
+```python
+x = 1
+eval('x+1')
+```
+
 ## hash\(\)
 
 **hash**\(_object_\)
