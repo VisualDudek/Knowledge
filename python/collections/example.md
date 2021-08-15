@@ -38,7 +38,7 @@ ID         MARKS      NAME       CLASS
 from collections import namedtuple
 
 n, names = int(input()), input().split()
-D = namedtuple('D', names)                  # <--- nice usage 
+D = namedtuple('D', names)                  # <--- nice usage of names
 l = [D(*input().split()) for _ in range(n)] # input of data
 res = sum([int(item.MARKS) for item in l])  # how to get it out
 
