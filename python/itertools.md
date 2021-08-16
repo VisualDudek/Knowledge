@@ -12,6 +12,20 @@ Combinations are emitted in lexicographic sort order. So, if the input _i**terab
 
 Elements are treated as unique based on their position, not on their value. So **if the input elements are unique,** there will be no repeat values in each combination.
 
+## cycle\(\)
+
+itertools.cycle\(_iterable_\)
+
+```python
+a = itertools.cycle('ABC')
+next(a)  # A B C A B C A ...
+
+# or
+for item in a:
+    time.sleep(1)
+    print(item)
+```
+
 ## groupby\(\)
 
 itertools.**groupby**\(_iterable, key=None_\) -&gt; k, g
