@@ -147,6 +147,16 @@ a == b # True
 first, *rest = [1,2,3,4,5,6]
 ```
 
+## string interning
+
+* u can help yourself with `dis` module to see if string was optimized
+
+```python
+a = ''.join(['a','b','c'])
+b = 'a' + 'b' + 'c'
+c = 'abc'
+```
+
 ## string Module
 
 string.**ascii\_letters**
