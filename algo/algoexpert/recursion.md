@@ -32,3 +32,17 @@ else:
         call(array, perm, res)
 ```
 
+## N-th Fibo
+
+* storing dict as function arg is absolutly genius
+
+```python
+# O(n) time | O(n) space
+def getNthFib(n, memo={1:0, 2:1}):
+	if n in memo:
+		return memo[n]
+	else:
+		memo[n] = getNthFib(n-1, memo) + getNthFib(n-2,memo)
+		return memo[n]
+```
+
