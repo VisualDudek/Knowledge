@@ -2,8 +2,6 @@
 
 ## bool\(\)
 
-* interesting example
-
 ```python
 bool([[]]) # True
 ```
