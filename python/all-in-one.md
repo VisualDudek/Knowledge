@@ -28,7 +28,8 @@ dis.dis('x=y=5')
 
 ## Operator precedence
 
-{% embed url="https://docs.python.org/3/reference/expressions.html" %}
+[https://docs.python.org/3/reference/expressions.html](https://docs.python.org/3/reference/expressions.html)  
+
 
 ## return None; usecase dis lib
 
@@ -187,7 +188,8 @@ print((lambda: b, lambda: a)[a < b]())
 ## Walrus operator :=
 
 * just do not compute expresion twice
-* need to be inside parenthesies \( \)
+* need to be inside parenthesies \( \) 
+* have the lowest operator precedence
 
 ```python
 if func(4) > 5:
