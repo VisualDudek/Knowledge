@@ -5,7 +5,7 @@ description: 'based on: https://realpython.com/primer-on-python-decorators/#furt
 # Decorators
 
 * Decorators are implemented using closures
-* why using `functools.wraps()` istead of my own clousure?
+* why using `functools.wraps()` instead of my own clousure?
 
 ## Simple Decorators
 
