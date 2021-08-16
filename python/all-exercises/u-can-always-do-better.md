@@ -35,7 +35,7 @@ f = [i for i in t if 'a' in i]
 print(len(f)/len(t))
 ```
 
-## do not how describe it
+## do not how describe it ???
 
 ```python
 from itertools import product
