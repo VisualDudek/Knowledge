@@ -1,5 +1,13 @@
 # Built-in
 
+## bool\(\)
+
+* interesting example
+
+```python
+bool([[]]) # True
+```
+
 ## id\(\)
 
 **id**\(_object_\)
@@ -48,6 +56,11 @@ eval('x+1')
 used to quick compare dict keys during a dict lookup.
 
 NOTICE: arg is object --&gt; it can be user-defined class
+
+```python
+hash(1) == hash(1.0) == hash(2-1)
+hash(True) == hash(1)
+```
 
 ## input\(\)
 
