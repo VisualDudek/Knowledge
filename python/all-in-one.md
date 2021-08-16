@@ -26,6 +26,10 @@ dis.dis('x=y=5')
 
 `hashlib.sha256(b'asdf').hexdigest()`
 
+## Operator precedence
+
+{% embed url="https://docs.python.org/3/reference/expressions.html" %}
+
 ## return None; usecase dis lib
 
 each func in python has implicite return None at the end
@@ -180,9 +184,30 @@ print({True: a, False: b} [a < b])
 print((lambda: b, lambda: a)[a < b]()) 
 ```
 
+## Walrus operator :=
+
+* just do not compute expresion twice
+* need to be inside parenthesies \( \)
+
+```python
+if func(4) > 5:
+    print(func(4)) # finc() is expensive so I should not call it twice
+    
+# better
+storage = func(4)
+if storage > 5:
+    print(storage) # code lines overhead
+    
+# better
+if ( x := func(4) ) > 5:
+    print(x)
+```
+
 ## Zen
 
 ```python
 import this
+# also
+import antigravity
 ```
 
