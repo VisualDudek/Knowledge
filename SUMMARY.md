@@ -34,6 +34,7 @@
 * [Other](algo/untitled.md)
 * [AlgoExpert \[shell\]](algo/algoexpert/README.md)
   * [Sort](algo/algoexpert/easy.md)
+  * [Searching](algo/algoexpert/searching.md)
   * [Array](algo/algoexpert/array.md)
   * [Recursion](algo/algoexpert/recursion.md)
 
