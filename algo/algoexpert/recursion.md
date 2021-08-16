@@ -2,8 +2,9 @@
 
 ## Permutations
 
-* `res` is only reference and way to access store obj. from deep recursion call-stack
 * algo with mutating array in place is much harder to grasp
+* `res` is only reference and way to access store obj. from deep recursion call-stack
+  * trick to pass reference from outer-scope as arg into recursion-function as a storage
 
 ```text
 # algo
