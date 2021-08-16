@@ -41,10 +41,16 @@ d = defaultdict(lambda:0, d)
 ```
 
 ```python
-def(a):
+def a():
     return 1
     
 d = defaultdict(a)
+
+# more
+def constant_factory(value):
+    return lambda: value
+    
+d = defaultdict(constant_factory('<missing>'))
 ```
 
 ## Counter
