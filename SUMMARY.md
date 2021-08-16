@@ -39,6 +39,7 @@
 
 ## PYTHON
 
+* [src](python/src.md)
 * [All Exercises](python/all-exercises/README.md)
   * [Solutions](python/all-exercises/solutions.md)
   * [U can always do better](python/all-exercises/u-can-always-do-better.md)
