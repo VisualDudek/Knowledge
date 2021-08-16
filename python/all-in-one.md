@@ -22,6 +22,8 @@ dis.dis('x=y=5')
 
 {% embed url="https://stackoverflow.com/questions/32156515/python-multiple-assignment-statements-in-one-line" %}
 
+### a, b = a\[b\] = { }, 5
+
 ## hashlib
 
 `hashlib.sha256(b'asdf').hexdigest()`
