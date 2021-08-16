@@ -51,6 +51,9 @@ def constant_factory(value):
     return lambda: value
     
 d = defaultdict(constant_factory('<missing>'))
+d.update(name='John', action='ran')
+print(f'{name} {action} to {location}')
+# >>> 'John ran to <missing>'
 ```
 
 ## Counter
