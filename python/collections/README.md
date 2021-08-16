@@ -40,6 +40,13 @@ d = {}
 d = defaultdict(lambda:0, d)
 ```
 
+```python
+def(a):
+    return 1
+    
+d = defaultdict(a)
+```
+
 ## Counter
 
 counter.**most\_common**\(\[_n_\]\) -&gt; list
