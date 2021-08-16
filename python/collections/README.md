@@ -15,7 +15,7 @@ d.move_to_end('b', last=False)
 
 ## defaultdict
 
-class collections.**defaultdict**\(\[_default\_factory\[, ...\]\]_\)
+class collections.**defaultdict**\(_default\_factory=None,/\[, ... \]_\)
 
 dict subclass that calls a factory function to supply missing values, Usually a Python dict throws a `KeyError` if you try to get an item with a key that is not currently in the dictionary. The `defaultdict` in contrast will simply create any item that you try to access \(provided of course they do not exist yet\). To create such a "default" item, it calls the function object that you pass to the constructor.
 
@@ -28,6 +28,16 @@ dict subclass that calls a factory function to supply missing values, Usually a 
 d = defaultdict(int)
 for x in keyword.kwlist:
     d[x] = len(x)
+```
+
+### defaultdict with default value 1
+
+```python
+d = defaultdict(lambda:1)
+
+# short but not exact solution is that it works underhood:
+d = {}
+d = defaultdict(lambda:0, d)
 ```
 
 ## Counter
