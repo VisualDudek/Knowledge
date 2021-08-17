@@ -52,3 +52,27 @@ based on class, SEE itertools&gt;&gt;User defined iterator
 
 you just need to implement dunder `getitem` and `setitem` methods
 
+```python
+x = l[idx]
+# is the same as writing:
+x = l.__getitem__(idx)
+
+l[idx] = x
+# is the same as writing:
+l.__setitem__(idx,x)
+```
+
+a list whose size cannot be changed, and with index start at 1
+
+```python
+class MyList():
+    def __init__(self, dimension):
+        self.l = [0 for i in range(dimension)] # allocate list
+        
+    def __getitem__(self, idx):
+        return self.l[idx-1] # map index to underhool legacy list
+        
+    def __setitem__(self, idx, data):
+        self.l[idx-1] = data
+```
+
