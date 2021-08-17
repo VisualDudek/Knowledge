@@ -103,6 +103,17 @@ if __name__ == "__main__":
     test = foo()
 ```
 
+### emulating Switch/Case
+
+```python
+def dispatch_dict(operator, x, y):
+    reutrn {
+        'add': lambda: x + y,
+        'sub': lambda: x - y,
+        'mul': lambda: x * y,
+    }.get(operator, lambda: None)()
+```
+
 ## Shallow and Deep Copy
 
 issue is pass by reference
