@@ -105,6 +105,8 @@ if __name__ == "__main__":
 
 ### emulating Switch/Case
 
+* one downsize is that each call of dispatch\_dict new instance of dict is created, can be mitigated via storing it in var to avoid crating it each time
+
 ```python
 def dispatch_dict(operator, x, y):
     reutrn {
