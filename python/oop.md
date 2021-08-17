@@ -44,3 +44,7 @@ class Date():
         return obj(day, month, year) 
 ```
 
+## User defined iterator
+
+based on class, SEE itertools&gt;&gt;User defined iterator
+
