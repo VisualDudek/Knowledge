@@ -24,6 +24,18 @@ dis.dis('x=y=5')
 
 ### a, b = a\[b\] = { }, 5
 
+## functions
+
+functions in Python are first class objects, which means you can pass them to other functions as arguments, return them from other functions as values, and store them in variables and data structures.
+
+```python
+def myfunc(a, b):
+    return a + b
+    
+funcs = [myfunc]
+funcs[0](2,3)
+```
+
 ## hashlib
 
 `hashlib.sha256(b'asdf').hexdigest()`
