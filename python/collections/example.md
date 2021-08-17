@@ -49,6 +49,7 @@ print(res/n)
 
 * remember that `str.split()` will give you list so you need to unpack it
 * **super** **cool** emulating switch/else with dict and lambda
+* namedtuple with default values
 
 ```python
 # INPUT
