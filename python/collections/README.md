@@ -75,6 +75,7 @@ return a new tuple subclass named typename and positional or keyword arguments.
 * \(python doc\) Named tuples are especially useful for assigning field names to result tuples returned by the csv or sqlite3 modules, SEE: **usage with map `somenamedtuple._make(iterable)`**
 * can return dict which maps field names to their corresponding values
   * `somenamedtuple._asdict()`
+* powerfull default option, remember that it need to be iterable e.g. list of values
 
 ```python
 Point = namedtuple('Point', ['x', 'y'])
@@ -90,5 +91,10 @@ EmployeeRecord = namedtuple('EmployeeRecord', 'name, age, title, department, pay
 import csv
 for emp in map(EmployeeRecord._make, csv.reader(open("employees.csv", "rb"))):
     print(emp.name, emp.title)
+```
+
+```python
+# defaults values
+Data = namedtuple('Data', ['cmd', 'arg'], defaults=[0])
 ```
 
