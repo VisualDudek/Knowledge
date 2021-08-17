@@ -1,5 +1,7 @@
 # collections
 
+* must see example with deque
+
 ## OrderedDict
 
 remembers the order entries were added, OrderedDict maintains the order of insertion.

@@ -45,3 +45,48 @@ res = sum([int(item.MARKS) for item in l])  # how to get it out
 print(res/n)
 ```
 
+## deque - read and perform methods
+
+* remember that `str.split()` will give you list so you need to unpack it
+
+```python
+# INPUT
+6
+append 1
+append 2
+append 3
+appendleft 4
+pop
+popleft
+```
+
+```python
+# SOLUTION
+from collections import deque
+from collections import namedtuple
+
+Data = namedtuple("Data", ["cmd", "arg"], defaults=[None])
+
+# before Python 3.7 
+Data = namedtuple("Data", ["cmd", "arg"])
+Data.__new__.__defaults__ = (None,) * len(Data._fields)
+
+d = deque()
+
+def use_cmd(d, cmd):
+    return {
+        'pop' : lambda: d.pop(),
+        'append' : lambda: d.append(cmd.arg),
+        'appendleft' : lambda: d.appendleft(cmd.arg),
+        'popleft' :  lambda: d.popleft(),
+    }.get(cmd.cmd, lambda: None)()
+
+n = int(input())
+
+for _ in range(n):
+    cmd = Data(*input().split())   
+    use_cmd(d, cmd)
+    
+print(*list(d), sep=' ')
+```
+
