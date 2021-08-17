@@ -48,3 +48,7 @@ class Date():
 
 based on class, SEE itertools&gt;&gt;User defined iterator
 
+## Accessing a class as a list
+
+you just need to implement dunder `getitem` and `setitem` methods
+
