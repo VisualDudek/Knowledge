@@ -1,6 +1,35 @@
 # itertools
 
-If U want lexicographic sorted order in output than sort the input seq.
+* If U want lexicographic sorted order in output than sort the input seq.
+* If you want to create your own iterator, you just have to implement the dunder `next` and `iter` methods
+
+## user defined iterator
+
+If you want to create your own iterator, you just have to implement the dunder next and iter methods
+
+```python
+class Backward():
+    def __init__(self, data):
+        self.data = data
+        self.index = len(self.data)
+        
+    def __iter__(self):
+        return self
+        
+    def __next__(self):
+        if(self.index == 0):
+            raise StopIteration
+        else:
+            self.index -= 1
+            return self.data[self.index]
+```
+
+```python
+# usage
+bw = Backward([1,2,3,4,5])
+for elem in bw:
+    print(elem)
+```
 
 ## combinations\(\)
 
