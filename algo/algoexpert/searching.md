@@ -28,3 +28,13 @@ n = 2^k
 log n = k  # base 2, k = is the number of division by half
 ```
 
+## in sorted Matrix
+
+* keey is to start from top-right corner BC moving only left or right will dfinitely cut out non-target nums
+
+```python
+# pseudo-code
+#starting from top-right corner
+
+```
+
