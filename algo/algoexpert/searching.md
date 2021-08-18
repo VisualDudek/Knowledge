@@ -32,9 +32,16 @@ log n = k  # base 2, k = is the number of division by half
 
 * keey is to start from top-right corner BC moving only left or right will dfinitely cut out non-target nums
 
-```python
+```text
 # pseudo-code
 #starting from top-right corner
-
+do-while: x,y are still in bound of matrix
+    if curr_pos = target: win
+    elif curr_pos > target: move left
+    else:
+        # implicite curr_pos < target: move down
+end of while
+# implicite out of bound
+return None
 ```
 
