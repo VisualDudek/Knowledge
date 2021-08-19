@@ -155,3 +155,7 @@ e = EmailableContact("Marcin", "email@gmail.com")
 e.send_mail("Hello mate")
 ```
 
+## Abstract base classes
+
+ABCs define a set of methods and properties that a class must implement in order to be considered a duck-type instance of that class. The class can extend the abstract base class itself in order to be used as an instance of that class, but it must supply all the appropriate.
+
