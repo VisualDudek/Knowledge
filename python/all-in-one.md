@@ -244,7 +244,17 @@ if ( x := func(4) ) > 5:
 ```
 
 ```python
+# advanced use-case
+def get_batches(count, size)
+    return count // size
 
+found = {name: get_batches(stock.get(name, 0), 8)
+        for anme in order
+        if get_batches(stock.get(name, 0), 8)}
+    
+# here comes warlus
+found = {name: batches for name in order
+        if (batches := get_batches(stock.get(name, 0), 8))}  
 ```
 
 ## Zen
