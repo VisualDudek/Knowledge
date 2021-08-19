@@ -80,3 +80,27 @@ class MyList():
         self.l[idx-1] = data
 ```
 
+## how to avoid immediate initailization
+
+How to avoid immediate initaialization after importing module? BC when U import below module Database\(\) obj will be initalized.
+
+```python
+class Database:
+    # the database implementation
+    pass
+    
+database = Database()
+```
+
+```python
+class Databse:
+    # the database implementation
+    pass
+    
+database = None
+
+def initialize_database():
+    global database
+    database = Database()
+```
+
