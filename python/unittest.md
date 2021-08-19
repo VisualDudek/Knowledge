@@ -32,6 +32,16 @@ assert True  # nothing happens
 assert False, 'smth went wrong'  # will raise AssertionError: smth went wrong
 ```
 
+## Skipping tests and expected failures
+
+@unittest.**skip**\(_reason\_str_\)
+
+@unittest.**skipIf**\(_condition_, _reason\_str_\)
+
+@unittest.**skipUnless**\(_condition_, _reason\_str_\)
+
+@unittest.**expectedFailure**
+
 ## VSCode
 
 1. run: Python: Configure Tests
