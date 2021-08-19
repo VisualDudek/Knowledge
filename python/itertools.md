@@ -68,6 +68,12 @@ l = [(1,2), (1,3), (4,5), (4,6)]
 [(k, list(g)) for k, g in groupby(l, key=lambda x: x[0])]
 ```
 
+## islice\(\)
+
+itertools.**islice**\(_iterable_, _start_, _stop_\[, _step_\]\) -&gt; iterator
+
+Problem that is solves: if you need only part of iterator you would probably have to enumerate\(\) it and store result in list? 
+
 
 
 
