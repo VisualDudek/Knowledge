@@ -227,7 +227,7 @@ print((lambda: b, lambda: a)[a < b]())
 * just do not compute expresion twice
 * need to be inside parenthesies \( \) 
 * have the lowest operator precedence
-* advantage in comprehance structures
+* advantage in comprehance structures, where your condition is external function
 
 ```python
 if func(4) > 5:
