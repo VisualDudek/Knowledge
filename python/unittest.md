@@ -40,7 +40,7 @@ assert False, 'smth went wrong'  # will raise AssertionError: smth went wrong
 
 @unittest.**skipUnless**\(_condition_, _reason\_str_\)
 
-@unittest.**expectedFailure**
+@unittest.**expectedFailure**           \#not supported by vscode
 
 ## VSCode
 
