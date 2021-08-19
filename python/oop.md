@@ -125,3 +125,33 @@ longkeys['hello2'] = 'world'
 longkeys.longest_key()  # 'longest yet'
 ```
 
+## Mixin
+
+A mixin is a superclass that is not intended to exist on its own, but is meant to be inherited by some other class to provide extra functionality.
+
+* mixin can operate on other class atributes -&gt; atributes names must be the same
+
+```python
+# setup
+class Contact():
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        
+# mixin
+class MailSender:
+    def send_mail(self, message):
+        print("Sending mail to" + self.email)
+        # Add e-mail logic here
+        
+# usage
+class EmailableContact(Contact, MailSender):
+    pass
+```
+
+```python
+# mixin in action
+e = EmailableContact("Marcin", "email@gmail.com")
+e.send_mail("Hello mate")
+```
+
