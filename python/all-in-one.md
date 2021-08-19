@@ -227,6 +227,7 @@ print((lambda: b, lambda: a)[a < b]())
 * just do not compute expresion twice
 * need to be inside parenthesies \( \) 
 * have the lowest operator precedence
+* advantage in comprehance structures
 
 ```python
 if func(4) > 5:
@@ -240,6 +241,10 @@ if storage > 5:
 # better
 if ( x := func(4) ) > 5:
     print(x)
+```
+
+```python
+
 ```
 
 ## Zen
