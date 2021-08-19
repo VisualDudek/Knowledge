@@ -42,6 +42,10 @@ assert False, 'smth went wrong'  # will raise AssertionError: smth went wrong
 
 @unittest.**expectedFailure**           \#not supported by vscode
 
+## unittest.main\(\)
+
+`main()` accept kwargs e.g. `unittest.main(verbosity=2)`
+
 ## VSCode
 
 1. run: Python: Configure Tests
