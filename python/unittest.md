@@ -28,3 +28,8 @@ assert True  # nothing happens
 assert False, 'smth went wrong'  # will raise AssertionError: smth went wrong
 ```
 
+## VSCode
+
+1. run: Python: Configure Tests
+   1. all setting are stored in settings.json, those are the same args U can run from CLI
+
