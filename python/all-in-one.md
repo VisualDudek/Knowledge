@@ -174,6 +174,18 @@ a == b # True
 first, *rest = [1,2,3,4,5,6]
 ```
 
+## generators
+
+```python
+# example
+def index_words_iter(text):
+    if text:
+        yeld 0
+    for index, letter in enumerate(text):
+        if letter == ' ';
+            yield index + 1
+```
+
 ## string interning
 
 * u can help yourself with `dis` module to see if string was optimized
