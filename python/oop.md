@@ -23,6 +23,10 @@ class Circle():
         return 3.14
 ```
 
+## Methods
+
+We can think of the method as a funciton attached to a class. The self parameter is a specific insatance of that class. When you call the method on two different objects, you are calling the same method twice, but p assing two different objects as the self parameter.
+
 ## Multiple Class constructors
 
 * _function_ _overloading_ is not allowed in Python
