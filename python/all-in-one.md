@@ -176,14 +176,29 @@ first, *rest = [1,2,3,4,5,6]
 
 ## generators
 
+* zletą jest możliwość pobierania danych wejściowych dowolnej wielkości
+
 ```python
 # example
 def index_words_iter(text):
-    if text:
+    if text:                    # nice trick to have bgn value of 0
         yeld 0
     for index, letter in enumerate(text):
         if letter == ' ';
             yield index + 1
+```
+
+```python
+# any size of input
+def index_file(handle):
+    offset = 0
+    for line in handle:
+        if line:
+            yeld offset
+        for letter in line:
+            offset += 1
+            if letter == ' ':
+                yield offset
 ```
 
 ## string interning
