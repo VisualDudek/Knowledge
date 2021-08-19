@@ -18,5 +18,13 @@ What is the difference between `mock` vs `patch` ?
 
 * stackoverflow  [Mocking a class: Mock\(\) or patch\(\)?](https://stackoverflow.com/questions/8180769/mocking-a-class-mock-or-patch)
 
+## assert stmt
 
+* it is not part of unittest module but keep in mind
+
+```python
+assert True  # nothing happens
+
+assert False, 'smth went wrong'  # will raise AssertionError: smth went wrong
+```
 
