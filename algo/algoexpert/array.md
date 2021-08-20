@@ -16,3 +16,21 @@
   main loop iterator
 ```
 
+## Smallest Diff
+
+```text
+# pseudo-code
+# INPUT array A and array B
+
+sort A and B
+set pointer for A and B to 0
+while in boud of A and B:
+if diff = 0 -> winner
+if abs(dif) < curMin -> update curMin and res
+
+if dif < 0 -> move pointer for A # dif = A - B
+else, implicite dif > 0 -> move pointer B
+
+return res 
+```
+
