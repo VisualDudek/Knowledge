@@ -163,7 +163,7 @@ ABCs define a set of methods and properties that a class must implement in order
 
 ## dataclass
 
-Really nice syntax sugar
+Really nice syntax sugar, decorator function if you need plain function use `make_dataclass`
 
 * instances can be compared when using: `@dataclass(order=True)`
 
@@ -177,4 +177,6 @@ class InventoryItem:
     unit_price: float
     quantity_on_hand: int = 0
 ```
+
+## dataclasses.make\_dataclass\(\)
 
