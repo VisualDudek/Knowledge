@@ -92,3 +92,23 @@ for _ in range(n):
 print(*list(d), sep=' ')
 ```
 
+## defaultdict - number missing items
+
+this is user based solution
+
+```python
+i = 0
+
+def f():
+    global i  # key takeaway
+    i += 1
+    return i
+    
+d = defaultdict(f)
+
+d[1]
+d[2]
+d[3]
+# defaultdict< {1:1, 2:2, 3:3}
+```
+
