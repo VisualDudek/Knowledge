@@ -34,3 +34,13 @@ else, implicite dif > 0 -> move pointer B
 return res 
 ```
 
+## First Diplicate Value
+
+* if array has only &lt;1...N&gt; elements you can use trick with fliping sign of given idx
+
+```text
+# pseudo-code
+
+
+```
+
