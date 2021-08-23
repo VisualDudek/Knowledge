@@ -19,7 +19,7 @@ a == b == c == d == e # True
 
 The objects returned by `dict.keys()` , `dict.values()` and `dict.items()` are _view objects_.
 
-**x in dictview -** if looking for items x should be a tuple
+**x in dictview -** if looking for items x should be a tuple, `k, v in dictview`
 
 **get**\(_key\[, default\]_\) - in that way `KeyError` is never raised.
 
