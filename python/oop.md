@@ -165,6 +165,8 @@ ABCs define a set of methods and properties that a class must implement in order
 
 Really nice syntax sugar
 
+* instances can be compared when using: `@dataclass(order=True)`
+
 ```python
 from dataclasses import dataclass
 
