@@ -8,6 +8,8 @@ Curly braces or the `set()` function can be used to create sets. Note: to create
 
 ## dict
 
+* from Python 3.7 legacy dict is also `OrderedDict`
+
 ```python
 a = dict(one=1, two=2, three=3)
 b = {'one': 1, 'two': 2, 'three': 3}
