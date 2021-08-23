@@ -34,13 +34,17 @@ else, implicite dif > 0 -> move pointer B
 return res 
 ```
 
-## First Diplicate Value
+## First Duplicate Value
 
 * if array has only &lt;1...N&gt; elements you can use trick with fliping sign of given idx
+* hash table is too esasy try solve it with Time: O\(n\) and Space O\(1\)
 
 ```text
 # pseudo-code
 
-
+iterate over array
+check if number under current number-idx is < 0 if yes -> winner
+else: make it negative, 
+  that is the way we can mark that we have already seen number == current idx 
 ```
 
