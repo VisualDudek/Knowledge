@@ -33,6 +33,7 @@
 
 * [Other](algo/untitled.md)
 * [AlgoExpert \[shell\]](algo/algoexpert/README.md)
+  * [Linked List](algo/algoexpert/linked-list.md)
   * [Sort](algo/algoexpert/easy.md)
   * [Searching](algo/algoexpert/searching.md)
   * [Array](algo/algoexpert/array.md)
