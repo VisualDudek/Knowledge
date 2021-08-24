@@ -60,6 +60,8 @@ print(f'{name} {action} to {location}')
 
 ### with user default\_factory
 
+This example, while succinctly demonstrating how to create our own function for defaultdict, is not actually very good code; using a global variable means that if we created four different defaultdict segments that each used tuple\_counter, it would count the number of entries in all dictionaries, rather than having a different count for each one. It would be better to create a class and pass a method on that class to defaultdict.
+
 ```python
 num_items = 0
 
