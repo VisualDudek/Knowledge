@@ -127,6 +127,25 @@ longkeys['hello2'] = 'world'
 longkeys.longest_key()  # 'longest yet'
 ```
 
+## \_\_lt\_\_
+
+silly class that can be sorted based on either a string or a number
+
+* method _less than_, should return bool
+
+```python
+class WierdSortee:
+    def __init__(self, string, number, sort_num):
+        self.string = string
+        self.number = number
+        self.sort_num = sort_num
+        
+    def __lt__(self, object):
+        if self.sort_num:
+            return self.number < object.number
+        return self.string < object.string
+```
+
 ## Mixin
 
 A mixin is a superclass that is not intended to exist on its own, but is meant to be inherited by some other class to provide extra functionality.
