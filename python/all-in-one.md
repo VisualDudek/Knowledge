@@ -137,6 +137,18 @@ first format than conversion: `{var:^10x}` NOT `{var:x^10}` bc this means fill, 
 
 {% embed url="https://docs.python.org/3/library/string.html\#formatspec" %}
 
+## for-loop syntax sugar
+
+```python
+for x in alist:
+    #do smth with x
+    
+it = alist.iterator()
+while it.has_next():
+    x = it.next()
+    #do something with x
+```
+
 ## Python Keywords
 
 Only two methods `keyword.iskeyword(s)` and `keyword.kwlist`
