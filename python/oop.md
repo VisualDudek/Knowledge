@@ -1,5 +1,13 @@
 # OOP
 
+## show dunder and display help
+
+```python
+dir(list)
+
+help(list.__add__)
+```
+
 ## Property value
 
 * user can easily break below code in following way: `c = Circle(4); c.pi = 4`
