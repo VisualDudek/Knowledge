@@ -58,6 +58,21 @@ print(f'{name} {action} to {location}')
 # >>> 'John ran to <missing>'
 ```
 
+### with user default\_factory
+
+```python
+num_items = 0
+
+def tuple_coutner():
+    global num_items
+    num_items += 1
+    return (num_items, [])
+    
+d = defaultdict(tuple_counter)
+
+d['a'][1].append("hello")
+```
+
 ## Counter
 
 counter.**most\_common**\(\[_n_\]\) -&gt; list
