@@ -38,6 +38,7 @@
   * [Searching](algo/algoexpert/searching.md)
   * [Array](algo/algoexpert/array.md)
   * [Recursion](algo/algoexpert/recursion.md)
+  * [Dynamic Programming](algo/algoexpert/dynamic-programming.md)
 
 ## PYTHON
 
