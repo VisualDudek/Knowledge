@@ -37,6 +37,7 @@
   * [Sort](algo/algoexpert/easy.md)
   * [Searching](algo/algoexpert/searching.md)
   * [Array](algo/algoexpert/array.md)
+  * [String](algo/algoexpert/string.md)
   * [Recursion](algo/algoexpert/recursion.md)
   * [Dynamic Programming](algo/algoexpert/dynamic-programming.md)
   * [Greedy Algorithms](algo/algoexpert/greedy-algorithms.md)
