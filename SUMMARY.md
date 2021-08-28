@@ -44,6 +44,7 @@
 
 ## PYTHON
 
+* [VSCode](python/vscode.md)
 * [src](python/src.md)
 * [All Exercises](python/all-exercises/README.md)
   * [Solutions](python/all-exercises/solutions.md)
