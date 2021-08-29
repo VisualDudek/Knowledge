@@ -12,3 +12,7 @@ settings.json file
     }
 ```
 
+## reportMissingModuleSource
+
+F1, Developer: Reload Window
+
