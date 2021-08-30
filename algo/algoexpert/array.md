@@ -3,6 +3,7 @@
 ## Summary
 
 * left - right pointer -&gt; indicate for while loop
+* try to sort
 
 ## Three Number Sum
 
