@@ -56,6 +56,12 @@ else: make it negative,
 ```text
 # pseuso-code
 
+sort over the first param
 
+create result array and add first interval
+
+iterate over array of intervals:
+compare last result with iter: if overlaps -> modify last res
+if not: -> append iter to the result array
 ```
 
