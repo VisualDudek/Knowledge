@@ -49,3 +49,13 @@ else: make it negative,
   that is the way we can mark that we have already seen number == current idx 
 ```
 
+## Merge Overlapping Intervals
+
+* key is sort over first param. \(start of interval\)
+
+```text
+# pseuso-code
+
+
+```
+
