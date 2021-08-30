@@ -205,5 +205,12 @@ class InventoryItem:
     quantity_on_hand: int = 0
 ```
 
+```python
+# mutable object as default value
+@dataclass
+class C:
+    mylist: list[int] = field(default_factory=list)
+```
+
 ## dataclasses.make\_dataclass\(\)
 
