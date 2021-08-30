@@ -9,7 +9,7 @@ main issue is the smart order of implementig methods
 Singly Linked List
 
 * use two pointers, first and second such way that second is ahead of first by k nodes
-* edge case: if you need to remove first node, it is done differently 
+* edge case: if you need to remove first node, it is done differently, wierd rewrite
 * stop condition second.next NOT second bc you need reference to the node before node that will be removed 
 
 ```text
