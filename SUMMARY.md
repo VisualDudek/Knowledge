@@ -41,6 +41,7 @@
   * [Recursion](algo/algoexpert/recursion.md)
   * [Dynamic Programming](algo/algoexpert/dynamic-programming.md)
   * [Greedy Algorithms](algo/algoexpert/greedy-algorithms.md)
+  * [Binary Trees](algo/algoexpert/binary-trees.md)
 
 ## PYTHON
 
