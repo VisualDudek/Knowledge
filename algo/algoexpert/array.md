@@ -5,6 +5,11 @@
 * left - right pointer -&gt; indicate for while loop
 * try to sort
 
+## Move Element To End
+
+* manipulate left and right pointer
+* need to remember that if U swap to the end do not increase idx bc U could swap from end element that should be at the end, only decrease right pointer
+
 ## Three Number Sum
 
 * if finally you will get Time Complexity of O\(n\*\*2\) it does not matter if parallel sort with O\(n log n\)
