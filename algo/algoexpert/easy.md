@@ -45,6 +45,14 @@ def bubbleSort(array):
 * finding smallest item on right decreasing subset
 * operate on idx
 
+```text
+# pseudo code
+
+while idx in bound:
+ - findSmallest item on right and swap it with idx
+ idx++
+```
+
 ```python
 def selectionSort(array):
     for idx in range(len(array)):
