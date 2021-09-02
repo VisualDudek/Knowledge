@@ -58,6 +58,7 @@
   * [example](python/collections/example.md)
 * [itertools](python/itertools.md)
 * [functools](python/functools.md)
+* [logging](python/logging.md)
 * [Closures](python/closures.md)
 * [Decorators](python/decorators.md)
 * [Names and Scopes](python/names-and-scopes.md)
