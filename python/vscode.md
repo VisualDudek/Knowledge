@@ -43,3 +43,5 @@ edit `launch.json` file, key: `justMyCode`
 
 Ctrl + Shift + O
 
+e.g. when you want find `Logger` class in `logging` module
+
