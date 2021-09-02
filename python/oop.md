@@ -212,5 +212,18 @@ class C:
     mylist: list[int] = field(default_factory=list)
 ```
 
+### type hinting
+
+```python
+@dataclass
+class Node:
+    value: int
+    left: InitVar["Node"] = None
+    
+# MISTAKE
+    left: IntVar[Node] = None   # This self ref of note will not work
+                                #see PEP 484: The problem of forward declaration
+```
+
 ## dataclasses.make\_dataclass\(\)
 
