@@ -39,3 +39,7 @@ edit `launch.json` file, key: `justMyCode`
 }
 ```
 
+## go to the symbol in editor
+
+Ctrl + Shift + O
+
