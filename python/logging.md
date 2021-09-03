@@ -38,7 +38,7 @@ bardzo ciekawy przykład i template do wykorzystania
 
 ### level arg validation
 
-* takeaway: `getattr` 
+* takeaway: `getattr` also has a default value, same as get method for dict\(\)
 
 ```python
 # assuming loglevel is bound to the string value obtained from the
