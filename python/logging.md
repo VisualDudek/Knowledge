@@ -1,5 +1,9 @@
 # logging
 
+## Summary
+
+* Log event information is passed between loggers, handlers, filters and formatters in a `LogRecord` instance.
+
 ## basic summary
 
 * plain `logging.warning(str)` refers to the sigleton-root logger
