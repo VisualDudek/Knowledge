@@ -4,6 +4,10 @@
 
 * Log event information is passed between loggers, handlers, filters and formatters in a `LogRecord` instance.
 
+## Q
+
+* jak getLogger\(\) dodaje kelejne loggery w hierarchi że możliwe jest dot.referencja `logger.child` ?
+
 ## basic summary
 
 * plain `logging.warning(str)` refers to the sigleton-root logger
