@@ -28,3 +28,11 @@ logger.addHandler(c_handler)
 logger.warning("Hello")
 ```
 
+## parsowanie --log=INFO
+
+{% hint style="info" %}
+bardzo ciekawy przykład i template do wykorzystania
+{% endhint %}
+
+`getattr(logging, loglvel.upper())`
+
