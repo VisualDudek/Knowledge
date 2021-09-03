@@ -3,6 +3,7 @@
 ## Summary
 
 * Log event information is passed between loggers, handlers, filters and formatters in a `LogRecord` instance.
+* The basic `Filter` functionality allows filtering by specific logger name.
 
 ## Q
 
