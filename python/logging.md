@@ -34,5 +34,5 @@ logger.warning("Hello")
 bardzo ciekawy przykład i template do wykorzystania
 {% endhint %}
 
-`getattr(logging, loglvel.upper())`
+`getattr(logging, loglevel.upper())`
 
