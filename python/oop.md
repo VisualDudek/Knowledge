@@ -215,6 +215,8 @@ class C:
 ### type hinting
 
 ```python
+# self reering in type hinting
+
 @dataclass
 class Node:
     value: int
