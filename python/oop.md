@@ -229,3 +229,25 @@ class Node:
 
 ## dataclasses.make\_dataclass\(\)
 
+## exception
+
+you can override the constructor of the `Exception` built-in class to accept our own custom arg, than you will need to call parent class manually with message argument using `super()`
+
+```python
+class SalaryNotInRange(Exception):
+    """Exception raised for errors in the input salary.
+    
+    Attributes:
+        salaray -- input salary which caused the error
+        message -- ecplanation of the error
+    """
+    
+    def __init__(self, salary, message="Sallary is not in range"):
+        self.salary = salary
+        self.message = message
+        super().__init__(self.message)
+        
+    def __str__(self):
+        return f'{self.salary} -> {self.message}'
+```
+
