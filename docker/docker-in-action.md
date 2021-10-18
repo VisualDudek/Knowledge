@@ -60,7 +60,7 @@ By creating the read-only mount, you can prevent any process inside the containe
 {% hint style="info" %}
 PoC:
 
-```text
+```
 docker exec diaweb \
     sed -i "s/listen 80/listen 8080/" /etc/nginx/conf.d/default.conf
 ```
@@ -98,7 +98,7 @@ docker run --rm \
 
 ### 4.4 Docker Volumes
 
-![](../.gitbook/assets/sharing-files-beetween-containers.jpg)
+![](<../.gitbook/assets/Sharing files beetween containers.jpg>)
 
 Docker volumes are named filesystem trees managed by Docker. They can be implemented with disk storage on the host filesystem, or another more exotic backend such as cloud storage. By default, Docker creates volumes by using the **`local`** volume plugin.
 
@@ -137,7 +137,7 @@ docker run -d \
 {% hint style="warning" %}
 Nice separation strategy!
 
-run a Cassandra client tool \(CQLSH\) from the same image but in another container !!! and connect to your running server:
+run a Cassandra client tool (CQLSH) from the same image but in another container !!! and connect to your running server:
 {% endhint %}
 
 ```bash
@@ -193,6 +193,4 @@ where keyspace_name = 'docker_hello_world';
 TBA
 
 ## 5. Single-host networking
-
-
 

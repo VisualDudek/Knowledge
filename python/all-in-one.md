@@ -18,11 +18,11 @@ dis.dis('x=y=5')
 '''
 ```
 
-### foo = foo\[0\] = \[0\]
+### foo = foo\[0] = \[0]
 
 {% embed url="https://stackoverflow.com/questions/32156515/python-multiple-assignment-statements-in-one-line" %}
 
-### a, b = a\[b\] = { }, 5
+### a, b = a\[b] = { }, 5
 
 ## functions
 
@@ -42,7 +42,7 @@ funcs[0](2,3)
 
 ## Operator precedence
 
-[https://docs.python.org/3/reference/expressions.html](https://docs.python.org/3/reference/expressions.html)  
+[https://docs.python.org/3/reference/expressions.html](https://docs.python.org/3/reference/expressions.html)\
 
 
 ## return None; usecase dis lib
@@ -68,7 +68,7 @@ import os
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 ```
 
-## dict\(\).get as a Alternative to if/elif/else 
+## dict().get as a Alternative to if/elif/else 
 
 switch case, prototypy musza byc te same np, ta sama liczba argumentow.
 
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
 ### emulating Switch/Case
 
-* one downsize is that each call of dispatch\_dict new instance of dict is created, can be mitigated via storing it in var to avoid crating it each time
+* one downsize is that each call of dispatch_dict new instance of dict is created, can be mitigated via storing it in var to avoid crating it each time
 
 ```python
 def dispatch_dict(operator, x, y):
@@ -120,9 +120,9 @@ def dispatch_dict(operator, x, y):
 
 issue is pass by reference
 
-copy.**copy**\(_x_\)
+copy.**copy**(_x_)
 
-copy.**deepcopy**\(_x\[, memo\]_\)
+copy.**deepcopy**(_x\[, memo]_)
 
 ## f-String
 
@@ -135,7 +135,7 @@ f'{number:>{n}}'
 
 first format than conversion: `{var:^10x}` NOT `{var:x^10}` bc this means fill, to sum up fill, align, conversion 
 
-{% embed url="https://docs.python.org/3/library/string.html\#formatspec" %}
+{% embed url="https://docs.python.org/3/library/string.html#formatspec" %}
 
 ## for-loop syntax sugar
 
@@ -160,7 +160,7 @@ print(keyword.kwlist)
 
 ## pyenv
 
-```text
+```
 pyenv versions    # List all Python versions available to pyenv
 pyenv install --list     # To create a virtual env, you need first to make sure
 #that you have a suitable interpreter installed
@@ -225,19 +225,19 @@ c = 'abc'
 
 ## string Module
 
-string.**ascii\_letters**
+string.**ascii_letters**
 
 The concatenation of the `ascii_lowercase` and `ascii_uppercase` 
 
 ## textwrap Module
 
-textwrap.**wrap**\(_text_, _width=70_, _\*\*kwargs_\) -&gt; _list_
+textwrap.**wrap**(_text_, _width=70_, _\*\*kwargs_) -> _list_
 
 ## Ternary operator
 
 keep in mind that expr1 mentioned below can be `assignment` or `return`
 
-I really like tuple use case! :\)
+I really like tuple use case! :)
 
 ```python
 # <expr1> if <conditional_expr> else <expr2>
@@ -264,7 +264,7 @@ print((lambda: b, lambda: a)[a < b]())
 ## Walrus operator :=
 
 * just do not compute expresion twice
-* need to be inside parenthesies \( \) 
+* need to be inside parenthesies ( ) 
 * have the lowest operator precedence
 * advantage in comprehance structures, where your condition is external function
 
@@ -303,4 +303,3 @@ import this
 # also
 import antigravity
 ```
-

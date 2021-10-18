@@ -77,7 +77,7 @@ delete[] my_int_array_ptr;
 * use `try-catch` blocks to establish exception handlers for a block of code.
 * can chaining together `catch` stmt's.
 * can rethrow exception using `throw` inside `catch`
-* `noexcept` mark any func that cannot possibly throw an exception -&gt; enable some code optimizations
+* `noexcept` mark any func that cannot possibly throw an exception -> enable some code optimizations
 * exception can affect object lifetime
 * `catch (...)` catch-all handler
 
@@ -124,16 +124,16 @@ As a general rule, treat destructors as if they were `noexcept` . Do not throw e
 * new func `strncpy`
 * co to jest _class invariant_ ???
 
-> What is assumed to **be true for** a class is called "_class invariant_" or simply "invariant" It is the job of a constructor to establish the invariant for its class \(**so that the member functions can rely on it**\) and for the member functions to make sure that the invatiant holds when they exit.
+> What is assumed to **be true for** a class is called "_class invariant_" or simply "invariant" It is the job of a constructor to establish the invariant for its class (**so that the member functions can rely on it**) and for the member functions to make sure that the invatiant holds when they exit.
 
-```text
+```
 // Invariant Example: it is not c++ lang
 context LargeCompany
 inv: numberOfEmployees > 50
 ```
 
 {% hint style="info" %}
-initializacja var members w kostruktorze, dziwna składnia po operatorze colon \(`:`\)
+initializacja var members w kostruktorze, dziwna składnia po operatorze colon (`:`)
 
 `Constructor( args ) : init member1 using arg1, init member2 using arg2 {`
 {% endhint %}
@@ -182,7 +182,7 @@ private:
 ciekawe czy jest róźnica pomiędzy `delete[] buffer;` a `delete buffer;` bez brackets
 {% endhint %}
 
-> This pattern is called _resource acquisiion is initialization_ \(RAII\) or _constructor acuires, deconstructor releases_ \(CADRe\).
+> This pattern is called _resource acquisiion is initialization_ (RAII) or _constructor acuires, deconstructor releases_ (CADRe).
 
 ### Composing a SimpleString
 
@@ -222,7 +222,7 @@ TODO: example from boook
 ### Alternatives to Exceptions
 
 1. manually enforce class invariants by exposing some method that communicates whether the class invariants could be established
-2. return multiple values using _structured binding declaration._ **Factory methods,** their purpose is to initialize objects.
+2. return multiple values using _structured binding declaration. _**Factory methods, **their purpose is to initialize objects.
 
 ```cpp
 // factory method + return multiple values
@@ -253,7 +253,7 @@ deklaracja typów w przypadku gdy funkcja zwraca więcej niż jeden arg, patrz p
 
 ## Copy Semantics
 
-_Copy sematics_ is "the meaning of copy". In practice, programmers use the term to mean the rules of makeing copies of objects: after `x` is _copied into_ `y`, they'r _equvalent_ and _independent_. That is, `x == y` is ture after a copy \(equivalence\), and a modification to `x` doesn't cause a modification of `y` \(independence\).
+_Copy sematics_ is "the meaning of copy". In practice, programmers use the term to mean the rules of makeing copies of objects: after `x` is _copied into_ `y`, they'r _equvalent_ and _independent_. That is, `x == y` is ture after a copy (equivalence), and a modification to `x` doesn't cause a modification of `y` (independence).
 
 ```cpp
 // example pass by value
@@ -383,12 +383,12 @@ SimpleStringOwner b { a };     // a is an lvalue
 SimpleStringOwner c{ SimpleString{ 50 } }; // SimpleString{ 50 } is an rvalue
 ```
 
-### lvalue \(&\) and rvalue \(&&\) References 
+### lvalue (&) and rvalue (&&) References 
 
 **Value categories**: lvalue and rvalue hard to understand but crucial element of C++
 
 * can cast an lvalue to an rvalue using `std::move`
-* ^^^-- ciekawe czy to coś podobnego do uzycia `const` NIE to jest w drugą strone :\)
+* ^^^-- ciekawe czy to coś podobnego do uzycia `const` NIE to jest w drugą strone :)
 
 {% hint style="warning" %}
 cast lvalue to rvalue ale po co?
@@ -473,4 +473,3 @@ SimpleStringOwner(SimpleString&& x) : string{ std::move(x) } {}
 ```
 
 ### Final Product of SimpleString
-

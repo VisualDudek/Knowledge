@@ -12,7 +12,7 @@ Singly Linked List
 * edge case: if you need to remove first node, it is done differently, wierd rewrite
 * stop condition second.next NOT second bc you need reference to the node before node that will be removed 
 
-```text
+```
 # pseudo-code
 
 e.g. for k = 4
@@ -26,4 +26,3 @@ iteruj po first and second till second.next is None
 # implicite first points to the node before node that will be removed
 first.next = first.next.next
 ```
-

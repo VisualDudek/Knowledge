@@ -14,7 +14,7 @@ print(*l, sep='\n')
 
 * in user-solution there is lots of space for improvements
   * can optimize input block
-  * finding second\_highest score can be done in one line
+  * finding second_highest score can be done in one line
   * **intesting usage of join**
 
 ```python
@@ -111,4 +111,3 @@ for item in permutations(ss, n):
 # can be shortened by unpack operator and print sep
 print(*[''.join(i) for i in permutations(sorted(s),int(n))],sep='\n')
 ```
-

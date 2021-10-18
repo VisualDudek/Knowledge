@@ -8,7 +8,7 @@ ansible all --list-hosts
 
 ## sample dir layout
 
-{% embed url="https://docs.ansible.com/ansible/latest/user\_guide/sample\_setup.html\#sample-directory-layout" %}
+{% embed url="https://docs.ansible.com/ansible/latest/user_guide/sample_setup.html#sample-directory-layout" %}
 
 ## ansible.cfg
 
@@ -16,7 +16,7 @@ ansible all --list-hosts
 copy from `/etc/ansible/ansible.cfg` and edit for best usage
 {% endhint %}
 
-```text
+```
 [defaults]
 
 inventory = ./inventory/inventory.yml
@@ -162,7 +162,7 @@ How to create hosts file based on inventory hosts
         dest: /tmp/hosts
 ```
 
-```text
+```
 # ./templates/hosts.j2
 {% for host in groups['all'] %}
 {{ hostvars[host]['ansible_facts']['default_ipv4']['address'] }} {{ hostvars[host]['ansible_facts']['fqdn'] }} {{ hostvars[host]['ansible_facts']['hostname'] }}
@@ -250,9 +250,9 @@ employee.name # first is safer due to python collison
 {{ groups['webservers'] | join(' ') }}
 ```
 
-{% embed url="https://jinja.palletsprojects.com/en/3.0.x/templates/\#filters" %}
+{% embed url="https://jinja.palletsprojects.com/en/3.0.x/templates/#filters" %}
 
-## ansible\_facts
+## ansible_facts
 
 * you can disable gathering of facts `gather_facts: no`
 * you can use `smart` gathering facts
@@ -413,7 +413,9 @@ roles/
 Galxy-init create nice dir structure
 {% endhint %}
 
-{% embed url="https://galaxy.ansible.com/linux-system-roles" caption="linux-system-roles" %}
+{% embed url="https://galaxy.ansible.com/linux-system-roles" %}
+linux-system-roles
+{% endembed %}
 
 ## Playbooks Examples
 
@@ -498,7 +500,7 @@ Galxy-init create nice dir structure
         mode: 0440
 ```
 
-```text
+```
 ./files
 ├── adam
 │   ├── id_rsa
@@ -560,4 +562,3 @@ ansible all -m setup -a "filter=ansible_distribution" -u ubuntu
 ### safely limiting to one server
 
 {% embed url="https://stackoverflow.com/questions/18195142/safely-limiting-ansible-playbooks-to-a-single-machine" %}
-

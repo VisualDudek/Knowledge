@@ -41,7 +41,7 @@ on most platforms, a function call compiles into a series of instructions, such 
 ## Auto return types
 
 * `auto` 
-* \(very pedantic\) it is possible to extend the auto return type deduction syntax to provide the return type as a suffix with the arrow operator `->` 
+* (very pedantic) it is possible to extend the auto return type deduction syntax to provide the return type as a suffix with the arrow operator `->` 
 * `decltype ( expression )` 
 
 ```cpp
@@ -74,7 +74,7 @@ takes a variable number of args, e.g. `printf` is a variadic function, it accept
 * declare variadic by placing `...` as the final parameter in the func arg list.
 * need to be accessed by utility functions int the `<cstdarg>` header.
   * func: `va_list` `va_start` `va_end` `va_arg` `va_copy` 
-* not type-safe \(notice that the second arg of `va_arg` is a type\)
+* not type-safe (notice that the second arg of `va_arg` is a type)
 * the number of elements in the variadic args must be tracked separately
 
 ```cpp
@@ -137,7 +137,7 @@ BC all of this generic programming can be computed at compile time, you mark the
 ### fold expressions
 
 * computes the result of using a binary operator over all the arguments of a parameter pack.
-*  `(... binary-operator parameter-pack)` 
+* ` (... binary-operator parameter-pack)` 
 
 ```cpp
 // example using fold expression indtead of recursion
@@ -156,11 +156,11 @@ int main() {
 _Functional programming_ is a programming paradigm that emphasizes function evaluation and immutable data.
 
 * One way you can achive this is to pass a function pointer. Functions occupy memory, just like objects. You can refer to this memory address via usual pointer mechanism.
-* cannot modity the pointed-to function \(conceptually similar to const obj.\)
+* cannot modity the pointed-to function (conceptually similar to const obj.)
 * `return-type (*pointer-name)(args);` 
 * use address-operator `&` to take the address of a function
 * **mind changer**: just init func pointer that accept types U want
-* alias to function pointers:  `using alias-name = return-type(*)(args)`
+* alias to function pointers: ` using alias-name = return-type(*)(args)`
 
 {% hint style="warning" %}
 Gdzie jest edge ???
@@ -244,14 +244,14 @@ int main() {
   * `[](int x, double y) -> { return x + y; }`
   * can use `decltype`
   * `[](auto x, double y) -> decltype(x+y) { reutrn x + y; }`
-* _lambda captures_, porównaj z Countif \(powyżej\) it is analogous to function type constructor
+* _lambda captures_, porównaj z Countif (powyżej) it is analogous to function type constructor
   * by default, lambda capture by value
   * capture is a list with comma
   * jeśli chcesz przechowywać wartości pomiędzy kolejnymi call lambda use reference pass
 * _lambda default capture_, reference `[&]` and by value `[=]` will auto-match variables
   * you're not allowed to midify variables captures by value unless you add the `mutable` keyword
 * _initializer expressions in capture list_,  
-  * przydatne jelsi chcesz przeniesc obiekt \(move\)
+  * przydatne jelsi chcesz przeniesc obiekt (move)
 * can capture `this`
 * all labda expressions are `constexpr` as long as the labmda can be invoked at compile time.
 
@@ -346,7 +346,7 @@ int main() {
 {% hint style="danger" %}
 nie do końca rozumiem
 
-SOLUTION: ułatwienie żeby nie męczyć sie w coś takiego:  `x(void(*foo)())` 
+SOLUTION: ułatwienie żeby nie męczyć sie w coś takiego: `  x(void(*foo)())  `
 {% endhint %}
 
 ## The main function
@@ -374,7 +374,7 @@ int main(int argc, char** argv) {
 
 ### example
 
-* zwróć uwage na sposób wyliczania indeksu do incrementacji \(row:18\)
+* zwróć uwage na sposób wyliczania indeksu do incrementacji (row:18)
 
 ```cpp
 // start with helper functions
@@ -431,5 +431,4 @@ int main(int argc, char** argv) {
 
 
 
----END---
-
+\---END---

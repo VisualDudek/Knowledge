@@ -19,7 +19,7 @@ description: processing files
 * underhood it is bits flag so U can chain them together
 * mega dziwna konstrukcja if która dopuszcza overload na condition ???
 
-```text
+```
 ios::app
 ios::ate
 ios::in
@@ -96,5 +96,4 @@ input >> account >> quoted(name) >> balance
 
 
 
----END---
-
+\---END---

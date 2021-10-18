@@ -11,12 +11,12 @@
 * Show how to structure project [link](https://github.com/bast/somepackage)
 * Guide to Python import statement [link](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
 * Lib/pkgutil
-  * pkgutil.iter\_modules\(\)
+  * pkgutil.iter_modules()
 * Use of:
-  * dir\(\)
-  * \_\_name\_\_
-  * \_\_package\_\_
-  * \_\_file\_\_
+  * dir()
+  * \__name\_\_
+  * \__package\_\_
+  * \__file\_\_
 
 ### GOOD TO KNOW
 
@@ -29,7 +29,7 @@
 
 LINUX - GNOME
 
-Switch to first workspace --&gt; Super + Home
+Switch to first workspace --> Super + Home
 
 
 
@@ -51,4 +51,3 @@ Once you're strong enough, save the world:
 // Ain't no code for that yet, sorry
 echo 'You got to trust me on this, I saved the world'
 ```
-

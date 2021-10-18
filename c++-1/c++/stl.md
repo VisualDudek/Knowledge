@@ -1,14 +1,14 @@
 # STL
 
-## &lt;algorithm&gt;
+## \<algorithm>
 
 ### sort
 
-### binary\_search
+### binary_search
 
 * only returns true or false
 
-## &lt;iomanip&gt;
+## \<iomanip>
 
 * flagi na `cout`
 
@@ -40,4 +40,3 @@ m["key"]
 // or get iterator using find and then:
 itr->second //access the value
 ```
-

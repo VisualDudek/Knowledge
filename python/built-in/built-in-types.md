@@ -4,7 +4,7 @@
 
 Curly braces or the `set()` function can be used to create sets. Note: to create an empty set you have to use `set()`, not `{}`; the latter creates an empty dictionary, a data structure that we discuss in the next section.
 
-### set.union\(\) or \|
+### set.union() or |
 
 ## dict
 
@@ -33,17 +33,16 @@ d[my_object] = "instance of class can be"
 
 The objects returned by `dict.keys()` , `dict.values()` and `dict.items()` are _view objects_.
 
-**x in dictview -** if looking for items x should be a tuple, `k, v in dictview`
+**x in dictview - **if looking for items x should be a tuple, `k, v in dictview`
 
-**get**\(_key\[, default\]_\) - in that way `KeyError` is never raised.
+**get**(_key\[, default]_) - in that way `KeyError` is never raised.
 
-**update**\(\[_other_\]\) - Insert multiple items at once with key/value pairs but also list of tuples.
+**update**(\[_other_]) - Insert multiple items at once with key/value pairs but also list of tuples.
 
-**pop**\(_key\[, default\]_\)
+**pop**(_key\[, default]_)
 
-**copy**\(\) - shallow copy
+**copy**() - shallow copy
 
-**fromkeys**\(_iterable\[, value\]_\) - tip: if you need distinct values use a dict comprehension instead.
+**fromkeys**(_iterable\[, value]_) - tip: if you need distinct values use a dict comprehension instead.
 
 **dict comprehension** - `{x: x**2 for x in (2, 4, 6)}`
-

@@ -8,7 +8,7 @@ A user parameter has the following syntax:
 
 `UserParameter=<key>,<command>`
 
-```text
+```
 #Example of my UserParameter in zabbix_agentd.conf
 UserParameter=marcin.sftp,cd /etc/zabbix;./run.me
 ```
@@ -30,6 +30,4 @@ When U test it from Zabbix Server keep in mind that it will be executed via zabb
 [Link Extending Zabbix agents](https://www.zabbix.com/documentation/current/manual/config/items/userparameters/extending_agent)
 
 ### test2
-
-
 

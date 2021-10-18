@@ -25,7 +25,7 @@ Class.classmethod()
 Class().classmethod()
 ```
 
-Factory Methods - design pattern, are those methods wich return a class object \(like constructor\) for different use cases.
+Factory Methods - design pattern, are those methods wich return a class object (like constructor) for different use cases.
 
 ```python
 class Person:
@@ -60,4 +60,3 @@ isinstance(man0, Man) -> True
 man1 = Man.fromFathersAge('John', 1965, 20)
 isinstance(man1, Man) -> False
 ```
-

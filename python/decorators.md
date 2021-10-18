@@ -230,7 +230,7 @@ all you need is that `repeat(num_times=4)` to return a function object that can 
 
 decorators can be used both with and without arguments. when a decorator uses arguments, you need to add an extra outer function. The challenge is for your code to figure out if the decorator has been called with or without arguments.
 
- \(...\) hard times \(...\)
+ (...) hard times (...)
 
 ### Stateful Decorators
 
@@ -247,4 +247,3 @@ we talked about pure functions returning a value based on given arguments. State
 * Show that simple decorator do not inherit original func name and doc string, show solution how to fix it.
 * Expand Syntactic Sugar
 * Write decorator that register func in PLUGINS dict
-

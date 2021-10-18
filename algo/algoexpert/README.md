@@ -1,2 +1,2 @@
-# AlgoExpert \[shell\]
+# AlgoExpert \[shell]
 

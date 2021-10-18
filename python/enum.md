@@ -29,4 +29,3 @@ class Employee(ABC)
     role: Role
     vacation_days: int = 25
 ```
-

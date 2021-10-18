@@ -23,13 +23,12 @@ description: all notes made during tutoring
     request.get.return_value = 'result'
     ```
 * `... import X, Y` use comas in import statement
-* ```python
-  class MockRequest:
-      def json(self)
-  ```
+*   ```python
+    class MockRequest:
+        def json(self)
+    ```
 
-  ???
-
+    ???
 * `assert_called_with()` and `assert_called_once_with() test for valid url build`
 * ```python
   class InvalidPhoneNumber(ValueError):
@@ -69,7 +68,7 @@ class Status:
 * dodaj w katalogu test katalog dataset dla danych testowych
 * `main()` wszedzie gdzie jest to mozliwe, przykład Konrada z `pip`
 * exclude all VSCode settings in `.gitignore`
-* przećwicz `git diff HEAD~1` \(zsh\) `gd` 
+* przećwicz `git diff HEAD~1` (zsh) `gd` 
 * `HEAD~3` nanosi trzy ostatnie commity na siebie
 * git submodule vs pip install from git repo?
 
@@ -79,12 +78,10 @@ class Status:
   * architektura hiperkonwergentna
   * protokol wifi bez zamykania access pointow
   * AWS Cloud
-* Building Quantum Computing Algorithms In Python - Episode 235 @Python \_\_init\_\_
+* Building Quantum Computing Algorithms In Python - Episode 235 @Python \__init\_\_
 * CVE sudo minus 1
 * logging
 * flask templates
-
-
 
 
 

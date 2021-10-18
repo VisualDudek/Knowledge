@@ -58,7 +58,7 @@ auto result = tf_name<t_param1, t_param2, ...>(f_param1, f_param2, ...);
 
 > `named-conversion<desired-type>( object-to-cast )`
 
-### const\_cast
+### const_cast
 
 The `const_cast` function dropts away the `const` modifier, allowing the modification of `const` values.
 
@@ -79,7 +79,7 @@ teraz doszło do mnie że const jest jedynie ograniczeniem compilatora ponieważ
 ciekawostka: you can use `const_cast` to add `const` to an object's type.
 {% endhint %}
 
-### static\_cast
+### static_cast
 
 ```cpp
 short increment_as_short(void* target) {
@@ -104,9 +104,9 @@ int* intPtr{ static_cast<int*>(voidPtr) };
 cout << *intPtr << '\n'; // OK
 ```
 
-### reinterpret\_cast
+### reinterpret_cast
 
-### narrow\_cast
+### narrow_cast
 
 ## Example: mean, A Template Function
 
@@ -251,7 +251,7 @@ int main() {
 // solution -> concepts 
 ```
 
-> C++ templare programming shares similarities with _duck-typed languages_. Duck-typed languages \(like Python\) defer type checking until runtime.
+> C++ templare programming shares similarities with _duck-typed languages_. Duck-typed languages (like Python) defer type checking until runtime.
 
 ## Concepts C++20
 
@@ -261,7 +261,7 @@ int main() {
 skip
 {% endhint %}
 
-## static\_assert \(the preconcepts stopgap\) C++17
+## static_assert (the preconcepts stopgap) C++17
 
 * alternative to concepts
 
@@ -288,10 +288,10 @@ T mean(T* values, size_t length) {
 * function `get` can be improved by enable by non-type template parameters genericizing the values out of `get`
 * _first_: relax the requ. that `arr` refer to an `int` array by making `get` template function
 * _second_: can relax the req that `arr` refer to an array of length `10` by introducing a non-type template parameter `Length` **into template, not func. parameter**. **U are injecting a value into the generic code at complie time.**
-* third**:** U can perform compile time bounds checking by taking `size_t index` as another non-type templare parameter. This allow you to replace the `std::out_of_range` with a `static_assert`.
+* third**: **U can perform compile time bounds checking by taking `size_t index` as another non-type templare parameter. This allow you to replace the `std::out_of_range` with a `static_assert`.
 
 {% hint style="info" %}
-when U declare int a\[\] = {1, 2, 3} it is the same as \(or will be rewritten as\) int\[3\] = {1, 2, 3} since the templated function is receiving argument in form of T a\[N\], then N will have value of 3.
+when U declare int a\[] = {1, 2, 3} it is the same as (or will be rewritten as) int\[3] = {1, 2, 3} since the templated function is receiving argument in form of T a\[N], then N will have value of 3.
 {% endhint %}
 
 ```cpp
@@ -378,4 +378,5 @@ skip
 > ee
 >
 > e
-
+>
+>

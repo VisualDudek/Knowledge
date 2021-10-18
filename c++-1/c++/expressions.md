@@ -120,11 +120,11 @@ You could try to avoid using the free store entirely, but this is severely limit
 **You do this by overloading opertor `new`.**
 {% endhint %}
 
-### the &lt;new&gt; Header
+### the \<new> Header
 
 * Notice that the return type of operator `new` is `viod*` 
 * if ther is plenty of free memory, but it's scattered across allocated memory large requests for memory can fail
-* &lt;new&gt; header contains the following four operators
+* \<new> header contains the following four operators
 
 ```cpp
 void* operator new(size_t);
@@ -292,8 +292,6 @@ int main() {
 
 
 a
-
-
 
 
 

@@ -106,5 +106,4 @@ This example defines a custom action that is just linke `store` action but littl
 
 * `.FileType`
 
-\`\`
-
+``

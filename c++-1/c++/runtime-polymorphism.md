@@ -10,14 +10,15 @@ description: >-
 
 1. wychodimy od miplementacji prostego Loggera
 2. jak rozwiazać zarzadzanie wieksza ilością implementacji Loggera np Console i File?
-3. brniemy w rozwiązania typu `enum class` czyli rownoległe utrzymywanie kilku implementacji oraz dodatkowego obiektu który utzymuej wiedze nt. dostępnych implementacji -&gt; w następstwie musi się pojawić "narzędzie" w obiekcie który konsumuje Loggera które na podstwie obiektu w którym przetrzymujemy informacje o dostępnych implementacjach będzie urzywał tego którego potrzebujemy
-4. rozwiązanie w punkcie powyżej generuje co najmniej kilka problemów \(w przypadku rozbudowy kodu\):
+3. brniemy w rozwiązania typu `enum class` czyli rownoległe utrzymywanie kilku implementacji oraz dodatkowego obiektu który utzymuej wiedze nt. dostępnych implementacji -> w następstwie musi się pojawić "narzędzie" w obiekcie który konsumuje Loggera które na podstwie obiektu w którym przetrzymujemy informacje o dostępnych implementacjach będzie urzywał tego którego potrzebujemy
+4. rozwiązanie w punkcie powyżej generuje co najmniej kilka problemów (w przypadku rozbudowy kodu):
    1. utzymanie spójnej deklaracji Loggera, ta sama struktura dla wszystkich implementacji
    2. zmiana kodu w co najmniej trzech miejscach, nowa implementacja Loggera, obiekt do przechowywania informacji o wszystkich implementacjach, narzedzie wewnątrz consumenta Loggera np swich-case work-flow code block.
 
 There must be a better way!
 
-1. 
+1.
+
 ## Polymorphism
 
 * interfaces
@@ -57,7 +58,7 @@ int main() {
 {% hint style="danger" %}
 What if I need several Loggers and switch beetwen in runtime?
 
-\(1\) u can use `enum class`
+(1) u can use `enum class`
 {% endhint %}
 
 ```cpp
@@ -245,4 +246,3 @@ int main() {
 //doesn't change for the lifetime of Bank.
 //You fix (hard-link) your logger choice upon Bank Construction.
 ```
-

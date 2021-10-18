@@ -10,7 +10,7 @@
 
 ### using tab pages
 
-```text
+```
 :tabe[dit] {file}
 
 # In normal mode
@@ -18,19 +18,19 @@ gt            go to next tab
 gT            go to previous tab
 ```
 
-{% embed url="https://vim.fandom.com/wiki/Using\_tab\_pages" %}
+{% embed url="https://vim.fandom.com/wiki/Using_tab_pages" %}
 
 ### panes
 
 {% embed url="https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally" %}
 
-{% embed url="https://vim.fandom.com/wiki/Resize\_splits\_more\_quickly" %}
+{% embed url="https://vim.fandom.com/wiki/Resize_splits_more_quickly" %}
 
 
 
 ### YAML setup
 
-```text
+```
 # vim config
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
@@ -44,7 +44,7 @@ Indentation guides by using [indentLine plugin](https://github.com/Yggdroot/inde
 
 ### display tabs as characters
 
-```text
+```
 :set list
 :set listchars=tab:>-
 ```
@@ -61,14 +61,12 @@ Indentation guides by using [indentLine plugin](https://github.com/Yggdroot/inde
 
 `:h[elp]`
 
-```text
+```
 # Get specific help:
 Option :help 'textwidth'
 ```
 
-{% embed url="https://vim.fandom.com/wiki/Learn\_to\_use\_help" %}
-
-
+{% embed url="https://vim.fandom.com/wiki/Learn_to_use_help" %}
 
 
 

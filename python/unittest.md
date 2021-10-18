@@ -16,7 +16,7 @@
 
 What is the difference between `mock` vs `patch` ?
 
-* stackoverflow  [Mocking a class: Mock\(\) or patch\(\)?](https://stackoverflow.com/questions/8180769/mocking-a-class-mock-or-patch)
+* stackoverflow  [Mocking a class: Mock() or patch()?](https://stackoverflow.com/questions/8180769/mocking-a-class-mock-or-patch)
 
 ## Mistakes
 
@@ -34,15 +34,15 @@ assert False, 'smth went wrong'  # will raise AssertionError: smth went wrong
 
 ## Skipping tests and expected failures
 
-@unittest.**skip**\(_reason\_str_\)
+@unittest.**skip**(_reason_str_)
 
-@unittest.**skipIf**\(_condition_, _reason\_str_\)
+@unittest.**skipIf**(_condition_, _reason_str_)
 
-@unittest.**skipUnless**\(_condition_, _reason\_str_\)
+@unittest.**skipUnless**(_condition_, _reason_str_)
 
-@unittest.**expectedFailure**           \#not supported by vscode
+@unittest.**expectedFailure           **#not supported by vscode
 
-## unittest.main\(\)
+## unittest.main()
 
 `main()` accept kwargs e.g. `unittest.main(verbosity=2)`
 
@@ -51,4 +51,3 @@ assert False, 'smth went wrong'  # will raise AssertionError: smth went wrong
 1. run: Python: Configure Tests
    1. all setting are stored in settings.json, those are the same args U can run from CLI
 2. remember that you need import func/obj that need to be tested
-

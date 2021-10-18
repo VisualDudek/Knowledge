@@ -1,14 +1,14 @@
 # functools
 
-## lru\_cache\(\)
+## lru_cache()
 
 
 
-## reduce\(\)
+## reduce()
 
-functools.**reduce**\(_function_, _iterable_\[, _initializer_\] \)
+functools.**reduce**(_function_, _iterable_\[, _initializer_] )
 
-## @total\_ordering
+## @total_ordering
 
 The class must define one of dunder lt, le, gt or ge. In addition the class should supply an dunder eq method.
 
@@ -29,4 +29,3 @@ class Student:
         return ((self.lastname.lower(), self.firstname.lower()) <
                 (other.lastname.lower(), other.firstname.lower()))
 ```
-

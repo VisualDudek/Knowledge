@@ -60,7 +60,7 @@ class Date():
 
 ## User defined iterator
 
-based on class, SEE itertools&gt;&gt;User defined iterator
+based on class, SEE itertools>>User defined iterator
 
 ## Accessing a class as a list
 
@@ -92,7 +92,7 @@ class MyList():
 
 ## how to avoid immediate initailization
 
-How to avoid immediate initaialization after importing module? BC when U import below module Database\(\) obj will be initalized.
+How to avoid immediate initaialization after importing module? BC when U import below module Database() obj will be initalized.
 
 ```python
 class Database:
@@ -135,7 +135,7 @@ longkeys['hello2'] = 'world'
 longkeys.longest_key()  # 'longest yet'
 ```
 
-## \_\_lt\_\_
+## \__lt\_\_
 
 silly class that can be sorted based on either a string or a number
 
@@ -158,7 +158,7 @@ class WierdSortee:
 
 A mixin is a superclass that is not intended to exist on its own, but is meant to be inherited by some other class to provide extra functionality.
 
-* mixin can operate on other class atributes -&gt; atributes names must be the same
+* mixin can operate on other class atributes -> atributes names must be the same
 
 ```python
 # setup
@@ -227,7 +227,7 @@ class Node:
                                 #see PEP 484: The problem of forward declaration
 ```
 
-## dataclasses.make\_dataclass\(\)
+## dataclasses.make_dataclass()
 
 ## exception
 
@@ -250,4 +250,3 @@ class SalaryNotInRange(Exception):
     def __str__(self):
         return f'{self.salary} -> {self.message}'
 ```
-

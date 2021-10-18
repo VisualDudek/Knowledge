@@ -3,7 +3,7 @@
 ## BubbleSort
 
 * bombelki uciekają do góry
-* każdy bombelek to swap\(x\[i\], x\[i+1\]\)
+* każdy bombelek to swap(x\[i], x\[i+1])
 
 ```python
 # brute-forece solution
@@ -45,7 +45,7 @@ def bubbleSort(array):
 * finding smallest item on right decreasing subset
 * operate on idx
 
-```text
+```
 # pseudo code
 
 while idx in bound:
@@ -63,6 +63,4 @@ def selectionSort(array):
 		array[idx], array[min_idx] = array[min_idx], array[idx]
     return array
 ```
-
-
 

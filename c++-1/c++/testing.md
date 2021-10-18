@@ -5,8 +5,8 @@
 ### example
 
 * lead architect wants you to expose an observe method so you can subscribe to SpeedUpdate and CarDetected events on the service bus.
-  * \(1\) you decide to build a class called _AutoBrake_ that you'll initialize in the program's entry point. The _AutoBrake_ class will keep a reference to the _publish_ method of the service bus, and it will subscirbe to _SpeedUpdate_ and _CarDetected_ events through its _observe_ method.
-* \(2\) servise integrates into the car's software
+  * (1) you decide to build a class called _AutoBrake_ that you'll initialize in the program's entry point. The _AutoBrake_ class will keep a reference to the _publish_ method of the service bus, and it will subscirbe to _SpeedUpdate_ and _CarDetected_ events through its _observe_ method.
+* (2) servise integrates into the car's software
 
 ```cpp
 struct SpeedUpdate {
@@ -128,7 +128,7 @@ int main() {
 }
 ```
 
-* **Getting the Test to Pass**: we need to intialize _speed\_mps_ to zero in the constructor of _AutoBrake_ 
+* **Getting the Test to Pass**: we need to intialize _speed_mps_ to zero in the constructor of _AutoBrake_ 
 
 ```cpp
 template <typename T>
@@ -156,7 +156,7 @@ int main() {
 ```
 
 * **Requirement**: sensitivity must always be greater than one
-* czyli sprawczamy czy rzuci wyjatkiem jesli bedziemy probować ustawic sensitivity na mniej niz 1, jesli rzuci wyjatkiem to wszystko jes ok i wychodzimy z funkcji, jesli nie rzuci wyjatkiem to sami zglaszamy failed test poprzez wywolanie assert\_that z false
+* czyli sprawczamy czy rzuci wyjatkiem jesli bedziemy probować ustawic sensitivity na mniej niz 1, jesli rzuci wyjatkiem to wszystko jes ok i wychodzimy z funkcji, jesli nie rzuci wyjatkiem to sami zglaszamy failed test poprzez wywolanie assert_that z false
 * add to test harnes
 * fix it
 
@@ -204,7 +204,7 @@ void speed_is_saved() {
 ```
 
 * **Req**: AutoBrake publishes a BrakeCommand when collision detected
-* it time collision is greater than zero and less than or equal to collision\_threshold\_s you invoke publish with a BrakeCommand
+* it time collision is greater than zero and less than or equal to collision_threshold_s you invoke publish with a BrakeCommand
 * fix it with `observe(const CarDetected& cd)` definition
 
 ```cpp
@@ -279,5 +279,4 @@ struct IServiceBus {
 
 
 
---- END---
-
+\--- END---

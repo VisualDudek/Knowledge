@@ -4,7 +4,7 @@
 
 * my mistake: recursive solution, calling rec. func on root and imediately increasing depth
 
-```text
+```
 # pseudo code
 
 recursion call: depth + call(left, depth + 1) + call(right, depth + 1)
@@ -29,4 +29,3 @@ class BinaryTree:
         self.left = None
         self.right = None
 ```
-

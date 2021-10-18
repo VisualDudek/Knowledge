@@ -17,9 +17,9 @@ d.move_to_end('b', last=False)
 
 ## defaultdict
 
-class collections.**defaultdict**\(_default\_factory=None,/\[, ... \]_\)
+class collections.**defaultdict**(_default_factory=None,/\[, ... ]_)
 
-dict subclass that calls a factory function to supply missing values, Usually a Python dict throws a `KeyError` if you try to get an item with a key that is not currently in the dictionary. The `defaultdict` in contrast will simply create any item that you try to access \(provided of course they do not exist yet\). To create such a "default" item, it calls the function object that you pass to the constructor.
+dict subclass that calls a factory function to supply missing values, Usually a Python dict throws a `KeyError` if you try to get an item with a key that is not currently in the dictionary. The `defaultdict` in contrast will simply create any item that you try to access (provided of course they do not exist yet). To create such a "default" item, it calls the function object that you pass to the constructor.
 
 * `d = defaultdict(int)` int wskazuje na typ value w parze key:value
 * dla value int `d[k] += 1` ale dla value list `d[k].append(obj)` uwaga na to
@@ -58,9 +58,9 @@ print(f'{name} {action} to {location}')
 # >>> 'John ran to <missing>'
 ```
 
-### with user default\_factory
+### with user default_factory
 
-This example, while succinctly demonstrating how to create our own function for defaultdict, is not actually very good code; using a global variable means that if we created four different defaultdict segments that each used tuple\_counter, it would count the number of entries in all dictionaries, rather than having a different count for each one. It would be better to create a class and pass a method on that class to defaultdict.
+This example, while succinctly demonstrating how to create our own function for defaultdict, is not actually very good code; using a global variable means that if we created four different defaultdict segments that each used tuple_counter, it would count the number of entries in all dictionaries, rather than having a different count for each one. It would be better to create a class and pass a method on that class to defaultdict.
 
 ```python
 num_items = 0
@@ -77,19 +77,19 @@ d['a'][1].append("hello")
 
 ## Counter
 
-counter.**most\_common**\(\[_n_\]\) -&gt; list
+counter.**most_common**(\[_n_]) -> list
 
 Elements with e**qual counts are ordered in the order first encountered.**
 
-## namedtuple\(\)
+## namedtuple()
 
-**namedtuple**\(_typename_, _field\_names_, \*, _rename=False, defaults=None, module=None_\)
+**namedtuple**(_typename_, _field_names_, \*, _rename=False, defaults=None, module=None_)
 
 return a new tuple subclass named typename and positional or keyword arguments.
 
 * can unpack like a regular tuple
 * odrobine przypomina POD z positional and kwargs boost
-* \(python doc\) Named tuples are especially useful for assigning field names to result tuples returned by the csv or sqlite3 modules, SEE: **usage with map `somenamedtuple._make(iterable)`**
+* (python doc) Named tuples are especially useful for assigning field names to result tuples returned by the csv or sqlite3 modules, SEE: **usage with map `somenamedtuple._make(iterable)`**
 * can return dict which maps field names to their corresponding values
   * `somenamedtuple._asdict()`
 * powerfull default option, remember that it need to be iterable e.g. list of values
@@ -114,4 +114,3 @@ for emp in map(EmployeeRecord._make, csv.reader(open("employees.csv", "rb"))):
 # defaults values
 Data = namedtuple('Data', ['cmd', 'arg'], defaults=[0])
 ```
-

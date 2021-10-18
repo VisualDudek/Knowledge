@@ -31,19 +31,19 @@ for elem in bw:
     print(elem)
 ```
 
-## combinations\(\)
+## combinations()
 
-itertools.**combinations**\(_iterable, r_\) -&gt; iterator
+itertools.**combinations**(_iterable, r_) -> iterator
 
 Return _r_ length subsequences of elements from the input _iterable_.
 
-Combinations are emitted in lexicographic sort order. So, if the input _i**terable**_ **is sorted,** the combination tuples w**ill be produced in sorted order.**
+Combinations are emitted in lexicographic sort order. So, if the input _i**terable**_** is sorted,** the combination tuples w**ill be produced in sorted order.**
 
 Elements are treated as unique based on their position, not on their value. So **if the input elements are unique,** there will be no repeat values in each combination.
 
-## cycle\(\)
+## cycle()
 
-itertools.cycle\(_iterable_\)
+itertools.cycle(_iterable_)
 
 ```python
 a = itertools.cycle('ABC')
@@ -55,9 +55,9 @@ for item in a:
     print(item)
 ```
 
-## groupby\(\)
+## groupby()
 
-itertools.**groupby**\(_iterable, key=None_\) -&gt; k, g
+itertools.**groupby**(_iterable, key=None_) -> k, g
 
 ```python
 [k for k, g in groupby('AAAABBBCCDAABBB')] --> A B C D A B
@@ -68,13 +68,11 @@ l = [(1,2), (1,3), (4,5), (4,6)]
 [(k, list(g)) for k, g in groupby(l, key=lambda x: x[0])]
 ```
 
-## islice\(\)
+## islice()
 
-itertools.**islice**\(_iterable_, _start_, _stop_\[, _step_\]\) -&gt; iterator
+itertools.**islice**(_iterable_, _start_, _stop_\[, _step_]) -> iterator
 
-Problem that is solves: if you need only part of iterator you would probably have to enumerate\(\) it and store result in list? 
-
-
+Problem that is solves: if you need only part of iterator you would probably have to enumerate() it and store result in list? 
 
 
 

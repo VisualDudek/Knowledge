@@ -40,7 +40,7 @@ input >> s1 >> s2 >> i >> d >> c;
 ### create file
 
 * ciekawy while z "chain" stream cin
-  * need to press EOF to exit cin \(Ctrl+D\)
+  * need to press EOF to exit cin (Ctrl+D)
 
 ```cpp
 if (ofstream output{"clients.txt", ios::out}; output) {
@@ -148,5 +148,4 @@ int main() {
 
 
 
----END---
-
+\---END---

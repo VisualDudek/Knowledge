@@ -73,7 +73,8 @@ void inputVector(vector<int>& items) { //pass-by reference
 
 #### Operator Overloading and Multidimensional vector
 
-* 
+*
+
 ```cpp
 // based on hackerrank: Operator Overloading
 struct Matrix {
@@ -241,7 +242,7 @@ In that case when using `const throw()`, it expects you to return a `const char*
 
 It is probably because you are casting inside the `what` method and you are returning a pointer to something that you have lost control of after the scope to `what` finished. So, an unexcepted behavior causes the random junk appear. As mentioned in other comments, your class needs to own the memory that pointer you are returning in the `what` method points to.
 
-You can declare a static string inside the what\(\) function so you can keep the memory after you exit the function.
+You can declare a static string inside the what() function so you can keep the memory after you exit the function.
 
 ```cpp
 // based on hackerrank Inherited Code
@@ -280,5 +281,4 @@ public:
 
 
 
----END--
-
+\---END--

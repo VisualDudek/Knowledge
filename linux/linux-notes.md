@@ -16,7 +16,7 @@ space not being freed form disk after deleting a file, docker case: after deleti
 * Resolution 1. shutdown of relevant process 2. truncate File Size
 * `echo > /proc/[pid]/fd/[fd_number]`
 
-To identify the used file size \(in blocks\): `# lsof -Fn -Fs |grep -B1 -i deleted | grep ^s  | cut -c 2- | awk '{s+=$1} END {print s}'`
+To identify the used file size (in blocks): `# lsof -Fn -Fs |grep -B1 -i deleted | grep ^s  | cut -c 2- | awk '{s+=$1} END {print s}'`
 
 U can get more info:
 
@@ -33,7 +33,7 @@ field to end of line
 
 #### df vs du
 
-* It is possible to delete \([unlink](https://linux.die.net/man/2/unlink)\) a file while a program is still writing to it. If this happens the file remains on disk until all references \(including open file handles\) are removed. `du` cannot find these because they have no filename. But they will still have an inode and so still show up when checked with `df`.
+* It is possible to delete ([unlink](https://linux.die.net/man/2/unlink)) a file while a program is still writing to it. If this happens the file remains on disk until all references (including open file handles) are removed. `du` cannot find these because they have no filename. But they will still have an inode and so still show up when checked with `df`.
 
 {% embed url="http://linuxshellaccount.blogspot.com/2008/12/why-du-and-df-display-different-values.html" %}
 
@@ -57,14 +57,14 @@ sudo timedate set-timezone <time_zone>
 ### setuid
 
 {% hint style="warning" %}
-Coś nie tak z przykładem dla ping -&gt; sysctl -a -&gt; `net.ipv4.ping_group_range`
+Coś nie tak z przykładem dla ping -> sysctl -a -> `net.ipv4.ping_group_range`
 {% endhint %}
 
 #### Why ping works without capability and setuid?
 
 On recent LInux system, ping doesn't need any privileges for its most basic operation, which is to send ICMP echo request messages and receive responding echo reply messages. Can use and ICMP socket, which is permited without privileges: `socket(AF INET, SOCK DGRAM, IPPROTO__ICMP) = 3`
 
-Enable the Linux kernel's net.ipv4.ping\_group\_range parameter to cover all groups. This will let all users on the operating system create ICMP Echo sockets without using setuid binaries, or having the CAP\_NET\_ADMIN and CAP\_NET\_RAW file capabilities.
+Enable the Linux kernel's net.ipv4.ping_group_range parameter to cover all groups. This will let all users on the operating system create ICMP Echo sockets without using setuid binaries, or having the CAP_NET_ADMIN and CAP_NET_RAW file capabilities.
 
 ```bash
 # check that system cmd sleep is owned by root
@@ -144,7 +144,7 @@ Bash scripts
 
 Double-check:
 
-* need space around \[ \] e.g. `[ $? -ne 0]` will produce error due to no inner space at the end of brackets.
+* need space around \[ ] e.g. `[ $? -ne 0]` will produce error due to no inner space at the end of brackets.
 * `set -x` Print commands and their arguments as they are executed.
 
 #### Script example
@@ -199,7 +199,7 @@ done
 
 {% embed url="https://stackoverflow.com/questions/356100/how-to-wait-in-bash-for-several-subprocesses-to-finish-and-return-exit-code-0" %}
 
-### Enable ssh server \(scp\)
+### Enable ssh server (scp)
 
 needed for `scp`
 
@@ -305,7 +305,7 @@ fzf --previw 'cat {}'
 man fzf
 ```
 
-wow usecase for Docker [https://github.com/junegunn/fzf/wiki/examples\#docker](https://github.com/junegunn/fzf/wiki/examples#docker)
+wow usecase for Docker [https://github.com/junegunn/fzf/wiki/examples#docker](https://github.com/junegunn/fzf/wiki/examples#docker)
 
 Links:
 
@@ -317,7 +317,7 @@ Links:
 Setuid is a Linux file permission setting that allows a user to execute that file or program with the permission of the owner of that file. This is primarily used to elevate the privileges of the current user. If a file is “setuid” and is owned by the user “root” then a user that has the ability to execute that program will do so as the user root instead of themselves.
 
 {% hint style="danger" %}
-Linux ignores the setuid bit on all interpreted executables \(i.e. executables starting with a `#!` line\)
+Linux ignores the setuid bit on all interpreted executables (i.e. executables starting with a `#!` line)
 {% endhint %}
 
 ### ssh
@@ -392,7 +392,7 @@ So `vdcv` will show you sizes of all dirs.
 ### Pomodoro GNOME
 
 {% hint style="info" %}
-[https://gnomepomodoro.org/](https://gnomepomodoro.org/)
+[https://gnomepomodoro.org/](https://gnomepomodoro.org)
 {% endhint %}
 
 ### timedatectl
@@ -443,7 +443,7 @@ Link
 
 ### tmux
 
-shortcuts: [link](https://tmuxcheatsheet.com/)
+shortcuts: [link](https://tmuxcheatsheet.com)
 
 ```bash
 # Window: Ctrl+b 
@@ -460,7 +460,7 @@ z - zoom pane
 
 ```
 
-```text
+```
 # Session managment
 tmux ls
 tmux new -s [session-name]
@@ -499,6 +499,4 @@ mount remote directories over a Secure Shell connection
 {% embed url="https://wiki.archlinux.org/index.php/SSHFS" %}
 
 {% embed url="https://unix.stackexchange.com/questions/61567/how-to-specify-key-in-sshfs/61572" %}
-
-
 

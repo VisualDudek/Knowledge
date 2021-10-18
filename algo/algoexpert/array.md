@@ -2,7 +2,7 @@
 
 ## Summary
 
-* left - right pointer -&gt; indicate for while loop
+* left - right pointer -> indicate for while loop
 * try to sort
 
 ## Move Element To End
@@ -12,10 +12,10 @@
 
 ## Three Number Sum
 
-* if finally you will get Time Complexity of O\(n\*\*2\) it does not matter if parallel sort with O\(n log n\)
+* if finally you will get Time Complexity of O(n\*\*2) it does not matter if parallel sort with O(n log n)
 * remember to do not stop after first gues and increse/decrese left/right pointer
 
-```text
+```
 # Algo
 [-8, -4, 0, 1, 2, 3, 5, 12]
   ^   ^- left pointer    ^- right pointer
@@ -24,7 +24,7 @@
 
 ## Smallest Diff
 
-```text
+```
 # pseudo-code
 # INPUT array A and array B
 
@@ -42,10 +42,10 @@ return res
 
 ## First Duplicate Value
 
-* if array has only &lt;1...N&gt; elements you can use trick with fliping sign of given idx
-* hash table is too esasy try solve it with Time: O\(n\) and Space O\(1\)
+* if array has only <1...N> elements you can use trick with fliping sign of given idx
+* hash table is too esasy try solve it with Time: O(n) and Space O(1)
 
-```text
+```
 # pseudo-code
 
 iterate over array
@@ -56,9 +56,9 @@ else: make it negative,
 
 ## Merge Overlapping Intervals
 
-* key is sort over first param. \(start of interval\)
+* key is sort over first param. (start of interval)
 
-```text
+```
 # pseuso-code
 
 sort over the first param
@@ -69,4 +69,3 @@ iterate over array of intervals:
 compare last result with iter: if overlaps -> modify last res
 if not: -> append iter to the result array
 ```
-

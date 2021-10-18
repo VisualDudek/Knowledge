@@ -19,4 +19,3 @@ noon.getMinute();             // const           const               OK
 noon.to24HourString();        // const           const               OK
 noon.to12HourString();        // const           non-const           BANG
 ```
-
