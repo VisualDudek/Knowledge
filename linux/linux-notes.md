@@ -8,7 +8,7 @@ space not being freed form disk after deleting a file, docker case: after deleti
 
 * run ubuntu container, keep several panes open in tmux
 * crate big file `$ dd if=/dev/zero of=1G.md bs=1G count=1`
-*  keep file open `$ less 1G.md`
+* keep file open `$ less 1G.md`
 * check used space via `df -h` and `docker system df -v` and `du`
 * remove `1g.md` file
 * check again disk usage
@@ -16,7 +16,7 @@ space not being freed form disk after deleting a file, docker case: after deleti
 * Resolution 1. shutdown of relevant process 2. truncate File Size
 * `echo > /proc/[pid]/fd/[fd_number]`
 
-To identify the used file size (in blocks): `# lsof -Fn -Fs |grep -B1 -i deleted | grep ^s  | cut -c 2- | awk '{s+=$1} END {print s}'`
+To identify the used file size (in blocks): `# lsof -Fn -Fs |grep -B1 -i deleted | grep ^s | cut -c 2- | awk '{s+=$1} END {print s}'`
 
 U can get more info:
 
@@ -64,7 +64,7 @@ Coś nie tak z przykładem dla ping -> sysctl -a -> `net.ipv4.ping_group_range`
 
 On recent LInux system, ping doesn't need any privileges for its most basic operation, which is to send ICMP echo request messages and receive responding echo reply messages. Can use and ICMP socket, which is permited without privileges: `socket(AF INET, SOCK DGRAM, IPPROTO__ICMP) = 3`
 
-Enable the Linux kernel's net.ipv4.ping_group_range parameter to cover all groups. This will let all users on the operating system create ICMP Echo sockets without using setuid binaries, or having the CAP_NET_ADMIN and CAP_NET_RAW file capabilities.
+Enable the Linux kernel's net.ipv4.ping\_group\_range parameter to cover all groups. This will let all users on the operating system create ICMP Echo sockets without using setuid binaries, or having the CAP\_NET\_ADMIN and CAP\_NET\_RAW file capabilities.
 
 ```bash
 # check that system cmd sleep is owned by root
@@ -263,7 +263,7 @@ Set a cron every certain hours between certain hours
 
 ### ls
 
-`-1`   list one file per line. Useful with `wc -l`
+`-1` list one file per line. Useful with `wc -l`
 
 ### lsof
 
@@ -273,7 +273,7 @@ Find process running on specific Port `# lsof -i TCP:22`
 
 `-k [cmd]` Search the short descriptions and manual page names for the keyword `cmd` as regular expression. Print out any matches. Equivalent to `appropos [cmd]`
 
-better search: `$ man -wk [cmd]` 
+better search: `$ man -wk [cmd]`
 
 ```bash
 -k, --apropos
@@ -324,7 +324,7 @@ Linux ignores the setuid bit on all interpreted executables (i.e. executables st
 
 #### Disable creating .ssh folder during connection
 
-Use `-o` flag with `StrictHostKeyChecking=no` and `UserKnownHostsFile=/dev/null` 
+Use `-o` flag with `StrictHostKeyChecking=no` and `UserKnownHostsFile=/dev/null`
 
 Not sure about the second one ^^^
 
@@ -348,11 +348,9 @@ $ ssh-add [file]
 
 ### tar
 
-
-
 ### tcpdump
 
-`-D,  --list-interfaces` Print the list of the network interfaces available on the system and on which tcpdump can capture packets.
+`-D, --list-interfaces` Print the list of the network interfaces available on the system and on which tcpdump can capture packets.
 
 #### tcpdump-notes
 
@@ -370,8 +368,6 @@ $ ssh-add [file]
 [keybindings]
     layout_launcher = None
 ```
-
-
 
 ### Ranger
 
@@ -457,7 +453,6 @@ p/n - previus/next window
 x - kill current pane
 
 z - zoom pane
-
 ```
 
 ```
@@ -492,6 +487,8 @@ set -g status-right "#(cut -d ' ' -f -3 /proc/loadavg) %H:%M %d-%b-%y"
 
 {% embed url="https://leanpub.com/the-tao-of-tmux/read" %}
 
+### TEST git sync
+
 ### sshfs
 
 mount remote directories over a Secure Shell connection
@@ -499,4 +496,3 @@ mount remote directories over a Secure Shell connection
 {% embed url="https://wiki.archlinux.org/index.php/SSHFS" %}
 
 {% embed url="https://unix.stackexchange.com/questions/61567/how-to-specify-key-in-sshfs/61572" %}
-
