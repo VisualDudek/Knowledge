@@ -470,6 +470,10 @@ tmux rename-session [-t session-name] [new-session-name]
 
 `:set-window-option mode-keys vi`
 
+#### sharing tmux terminal
+
+[link](https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen)
+
 #### tmux-config
 
 ```bash
