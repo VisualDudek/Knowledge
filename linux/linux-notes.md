@@ -379,6 +379,7 @@ gc        Close the current tab
 
 # How to display the size of all selected multiple dirs in current view?
 v -  selects all items in current view.
+V - toggle visual mode
 So `vdcv` will show you sizes of all dirs.
 ```
 
