@@ -1,6 +1,6 @@
 # VSCode
 
-## showHover
+### showHover
 
 settings.json file
 
@@ -12,11 +12,11 @@ settings.json file
     }
 ```
 
-## reportMissingModuleSource
+### reportMissingModuleSource
 
 F1, Developer: Reload Window
 
-## debug no just in my code
+### debug no just in my code
 
 edit `launch.json` file, key: `justMyCode`
 
@@ -39,8 +39,12 @@ edit `launch.json` file, key: `justMyCode`
 }
 ```
 
-## go to the symbol in editor
+### go to the symbol in editor
 
 Ctrl + Shift + O
 
 e.g. when you want find `Logger` class in `logging` module
+
+### fix internal terminal font for zsh
+
+Settings -> Editor:Font Family add 'PowerlineSymbols'
