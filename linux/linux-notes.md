@@ -110,7 +110,7 @@ strace -f -o out ping [ip]
 
 ## LINUX SETUP
 
-* zsh
+* oh-my-zsh (zsh)
 * ranger
 * keybind Caps Lock -> Ctrl
   * Tweaks -> Keyboard & Mouse -> Additional Layout -> Ctrl position
