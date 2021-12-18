@@ -113,6 +113,11 @@ strace -f -o out ping [ip]
 * zsh
 * ranger
 * keybind Caps Lock -> Ctrl
+  * Tweaks -> Keyboard & Mouse -> Additional Layout -> Ctrl position
+
+```
+sudo apt install gnome-tweaks
+```
 
 ## TOPICS
 
