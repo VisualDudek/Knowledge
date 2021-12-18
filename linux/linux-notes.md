@@ -110,6 +110,17 @@ strace -f -o out ping [ip]
 
 ## LINUX SETUP
 
+```
+# all apt install
+curl
+git
+python3
+python3-pip
+ranger
+ncdu
+zsh
+```
+
 * oh-my-zsh (zsh)
 * ranger
 * keybind Caps Lock -> Ctrl
@@ -118,6 +129,15 @@ strace -f -o out ping [ip]
 ```
 sudo apt install gnome-tweaks
 ```
+
+* python3
+
+```
+#pip install
+sudo apt install -y python3-pip
+```
+
+* vscode
 
 ## TOPICS
 
