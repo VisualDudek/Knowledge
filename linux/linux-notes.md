@@ -119,6 +119,7 @@ python3-pip
 ranger
 ncdu
 zsh
+htop
 ```
 
 * oh-my-zsh (zsh)
