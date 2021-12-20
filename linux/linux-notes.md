@@ -533,3 +533,23 @@ mount remote directories over a Secure Shell connection
 {% embed url="https://wiki.archlinux.org/index.php/SSHFS" %}
 
 {% embed url="https://unix.stackexchange.com/questions/61567/how-to-specify-key-in-sshfs/61572" %}
+
+## HOW TO
+
+### power down external drive safely
+
+```
+# Flush USB drive buffer
+sync
+# Identify the device name for the SILICON16GB USB drive
+usblongname=$(lsblk -l | grep SILICON16GB)
+usbname="${usblongname:0:4}"
+# Unmount the USB drive
+udisksctl unmount -b /dev/$usbname
+# Power off the USB drive
+udisksctl power-off -b /dev/$usbname
+```
+
+[link](https://askubuntu.com/questions/1163119/how-to-power-down-external-drive-safely)
+
+## ---END--
