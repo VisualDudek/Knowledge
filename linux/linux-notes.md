@@ -534,6 +534,12 @@ mount remote directories over a Secure Shell connection
 
 {% embed url="https://unix.stackexchange.com/questions/61567/how-to-specify-key-in-sshfs/61572" %}
 
+### zsh
+
+```
+history -E    # history with timestamp
+```
+
 ## HOW TO
 
 ### power down external drive safely
