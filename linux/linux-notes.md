@@ -120,6 +120,13 @@ ranger
 ncdu
 zsh
 htop
+make
+build-essential
+```
+
+```
+# install neovim ? vim, which is better?
+#vim, install from github 
 ```
 
 * oh-my-zsh (zsh)
