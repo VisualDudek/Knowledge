@@ -114,8 +114,8 @@ strace -f -o out ping [ip]
 # all apt install
 curl
 git
-python3
-python3-pip
+//python3
+//python3-pip
 ranger
 ncdu
 zsh
@@ -126,10 +126,20 @@ build-essential
 
 ```
 # install neovim ? vim, which is better?
-#vim, install from github 
+#vim, install from github, need make and build-essential
 ```
 
 * oh-my-zsh (zsh)
+
+```
+#change theme to agnoster, check agnoster github how to fix powerline font
+sudo apt install fonts-powerline
+
+# run omz help
+omz
+alias
+```
+
 * ranger
 * keybind Caps Lock -> Ctrl
   * Tweaks -> Keyboard & Mouse -> Additional Layout -> Ctrl position
