@@ -122,6 +122,7 @@ zsh
 htop
 make
 build-essential
+terminator
 ```
 
 ```
