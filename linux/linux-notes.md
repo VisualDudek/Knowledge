@@ -114,7 +114,7 @@ strace -f -o out ping [ip]
 # all apt install
 curl
 git
-//python3
+//python3, in ubuntu 20 make alias to pyython3
 //python3-pip
 ranger
 ncdu
@@ -123,6 +123,7 @@ htop
 make
 build-essential
 terminator
+atop //bild from github, need deped libs
 ```
 
 ```
