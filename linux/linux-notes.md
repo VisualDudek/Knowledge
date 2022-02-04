@@ -124,6 +124,7 @@ make
 build-essential
 terminator
 atop //bild from github, need deped libs
+neofetch
 ```
 
 ```
