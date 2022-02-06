@@ -160,6 +160,11 @@ sudo apt install -y python3-pip
 
 * vscode
 
+```
+# Find out information about your GPU
+sudo lshw -C display
+```
+
 ## TOPICS
 
 ### Advanced Topics
