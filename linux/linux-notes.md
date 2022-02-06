@@ -128,6 +128,14 @@ neofetch
 ```
 
 ```
+# Install nvidia-drivers
+apt search nvidia-drivers
+//Install and reboot
+nvidia-smi
+sudo nvidia-settings
+```
+
+```
 # install neovim ? vim, which is better?
 #vim, install from github, need make and build-essential
 ```
