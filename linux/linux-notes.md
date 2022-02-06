@@ -125,7 +125,7 @@ build-essential
 terminator
 atop //bild from github, need deped libs
 neofetch
-guake
+guake //need add to autostart from Tweeks
 ```
 
 ```
