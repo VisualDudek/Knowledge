@@ -428,7 +428,7 @@ man terminator
 man terminator-config
 
 // change size of default window, under [[[window0]]] section
-size = 1200, 1000
+size = 1200, 1000  //need to close all termiator active windows
 ```
 
 {% embed url="https://terminator-gtk3.readthedocs.io/en/latest/index.html" %}
