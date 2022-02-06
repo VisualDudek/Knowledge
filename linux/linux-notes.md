@@ -423,6 +423,16 @@ $ ssh-add [file]
 
 ### terminator
 
+```
+man terminator
+man terminator-config
+
+// change size of default window, under [[[window0]]] section
+size = 1200, 1000
+```
+
+{% embed url="https://terminator-gtk3.readthedocs.io/en/latest/index.html" %}
+
 {% embed url="https://askubuntu.com/questions/158159/how-do-i-get-terminator-to-start-up-with-my-custom-layout" %}
 
 #### keybinds disabled
