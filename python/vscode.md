@@ -1,5 +1,12 @@
 # VSCode
 
+## EXTENSIONS
+
+```
+Python
+Vim
+```
+
 ### showHover
 
 settings.json file
