@@ -42,8 +42,7 @@ funcs[0](2,3)
 
 ## Operator precedence
 
-[https://docs.python.org/3/reference/expressions.html](https://docs.python.org/3/reference/expressions.html)\
-
+[https://docs.python.org/3/reference/expressions.html](https://docs.python.org/3/reference/expressions.html)\\
 
 ## return None; usecase dis lib
 
@@ -68,7 +67,7 @@ import os
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 ```
 
-## dict().get as a Alternative to if/elif/else 
+## dict().get as a Alternative to if/elif/else
 
 switch case, prototypy musza byc te same np, ta sama liczba argumentow.
 
@@ -105,7 +104,7 @@ if __name__ == "__main__":
 
 ### emulating Switch/Case
 
-* one downsize is that each call of dispatch_dict new instance of dict is created, can be mitigated via storing it in var to avoid crating it each time
+* one downsize is that each call of dispatch\_dict new instance of dict is created, can be mitigated via storing it in var to avoid crating it each time
 
 ```python
 def dispatch_dict(operator, x, y):
@@ -133,7 +132,7 @@ n = 10
 f'{number:>{n}}'
 ```
 
-first format than conversion: `{var:^10x}` NOT `{var:x^10}` bc this means fill, to sum up fill, align, conversion 
+first format than conversion: `{var:^10x}` NOT `{var:x^10}` bc this means fill, to sum up fill, align, conversion
 
 {% embed url="https://docs.python.org/3/library/string.html#formatspec" %}
 
@@ -161,6 +160,7 @@ print(keyword.kwlist)
 ## pyenv
 
 ```
+# You need to install also pyenv-virtualenv
 pyenv versions    # List all Python versions available to pyenv
 pyenv install --list     # To create a virtual env, you need first to make sure
 #that you have a suitable interpreter installed
@@ -188,7 +188,7 @@ first, *rest = [1,2,3,4,5,6]
 
 ## generators
 
-* zletą jest możliwość pobierania danych wejściowych dowolnej wielkości
+* zletą jest możliwość pobierania danych wejściowych dowolnej wielkości
 
 ```python
 # example
@@ -225,9 +225,9 @@ c = 'abc'
 
 ## string Module
 
-string.**ascii_letters**
+string.**ascii\_letters**
 
-The concatenation of the `ascii_lowercase` and `ascii_uppercase` 
+The concatenation of the `ascii_lowercase` and `ascii_uppercase`
 
 ## textwrap Module
 
@@ -264,7 +264,7 @@ print((lambda: b, lambda: a)[a < b]())
 ## Walrus operator :=
 
 * just do not compute expresion twice
-* need to be inside parenthesies ( ) 
+* need to be inside parenthesies ( )
 * have the lowest operator precedence
 * advantage in comprehance structures, where your condition is external function
 
