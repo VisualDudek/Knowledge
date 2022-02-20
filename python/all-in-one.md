@@ -161,6 +161,7 @@ print(keyword.kwlist)
 
 ```
 # You need to install also pyenv-virtualenv
+#remember to install build dependencies before attempting to install a new Python version
 pyenv versions    # List all Python versions available to pyenv
 pyenv install --list     # To create a virtual env, you need first to make sure
 #that you have a suitable interpreter installed
