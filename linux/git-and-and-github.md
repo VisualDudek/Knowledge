@@ -28,7 +28,7 @@ git push --force <brand-name>
 
 ### Commit only part of code
 
-`git add -p,--patch <filename>` 
+`git add -p,--patch <filename>`
 
 ### Interactive Staging
 
@@ -42,7 +42,7 @@ git push --force <brand-name>
 
 ### Undo the last commit
 
-`git reset --soft HEAD~1` 
+`git reset --soft HEAD~1`
 
 `reset` copied the old head to `.git/ORIG_HEAD`
 
@@ -59,6 +59,17 @@ $ git commit -c ORIG_HEAD                      # (4)
 {% embed url="https://www.atlassian.com/git/tutorials/rewriting-history" %}
 
 {% embed url="https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git" %}
+
+### Git add and commit in one command
+
+```
+# use zsh alias gcam='git commit -a -m'
+
+# use git alias
+git config --global alias.add-commit '!git add -A && git commit'
+#and use it with
+git add-commit -m 'My commit message'
+```
 
 ### Hooks
 
@@ -93,4 +104,3 @@ just repo in cloud
 
 1. Commit only part of code
 2. Do staging interactive
-
