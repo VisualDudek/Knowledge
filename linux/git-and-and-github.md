@@ -34,6 +34,10 @@ git push --force <brand-name>
 
 `git add -i`
 
+### Undo with git
+
+{% embed url="https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git" %}
+
 ### Undo uncommitted changes
 
 `git reset` this will unstage all files.
