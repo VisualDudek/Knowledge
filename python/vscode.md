@@ -1,5 +1,9 @@
 # VSCode
 
+## LINKS
+
+{% embed url="https://www.barbarianmeetscoding.com/blog/boost-your-coding-fu-with-vscode-and-vim" %}
+
 ## EXTENSIONS
 
 ```
