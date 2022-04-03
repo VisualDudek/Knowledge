@@ -59,3 +59,16 @@ e.g. when you want find `Logger` class in `logging` module
 ### fix internal terminal font for zsh
 
 Settings -> Editor:Font Family add 'PowerlineSymbols'
+
+### set "jj" as \<Ecs>
+
+```
+# add to user settings.json; open with shitf + cmd + p and serch for user settings
+
+"vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ]
+```
