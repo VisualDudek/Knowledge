@@ -72,3 +72,25 @@ Settings -> Editor:Font Family add 'PowerlineSymbols'
         }
     ]
 ```
+
+### keybindings
+
+{% embed url="https://www.salesscreen.com/blog/productivity-in-visual-studio-code" %}
+check user keybindings.json file on GitHub
+{% endembed %}
+
+```
+#file: keybindings.json
+[
+    {
+      "key": "ctrl+l",
+      "command": "cursorEnd",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "cursorHome",
+      "when": "editorTextFocus"
+    },
+]
+```
