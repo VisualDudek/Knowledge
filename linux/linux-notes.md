@@ -447,7 +447,7 @@ size = 1200, 1000  //need to close all termiator active windows
 
 ### Ranger
 
-```bash
+```
 # MAIN BINDINGS
 gn        Create a new tab
 gt, gT    Go to the next or previous tab. You can also use TAB and SHITF+TAB
@@ -457,6 +457,8 @@ gc        Close the current tab
 v -  selects all items in current view.
 V - toggle visual mode
 So `vdcv` will show you sizes of all dirs.
+
+oX - change sort type 
 ```
 
 * show shell output and exit status, use `:shell -w [cmd]` to view the output until you press enter.
