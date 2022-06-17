@@ -427,6 +427,8 @@ cd /etc/sudoers.d/
 sudo visudo -f <user>  # create a per-user configuration file
 
 sudo -k   # reset passwd timeout
+
+sudo -l   # list the allowed (and forbidden) commands for the invoking user
 ```
 
 ### tar
