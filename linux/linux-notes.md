@@ -420,6 +420,15 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/name.key -C "Comment"
 $ ssh-add [file]
 ```
 
+### sudo/visudo
+
+```
+cd /etc/sudoers.d/
+sudo visudo -f <user>  # create a per-user configuration file
+
+sudo -k   # reset passwd timeout
+```
+
 ### tar
 
 ### tcpdump
