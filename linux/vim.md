@@ -4,7 +4,7 @@
 
 ### moving around
 
-`Ctrl+{` jump do the next empty newline
+`{ / }` jump do the next empty newline
 
 ### show compiled modules
 
