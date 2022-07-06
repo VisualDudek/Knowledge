@@ -2,6 +2,10 @@
 
 * autocompletion: `Ctrl-x Ctrl-n OR Ctrl-p`
 
+### moving around
+
+`Ctrl+{` jump do the next empty newline
+
 ### show compiled modules
 
 `vim --version`
@@ -25,8 +29,6 @@ gT            go to previous tab
 {% embed url="https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally" %}
 
 {% embed url="https://vim.fandom.com/wiki/Resize_splits_more_quickly" %}
-
-
 
 ### YAML setup
 
@@ -67,8 +69,3 @@ Option :help 'textwidth'
 ```
 
 {% embed url="https://vim.fandom.com/wiki/Learn_to_use_help" %}
-
-
-
-
-
