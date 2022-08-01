@@ -83,6 +83,12 @@ git add-commit -m 'My commit message'
 
 {% embed url="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" %}
 
+### Merge specific file from another branch
+
+```
+git checkout src-branch path/to/file
+```
+
 ## GitHub
 
 ### Actions
