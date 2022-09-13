@@ -69,3 +69,10 @@ Option :help 'textwidth'
 ```
 
 {% embed url="https://vim.fandom.com/wiki/Learn_to_use_help" %}
+
+### Locate the vimrc file used by Vim
+
+```
+# inside Vim
+:version
+```
