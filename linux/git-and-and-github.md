@@ -89,6 +89,14 @@ git add-commit -m 'My commit message'
 git checkout src-branch path/to/file
 ```
 
+### Renaming a file <a href="#renaming-a-file-using-the-command-line" id="renaming-a-file-using-the-command-line"></a>
+
+```
+git mv old_filename new_filename
+git commit -m "Rename file"
+git push origin your-branch
+```
+
 ## GitHub
 
 ### Actions
