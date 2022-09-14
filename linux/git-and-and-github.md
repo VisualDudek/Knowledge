@@ -97,6 +97,12 @@ git commit -m "Rename file"
 git push origin your-branch
 ```
 
+### Adding a local repository to GitHub with GitHub CLI <a href="#adding-a-local-repository-to-github-with-github-cli" id="adding-a-local-repository-to-github-with-github-cli"></a>
+
+```
+gh repo create
+```
+
 ## GitHub
 
 ### Actions
