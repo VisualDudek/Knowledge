@@ -478,6 +478,13 @@ V - toggle visual mode
 So `vdcv` will show you sizes of all dirs.
 
 oX - change sort type 
+
+# exit Ranger but keep current dir
+--choosedir=targetfile    
+    Allows you to pick a directory with ranger. When you exit ranger, 
+    it will write the last visited directory into targetfile.
+    
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 ```
 
 * show shell output and exit status, use `:shell -w [cmd]` to view the output until you press enter.
