@@ -489,6 +489,7 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir
 
 * show shell output and exit status, use `:shell -w [cmd]` to view the output until you press enter.
 * ^^^--- U can rebind `!` to `map ! console shell -w%space`
+* copy the defalut config, check --help; `ranger --copy-config=which`
 
 ### Pomodoro GNOME
 
