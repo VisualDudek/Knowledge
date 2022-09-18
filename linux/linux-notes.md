@@ -265,6 +265,10 @@ done
 
 {% embed url="https://stackoverflow.com/questions/356100/how-to-wait-in-bash-for-several-subprocesses-to-finish-and-return-exit-code-0" %}
 
+### dictionary list of words
+
+/`usr/share/dict/`
+
 ### Enable ssh server (scp)
 
 needed for `scp`
