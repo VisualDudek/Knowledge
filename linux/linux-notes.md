@@ -614,6 +614,10 @@ mount remote directories over a Secure Shell connection
 
 {% embed url="https://unix.stackexchange.com/questions/61567/how-to-specify-key-in-sshfs/61572" %}
 
+### type unicode char
+
+left Ctrl + shift + U -> cursor will change, now type unicode number
+
 ### zsh
 
 ```
