@@ -485,6 +485,9 @@ oX - change sort type
     it will write the last visited directory into targetfile.
     
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+H - goes bacwards (dir)
+L - forward (dir
 ```
 
 * show shell output and exit status, use `:shell -w [cmd]` to view the output until you press enter.
