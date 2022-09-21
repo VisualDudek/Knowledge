@@ -169,6 +169,8 @@ pyenv install --list     # To create a virtual env, you need first to make sure
 pyenv shell 3.8.0    # Set the shell-specific Pyhon version
 pyenv virtualenv 3.8.0 my-data-project    # Create virtual env
 pyenv local my-data-project    # Set virtual env for this dir and auto-load
+
+# add pyenv plugin into .zshrc
 ```
 
 ## Underscores
