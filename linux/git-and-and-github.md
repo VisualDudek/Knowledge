@@ -30,6 +30,16 @@ git push --force <brand-name>
 
 `git add -p,--patch <filename>`
 
+### diff between current and last version
+
+```
+git diff HEAD^ HEAD
+# @ alias for HEAD in git
+git diff @^ @
+# same as above
+git diff @^..@
+```
+
 ### Interactive Staging
 
 `git add -i`
