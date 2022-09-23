@@ -30,6 +30,13 @@ git push --force <brand-name>
 
 `git add -p,--patch <filename>`
 
+### config
+
+```
+# list global config
+git config --global --list
+```
+
 ### diff between current and last version
 
 ```
