@@ -30,6 +30,10 @@ git push --force <brand-name>
 
 `git add -p,--patch <filename>`
 
+### commit, list files
+
+`git diff-tree --no-commit-id --name-only -r bd61ad98`
+
 ### config
 
 ```
