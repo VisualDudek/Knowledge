@@ -89,6 +89,13 @@ git add-commit -m 'My commit message'
 
 {% embed url="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks" %}
 
+### log stay on CLI
+
+1. `git --no-pager log ...`&#x20;
+2.  &#x20;set global config to use `cat` insead of `less`&#x20;
+
+    `git config --global core.pager "cat"`
+
 ### Merging vs. Rebase
 
 {% embed url="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" %}
