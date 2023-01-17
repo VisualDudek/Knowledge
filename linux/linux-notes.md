@@ -43,17 +43,6 @@ field to end of line
 TODO
 {% endhint %}
 
-### timezone, set or change
-
-```bash
-# check current time zone
-timedatectl
-# view all zones
-timedatectl list-timezones
-# set
-sudo timedate set-timezone <time_zone>
-```
-
 ### setuid
 
 {% hint style="warning" %}
@@ -511,6 +500,15 @@ $ timedatectl
 $ cat /etc/timezone
 $ timedatectl list-timezones
 $ sudo timedatectl set-timezone your_time_zone
+```
+
+```bash
+# check current time zone
+timedatectl
+# view all zones
+timedatectl list-timezones
+# set
+sudo timedatectl set-timezone <time_zone>
 ```
 
 ### unrar
